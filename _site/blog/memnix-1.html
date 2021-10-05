@@ -20,11 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Blog">
-  <meta property="og:description" content="Hey 👋, I'm Corentin  Welcome to my portfolio ! ">
+  <meta property="og:title" content="Memnix - Devlogs 1">
+  <meta property="og:description" content="Memnix is getting an update !">
 
-  <title>Blog</title>
-  <meta name="description" content="Hey 👋, I'm Corentin  Welcome to my portfolio ! ">
+  <title>Memnix - Devlogs 1</title>
+  <meta name="description" content="Memnix is getting an update !">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -70,73 +70,50 @@
   </div>
 
 </nav>
-    <!-- Simple-Jekyll-Search https://github.com/christian-fei/Simple-Jekyll-Search -->
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Memnix - Devlogs 1</b></h1>
 
-<div class="input-group mt-5 px-3">
-  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts..">
-  <div class="input-group-append">
-    <span class="input-group-text border border-primary bg-primary text-white">
-      <i class="fas fa-search"></i>
-    </span>
-  </div>
-  <button class="btn btn-outline-primary ml-1" onclick="location.href = '/blog/tags';">
-    <i class="fas fa-tags"></i>
-  </button>
-</div>
-<ul class="px-3" id="results-container"></ul>
+<p class="post-metadata text-muted">
+  05 October 2021 -  
+  <b>less than 1 min read time</b>
 
-<script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
-<script>
-  var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action">{title}</a>',
-        noResultsText: '<li class="list-group-item list-group-item-action disabled">No results found</li>',
-        json: '/search.json'
-      })
-</script>
-<div class="card-group mt-2">
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#memnix">
+      <span class="tag badge badge-pill text-primary border border-primary">Memnix</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#golang">
+      <span class="tag badge badge-pill text-primary border border-primary">Golang</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#postgresql">
+      <span class="tag badge badge-pill text-primary border border-primary">PostgreSQL</span>
+    </a>
+    </p>
 
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/memnix-1" class="post card border border-">
-    <div class="card-body text-themed">
-      <h3 class="card-title">Memnix - Devlogs 1</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-dark">Memnix</span>
-        
-        <span class="badge badge-dark">Golang</span>
-        
-        <span class="badge badge-dark">PostgreSQL</span>
-        
-      </p>
-      <p class="card-text">Memnix is getting an update !</p>
-    </div>
-    <div class="card-footer text-themed">
-      05 October 2021
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/first-post" class="post card border border-">
-    <div class="card-body text-themed">
-      <h3 class="card-title">First post</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-dark">Personal</span>
-        
-      </p>
-      <p class="card-text">This is my first post !</p>
-    </div>
-    <div class="card-footer text-themed">
-      03 October 2021
-    </div>
-  </a>
-</div>
-  
-  
+<h2 id="1-database">1. Database</h2>
+
+<p>So I’ve started to think about memnix’s database ! I’ve created tables to handle cards &amp; decks.</p>
+<figure class="figure w-100">
+  <img src="/assets/memnix-db1.png" class="figure-img img-fluid rounded" alt="VStudio Schema" /><figcaption class="figure-caption text-center">VStudio Schema</figcaption></figure>
+
+<p>It’s not much but still a great start !</p>
+
+<h2 id="2-rest-api">2. Rest API</h2>
+
+<p>I’ve been working on a rest API using Gofiber &amp; Gorm (golang) to access my Database. 
+It’s not fully ready yet but I want to start documenting before coding more &amp; as I’m going to edit my database soon, I prefer to wait a bit more. Otherwise, it’s ready for testing purpose !</p>
+
+<h2 id="3-whats-next">3. What’s next</h2>
+
+<p>The next goal is to start writting a documentation for my api ! 
+Then, I’ll need to keep working on my database and to start designing memnix’s engine !</p>
+
+<p>I’m also thinking about a discord bot to beta test my api and to start collecting data about users.</p>
+
+
+
 </div>
   </main>
 

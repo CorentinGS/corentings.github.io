@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Memnix - Devlogs 1",
+      "category" : "",
+      "tags"     : "Memnix, Golang, PostgreSQL",
+      "url"      : "/blog/memnix-1",
+      "date"     : "2021-10-05 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "First post",
       "category" : "",
       "tags"     : "Personal",
