@@ -13,7 +13,7 @@ weight: 3
 
 I'm also known online as **Yume** or **Le Petit Prince** :rose:
 
-I'm a **student** in computering at **Université Côte d'Azur** and also a **self-taught developer** contributing to many **open-source projects** <br> I am also a chess player and a student pilot. I read a lot and am passionate about history and philosophy.
+I'm a **student** in computer science at **Université Côte d'Azur** and also a **self-taught developer** contributing to many **open-source projects** <br> I am also a chess player and a student pilot. I read a lot and am passionate about history and philosophy.
 I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://discord.gg/VBxbhsmv3y). 
 
 I am looking to contribute to any project that I can find fun and interesting !

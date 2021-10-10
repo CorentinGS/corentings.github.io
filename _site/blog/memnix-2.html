@@ -20,11 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Tags">
-  <meta property="og:description" content="Hey 👋, I'm Corentin  Welcome to my portfolio ! ">
+  <meta property="og:title" content="Memnix - Devlogs 2">
+  <meta property="og:description" content="Memnix is getting an update !">
 
-  <title>Tags</title>
-  <meta name="description" content="Hey 👋, I'm Corentin  Welcome to my portfolio ! ">
+  <title>Memnix - Devlogs 2</title>
+  <meta name="description" content="Memnix is getting an update !">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -71,63 +71,68 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <!-- Collect tags from all posts --><!-- List tags & related posts -->
+  <h1><b>Memnix - Devlogs 2</b></h1>
 
-<div class="py-3">
-  <h4 id="golang">Golang</h4>
-  <ol>
-  <a href="/blog/memnix-2"><li>Memnix - Devlogs 2</li></a>
-    <small class="text-muted"> - 10 October 2021</small>
-    <br/><a href="/blog/memnix-1"><li>Memnix - Devlogs 1</li></a>
-    <small class="text-muted"> - 05 October 2021</small>
-    <br/>
-  </ol>
-</div>
-<hr class="bg-light">
+<p class="post-metadata text-muted">
+  10 October 2021 -  
+  <b>less than 1 min read time</b>
 
-<div class="py-3">
-  <h4 id="memnix">Memnix</h4>
-  <ol>
-  <a href="/blog/memnix-2"><li>Memnix - Devlogs 2</li></a>
-    <small class="text-muted"> - 10 October 2021</small>
-    <br/><a href="/blog/memnix-1"><li>Memnix - Devlogs 1</li></a>
-    <small class="text-muted"> - 05 October 2021</small>
-    <br/>
-  </ol>
-</div>
-<hr class="bg-light">
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#memnix">
+      <span class="tag badge badge-pill text-primary border border-primary">Memnix</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#golang">
+      <span class="tag badge badge-pill text-primary border border-primary">Golang</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#postgresql">
+      <span class="tag badge badge-pill text-primary border border-primary">PostgreSQL</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#rust">
+      <span class="tag badge badge-pill text-primary border border-primary">Rust</span>
+    </a>
+    </p>
 
-<div class="py-3">
-  <h4 id="personal">Personal</h4>
-  <ol>
-  <a href="/blog/first-post"><li>First post</li></a>
-    <small class="text-muted"> - 03 October 2021</small>
-    <br/>
-  </ol>
-</div>
-<hr class="bg-light">
+<h1 id="devlogs-2">Devlogs 2</h1>
 
-<div class="py-3">
-  <h4 id="postgresql">PostgreSQL</h4>
-  <ol>
-  <a href="/blog/memnix-2"><li>Memnix - Devlogs 2</li></a>
-    <small class="text-muted"> - 10 October 2021</small>
-    <br/><a href="/blog/memnix-1"><li>Memnix - Devlogs 1</li></a>
-    <small class="text-muted"> - 05 October 2021</small>
-    <br/>
-  </ol>
-</div>
-<hr class="bg-light">
+<h2 id="1-database">1. Database</h2>
 
-<div class="py-3">
-  <h4 id="rust">Rust</h4>
-  <ol>
-  <a href="/blog/memnix-2"><li>Memnix - Devlogs 2</li></a>
-    <small class="text-muted"> - 10 October 2021</small>
-    <br/>
-  </ol>
-</div>
-<hr class="bg-light">
+<p>I made some modifications to the database!</p>
+
+<figure class="figure w-100">
+  <img src="/assets/memnix-db2.png" class="figure-img img-fluid rounded" alt="VStudio Schema" /><figcaption class="figure-caption text-center">VStudio Schema</figcaption></figure>
+
+<p>Other changes are to come, especially on the cards.</p>
+
+<h2 id="2-rest-api">2. Rest API</h2>
+
+<p>I changed a lot the REST api, especially by adding the SM-2 algorithm! An article will come soon to detail this algorithm and the changes I plan to make.</p>
+
+<p>It is now possible to retrieve the cards to study with the optimal date!</p>
+
+<h2 id="3-discord-bot">3. Discord Bot</h2>
+
+<p>I created a bot discord in Rust allowing to play on a first test deck. This allows me to have a simple implementation to try out my API as I go along, to be able to make demos and to start getting statistics</p>
+
+<figure class="figure w-100">
+  <img src="/assets/memnix-bot1.png" class="figure-img img-fluid rounded" alt="Memnix discord bot" /><figcaption class="figure-caption text-center">Memnix discord bot</figcaption></figure>
+
+<h2 id="4-metabase">4. Metabase</h2>
+
+<p>I have locally deployed metabase in order to make nice statistics! I’ll put some screenshots in the next devlogs</p>
+
+<h2 id="5-whats-next">5. What’s next</h2>
+
+<p>I need to work on the documentation of my API, comment the code, have better error handling etc… The api is currently impossible to deploy in production because of its instability!</p>
+
+<p>I will improve the model of the cards to provide my modified version of the SM-2 algorithm!  (more information in my next post)</p>
+
+<p>I’ll work on a new cinema-themed deck with the help of professionals in the industry so that I can demo Memnix on a fully featured deck.</p>
+
+
 
 </div>
   </main>

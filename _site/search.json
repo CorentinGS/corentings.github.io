@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Memnix - Devlogs 2",
+      "category" : "",
+      "tags"     : "Memnix, Golang, PostgreSQL, Rust",
+      "url"      : "/blog/memnix-2",
+      "date"     : "2021-10-10 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Memnix - Devlogs 1",
       "category" : "",
       "tags"     : "Memnix, Golang, PostgreSQL",
