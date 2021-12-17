@@ -14,7 +14,7 @@ weight: 3
 I'm also known online as **Yume** or **Le Petit Prince** :rose:
 
 I'm a **student** in computer science at **Université Côte d'Azur** and also a **self-taught developer** contributing to many **open-source projects** <br> I am also a chess player and a student pilot. I read a lot and am passionate about history and philosophy.
-I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://discord.gg/VBxbhsmv3y). 
+I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://discord.gg/VBxbhsmv3y).
 
 I am looking to contribute to any project that I can find fun and interesting !
 
@@ -24,23 +24,23 @@ I am looking to contribute to any project that I can find fun and interesting !
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
 </div>-->
 
-
 <div class="row">
 {% include about/timeline.html %}
 </div>
 
-## Tools I am using 
+## Tools I am using
 
 - **Laptop** : Gigabyte Sabre 15
 - **Distro**: ArchLinux
-- **WM**: Openbox
+- **WM**: [LeftWM](https://github.com/leftwm/leftwm)
 - **Text editor**: Emacs
 - **IDE**: VSCode & Idea
 - **Browser**: Firefox
 
-## Technologies 
+## Technologies
 
-#### Languages I like to code in 
+#### Languages I like to code in
+
 - Java
 - Rust
 - Go
@@ -48,6 +48,7 @@ I am looking to contribute to any project that I can find fun and interesting !
 - Python
 
 #### Others things I use
+
 - Docker
 - MongoDB
 - Postgresql
@@ -55,8 +56,6 @@ I am looking to contribute to any project that I can find fun and interesting !
 - Metabase
 
 #### What I am learning
+
 - Lisp
 - Apache Kafka
-- C# 
-- Game development
-
