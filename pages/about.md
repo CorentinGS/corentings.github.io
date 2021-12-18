@@ -54,6 +54,9 @@ I am looking to contribute to any project that I can find fun and interesting !
 - Postgresql
 - Git
 - Metabase
+- Qt5
+- Flutter
+- VueJS
 
 #### What I am learning
 
