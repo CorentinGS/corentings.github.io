@@ -71,7 +71,88 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  
+  <h1 id="memnix">Memnix</h1>
+
+<p>Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way.
+It is based on the spaced repetition learning system using flash cards.</p>
+
+<blockquote>
+  <p><em>A flashcard or flash card (also known as an index card) is a card bearing information on both sides, which is intended to be used as an aid in memorization. Each flashcard bears a question on one side and an answer on the other. Flashcards are often used to memorize vocabulary, historical dates, formulas or any subject matter that can be learned via a question-and-answer format. Flashcards can be virtual (part of a flashcard software), or physical.</em> (wikipedia)</p>
+</blockquote>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<p>Memnix aims to provide users with a tool that allows them to create decks and cards on various topics, to practice on them, to share them with their friends or to play on “public” decks !</p>
+
+<p>I’m working with Jira &amp; Confluence from Atlassian to handle Memnix’s roadmap.</p>
+
+<p><em>The full roadmap is still in progress…</em></p>
+
+<p>Here is a short list of my next main goals:</p>
+
+<ul>
+  <li>CDN</li>
+  <li>Card creator
+    <ul>
+      <li>Create cards</li>
+      <li>Generate cards from a json</li>
+    </ul>
+  </li>
+  <li>User Management
+    <ul>
+      <li>Profile</li>
+      <li>Friends</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="technologies">Technologies</h2>
+
+<h3 id="core">Core</h3>
+
+<p>The core of Memnix is written in Golang for now but I’m planning to change it to a microservice driven architecture.
+I’ll use Python3 for the algorithm and Deep Learning behind Memnix while Rust should handle most of the computing such as cards generation.
+I’m working on using Apache Kafka as a message broker.</p>
+
+<h3 id="android">Android</h3>
+
+<p>The first demo of the android client written in Flutter using Dart is available <a href="here on github">https://github.com/memnix/memnix-flutter</a>.</p>
+
+<p>I’m planning to rewrite it fully in Kotlin in the future but I want to focus first on the webapp. Otherwise, the old flutter version is still working and you can compile it by youserlf from sources or send me an email to get access to the beta on the Google Play.</p>
+
+<h3 id="ios">IOS</h3>
+
+<p>Well, if you buy me an Iphone and a MacBook, I’ll develop it !</p>
+
+<h3 id="web-app">Web App</h3>
+
+<p>The web app is in demo on <a href="this website">https://memnix.yumenetwork.net/</a>. You can create an account and start playing on public decks.
+It’s written in VueJS using Nuxt and Vuetify. You can find the sources on <a href="Github">https://github.com/memnix/memnix-spa</a>.</p>
+
+<h3 id="api">API</h3>
+
+<p>The API behinds Memnix is written in Golang using the amazing <a href="Fiber framework">https://memnix.yumenetwork.net/</a> and <a href="Gorm">https://gorm.io</a>. You can find the sources on <a href="Github">https://github.com/memnix/memnix-rest</a>.
+I’m using Swagger to generate the documentation, which you can find <a href="here">https://api-memnix.yumenetwork.net/swagger/index.html#/</a>.</p>
+
+<h3 id="docker">Docker</h3>
+
+<p>Everything is deployed on my VPS using Docker and traefik !</p>
+
+<h3 id="database">Database</h3>
+
+<p>I’m using PostgreSQL and MongoDB.</p>
+
+<h2 id="the-algorithm">The algorithm</h2>
+
+<p>You can find a lot of <em>Spaced Repetition Learning Algorithm</em> on the internet. I’ve been experimeting with a lot of them and decided to use SM-2 as a base and will improve it using Deep Learning.</p>
+
+<p>My main source is <a href="this amazing paper: *Learning-Algorithms from Bayesian Principles*">https://emtiyaz.github.io/papers/learning_from_bayes.pdf</a>. I’m also using posts from the <a href="subbredit /r/Anki">https://www.reddit.com/r/Anki</a>.</p>
+
+<p>Most of the algorithm is based on <em>The forgetting curve</em> developed by H. Ebbinghaus and the work done by Piotr Wozniak such as the <a href="*Exponential nature of forgetting*">https://supermemo.guru/wiki/Exponential_nature_of_forgetting#Forgetting_curve_approximations</a>.</p>
+<figure class="figure w-100">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/320px-ForgettingCurve.svg.png?1644344707790" class="figure-img img-fluid rounded" alt="The Forgetting Curve" /><figcaption class="figure-caption text-center">The Forgetting Curve</figcaption></figure>
+
+<p>This is just an overview of how I designed Memnix, I’ll soon write a more detailed post about the algorithm I’m developing.</p>
 
 </div>
   </main>
