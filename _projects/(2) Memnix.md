@@ -40,7 +40,7 @@ I'm working on using Apache Kafka as a message broker.
 
 ### Android
 
-The first demo of the android client written in Flutter using Dart is available [https://github.com/memnix/memnix-flutter](here on github).
+The first demo of the android client written in Flutter using Dart is available [here on github](https://github.com/memnix/memnix-flutter).
 
 I'm planning to rewrite it fully in Kotlin in the future but I want to focus first on the webapp. Otherwise, the old flutter version is still working and you can compile it by youserlf from sources or send me an email to get access to the beta on the Google Play.
 
@@ -50,13 +50,13 @@ Well, if you buy me an Iphone and a MacBook, I'll develop it !
 
 ### Web App
 
-The web app is in demo on [https://memnix.yumenetwork.net/](this website). You can create an account and start playing on public decks.
-It's written in VueJS using Nuxt and Vuetify. You can find the sources on [https://github.com/memnix/memnix-spa](Github).
+The web app is in demo on [this website](https://memnix.yumenetwork.net/). You can create an account and start playing on public decks.
+It's written in VueJS using Nuxt and Vuetify. You can find the sources on [Github](https://github.com/memnix/memnix-spa).
 
 ### API
 
-The API behinds Memnix is written in Golang using the amazing [https://memnix.yumenetwork.net/](Fiber framework) and [https://gorm.io](Gorm). You can find the sources on [https://github.com/memnix/memnix-rest](Github).
-I'm using Swagger to generate the documentation, which you can find [https://api-memnix.yumenetwork.net/swagger/index.html#/](here).
+The API behinds Memnix is written in Golang using the amazing [Fiber framework](https://memnix.yumenetwork.net/) and [Gorm](https://gorm.io). You can find the sources on [Github](https://github.com/memnix/memnix-rest).
+I'm using Swagger to generate the documentation, which you can find [here](https://api-memnix.yumenetwork.net/swagger/index.html#/).
 
 ### Docker
 
@@ -70,9 +70,9 @@ I'm using PostgreSQL and MongoDB.
 
 You can find a lot of *Spaced Repetition Learning Algorithm* on the internet. I've been experimeting with a lot of them and decided to use SM-2 as a base and will improve it using Deep Learning.
 
-My main source is [https://emtiyaz.github.io/papers/learning_from_bayes.pdf](this amazing paper: *Learning-Algorithms from Bayesian Principles*). I'm also using posts from the [https://www.reddit.com/r/Anki](subbredit /r/Anki).
+My main source is [this amazing paper: *Learning-Algorithms from Bayesian Principles*](https://emtiyaz.github.io/papers/learning_from_bayes.pdf). I'm also using posts from the [subbredit /r/Anki](https://www.reddit.com/r/Anki).
 
-Most of the algorithm is based on *The forgetting curve* developed by H. Ebbinghaus and the work done by Piotr Wozniak such as the [https://supermemo.guru/wiki/Exponential_nature_of_forgetting#Forgetting_curve_approximations](*Exponential nature of forgetting*).
+Most of the algorithm is based on *The forgetting curve* developed by H. Ebbinghaus and the work done by Piotr Wozniak such as the [*Exponential nature of forgetting*](https://supermemo.guru/wiki/Exponential_nature_of_forgetting#Forgetting_curve_approximations).
 {% include elements/figure.html image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ForgettingCurve.svg/320px-ForgettingCurve.svg.png?1644344707790" caption="The Forgetting Curve" %}
 
 This is just an overview of how I designed Memnix, I'll soon write a more detailed post about the algorithm I'm developing.
