@@ -1,6 +1,8 @@
 ---
 name: Memnix
 tools: [Coding, Opensource, Flashcards]
+style: fill
+color: success
 image: 
 description: Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way.
 ---
