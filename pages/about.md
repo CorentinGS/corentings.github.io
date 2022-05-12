@@ -14,9 +14,9 @@ weight: 3
 I'm also known online as **Yume** or **Le Petit Prince** :rose:
 
 I'm a **student** in computer science at **Université Côte d'Azur** and also a **self-taught developer** contributing to many **open-source projects** <br> I am also a chess player and a student pilot. I read a lot and am passionate about history and philosophy.
-I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://discord.gg/VBxbhsmv3y).
+I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://memnix.app/discord).
 
-I am looking to contribute to any project that I can find fun and interesting !
+I'm currently working hard on my project [Memnix](https://memnix.app/) but I am also looking to contribute to any project that I can find fun and interesting !
 
 <!---
 <div class="row">
@@ -31,11 +31,11 @@ I am looking to contribute to any project that I can find fun and interesting !
 ## Tools I am using
 
 - **Laptop** : Gigabyte Sabre 15
-- **Distro**: ArchLinux
+- **Distro**: Void Linux
 - **WM**: [LeftWM](https://github.com/leftwm/leftwm)
 - **Text editor**: Emacs
-- **IDE**: VSCode & Idea
-- **Browser**: Firefox
+- **IDE**: Idea
+- **Browser**: Chromium
 
 ## Technologies
 
@@ -45,10 +45,10 @@ I am looking to contribute to any project that I can find fun and interesting !
 - Rust
 - Go
 - C/C++
-- Python
 
 #### Others things I use
 
+- Python
 - Docker
 - MongoDB
 - Postgresql
@@ -57,8 +57,6 @@ I am looking to contribute to any project that I can find fun and interesting !
 - Qt5
 - Flutter
 - VueJS
-
-#### What I am learning
-
-- Lisp
-- Apache Kafka
+- Nuxt
+- TailwindCSS
+- RabbitMQ
