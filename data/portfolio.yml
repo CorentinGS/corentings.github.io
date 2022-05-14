@@ -3,16 +3,14 @@ portfolioitems:
   - title: Coding Projects
     # items within a category
     portfolioitem:
-      - name: Project 1
-        image: '/images/portfolio/code.jpg'
-        link: https://gohugo.io/
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      - name: Memnix
+        image: '/images/memnix.png'
+        link: https://memnix.app/
+        description: 'Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way.'
         tags:
-          - Tag 1
-          - Tag 2
-        status: 'Finished'
-        start: '2020'
-        end: '2021'
-        authors:
-          - Author 1
-          - Author 2
+          - Memnix
+          - Spaced repetition
+          - Active recall
+          - Fullstack
+        status: 'In Progress'
+        start: '2021'

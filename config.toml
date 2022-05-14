@@ -1,0 +1,93 @@
+baseURL = 'https://corentings.github.io/'
+languageCode = 'en'
+DefaultContentLanguage = "en"
+title = 'CorentinGS Blog'
+theme = 'anatole'
+
+reversepagetitle = true
+
+summarylength = 10
+readMore = true
+enableEmoji = true
+enableRobotsTXT = true
+
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[params]
+title = "Corentin GS"
+author = "Corentin GS"
+description = """
+        Open source enthusiast developer
+        Student in computer science at Unice, France
+        Linux user and contributor
+        aka The Little Prince
+        """
+profilePicture = "images/me.jpeg"
+keywords = "CorentinGS, Memnix, The Little Prince"
+favicon = "favicons/"
+displayMode = "dark"
+doNotLoadAnimations = true
+relatedPosts = true
+numberOfRelatedPosts = 3
+oldContentWarning = true
+oldContentDuration = 365
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe=true
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+[related]
+includeNewer = true
+threshold = 80
+toLower = true
+[[related.indices]]
+name = 'keywords'
+weight = 100
+[[related.indices]]
+name = 'tags'
+weight = 80
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://linkedin.com/corentin-giaufer-saubert-2684381b3"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "Github"
+url = "https://github.com/CorentinGS"
+
+
+[menu]
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[menu.main]]
+name = "Posts"
+weight = 200
+identifier = "posts"
+url = "/post/"
+
+[[menu.main]]
+name = "Portfolio"
+weight = 300
+identifier = "portfolio"
+url = "/portfolio/"
+
+[[menu.main]]
+name = "About"
+weight = 400
+identifier = "about"
+url = "/about/"
