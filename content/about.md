@@ -1,25 +1,50 @@
 +++
-title = "About"
+title = "Who am I ?"
 description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+date = "2022-01-01"
+aliases = ["about-us", "about-me", "contact"]
+author = "CorentinGS"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache License 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## Hi I am **Corentin GS** :wave:<br>
 
-Hugo makes use of a variety of open source projects including:
+I'm also known online as **Yume** or **Le Petit Prince** :rose:
 
-- https://github.com/yuin/goldmark
-- https://github.com/alecthomas/chroma
-- https://github.com/muesli/smartcrop
-- https://github.com/spf13/cobra
-- https://github.com/spf13/viper
+I'm a **student** in computer science at **Université Côte d'Azur** and also a **self-taught developer** contributing to many **open-source projects** <br> I am also a chess player and a student pilot. I read a lot and am passionate about history and philosophy.
+I've been a community manager for quite a long time now and you can find my new [awesome and friendly community on discord](https://memnix.app/discord).
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+I'm currently working hard on my project [Memnix](https://memnix.app/) but I am also looking to contribute to any project that I can find fun and interesting !
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+## Tools I am using
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- **Laptop** : Gigabyte Sabre 15
+- **Distro**: Void Linux
+- **WM**: [LeftWM](https://github.com/leftwm/leftwm)
+- **Text editor**: Emacs
+- **IDE**: Idea
+- **Browser**: Chromium
+
+## Technologies
+
+#### Languages I like to code in
+
+- Java
+- Rust
+- Go
+- C/C++
+
+#### Others things I use
+
+- Python
+- Docker
+- MongoDB
+- Postgresql
+- Git
+- Metabase
+- Qt5
+- Flutter
+- VueJS
+- Nuxt
+- TailwindCSS
+- RabbitMQ
