@@ -4,3 +4,4 @@
 # Design Files
 *.psd
 *.ai
+/node_modules/
