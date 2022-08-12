@@ -1,7 +1,9 @@
 <template>
-  <SectionsHero />
+  <Hero class="min-h-screen"/>
+  <About />
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: "static" });
+
+
 </script>

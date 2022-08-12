@@ -1,5 +1,5 @@
 <template>
-  <section class="hero h-screen bg-base-100">
+  <section class="hero bg-base-100">
     <div class="hero-content">
       <div
           class="flex h-full flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
@@ -10,7 +10,7 @@
             class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
         />
         <div class="flex-grow sm:pl-8">
-          <h1 class="text-2xl font-bold md:text-3xl">
+          <h1 class="text-3xl font-bold md:text-3xl">
             Hi, I'm {{ profile.full_name }}🤘
           </h1>
           <h2 class="max-w-3xl py-2 text-xl md:text-2xl">

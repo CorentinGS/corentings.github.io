@@ -29,8 +29,11 @@
 
 <script lang='ts' setup>
 
-definePageMeta({
-  layout: 'static'
+
+useHead({
+  bodyAttrs: {
+    class: 'no-scrollbar'
+  }
 })
 </script>
 

@@ -3,7 +3,7 @@
     <Body
       class="transition-colors duration-300"
     >
-      <NuxtLayout>
+      <NuxtLayout name="default" >
         <NuxtPage />
       </NuxtLayout>
     </Body>
