@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@headlessui/vue": "^1.6.7",
+    "@iconify/json": "^2.1.90",
+    "@intlify/nuxt3": "^0.2.3",
+    "@nuxtjs/tailwindcss": "^5.3.1",
+    "nuxt": "3.0.0-rc.1",
+    "sass": "1.52.3",
+    "sass-loader": "13.0.0",
+    "unplugin-icons": "0.14.8",
+    "unplugin-vue-components": "^0.22.4"
+  },
+  "dependencies": {
+    "@heroicons/vue": "1.0.6",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@tailwindcss/aspect-ratio": "0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "0.4.0",
+    "@tailwindcss/typography": "0.5.4",
+    "daisyui": "^2.22.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}
