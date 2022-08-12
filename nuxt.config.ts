@@ -5,6 +5,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   ssr: false,
+  target: 'static',
 
   modules: ['@nuxtjs/tailwindcss'],
 

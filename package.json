@@ -11,7 +11,7 @@
     "@iconify/json": "^2.1.90",
     "@intlify/nuxt3": "^0.2.3",
     "@nuxtjs/tailwindcss": "^5.3.1",
-    "nuxt": "3.0.0-rc.1",
+    "nuxt": "^3.0.0-rc.8",
     "sass": "1.52.3",
     "sass-loader": "13.0.0",
     "unplugin-icons": "0.14.8",
