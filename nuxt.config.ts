@@ -4,7 +4,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
-  ssr: true,
+  ssr: false,
 
   modules: ['@nuxtjs/tailwindcss'],
 
