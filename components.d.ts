@@ -10,7 +10,6 @@ declare module '@vue/runtime-core' {
     IconLaDiscord: typeof import('~icons/la/discord')['default']
     IconLucideChevronRight: typeof import('~icons/lucide/chevron-right')['default']
     IconLucideGithub: typeof import('~icons/lucide/github')['default']
-    IconLucideLanguages: typeof import('~icons/lucide/languages')['default']
     IconLucideLinkedin: typeof import('~icons/lucide/linkedin')['default']
     IconLucideMail: typeof import('~icons/lucide/mail')['default']
     IconLucideTwitter: typeof import('~icons/lucide/twitter')['default']
