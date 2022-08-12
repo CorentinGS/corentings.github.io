@@ -14,9 +14,9 @@
           <label for="my-drawer-3" class="drawer-overlay"></label>
           <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
             <!-- Sidebar content here -->
-            <li><a>Blog</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Resume</a></li>
+            <li><NuxtLink to="/">Blog</NuxtLink></li>
+            <li><NuxtLink to="/">Projects</NuxtLink></li>
+            <li><NuxtLink to="/">Resume</NuxtLink></li>
           </ul>
         </div>
       </div>

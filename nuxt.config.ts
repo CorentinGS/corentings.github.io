@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   ],
 
   tailwindcss: {
+    // @ts-ignore
     jit: true,
   },
 
