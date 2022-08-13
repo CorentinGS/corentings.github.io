@@ -26,7 +26,7 @@
         </h1>
       </NuxtLink>
     </div>
-    <div class="navbar-center hidden text-xl lg:flex">
+    <div class="navbar-end hidden text-xl lg:flex">
       <ul class="menu menu-horizontal p-0">
         <li>
           <NuxtLink class="hoveranimation hover:text-accent" to="/">
@@ -44,9 +44,6 @@
           </NuxtLink>
         </li>
       </ul>
-    </div>
-    <div class="navbar-end">
-      <UtilsLangSwitcher />
     </div>
   </div>
 </template>
