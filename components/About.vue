@@ -7,7 +7,7 @@
           <h3 class="mt-1 text-2xl font-bold">
             I'm a computer science student & open-source enthusiast...</h3>
           <p class="mt-4 lg:max-w-lg text-xl">
-           Hi ! I'm Corentin, a 19 years old student from Nice. I'm a computer science student, and I'm passionate about open-source. I've been contributing to open-source projects since I was a kid, and I'm currently working on a project called <NuxtLink to="https://memnix.app" target="_blank">Memnix</NuxtLink>.
+           Hi ! I'm Corentin, a 19 year old student from Nice. I'm a computer science student, and I'm passionate about open-source. I've been contributing to open-source projects since I was a kid, and I'm currently working on a project called <NuxtLink to="https://memnix.app" target="_blank">Memnix</NuxtLink>.
           </p>
         </div>
 

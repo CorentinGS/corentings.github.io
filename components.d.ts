@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     IconLaDiscord: typeof import('~icons/la/discord')['default']
+    IconLucideChevronDown: typeof import('~icons/lucide/chevron-down')['default']
     IconLucideChevronRight: typeof import('~icons/lucide/chevron-right')['default']
     IconLucideGithub: typeof import('~icons/lucide/github')['default']
     IconLucideLanguages: typeof import('~icons/lucide/languages')['default']
