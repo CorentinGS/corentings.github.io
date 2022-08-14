@@ -1,20 +1,15 @@
-import { defineNuxtConfig } from 'nuxt'
-import UnpluginComponentsVite from 'unplugin-vue-components/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import compress from 'vite-plugin-compress'
-
+import { defineNuxtConfig } from "nuxt";
+import UnpluginComponentsVite from "unplugin-vue-components/vite";
+import IconsResolver from "unplugin-icons/resolver";
 
 export default defineNuxtConfig({
-  css: ['~/assets/css/tailwind.css'],
+  css: ["~/assets/css/tailwind.css"],
   ssr: false,
-  target: 'static',
+  target: "static",
 
-  modules: ['@nuxtjs/tailwindcss',     '@nuxt/image-edge',],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image-edge"],
 
-
-  buildModules: [
-    'unplugin-icons/nuxt'
-  ],
+  buildModules: ["unplugin-icons/nuxt"],
 
   tailwindcss: {
     // @ts-ignore
@@ -24,17 +19,16 @@ export default defineNuxtConfig({
   components: true,
 
   image: {
-    staticFilename: '[name].[ext]',
+    staticFilename: "[name].[ext]",
   },
 
   vite: {
     plugins: [
-
       UnpluginComponentsVite({
         dts: true,
         resolvers: [
           IconsResolver({
-            prefix: 'Icon',
+            prefix: "Icon",
           }),
         ],
       }),
@@ -42,6 +36,6 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['@heroicons/vue', 'headlessui/vue'],
+    transpile: ["@heroicons/vue", "headlessui/vue"],
   },
-})
+});

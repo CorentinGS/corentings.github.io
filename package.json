@@ -24,12 +24,13 @@
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.4",
+    "@vueuse/core": "^9.1.0",
+    "aos": "^2.3.4",
     "daisyui": "^2.22.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "vite-plugin-compress": "^2.1.1"
   },
-
   "overrides": {
     "semver-regex": "^3.1.4",
     "nth-check": "^2.0.1",

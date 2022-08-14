@@ -8,6 +8,13 @@
   </Html>
 </template>
 
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
+
 <script lang="ts" setup>
 useHead({
   title: "Corentin GS",
