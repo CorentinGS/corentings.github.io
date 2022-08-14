@@ -3,9 +3,15 @@
     <div class="hero-content">
       <div class="flex flex-col">
         <div
-          class="flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left my-10"
+          class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
         >
-          <img
+          <nuxt-img
+            format="webp"
+            quality="80"
+            preload
+            loading="lazy"
+            width="192"
+            height="192"
             :src="profile.avatar"
             alt="avatar"
             class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
@@ -60,7 +66,9 @@
           </div>
         </div>
         <NuxtLink class="my-10">
-          <Icon-lucide-chevron-down class="mx-auto text-3xl md:text-4xl animate-bounce" />
+          <Icon-lucide-chevron-down
+            class="mx-auto animate-bounce text-3xl md:text-4xl"
+          />
         </NuxtLink>
       </div>
     </div>

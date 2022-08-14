@@ -9,11 +9,10 @@ export default defineNuxtConfig({
   ssr: false,
   target: 'static',
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss',     '@nuxt/image-edge',],
 
 
   buildModules: [
-    '@intlify/nuxt3',
     'unplugin-icons/nuxt'
   ],
 
@@ -22,21 +21,23 @@ export default defineNuxtConfig({
     jit: true,
   },
 
-  intlify: {
-    localeDir: 'locales',
-    vueI18n: {
-      availableLocales: ['en', 'fr'],
-      locale: 'en',
-      fallbackLocale: 'en',
-    },
+  nitro: {
+    minify: true,
+    serveStatic: true,
   },
+
+
   components: true,
+
+  image: {
+    domains: ["github.com"],
+  },
 
   vite: {
     plugins: [
       compress(
           {
-            exclude: ["srr-manifest.json"],
+            exclude: ["manifest.json"],
           }
       ),
       UnpluginComponentsVite({

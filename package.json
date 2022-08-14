@@ -9,7 +9,7 @@
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",
     "@iconify/json": "^2.1.90",
-    "@intlify/nuxt3": "^0.2.3",
+    "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxtjs/tailwindcss": "^5.3.1",
     "nuxt": "^3.0.0-rc.8",
     "sass": "1.52.3",
