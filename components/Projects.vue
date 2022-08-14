@@ -44,11 +44,11 @@
         >
           <IndexProject
             description="This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students."
-            image="https://awesomescreenshot.s3.amazonaws.com/image/3592170/31358446-8fa62f4a037538075e3dde385a9cb762.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20220814%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220814T123206Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=f3c20a0a33d2022abf441c627cc58854003557c2cb54a0c70232bdf67297329e"
             link="https://stouuf.net"
             name="Stouuf Website"
             reversed="true"
             stack="Tailwindcss"
+            image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/Stouuf.png?raw=true"
           />
         </TransitionChild>
       </div>
