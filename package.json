@@ -1,16 +1,20 @@
 {
   "private": true,
+  "homepage": "https://corentings.github.io/",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages -d .nuxt/dist/client"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",
     "@iconify/json": "^2.1.90",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxtjs/tailwindcss": "^5.3.1",
+    "gh-pages": "^4.0.0",
     "nuxt": "^3.0.0-rc.8",
     "sass": "1.52.3",
     "sass-loader": "13.0.0",
