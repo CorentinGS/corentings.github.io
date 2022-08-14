@@ -11,9 +11,6 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss'],
 
-  meta: [
-
-  ],
 
   buildModules: [
     '@intlify/nuxt3',
@@ -37,7 +34,11 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [
-      compress(),
+      compress(
+          {
+            exclude: ["srr-manifest.json"],
+          }
+      ),
       UnpluginComponentsVite({
         dts: true,
         resolvers: [
