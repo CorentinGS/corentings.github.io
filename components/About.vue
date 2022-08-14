@@ -17,7 +17,7 @@
               I'm a computer science student & open-source enthusiast...
             </h3>
             <p class="mt-4 text-xl lg:max-w-lg">
-              Hi ! I'm Corentin, a 19 year old student from Nice. I'm a computer
+              Hi ! I'm Corentin, a 19 years old student from Nice. I'm a computer
               science student, and I'm passionate about open-source. I've been
               contributing to open-source projects since I was a kid, and I'm
               currently working on a project called
