@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "_nuxt/entry.3eec690f.mjs",
+    "file": "_nuxt/entry.303e87d5.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -13,7 +13,7 @@
     ]
   },
   "virtual:nuxt:/media/stock/Coding/CorentinBlog/corentings.github.io/.nuxt/error-component.mjs": {
-    "file": "_nuxt/error-component.d94a0cf0.mjs",
+    "file": "_nuxt/error-component.0994c0b4.mjs",
     "src": "virtual:nuxt:/media/stock/Coding/CorentinBlog/corentings.github.io/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -25,31 +25,31 @@
     ]
   },
   "pages/index.vue": {
-    "file": "_nuxt/index.dfbbd499.mjs",
+    "file": "_nuxt/index.0721629d.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_mail.8c653a93.mjs"
+      "_mail.227d40eb.mjs"
     ]
   },
-  "_mail.8c653a93.mjs": {
-    "file": "_nuxt/mail.8c653a93.mjs",
+  "_mail.227d40eb.mjs": {
+    "file": "_nuxt/mail.227d40eb.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "_nuxt/default.193e56de.mjs",
+    "file": "_nuxt/default.eb548f92.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_mail.8c653a93.mjs"
+      "_mail.227d40eb.mjs"
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "_nuxt/error-404.d1ed9ab3.mjs",
+    "file": "_nuxt/error-404.6f8f26f2.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -60,7 +60,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "_nuxt/error-500.46342f56.mjs",
+    "file": "_nuxt/error-500.54b1b838.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
