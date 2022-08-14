@@ -26,6 +26,7 @@
     "@tailwindcss/typography": "0.5.4",
     "daisyui": "^2.22.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.13"
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "vite-plugin-compress": "^2.1.1"
   }
 }

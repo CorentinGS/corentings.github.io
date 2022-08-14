@@ -1,6 +1,8 @@
 import { defineNuxtConfig } from 'nuxt'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import compress from 'vite-plugin-compress'
+
 
 export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
@@ -8,6 +10,10 @@ export default defineNuxtConfig({
   target: 'static',
 
   modules: ['@nuxtjs/tailwindcss'],
+
+  meta: [
+
+  ],
 
   buildModules: [
     '@intlify/nuxt3',
@@ -31,6 +37,7 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [
+      compress(),
       UnpluginComponentsVite({
         dts: true,
         resolvers: [
