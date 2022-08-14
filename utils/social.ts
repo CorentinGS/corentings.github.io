@@ -21,5 +21,5 @@ export class Profile {
     static readonly title = 'Computer Science student at Unice.';
     static readonly location = 'Nice, France';
     static readonly email = 'c.giaufer--saubert@outlook.com';
-    static readonly avatar = '/img/avatar.webp';
+    static readonly avatar = '/img/avatar.png';
 }
