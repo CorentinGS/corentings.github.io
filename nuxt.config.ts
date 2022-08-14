@@ -21,25 +21,11 @@ export default defineNuxtConfig({
     jit: true,
   },
 
-  nitro: {
-    minify: true,
-    serveStatic: true,
-  },
-
-
   components: true,
-
-  image: {
-    domains: ["github.com"],
-  },
 
   vite: {
     plugins: [
-      compress(
-          {
-            exclude: ["manifest.json"],
-          }
-      ),
+
       UnpluginComponentsVite({
         dts: true,
         resolvers: [
