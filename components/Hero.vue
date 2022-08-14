@@ -5,11 +5,7 @@
         <div
           class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
         >
-          <nuxt-img
-            format="webp"
-            quality="80"
-            preload
-            loading="lazy"
+          <img
             width="192"
             height="192"
             :src="profile.avatar"
