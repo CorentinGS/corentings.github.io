@@ -11,12 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { LanguageManager } from '~/utils/lang'
-
-onMounted(() => {
-})
-
-const languageManager = LanguageManager()
 
 useHead({
   title: 'Corentin GS',
