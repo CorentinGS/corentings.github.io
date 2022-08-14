@@ -23,6 +23,10 @@ export default defineNuxtConfig({
 
   components: true,
 
+  image: {
+    staticFilename: '[name].[ext]',
+  },
+
   vite: {
     plugins: [
 
