@@ -28,6 +28,7 @@
               :start_date="card.start_date"
               :type="card.type"
               :tools="card.tools"
+              :right="index % 2 !== 0"
             />
           </IndexTimeline>
         </div>
