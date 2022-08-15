@@ -23,7 +23,7 @@ export class Profile {
   static readonly title = "Computer Science student at Unice.";
   static readonly location = "Nice, France";
   static readonly email = "c.giaufersaubert@outlook.com";
-  static readonly avatar = "/img/avatar.png";
+  static readonly avatar = "/img/avatar.webp";
 }
 
 export class Experiences {
