@@ -1,16 +1,19 @@
 <template>
   <TransitionChild
-    class="hoveranimation order-1 w-10/12 transform-gpu rounded-lg border-l-[6px] bg-base-200 px-6 py-4 shadow-xl hover:skew-y-2 hover:skew-x-2 hover:shadow-2xl md:w-5/12"
-    :class="
+      :class="
+      right? 'border-l-[6px]': 'border-r-[6px]',
       type === TimelineCardType.School
         ? 'border-primary'
         : type === TimelineCardType.Work
         ? 'border-secondary'
+        : type === TimelineCardType.Course
+        ? 'border-success'
         : 'border-accent'
     "
-    enter="transition transform duration-[1500ms] ease-in-out transform-gpu"
-    enter-from="opacity-0 scale-50 rotate-12 skew-y-12 skew-x-12"
-    enter-to="opacity-100 scale-100 rotate-0 skew-y-0 skew-x-0"
+      class="hoveranimation order-1 w-10/12 transform-gpu rounded-lg  bg-base-200 px-6 py-4 shadow-xl hover:skew-y-2 hover:skew-x-2 hover:shadow-2xl md:w-5/12"
+      enter="transition transform duration-[1500ms] ease-in-out transform-gpu"
+      enter-from="opacity-0 scale-50 rotate-12 skew-y-12 skew-x-12"
+      enter-to="opacity-100 scale-100 rotate-0 skew-y-0 skew-x-0"
   >
     <div class="justify-between sm:flex">
       <div>
@@ -22,23 +25,29 @@
           <p v-else>Since {{ start_date }}</p>
           <p v-if="location !== null">・{{ location }}</p>
         </div>
-        <div class="mb-2 flex" v-if="tools != null">
+        <div v-if="tools != null" class="mb-2 flex">
           <p class="text-xs font-medium uppercase md:text-sm">Skills</p>
-          <Icon-lucide-chevron-right />
+          <Icon-lucide-chevron-right/>
           <p class="text-xs font-medium md:text-sm">{{ tools }}</p>
         </div>
       </div>
 
-      <NuxtLink :to="link" class="ml-3 hidden flex-shrink-0 sm:block" v-if="image !== null">
+      <NuxtLink
+          v-if="image !== null"
+          :to="link"
+          class="ml-3 hidden flex-shrink-0 sm:block"
+          rel="noopener noreferrer"
+          target="_blank"
+      >
         <nuxt-img
-          :alt="name"
-          :src="image"
-          class="h-16 w-16 rounded-lg object-cover shadow-sm"
-          format="webp"
-          height="64"
-          width="64"
-          loading="lazy"
-          quality="80"
+            :alt="name"
+            :src="image"
+            class="h-16 w-16 rounded-lg object-cover shadow-sm"
+            format="webp"
+            height="64"
+            loading="lazy"
+            quality="80"
+            width="64"
         />
       </NuxtLink>
     </div>
@@ -49,9 +58,9 @@
 </template>
 
 <script lang="ts" setup>
-import { TimelineCardType } from "~/utils/types";
-import { PropType } from "@vue/runtime-core";
-import { TransitionChild } from "@headlessui/vue";
+import {TimelineCardType} from "~/utils/types";
+import {PropType} from "@vue/runtime-core";
+import {TransitionChild} from "@headlessui/vue";
 
 const props = defineProps({
   name: {
@@ -96,6 +105,12 @@ const props = defineProps({
     required: false,
     default: null,
   },
+  right: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+
 });
 </script>
 
