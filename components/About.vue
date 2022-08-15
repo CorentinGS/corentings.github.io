@@ -1,5 +1,5 @@
 <template>
-  <section ref="target" class="bg-base-200" id="about">
+  <section ref="target" class="bg-base-200">
     <TransitionRoot
       :show="showTransition"
       appear
@@ -49,7 +49,6 @@ import { useIntersectionObserver } from "@vueuse/core";
 import { TransitionRoot } from "@headlessui/vue";
 
 let showTransition = ref(false);
-
 const target = ref(null);
 
 const { stop } = useIntersectionObserver(

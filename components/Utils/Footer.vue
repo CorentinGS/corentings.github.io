@@ -47,9 +47,9 @@
 
 <script lang='ts' setup>
 
-import {Profile, Social} from "~/utils/social";
+import {Profile, Config} from "~/utils/config";
 
-const social = Social
+const social = Config
 const profile = Profile
 
 </script>

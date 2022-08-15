@@ -1,4 +1,6 @@
-export class Social {
+import {TimelineCardList, TimelineCardType} from "~/utils/types";
+
+export class Config {
     static readonly twitter = '';
     static readonly facebook = '';
     static readonly instagram = '';
@@ -22,4 +24,31 @@ export class Profile {
     static readonly location = 'Nice, France';
     static readonly email = 'c.giaufersaubert@outlook.com';
     static readonly avatar = '/img/avatar.png';
+}
+
+export class Experiences {
+    private static readonly _experiences: TimelineCardList = [
+        {
+            type: TimelineCardType.School,
+            description: "Student at unice",
+            link: "https://unice.fr",
+            image: "https://www.hyperui.dev/photos/man-5.jpeg",
+            name: "Student at unice",
+            start_date: "2021",
+            location: "Nice, France",
+        },
+        {
+            type: TimelineCardType.School,
+            description: "Student at unice",
+            image: "https://www.hyperui.dev/photos/man-5.jpeg",
+            name: "Student at unice",
+            start_date: "2021",
+            end_date: "2022",
+        },
+    ]
+
+    static get experiences(): TimelineCardList {
+        return this._experiences;
+    }
+
 }

@@ -3,7 +3,7 @@
     <TransitionRoot
       :show="showTransition"
       appear
-      enter="transition transform duration-[650ms] ease-in-out "
+      enter="transition transform duration-[650ms] ease-in-out"
       enter-from="opacity-0 scale-50 -translate-x-full"
       enter-to="opacity-100 scale-100 translate-x-0"
     >

@@ -45,7 +45,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            >Resume
+            Resume
           </NuxtLink>
         </li>
       </ul>
@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Profile } from "~/utils/social";
+import { Profile } from "~/utils/config";
 
 const profile = Profile;
 </script>
