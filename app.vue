@@ -8,7 +8,6 @@
   </Html>
 </template>
 
-
 <script lang="ts" setup>
 useHead({
   title: "Corentin GS",
@@ -49,6 +48,10 @@ useHead({
         "https://github.com/CorentinGS/CorentinGS/blob/main/Banner-metatags.png?raw=true",
     },
     { name: "twitter:url", content: "https://corentings.github.io" },
+    {
+      name: "google-site-verification",
+      content: "LGAhLuUen1YBXg92Vx7BpIn4tWNw3btL8k8htkHko4U",
+    },
   ],
   link: [
     {
