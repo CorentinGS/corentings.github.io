@@ -2,7 +2,8 @@ export enum TimelineCardType {
   School = 0,
   Work = 1,
   Personal = 2,
-  Other = 3,
+  Course = 3,
+  Other = 4,
 }
 
 export interface TimelineCard {
@@ -11,15 +12,11 @@ export interface TimelineCard {
   type: TimelineCardType;
   start_date: string;
   end_date?: string;
-  image: string;
+  image?: string;
   link?: string;
   location?: string;
+  tools?: string;
 }
 
 export interface TimelineCardList extends Array<TimelineCard> {}
 
-export const TimelineCardColors = {
-  [TimelineCardType.School]: "primary",
-  [TimelineCardType.Work]: "secondary",
-  [TimelineCardType.Other]: "accent",
-};

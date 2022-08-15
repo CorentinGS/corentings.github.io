@@ -21,7 +21,7 @@
             />
             <div class="flex-grow sm:pl-8">
               <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
-                Hi, I'm {{ profile.full_name }}🤘
+                Hi, I'm {{ profile.full_name }}
               </h1>
               <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
                 {{ profile.title }}

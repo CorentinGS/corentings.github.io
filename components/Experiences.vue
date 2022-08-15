@@ -27,6 +27,7 @@
               :name="card.name"
               :start_date="card.start_date"
               :type="card.type"
+              :tools="card.tools"
             />
           </IndexTimeline>
         </div>
