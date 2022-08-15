@@ -39,7 +39,12 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink class="hoveranimation hover:text-accent" to="/"
+          <NuxtLink
+            class="hoveranimation hover:text-accent"
+            to="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             >Resume
           </NuxtLink>
         </li>
