@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     IconLogosRust: typeof import('~icons/logos/rust')['default']
     IconLogosTailwindcssIcon: typeof import('~icons/logos/tailwindcss-icon')['default']
     IconLogosVoid: typeof import('~icons/logos/void')['default']
+    IconLucideArrowLeft: typeof import('~icons/lucide/arrow-left')['default']
     IconLucideChevronDown: typeof import('~icons/lucide/chevron-down')['default']
     IconLucideChevronRight: typeof import('~icons/lucide/chevron-right')['default']
     IconLucideGithub: typeof import('~icons/lucide/github')['default']

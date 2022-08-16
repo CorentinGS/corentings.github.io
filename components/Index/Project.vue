@@ -28,7 +28,7 @@
       <p class="text mt-5 text-lg md:text-left">{{ description }}</p>
       <div class="flex">
         <NuxtLink :to="link" class="flex text-secondary hover:text-primary">
-          <span>Read more</span>
+          <span>Learn more</span>
         </NuxtLink>
       </div>
     </div>

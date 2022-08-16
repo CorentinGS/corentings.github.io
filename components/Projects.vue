@@ -18,7 +18,7 @@
             description="Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way. It's using its own spaced repetition system to allows students to create and share their learning materials.
        "
             image="https://github.com/memnix/memnix/blob/main/assets/images/moutmout.png?raw=true"
-            link="/projects/memnix"
+            link="https://memnix.app"
             name="Memnix"
             reversed="true"
             stack="Vue.js・Golang・PostgreSQL・MongoDB"

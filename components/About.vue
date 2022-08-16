@@ -17,14 +17,18 @@
               I'm a computer science student & open-source enthusiast...
             </h3>
             <p class="mt-4 text-xl lg:max-w-lg">
-              Hi ! I'm Corentin, a 19 years old student from Nice. I'm a computer
-              science student, and I'm passionate about open-source. I've been
-              contributing to open-source projects since I was a kid, and I'm
-              currently working on a project called
-              <NuxtLink target="_blank" to="https://memnix.app"
-                >Memnix
+              Hi ! I'm Corentin, a 19 years old student from Nice. I'm studying
+              computer science at the university of Nice Côte d'Azur, France.
+              I'm a passionate open-source enthusiast and have been contributing
+              to several projects for the past few years including Linux
+              distributions, discord bots, and more. I've also been working on
+              my own project called
+              <NuxtLink
+                target="_blank"
+                to="https://memnix.app"
+                class="underline decoration-secondary decoration-2 hover:decoration-primary"
+                >Memnix.
               </NuxtLink>
-              .
             </p>
           </div>
 

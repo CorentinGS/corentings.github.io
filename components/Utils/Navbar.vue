@@ -29,14 +29,9 @@
     <div class="navbar-end hidden text-xl lg:flex">
       <ul class="menu menu-horizontal p-0">
         <li>
-          <NuxtLink class="hoveranimation hover:text-accent" to="/">
+          <a class="hoveranimation hover:text-accent" href="/blog">
             Blog
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink class="hoveranimation hover:text-accent" to="/"
-            >Projects
-          </NuxtLink>
+          </a>
         </li>
         <li>
           <NuxtLink

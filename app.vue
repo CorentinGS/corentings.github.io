@@ -10,13 +10,10 @@
 
 <script lang="ts" setup>
 useHead({
-  title: "Corentin GS",
+  title: "Corentin Giaufer Saubert - Computer Science Student",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  charset: "utf-8",
   meta: [
-    {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1.0",
-    },
-    { name: "title", content: "CorentinGS - Computer Science Student" },
     {
       name: "description",
       content:
@@ -32,9 +29,9 @@ useHead({
     {
       name: "og:image",
       content:
-        "https://github.com/CorentinGS/CorentinGS/blob/main/Banner-metatags.png?raw=true",
+        "https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png",
     },
-    { name: "og:url", content: "https://corentings.github.io" },
+    { name: "og:url", content: "https://corentings.vercel.app" },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "CorentinGS - Computer Science Student" },
     {
@@ -45,9 +42,9 @@ useHead({
     {
       name: "twitter:image",
       content:
-        "https://github.com/CorentinGS/CorentinGS/blob/main/Banner-metatags.png?raw=true",
+        "https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png",
     },
-    { name: "twitter:url", content: "https://corentings.github.io" },
+    { name: "twitter:url", content: "https://corentings.vercel.app" },
   ],
   link: [
     {
