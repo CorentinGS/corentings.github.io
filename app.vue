@@ -11,9 +11,12 @@
 <script lang="ts" setup>
 useHead({
   title: "Corentin Giaufer Saubert - Computer Science Student",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   charset: "utf-8",
   meta: [
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
     {
       name: "description",
       content:
