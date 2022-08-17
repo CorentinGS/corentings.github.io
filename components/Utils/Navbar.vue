@@ -28,10 +28,11 @@
     </div>
     <div class="navbar-end hidden text-xl lg:flex">
       <ul class="menu menu-horizontal p-0">
+        <li class="px-3">
+          <UtilsThemeSwitcher />
+        </li>
         <li>
-          <a class="hoveranimation hover:text-accent" href="/blog">
-            Blog
-          </a>
+          <a class="hoveranimation hover:text-accent" href="/blog"> Blog </a>
         </li>
         <li>
           <NuxtLink

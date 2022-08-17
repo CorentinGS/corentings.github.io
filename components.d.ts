@@ -26,6 +26,8 @@ declare module '@vue/runtime-core' {
     IconLucideGithub: typeof import('~icons/lucide/github')['default']
     IconLucideLinkedin: typeof import('~icons/lucide/linkedin')['default']
     IconLucideMail: typeof import('~icons/lucide/mail')['default']
+    IconLucideMoon: typeof import('~icons/lucide/moon')['default']
+    IconLucideSun: typeof import('~icons/lucide/sun')['default']
     IconLucideTwitter: typeof import('~icons/lucide/twitter')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
