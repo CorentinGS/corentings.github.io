@@ -9,7 +9,7 @@
       </NuxtLink>
     </div>
     <div
-      class="relative mx-auto mb-4 w-full max-w-screen-md md:mb-0"
+      class="relative mx-auto mb-4 w-full max-w-screen-lg md:mb-0"
       :class="blogPost.dark_background===true? 'text-white': ''"
       style="height: 24em"
     >
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div
-      class="mx-auto mt-12 max-w-screen-md px-4 text-lg leading-relaxed lg:px-0"
+      class="mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0"
     >
       <slot></slot>
     </div>

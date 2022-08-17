@@ -20,7 +20,7 @@
             image="https://github.com/memnix/memnix/blob/main/assets/images/moutmout.png?raw=true"
             link="https://memnix.app"
             name="Memnix"
-            reversed="true"
+            :reversed="true"
             stack="Vue.js・Golang・PostgreSQL・MongoDB"
           />
         </TransitionChild>
@@ -46,7 +46,7 @@
             description="This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students."
             link="https://stouuf.net"
             name="Stouuf Website"
-            reversed="true"
+            :reversed="true"
             stack="Tailwindcss"
             image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/Stouuf.png?raw=true"
           />
