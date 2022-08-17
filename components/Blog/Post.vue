@@ -24,7 +24,6 @@
       />
       <div class="absolute bottom-0 left-0 z-20 p-4">
         <span
-          to=""
           class="badge badge-secondary mb-2 inline-flex items-center justify-center px-4 py-1 uppercase"
           >{{ blogPost.category }}</span
         >
