@@ -10,7 +10,7 @@
         ? 'border-success'
         : 'border-accent'
     "
-      class="hoveranimation order-1 w-10/12 transform-gpu rounded-lg  bg-base-200 px-6 py-4 shadow-xl hover:skew-y-2 hover:skew-x-2 hover:shadow-2xl md:w-5/12"
+      class="hoveranimation order-1 w-10/12 transform-gpu rounded-lg bg-base-200 px-6 py-4 shadow-xl hover:skew-y-2 hover:skew-x-2 hover:shadow-2xl md:w-5/12"
       enter="transition transform duration-[1500ms] ease-in-out transform-gpu"
       enter-from="opacity-0 scale-50 rotate-12 skew-y-12 skew-x-12"
       enter-to="opacity-100 scale-100 rotate-0 skew-y-0 skew-x-0"
