@@ -18,6 +18,7 @@
         <nuxt-img
           class="mr-3 h-8 w-8 rounded-full object-cover"
           :src="blogPost.author.avatar"
+          :alt="blogPost.author.name"
           format="webp"
           height="32"
           loading="lazy"

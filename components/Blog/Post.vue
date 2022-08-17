@@ -16,6 +16,7 @@
       <nuxt-img
         :src="blogPost.image"
         class="absolute left-0 top-0 z-0 h-full w-full object-cover"
+        :alt="blogPost.title"
         width="100%"
         height="100%"
         format="webp"
@@ -33,6 +34,10 @@
         <div class="mt-3 flex">
           <nuxt-img
             :src="blogPost.author.avatar"
+            format="webp"
+            loading="lazy"
+            quality="80"
+            :alt="blogPost.author.name"
             class="mr-2 h-10 w-10 rounded-full object-cover"
           />
           <div>

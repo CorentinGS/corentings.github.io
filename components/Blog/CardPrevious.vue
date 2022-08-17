@@ -8,6 +8,7 @@
       format="webp"
       loading="lazy"
       quality="80"
+      :alt="blogPost.title"
     />
 
     <div class="w-3/5 pl-3">
@@ -24,6 +25,7 @@
         <nuxt-img
           class="mr-3 h-10 w-10 rounded-full"
           :src="blogPost.author.avatar"
+          :alt="blogPost.author.name"
         />
         <div class="flex flex-col">
           <span>{{ blogPost.author.name }}</span>
