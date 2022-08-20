@@ -2,12 +2,12 @@
   <div id="app-layout">
     <main>
       <div class="drawer">
-        <input id="my-drawer-3" class="drawer-toggle" type="checkbox"/>
+        <input id="my-drawer-3" class="drawer-toggle" type="checkbox" />
         <div class="drawer-content flex flex-col">
           <!-- Navbar -->
-          <UtilsNavbar/>
+          <UtilsNavbar />
           <!-- Page Slot -->
-          <slot/>
+          <slot />
         </div>
 
         <div class="drawer-side">
@@ -15,23 +15,22 @@
           <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
             <!-- Sidebar content here -->
             <li>
-              <a href="/blog">Blog</a>
+              <NuxtLink to="/blog">Blog</NuxtLink>
             </li>
             <li>
               <NuxtLink
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  to="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
-              >Resume
-              </NuxtLink
-              >
+                rel="noopener noreferrer"
+                target="_blank"
+                to="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
+                >Resume
+              </NuxtLink>
             </li>
           </ul>
         </div>
       </div>
     </main>
     <footer>
-      <UtilsFooter/>
+      <UtilsFooter />
     </footer>
   </div>
 </template>

@@ -32,7 +32,7 @@
           <UtilsThemeSwitcher />
         </li>
         <li>
-          <a class="hoveranimation hover:text-accent" href="/blog"> Blog </a>
+          <NuxtLink class="hoveranimation hover:text-accent" to="/blog"> Blog </NuxtLink>
         </li>
         <li>
           <NuxtLink

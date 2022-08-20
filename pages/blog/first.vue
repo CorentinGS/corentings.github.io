@@ -1,10 +1,12 @@
 <template>
+  <div>
   <BlogPost :blogPost="blogPost">
     <h3 class="pb-6 text-2xl">
       Here is a simple first post to showcase my blog !
     </h3>
     <p class="pb-6">Stay tuned to the next posts...</p>
   </BlogPost>
+  </div>
 </template>
 
 <script setup lang="ts">
