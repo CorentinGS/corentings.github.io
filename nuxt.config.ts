@@ -4,12 +4,11 @@ import IconsResolver from "unplugin-icons/resolver";
 
 export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
-  ssr: false,
   target: "static",
 
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image-edge"],
 
-  buildModules: ["unplugin-icons/nuxt"],
+  buildModules: ["unplugin-icons/nuxt" ],
 
   tailwindcss: {
     // @ts-ignore
@@ -35,7 +34,13 @@ export default defineNuxtConfig({
     ],
   },
 
+  nitro: {
+    prerender: {
+      routes: ["/", "/blog"],
+    }
+  },
+
   build: {
-    transpile: ["@heroicons/vue", "headlessui/vue"],
+    transpile: ["@heroicons/vue", "@headlessui/vue"],
   },
 });
