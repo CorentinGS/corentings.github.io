@@ -15,12 +15,12 @@
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxtjs/tailwindcss": "^5.3.1",
     "gh-pages": "^4.0.0",
-    "nuxt": "^3.0.0-rc.8",
+    "nuxt": "^3.0.0-rc.10",
     "sass": "1.52.3",
     "sass-loader": "13.0.0",
+    "theme-change": "^2.2.0",
     "unplugin-icons": "0.14.8",
-    "unplugin-vue-components": "^0.22.4",
-    "theme-change": "^2.2.0"
+    "unplugin-vue-components": "^0.22.4"
   },
   "dependencies": {
     "@heroicons/vue": "1.0.6",
