@@ -44,9 +44,9 @@
             enter-to="opacity-100 scale-100 translate-x-0"
         >
           <IndexProject
-              description="A simple project to help UCA students to have a better view of their schedule and to be able to export it to their calendar."
+              description="A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar."
               link="https://github.com/CorentinGS/uca-edt"
-              name="UCA Edt"
+              name="Uca Edt"
               :reversed="true"
               stack="Go・Mongo・Docker"
               image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/edt-uca.png?raw=true"
