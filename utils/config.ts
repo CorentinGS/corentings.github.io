@@ -1,7 +1,7 @@
 import { TimelineCardList, TimelineCardType } from "~/utils/types";
 
 export class Config {
-  static readonly twitter = "";
+  static readonly twitter = "GSCorentinDev";
   static readonly facebook = "";
   static readonly instagram = "";
   static readonly youtube = "";
