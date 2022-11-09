@@ -88,7 +88,7 @@
               <IndexSkill link="https://kotlinlang.org/" name="Kotlin">
                 <div class="indicator">
                   <span class="indicator-item indicator-bottom indicator-start">
-                    <Icon-Ic-Baseline-School class="h-7 w-7 text-secondary motion-safe:animate-pulse"/>
+                    <Icon-Ic-Baseline-School class="h-8 w-8 text-secondary motion-safe:animate-pulse"/>
                   </span>
                 <Icon-logos-kotlin-icon class="h-15 w-15 md:h-20 md:w-20"/>
                   </div>
