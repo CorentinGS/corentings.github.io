@@ -25,6 +25,34 @@
           />
         </TransitionChild>
         <TransitionChild
+            enter="transition transform duration-[2000ms] ease-in-out "
+            enter-from="opacity-0 scale-50 -translate-x-full"
+            enter-to="opacity-100 scale-100 translate-x-0"
+        >
+          <IndexProject
+              description="Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s."
+              link="https://github.com/corentings/gauntlet-reborn"
+              name="Gauntlet Reborn"
+              :reversed="false"
+              stack="C・SDL2"
+              image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/gauntlet.png?raw=true"
+          />
+        </TransitionChild>
+        <TransitionChild
+            enter="transition transform duration-[2000ms] ease-in-out "
+            enter-from="opacity-0 scale-50 -translate-x-full"
+            enter-to="opacity-100 scale-100 translate-x-0"
+        >
+          <IndexProject
+              description="A simple project to help UCA students to have a better view of their schedule and to be able to export it to their calendar."
+              link="https://github.com/CorentinGS/uca-edt"
+              name="UCA Edt"
+              :reversed="true"
+              stack="Go・Mongo・Docker"
+              image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/edt-uca.png?raw=true"
+          />
+        </TransitionChild>
+        <TransitionChild
           enter="transition transform duration-[1500ms] ease-in-out "
           enter-from="opacity-0 scale-50 translate-x-full"
           enter-to="opacity-100 scale-100 translate-x-0"
@@ -35,6 +63,7 @@
             link="https://github.com/CorentinGS/Kitsu"
             name="Kitsu"
             stack="PostgreSQL・Golang・Rust"
+            :reversed="false"
           />
         </TransitionChild>
         <TransitionChild
@@ -65,6 +94,7 @@
               image="https://github.com/CorentinGS/corentings.github.io/blob/main/public/img/en.png?raw=true"
           />
         </TransitionChild>
+
       </div>
     </TransitionRoot>
   </section>
