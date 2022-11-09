@@ -152,6 +152,32 @@ useHead({
       name: "description",
       content: "How to deploy an optimized Go application with Docker",
     },
+    { name: "og:type", content: "website" },
+    { name: "og:title", content: "CorentinGS - Computer Science Student" },
+    {
+      name: "og:description",
+      content:
+          "Corentin Giaufer Saubert - How to deploy an optimized Go application with Docker",
+    },
+    {
+      name: "og:image",
+      content:
+          "https://images.unsplash.com/photo-1646627927863-19874c27316b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80",
+    },
+    { name: "og:url", content: "https://corentings.vercel.app/blog/docker-and-go" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "CorentinGS - Computer Science Student" },
+    {
+      name: "twitter:description",
+      content:
+          "Corentin Giaufer Saubert - How to deploy an optimized Go application with Docker",
+    },
+    {
+      name: "twitter:image",
+      content:
+          "https://images.unsplash.com/photo-1646627927863-19874c27316b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80",
+    },
+    { name: "twitter:url", content: "https://corentings.vercel.app/blog/docker-and-go" },
   ],
 });
 </script>
