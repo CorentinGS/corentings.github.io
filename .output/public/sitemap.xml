@@ -16,6 +16,9 @@
     <url>
         <loc>https://corentings.vercel.app/blog/first</loc>
     </url>
+    <url>
+        <loc>https://corentings.vercel.app/blog/docker-and-go</loc>
+    </url>
 
 
 </urlset>
