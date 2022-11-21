@@ -1,0 +1,146 @@
+---
+layout: "../../layouts/BlogPostLayout.astro"
+title: "How to optimize a Go deployment with Docker "
+description: "Learn how to optimize a Go deployment with Docker."
+pubDate: "November 09, 2022"
+link: "/blog/docker-and-go"
+---
+
+import { Image } from '@astrojs/image/components';
+
+
+## How to optimize a Go deployment with Docker ?
+<br></br>
+
+In this article, I will present the different steps that led me to optimize the deployment of services in **golang**
+using **docker**.
+<br></br>
+
+## A simple Dockerfile
+<br></br>
+
+When I started Go and deployed a rest api service for my Memnix application, I used a very simple Dockerfile
+that I had found on the internet.
+<br></br>
+
+```dockerfile
+FROM golang:1.19
+RUN mkdir -p /go/src/myapp
+WORKDIR /go/src/myapp
+COPY . /go/src/myapp
+
+RUN go get -d -v
+RUN go install -v
+
+EXPOSE 8080
+CMD ["/go/bin/myapp"]
+```
+<br></br>
+
+The problem is that I ended up with a 2GB image while my project compiled locally without docker and optimized was only 10MB! So I decided to try to optimize the size of my Docker image as much as possible.
+<br></br>
+
+## The first step: using a multi-stage build
+<br></br>
+
+It is possible to separate our Dockerfile in several parts and to use several images:
+
+- One image to build the project
+- A minimalist image to deploy it
+<br></br>
+
+This method allows us not to keep the sources and all the development tools provided with the golang image.
+Thus, we only keep the binaries.
+I decided to use the **golang:1.19-alpine** image as the **builder**.
+<br></br>
+
+```dockerfile
+FROM golang:1.19-alpine as builder
+
+LABEL stage=gobuilder
+ENV CGO_ENABLED=0
+ENV GOOS linux
+WORKDIR /build
+
+COPY go.mod go.sum .
+RUN go mod download
+
+COPY . .
+RUN go get -d -v
+RUN go build -o /app/myapp .
+```
+<br></br>
+
+This first part of the Dockerfile allows us to copy the sources, to synchronize the packages and to launch the command go build to generate the binary.
+Once the build is finished, we use a minimalist alpine image that will be used for deployment. We just need to copy the binary from our builder and run it.
+<br></br>
+
+```dockerfile
+FROM alpine:latest
+
+WORKDIR /app
+
+COPY --from=builder /app/myapp .
+
+EXPOSE 8080
+
+CMD ["/app/myapp"]
+```
+<br></br>
+
+After testing this new Dockerfile, the final image was 34MB. It's far from the original 10MB but it's still much better than 2GB.
+<br></br>
+
+## Improve the build process
+<br></br>
+
+It is possible in Golang to add flags to the build command in order to slightly optimize the binary size.
+After a little research on internet, I discovered the existence of "-s -w" flags. After testing them locally, I noticed an improvement of a few MB so I decided to add them to my Dockerfile.
+I also discovered <a href="https://upx.github.io/" class="font-bold underline text-accent">Upx</a> which is a small program that allows to compress binary files to reduce their size.
+I tested this little software in a terminal and I noticed an improvement of almost <b>50%</b> on the size of the Memnix api. So I also added this step to my Dockerfile.
+<br></br>
+
+```dockerfile
+FROM golang:1.19-alpine as builder
+
+LABEL stage=gobuilder
+ENV CGO_ENABLED=0
+ENV GOOS linux
+RUN apk update --no-cache && apk add upx
+WORKDIR /build
+
+COPY go.mod go.sum .
+RUN go mod download
+
+COPY . .
+RUN go get -d -v
+RUN go build -ldflags="-s -w"  -o /app/myapp .
+RUN upx /app/myapp
+
+FROM alpine:3.14
+
+WORKDIR /app
+
+COPY --from=builder /app/myapp .
+
+EXPOSE 8080
+
+CMD ["/app/myapp"]
+```
+<br></br>
+
+And here is my new Dockerfile! It may seem much longer and more complex than the first version but in the end, the result is very interesting. After testing this new Dockerfile, the final image is 16Mb so only 6Mb more than the version without Docker which is almost negligible.
+<br></br>
+
+## Conclusion
+<br></br>
+
+Docker is a great tool to simplify application development and deployment, but it can be problematic if used incorrectly. This experience helped me understand how to better use Docker and how to optimize my images.
+This article is inspired by a <a href="https://twitter.com/GSCorentinDev/status/1564536030795075585?s=20&t=l2hgvKBPDMVs4pS6um2HeA" class="font-bold underline text-accent">twitter thread</a> and the complete code of my Dockerfile is available on my <a href="https://github.com/memnix/memnix-rest/blob/e8e52b3d10731df5b2767f0d24bcdcb5d13d72e3/Dockerfile" class="font-bold underline text-accent">github</a>.
+I hope this first article will interest you, don't hesitate to give me feedback so I can improve for the next articles and share your tips on Docker or Golang!
+<br></br>
+Here is a small infographic that summarizes the evolution of our Docker image. It's in French but I think you can understand it anyway.
+<br></br>
+
+<img src="https://media-exp1.licdn.com/dms/image/D4E12AQHotzXp5YiILw/article-inline_image-shrink_1500_2232/0/1661955794766?e=1673481600&v=beta&t=zF5WizfPOTjfVGi5KAxQFCKpP6PMGJSmelU7_K4ZP1U" quality="80"
+    alt="Docker Infographic" class="mt-5 mb-5" width="1024" />

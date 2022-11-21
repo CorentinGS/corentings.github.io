@@ -1,0 +1,137 @@
+---
+import Skill from "./Index/Skill.astro";
+
+import LucideHeart from "~icons/lucide/heart";
+import LogosGopher from '~icons/logos/gopher'
+import LogosGo from '~icons/logos/go'
+import LogosRust from '~icons/logos/rust'
+import LogosJava from '~icons/logos/java'
+import LogosPython from '~icons/logos/python'
+import LogosC from '~icons/logos/c'
+import LogosDockerIcon from '~icons/logos/docker-icon'
+import LogosGitIcon from '~icons/logos/git-icon'
+import LogosNuxtIcon from '~icons/logos/nuxt-icon'
+import LogosTailwindcssIcon from '~icons/logos/tailwindcss-icon'
+import LogosRabbitmqIcon from '~icons/logos/rabbitmq-icon'
+import EmojionePenguin from '~icons/emojione/penguin'
+import LogosVoid from '~icons/logos/void'
+import LogosPostgresql from '~icons/logos/postgresql'
+import LucideStar from '~icons/lucide/star'
+import IcBaselineSchool from '~icons/ic/baseline-school'
+import LogosKotlinIcon from '~icons/logos/kotlin-icon'
+import LogosHaskellIcon from '~icons/logos/haskell-icon'
+import LogosVim from '~icons/logos/vim'
+import SimpleIconsOpensuse from '~icons/simple-icons/opensuse'
+---
+
+<section class="bg-base-100 lg:py-15 py-6 md:py-10">
+      <div class="mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12">
+        <div>
+          <h2
+              class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl"
+          >
+            My Skills & Learnings
+          </h2>
+        </div>
+        <div class="items-center">
+          <div class="mt-8 lg:mt-0">
+            <div class="grid grid-cols-4 items-center gap-4 text-center">
+              <Skill link="https://go.dev/" name="Golang">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <LucideHeart class="h-7 w-7 text-accent motion-safe:animate-bounce "/>
+                  </span>
+                  <LogosGopher class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+              <Skill link="https://rust-lang.org/" name="Rust">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                     <LogosGo class="h-8 w-8 text-secondary motion-safe:animate-pulse"/>
+                  </span>
+                  <LogosRust class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+
+              </Skill>
+              <Skill link="https://www.java.com/" name="java">
+                <LogosJava class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://www.python.org/" name="python">
+                <LogosPython class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill
+                  link="https://en.wikipedia.org/wiki/C_(programming_language)"
+                  name="C"
+              >
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <LucideHeart class="h-7 w-7 text-secondary motion-safe:animate-bounce "/>
+                  </span>
+                  <LogosC class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+              <Skill link="https://www.docker.com/" name="Docker">
+                <LogosDockerIcon class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://git-scm.com/" name="Git">
+                <LogosGitIcon class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://v3.nuxtjs.org/" name="Nuxt">
+                <LogosNuxtIcon class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://tailwindcss.com/" name="Tailwind">
+                <LogosTailwindcssIcon
+                    class="h-16 w-16 md:h-20 md:w-20"
+                />
+              </Skill>
+              <Skill link="https://www.rabbitmq.com/" name="RabbitMQ">
+                <LogosRabbitmqIcon class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://voidlinux.org/" name="Void">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <EmojionePenguin class="h-9 w-9 motion-safe:animate-pulse "/>
+                  </span>
+                  <LogosVoid class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+              <Skill link="https://www.postgresql.org/" name="PostgreSQL">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <LucideStar class="h-8 w-8 text-secondary motion-safe:animate-pulse"/>
+                  </span>
+                  <LogosPostgresql class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+              <Skill link="https://kotlinlang.org/" name="Kotlin">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <IcBaselineSchool class="h-8 w-8 text-secondary motion-safe:animate-pulse"/>
+                  </span>
+                <LogosKotlinIcon class="h-15 w-15 md:h-20 md:w-20"/>
+                  </div>
+              </Skill>
+              <Skill link="https://www.haskell.org/" name="Haskell">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <IcBaselineSchool class="h-7 w-7 text-accent motion-safe:animate-pulse"/>
+                  </span>
+                  <LogosHaskellIcon class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+              <Skill link="https://www.youtube.com/watch?v=oHNKTlz1lps" name="Suse Musics">
+                  <SimpleIconsOpensuse class="h-16 w-16 md:h-20 md:w-20"/>
+              </Skill>
+              <Skill link="https://www.vim.org/" name=":q">
+                <div class="indicator">
+                  <span class="indicator-item indicator-bottom indicator-start">
+                    <EmojionePenguin class="h-9 w-9 motion-safe:animate-pulse "/>
+                  </span>
+                  <LogosVim class="h-16 w-16 md:h-20 md:w-20"/>
+                </div>
+              </Skill>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>

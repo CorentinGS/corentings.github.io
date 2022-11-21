@@ -1,20 +1,10 @@
-import {BlogAuthorMap, BlogPostList} from "~/utils/types";
+import type {  BlogAuthor, BlogPost, BlogPostList } from "./types";
 
-export class BlogAuthor {
-    private static readonly _blogAuthors: BlogAuthorMap = new Map([
-        [
-            "cgs",
-            {
-                name: "Corentin Giaufer Saubert",
-                avatar:
-                    "https://raw.githubusercontent.com/CorentinGS/corentings.github.io/main/public/img/avatar.webp",
-            },
-        ],
-    ]);
 
-    static get(name: string) {
-        return this._blogAuthors.get(name);
-    }
+const cgs: BlogAuthor = {
+    name: "Corentin Giaufer Saubert",
+    avatar:
+        "https://raw.githubusercontent.com/CorentinGS/corentings.github.io/main/public/img/avatar.webp",
 }
 
 export class BlogPosts {
@@ -27,7 +17,7 @@ export class BlogPosts {
             link: "/blog/docker-and-go",
             category: "Programming",
             timeToRead: "5 min",
-            author: BlogAuthor.get("cgs"),
+            author: cgs,
             dark_background: true,
         },
         {
@@ -39,7 +29,7 @@ export class BlogPosts {
             link: "/blog/first",
             category: "Life",
             timeToRead: "5 min",
-            author: BlogAuthor.get("cgs"),
+            author: cgs,
             dark_background: true,
         }
 
@@ -47,5 +37,9 @@ export class BlogPosts {
 
     static get blogPosts(): BlogPostList {
         return this._blogPosts;
+    }
+
+    static getBlogPostByLink(link: string): BlogPost | any {
+        return this._blogPosts.find((post) => post.link === link);
     }
 }

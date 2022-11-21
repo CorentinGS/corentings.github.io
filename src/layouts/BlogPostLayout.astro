@@ -1,0 +1,103 @@
+---
+import { BlogPosts } from "../../utils/blog";
+import BlogPost from "../components/blog/BlogPost.astro";
+import Navbar from "../components/utils/Navbar.astro";
+import '../styles/global.css'
+const {frontmatter} = Astro.props;
+
+
+const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script is:inline>
+      // ☝️ This script prevent the FART effect.
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme")
+        );
+      // "theme" LocalStorage value is set by the package to remember user preference.
+      // The value is checked and applyed before rendering anything.
+    </script>
+    <script>
+      import { themeChange } from "theme-change";
+      themeChange();
+      // 👆 you could import the CDN directly instead of these two lines
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="description" content={frontmatter.description} />
+    <meta name="og:title" content="CorentinGS - Computer Science Student" />
+    <meta
+      name="og:description"
+      content="Personal blog & Portfolio - Computer science student & open-source enthusiast"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://corentings.vercel.app" />
+    <meta
+      name="og:image"
+      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://corentings.vercel.app" />
+    <meta name="twitter:creator" content="@CorentinGS" />
+    <meta
+      name="twitter:title"
+      content="CorentinGS - Computer Science Student"
+    />
+    <meta
+      name="twitter:description"
+      content="Personal blog & Portfolio - Computer science student & open-source enthusiast"
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>{frontmatter.title}</title>  </head>
+  <body>
+    <main>
+      <div class="drawer">
+        <input id="my-drawer-3" class="drawer-toggle" type="checkbox" />
+        <div class="drawer-content flex flex-col">
+          <!-- Navbar -->
+          <Navbar />
+          <!-- Page Slot -->
+          <BlogPost blogPost={blogPost}>
+            <slot />
+          </BlogPost>
+        </div>
+
+        <div class="drawer-side">
+          <label class="drawer-overlay" for="my-drawer-3"></label>
+          <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
+            <!-- Sidebar content here -->
+            <li>
+              <a href="/blog" rel="prefetch">Blog</a>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
+                >Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
