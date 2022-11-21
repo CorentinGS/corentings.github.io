@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mb-4 w-full w-full max-w-screen-lg bg-base-100 p-6 md:mb-0">
+  <div class="mx-auto mb-4 w-full max-w-screen-lg bg-base-100 p-6 md:mb-0">
     <div class="header mb-6 flex items-end justify-between">
       <div class="title">
         <p class="mb-3 text-4xl font-bold">My articles</p>
