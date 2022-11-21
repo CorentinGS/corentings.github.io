@@ -1,0 +1,44 @@
+---
+import { Profile, Config } from "../../../utils/config";
+
+const social = Config;
+const profile = Profile;
+
+import LucideChevronRight from "~icons/lucide/chevron-right";
+import LucideChevronDown from "~icons/lucide/chevron-down";
+import LucideMail from "~icons/lucide/mail";
+import LucideTwitter from "~icons/lucide/twitter";
+import LucideGithub from "~icons/lucide/github";
+import LucideLinkedin from "~icons/lucide/linkedin";
+import LaDiscord from "~icons/la/discord";
+import { Image } from "@astrojs/image/components";
+---
+
+<footer class="footer items-center bg-base-200 p-4">
+    <div class="grid-flow-col items-center">
+        <p>Copyright © 2022 - All right reserved - {profile.full_name}</p>
+    </div>
+    <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <a href={`mailto:${profile.email}`} target="_blank">
+            <LucideMail class="hoveranimation h-6 w-6" />
+        </a>
+        <a href={"https://twitter.com/" + social.twitter} target="_blank">
+            <LucideTwitter class="hoveranimation h-6 w-6" />
+        </a>
+        <a
+            href={"https://discordapp.com/users/" + social.discord}
+            target="_blank"
+        >
+            <LaDiscord class="hoveranimation h-6 w-6" />
+        </a>
+        <a href={"https://github.com/" + social.github} target="_blank">
+            <LucideGithub class="hoveranimation h-6 w-6" />
+        </a>
+        <a
+            href={"https://www.linkedin.com/in/" + social.linkedin}
+            target="_blank"
+        >
+            <LucideLinkedin class="hoveranimation h-6 w-6" />
+        </a>
+    </div>
+</footer>

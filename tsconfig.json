@@ -1,4 +1,9 @@
 {
-  // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/astro",
+    ]
+  }
+
 }

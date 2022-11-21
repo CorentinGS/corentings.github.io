@@ -1,0 +1,31 @@
+---
+import { themeChange } from "theme-change";
+
+const themes = [
+  "corporate",
+  "dark",
+  "night",
+  "fantasy",
+  "cupcake",
+  "forest",
+  "coffee",
+  "business",
+  "dracula",
+  "pastel",
+  "memnix",
+];
+
+---
+  
+  <select
+    data-choose-theme
+    class="select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+  >
+    <option disabled selected>Pick your theme</option>
+      {themes.map((theme) => (
+        <option value={theme}>{theme}</option>
+      ))}
+  </select>
+
+
+<style></style>

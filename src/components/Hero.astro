@@ -1,0 +1,86 @@
+---
+import { Config, Profile } from "../../utils/config";
+import LucideChevronRight from '~icons/lucide/chevron-right'
+import LucideChevronDown from '~icons/lucide/chevron-down'
+import LucideMail from '~icons/lucide/mail'
+import LucideTwitter from '~icons/lucide/twitter'
+import LucideGithub from '~icons/lucide/github'
+import LucideLinkedin from '~icons/lucide/linkedin'
+import LaDiscord from '~icons/la/discord'
+import { Image } from '@astrojs/image/components';
+const social = Config;
+const profile = Profile;
+---
+
+<section  class="hero relative bg-base-100 min-h-screen">
+    <div class="hero-content">
+        <div class="flex flex-col">
+          <div
+            class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
+          >
+            <Image
+              src={profile.avatar}
+              format="avif"
+              widths={[200, 400, 800]}
+              alt="avatar"
+              class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
+              height="192"
+              width="192"
+            />
+            <div class="flex-grow sm:pl-8">
+              <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
+                Hi, I'm { profile.full_name }
+              </h1>
+              <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
+                { profile.title }
+              </h2>
+
+              <div class="inline-flex space-x-4">
+                <span class="text-md uppercase lg:text-lg">LET'S CONNECT</span>
+                <LucideChevronRight class="mx-auto" />
+                <a
+                  v-if="profile.email !== ''"
+                  href={`mailto:${profile.email}`}
+                  target="_blank"
+                >
+                  <LucideMail class="hoveranimation h-6 w-6" />
+              </a>
+                <a
+                  v-if="social.twitter !== ''"
+                  href={'https://twitter.com/' + social.twitter}
+                  target="_blank"
+                >
+                  <LucideTwitter class="hoveranimation h-6 w-6" />
+            </a>
+                <a
+                  v-if="social.discord !== ''"
+                  href={'https://discordapp.com/users/' + social.discord}
+                  target="_blank"
+                >
+                  <LaDiscord class="hoveranimation h-6 w-6" />
+        </a>
+                <a
+                  v-if="social.github !== ''"
+                  href={'https://github.com/' + social.github}
+                  target="_blank"
+                >
+                  <LucideGithub class="hoveranimation h-6 w-6" />
+    </a>
+                <a
+                  v-if="social.linkedin !== ''"
+                  href={'https://www.linkedin.com/in/' + social.linkedin}
+                  target="_blank"
+                >
+                  <LucideLinkedin class="hoveranimation h-6 w-6" />
+</a>
+              </div>
+            </div>
+          </div>
+          <a href='#about'>
+          <LucideChevronDown
+            class="mx-auto my-10 animate-bounce text-3xl md:text-4xl"
+          />
+        </a>
+        </div>
+    </div>
+  </section>
