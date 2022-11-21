@@ -20,9 +20,9 @@ const blogPosts = BlogPosts.blogPosts.slice(1);
     </div>
     <div>
       {
-        latest.map((blogPost) => (
-          <a href={blogPost.link} rel="prefetch">
-            <CardLatest blogPost={blogPost} class="mb-5" />
+        latest.map((last) => (
+          <a href={last.link} rel="prefetch">
+            <CardLatest blogPost={last} class="mb-5" />
           </a>
         ))
       }

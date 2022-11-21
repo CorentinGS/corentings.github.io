@@ -6,7 +6,7 @@ import '../styles/global.css'
 const {frontmatter} = Astro.props;
 
 
-const blogPost = BlogPosts.getBlogPostByLink("/blog/first");
+const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
 ---
 
 <!DOCTYPE html>
