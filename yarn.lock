@@ -1563,9 +1563,10 @@
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-21.0.0.tgz#0c60e537fa790f5f9472ed2776c2b71ec117351b"
   integrity sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==
 
-"@vite-pwa/astro@vite-pwa/astro":
+"@vite-pwa/astro@^0.0.1":
   version "0.0.1"
-  resolved "https://codeload.github.com/vite-pwa/astro/tar.gz/ef3c642df2daffeca9835b2bf94f7aa8e5dd67c4"
+  resolved "https://registry.yarnpkg.com/@vite-pwa/astro/-/astro-0.0.1.tgz#3ac7293aa76b7736d648873c1973c9ccfe9f27b6"
+  integrity sha512-FkX3F+JbVVjSjXrHkE681ZmOSIS2h43ldj7+YnBf52/qoSM9Ns05kNcjC7RNSIlRpD0a0TN1efutulDWWra6UQ==
 
 "@vscode/emmet-helper@^2.8.4":
   version "2.8.4"
@@ -1775,6 +1776,13 @@ astro@^1.6.10:
     vitefu "^0.2.1"
     yargs-parser "^21.0.1"
     zod "^3.17.3"
+
+astrojs-service-worker@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/astrojs-service-worker/-/astrojs-service-worker-0.0.8.tgz#704972af2656502c639ea8f143c337abbba314b5"
+  integrity sha512-zBdwgF94vgvaD164g2mvPwbPi5sxRuNL+YF/NgYRVJiXo/WRsZuzy/vbIuB0/znc8GIOnwTGCl5rAWbqIkCE4Q==
+  dependencies:
+    workbox-build "^6.5.4"
 
 async@^3.2.3:
   version "3.2.4"
