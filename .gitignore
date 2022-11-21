@@ -5,3 +5,6 @@
 *.psd
 *.ai
 /node_modules/
+.vscode
+.idea
+*.log

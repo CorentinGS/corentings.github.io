@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
-import vue from '@astrojs/vue';
 import Icons from 'unplugin-icons/vite';
 import image from '@astrojs/image';
 
@@ -28,5 +27,5 @@ export default defineConfig({
       compiler: 'astro'
     })]
   },
-  integrations: [tailwind(), vue(), image(), mdx(), prefetch(), sitemap(), compress()]
+  integrations: [tailwind(),  image(), mdx(), prefetch(), sitemap(), compress()]
 });
