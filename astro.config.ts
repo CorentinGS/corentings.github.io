@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config';
+import { VitePWA } from "vite-plugin-pwa"
+
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -25,7 +27,7 @@ export default defineConfig({
   vite: {
     plugins: [Icons({
       compiler: 'astro'
-    })]
+    }), VitePWA()]
   },
   integrations: [tailwind(),  image(), mdx(), prefetch(), sitemap(), compress()]
 });

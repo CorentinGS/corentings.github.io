@@ -2,6 +2,7 @@
 import Footer from "../components/utils/Footer.astro";
 import Navbar from "../components/utils/Navbar.astro";
 import "../styles/global.css";
+import { pwaInfo } from 'virtual:pwa-info';
 
 export interface Props {
   title: string;
@@ -35,8 +36,11 @@ const { title } = Astro.props;
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#ffffff">
+    <script src="/src/pwa.ts"></script>
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="CorentinGS - Portfolio" />
     <meta name="og:title" content="CorentinGS - Computer Science Student" />
