@@ -18,17 +18,19 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import compress from "astro-compress";
+import serviceWorker from "astrojs-service-worker";
 
-import serviceWorker from "astrojs-service-worker"
+// https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://corentings.vercel.app",
   vite: {
-    plugins: [
-      Icons({
-        compiler: "astro",
-      })]
+    plugins: [Icons({
+      compiler: "astro"
+    })]
   },
-  integrations: [tailwind(), image(), mdx(), prefetch(), sitemap(), compress(), serviceWorker()],
+  integrations: [tailwind(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), mdx(), prefetch(), sitemap(), compress(), serviceWorker()]
 });
