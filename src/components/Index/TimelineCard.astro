@@ -61,9 +61,9 @@ class={classContent + " hoveranimation order-1 w-10/12 transform-gpu rounded-lg 
       alt={name}
       src={image}
       class="h-16 w-16 rounded-lg object-cover shadow-sm"
-      format="avif"
+      formats={['avif', 'webp']}
       loading="lazy"
-      quality="80"
+      quality={70}
       width="64"
       height="64"
   />

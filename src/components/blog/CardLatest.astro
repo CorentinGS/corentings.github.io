@@ -36,11 +36,11 @@ const cssProps = {
                 class="mr-3 h-8 w-8 rounded-full object-cover"
                 src={blogPost.author.avatar}
                 alt={blogPost.author.name}
-                format="avif"
-                height="32"
+                formats={['avif', 'webp']}
+                height="64"
                 loading="lazy"
-                quality="80"
-                width="32"
+                quality={50}
+                width="64"
             />
             <div class="flex flex-col">
                 <span>{blogPost.author.name}</span>

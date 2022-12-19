@@ -29,12 +29,23 @@ export class Profile {
   export class Experiences {
     private static readonly _experiences: TimelineCardList = [
       {
+        name: "Freelance developer",
+        type: TimelineCardType.Work,
+        description:
+          "Developing websites and web applications for clients.",
+        start_date: "2022",
+        tools: "Golang, PostgreSQL, Docker...",
+        link: "https://corentings.vercel.app",
+      },
+      {
         name: "Stouuf community manager",
         type: TimelineCardType.Work,
         description:
           "Managing the Stouuf community, website development, events organization and twitch moderation.",
         start_date: "2022",
         tools: "Canva, Tailwindcss",
+        image: "/MF_STOUUF.png",
+        link: "https://stouuf.net/",
       },
       {
         name: "Educative.io courses",
@@ -91,6 +102,8 @@ export class Profile {
         name: "Developer intern at OneToo",
         start_date: "June 2021",
         end_date: "July 2021",
+        location: "Nice, France",
+        link: "https://www.one-too.com/",
       },
       {
         type: TimelineCardType.School,
@@ -111,6 +124,7 @@ export class Profile {
           "Obtained the Scientific Baccalaureate with honors with Engineering Sciences and English options at Cornat High School in Valognes ",
         start_date: "2020",
         location: "Valognes, France",
+        link: "https://www.lycee-valognes.fr/",
       },
       {
         type: TimelineCardType.Personal,
@@ -131,6 +145,7 @@ export class Profile {
           "Preparing for the private pilot license exam (postponed due to covid-19)",
         start_date: "2019",
         location: "Cherbourg, France",
+        link: "https://ac-cherbourg.com/"
       },
       {
         type: TimelineCardType.Work,
@@ -141,6 +156,9 @@ export class Profile {
         end_date: "2018",
         location: "Toulouse, France",
         tools: "Kubernetes, Helm, Debian",
+        link: "https://www.qualialtis.com/",
+        image:
+        "/img/logo_qualialtis.png"
       },
       {
         type: TimelineCardType.Personal,

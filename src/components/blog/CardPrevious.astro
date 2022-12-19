@@ -15,10 +15,11 @@ const { blogPost } = Astro.props;
     <Image
         class="block h-40 w-2/5 overflow-hidden rounded object-cover"
         src={blogPost.image}
-        format="avif"
+        formats={['avif', 'webp']}
         loading="lazy"
-        quality="80"
-        width="400"
+        quality={70}
+        width="512"
+        height="512"
         aspectRatio="1/1"
         alt={blogPost.title}/>
 
@@ -37,8 +38,10 @@ const { blogPost } = Astro.props;
                 class="mr-3 h-10 w-10 rounded-full"
                 src={blogPost.author.avatar}
                 alt= {blogPost.author.name}
-                width="100"
-                format="avif"
+                width="64"
+                height="64"
+                formats={['avif', 'webp']}
+                quality={50}
                 aspectRatio="1/1"
                 />
             <div class="flex flex-col">

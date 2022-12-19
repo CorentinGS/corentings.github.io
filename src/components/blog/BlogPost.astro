@@ -26,9 +26,10 @@ const { blogPost } = Astro.props;
       class="absolute left-0 top-0 z-0 h-full w-full object-cover"
       alt={blogPost.title}
       width="1024"
+      height="576"
       aspectRatio="16/9"
-      format="avif"
-      quality="70"/>
+      formats={['avif', 'webp']}
+      quality={70}/>
     <div class="absolute bottom-0 left-0 z-20 p-4">
       <span
         class="badge badge-secondary mb-2 inline-flex items-center justify-center px-4 py-1 uppercase"
@@ -40,10 +41,11 @@ const { blogPost } = Astro.props;
       <div class="mt-3 flex">
         <Image
           src={blogPost.author.avatar}
-          format="avif"
-          quality="50"
+          formats={['avif', 'webp']}
+          quality={50}
           alt={blogPost.author.name}
-          width="48"
+          width="64"
+          height="64"
           aspectRatio="1/1"
           class="mr-2 h-10 w-10 rounded-full object-cover"/>
         <div>
