@@ -23,6 +23,10 @@ module.exports = {
 					'"Noto Color Emoji"',
 				],
 			},
+			animation: {
+				// Bounces 5 times 1s equals 5 seconds
+				'bounce-short': 'bounce 3s ease-in-out 2' 
+			  },
 		},
 	},
 	variants: {
@@ -49,6 +53,11 @@ module.exports = {
 			"business",
 			"dracula",
 			"pastel",
+			'autumn',
+			"luxury",
+			"retro",
+			"valentine",
+			"cyberpunk", "synthwave", "winter", "acid",
 			{
 				memnix: {
 					primary: "#E9AF98",

@@ -18,12 +18,13 @@ export class Profile {
     static readonly linkedin = "corentin-giaufer-saubert/";
     static readonly medium = "";
     static readonly patreon = "";
-    static readonly discord = "282233191916634113";
+    static readonly discord = "https://discord.gg/wc4PQsd7eE";
     static readonly telegram = "";
     static readonly reddit = "";
     static readonly twitch = "";
     static readonly stackoverflow = "";
     static readonly devto = "";
+    static readonly mastodon = "https://hachyderm.io/@TheLittlePrince";
   }
 
   export class Experiences {

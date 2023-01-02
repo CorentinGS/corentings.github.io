@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import LucideTwitter from "~icons/lucide/twitter";
+import LucideGithub from "~icons/lucide/github";
+import LucideLinkedin from "~icons/lucide/linkedin";
+import LaDiscord from "~icons/la/discord";
+import LaMastodon from "~icons/la/mastodon";
+import LucideBook from "~icons/lucide/book";
+import LucideInfo from "~icons/lucide/info";
+import LucideArrowRight from "~icons/lucide/arrow-right";
+---
+
+<Layout title="CorentinGS">
+  <section class="">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-20">
+        <h1 class="sm:text-3xl text-2xl font-bold text-center mb-4">
+          My links and socials
+        </h1>
+        <p class="leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          Here are my socials and links to my projects and other stuff.<br />I'm
+          also on Discord, so feel free to join my server.
+        </p>
+      </div>
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="/discord"
+            target="_blank"
+            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LaDiscord class="w-7 h-7 flex-shrink-0 mr-4" />
+
+            <span class="title-font font-medium decoration-accent group-hover:underline" >The Kafejo</span>
+          </a>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="https://hachyderm.io/@TheLittlePrince"
+            target="_blank"
+            rel="me noopener noreferrer"
+            class="bg-base-200 group hoveranimation bounce-short rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LaMastodon class="w-7 h-7 flex-shrink-0 mr-4 " />
+            <span class="title-font font-medium decoration-accent group-hover:underline"
+              >@TheLittlePrince@hachyderm.io
+            </span>
+          </a>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="https://twitter.com/GSCorentinDev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LucideTwitter class="w-7 h-7 flex-shrink-0 mr-4" />
+
+            <span class="title-font font-medium decoration-accent group-hover:underline">@GSCorentinDev</span>
+          </a>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="https://github.com/corentings"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LucideGithub class="w-7 h-7 flex-shrink-0 mr-4" />
+
+            <span class="title-font font-medium decoration-accent group-hover:underline">@CorentinGS</span>
+          </a>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="/blog"
+            target="_blank"
+            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LucideBook class="w-7 h-7 flex-shrink-0 mr-4" />
+
+            <span class="title-font font-medium decoration-accent group-hover:underline">My blog</span>
+          </a>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <a
+            href="https://www.linkedin.com/in/corentin-giaufer-saubert/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+          >
+            <LucideLinkedin class="w-7 h-7 flex-shrink-0 mr-4" />
+
+            <span class="title-font font-medium decoration-accent group-hover:underline">Corentin Giaufer--Saubert</span
+            >
+          </a>
+        </div>
+      </div>
+      <div class="container mt-10 w-[41%] mx-auto">
+        <div class="alert shadow-lg alert-info animate-bounce-short">
+          <div>
+            <LucideInfo class="w-6 h-6 flex-shrink-0 mr-4" />
+            <div>
+              <h3 class="font-bold">I created a friendly discord !</h3>
+              <div class="text-xs">Join our community on The Kafejo </div>
+            </div>
+          </div>
+          <div class="flex-none">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.com/invite/wc4PQsd7eE"
+              class="btn btn-md btn-accent hoveranimation "
+            >
+              <LucideArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style></style>
