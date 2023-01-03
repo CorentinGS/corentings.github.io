@@ -2,7 +2,6 @@
 import { Config, Profile } from "../../utils/config";
 import LucideChevronRight from "~icons/lucide/chevron-right";
 import LucideChevronDown from "~icons/lucide/chevron-down";
-import LucideMail from "~icons/lucide/mail";
 import LucideTwitter from "~icons/lucide/twitter";
 import LucideGithub from "~icons/lucide/github";
 import LucideLinkedin from "~icons/lucide/linkedin";
@@ -39,13 +38,6 @@ const profile = Profile;
           <div class="inline-flex space-x-4">
             <span class="text-md uppercase lg:text-lg">LET'S CONNECT</span>
             <LucideChevronRight class="mx-auto" />
-            <a
-              v-if="profile.email !== ''"
-              href={`mailto:${profile.email}`}
-              target="_blank"
-            >
-              <LucideMail class="hoveranimation h-6 w-6" />
-            </a>
             <a
               v-if="social.twitter !== ''"
               href={"https://twitter.com/" + social.twitter}

@@ -4,6 +4,7 @@ import { Profile, Config } from "../../../utils/config";
 const social = Config;
 const profile = Profile;
 
+import LaMastodon from "~icons/la/mastodon";
 import LucideChevronRight from "~icons/lucide/chevron-right";
 import LucideChevronDown from "~icons/lucide/chevron-down";
 import LucideMail from "~icons/lucide/mail";
@@ -26,7 +27,7 @@ import { Image } from "@astrojs/image/components";
             <LucideTwitter class="hoveranimation h-6 w-6" />
         </a>
         <a
-            href={"https://discordapp.com/users/" + social.discord}
+            href={social.discord}
             target="_blank"
         >
             <LaDiscord class="hoveranimation h-6 w-6" />
@@ -40,5 +41,11 @@ import { Image } from "@astrojs/image/components";
         >
             <LucideLinkedin class="hoveranimation h-6 w-6" />
         </a>
+        <a
+        v-if="social.mastodon !== ''" rel="me"
+        href={social.mastodon}
+        target="_blank" > 
+        <LaMastodon class="hoveranimation h-6 w-6" />
+      </a>
     </div>
 </footer>
