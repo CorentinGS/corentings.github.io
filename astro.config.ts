@@ -32,5 +32,5 @@ export default defineConfig({
   },
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), mdx(), prefetch(), sitemap(), compress(), serviceWorker()]
+  }), mdx(), prefetch(), sitemap(), compress({css: false}), serviceWorker()]
 });
