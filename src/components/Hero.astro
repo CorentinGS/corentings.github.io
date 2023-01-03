@@ -42,6 +42,7 @@ const profile = Profile;
               v-if="social.twitter !== ''"
               href={"https://twitter.com/" + social.twitter}
               target="_blank"
+              aria-label="twitter"
             >
               <LucideTwitter class="hoveranimation h-6 w-6" />
             </a>
@@ -49,6 +50,7 @@ const profile = Profile;
               v-if="social.discord !== ''"
               href={social.discord}
               target="_blank"
+              aria-label="discord"
             >
               <LaDiscord class="hoveranimation h-6 w-6" />
             </a>
@@ -56,6 +58,7 @@ const profile = Profile;
               v-if="social.github !== ''"
               href={"https://github.com/" + social.github}
               target="_blank"
+              aria-label="github"
             >
               <LucideGithub class="hoveranimation h-6 w-6" />
             </a>
@@ -63,12 +66,14 @@ const profile = Profile;
               v-if="social.linkedin !== ''"
               href={"https://www.linkedin.com/in/" + social.linkedin}
               target="_blank"
+              aria-label="linkedin"
             >
               <LucideLinkedin class="hoveranimation h-6 w-6" />
             </a>
             <a
               v-if="social.mastodon !== ''" rel="me"
               href={social.mastodon}
+              aria-label="mastodon"
               target="_blank" > 
               <LaMastodon class="hoveranimation h-6 w-6" />
             </a>

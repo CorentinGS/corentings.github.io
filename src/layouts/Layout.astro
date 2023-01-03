@@ -74,7 +74,7 @@ const { title } = Astro.props;
   <body>
     <main>
       <div class="drawer">
-        <input id="my-drawer-3" class="drawer-toggle" type="checkbox" />
+        <input id="my-drawer-3" class="drawer-toggle" type="checkbox" aria-label="drawer"/>
         <div class="drawer-content flex flex-col">
           <!-- Navbar -->
           <Navbar />
@@ -82,7 +82,7 @@ const { title } = Astro.props;
           <slot />
         </div>
 
-        <div class="drawer-side">
+        <div class="drawer-side" >
           <label class="drawer-overlay" for="my-drawer-3"></label>
           <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
             <!-- Sidebar content here -->
