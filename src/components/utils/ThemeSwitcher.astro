@@ -17,16 +17,21 @@ const themes = [
   "luxury",
   "retro",
   "valentine",
-  "cyberpunk", "synthwave", "winter", "acid"
+  "cyberpunk",
+  "synthwave",
+  "winter",
+  "acid",
 ];
 ---
 
 <select
-  data-choose-theme
-  class="select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+data-choose-theme
+class="select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
 >
-  <option disabled selected>Pick your theme</option>
-  {themes.map((theme) => <option value={theme}>{theme}</option>)}
+<option disabled selected>Pick your theme</option>
+  {themes.map((theme) => (
+    <option value={theme}>{theme}</option>
+  ))}
 </select>
 
 <style></style>

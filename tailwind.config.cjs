@@ -53,7 +53,7 @@ module.exports = {
 			"business",
 			"dracula",
 			"pastel",
-			'autumn',
+			"autumn",
 			"luxury",
 			"retro",
 			"valentine",
