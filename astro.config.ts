@@ -27,6 +27,9 @@ import compressor from "astro-compressor";
 import critters from "astro-critters";
 
 // https://astro.build/config
+import vercel from '@astrojs/vercel/static';
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://corentings.vercel.app",
   vite: {
@@ -38,5 +41,7 @@ export default defineConfig({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), mdx(), prefetch(), sitemap(), serviceWorker(), critters(), compress({
     css: false
-  }), compressor() ]
+  }), compressor()],
+  output: "static",
+  adapter: vercel()
 });
