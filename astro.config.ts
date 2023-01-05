@@ -28,21 +28,37 @@ import astroI18next from "astro-i18next";
 import critters from "astro-critters";
 
 // https://astro.build/config
-import vercel from '@astrojs/vercel/static';
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://corentings.vercel.app",
   vite: {
-    plugins: [Icons({
-      compiler: "astro"
-    })]
+    plugins: [
+      Icons({
+        compiler: "astro",
+      }),
+    ],
   },
-  integrations: [tailwind(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), mdx(), prefetch(), sitemap(), astroI18next(),  serviceWorker(), critters(), compress({
-    css: false
-  }), compressor()],
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    prefetch(),
+    sitemap(),
+    astroI18next(),
+    serviceWorker(),
+    critters({
+      path: ".vercel/output/static",
+    }),
+    compress({
+      path: ".vercel/output/static",
+      css: false,
+    }),
+    compressor(),
+  ],
   output: "static",
-  adapter: vercel()
+  adapter: vercel(),
 });

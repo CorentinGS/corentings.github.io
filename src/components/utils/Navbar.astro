@@ -3,6 +3,7 @@ import { Profile } from "../../../utils/config";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 import { LanguageSelector } from "astro-i18next/components";
 import { t } from "i18next";
+import { localizePath } from "astro-i18next";
 
 
 const profile = Profile
@@ -29,7 +30,7 @@ const profile = Profile
         </div>
         <a
           class="hoveranimation btn btn-ghost text-xl normal-case lg:text-3xl"
-          href="/" rel="prefetch"
+          href={localizePath("/")} rel="prefetch"
           ><h1 class="font-bold text-secondary">
             {profile.short_name }
           </h1>
@@ -44,10 +45,10 @@ const profile = Profile
             <ThemeSwitcher />
           </li>
           <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/blog"> {t("navbar.blog")} </a>
+            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href={localizePath("/blog")}> {t("navbar.blog")} </a>
           </li>
           <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/links"> {t("navbar.links")} </a>
+            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href={localizePath("/links")}> {t("navbar.links")} </a>
           </li>
           <li>
             <a
