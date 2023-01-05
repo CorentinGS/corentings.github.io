@@ -12,7 +12,7 @@ const { blogPost } = Astro.props;
 
 <div class="relative w-full bg-base-100 p-5 min-h-screen">
   <div class="hoveranimation absolute left-1 top-[0.5rem]">
-    <a href="/blog" class="btn btn-ghost text-xl md:text-2xl lg:text-3xl" rel="nofollow">
+    <a href="/blog" class="btn btn-ghost text-xl md:text-2xl lg:text-3xl" rel="prefetch">
       <LucideArrowLeft />
     </a>
   </div>
@@ -28,7 +28,8 @@ const { blogPost } = Astro.props;
       width="1024"
       height="576"
       aspectRatio="16/9"
-      formats={['avif', 'webp']}
+      loading={"eager"}
+      format='avif'
       quality={70}/>
     <div class="absolute bottom-0 left-0 z-20 p-4">
       <span
@@ -41,8 +42,9 @@ const { blogPost } = Astro.props;
       <div class="mt-3 flex">
         <Image
           src={blogPost.author.avatar}
-          formats={['avif', 'webp']}
+          format='avif'
           quality={50}
+          loading={"eager"}
           alt={blogPost.author.name}
           width="64"
           height="64"

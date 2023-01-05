@@ -15,7 +15,7 @@ const { blogPost } = Astro.props;
     <Image
         class="block h-40 w-2/5 overflow-hidden rounded object-cover"
         src={blogPost.image}
-        formats={['avif', 'webp']}
+        format='avif'
         loading="lazy"
         quality={70}
         width="512"
@@ -40,7 +40,7 @@ const { blogPost } = Astro.props;
                 alt= {blogPost.author.name}
                 width="64"
                 height="64"
-                formats={['avif', 'webp']}
+                format='avif'
                 quality={50}
                 aspectRatio="1/1"
                 />
