@@ -27,7 +27,7 @@ import compressor from "astro-compressor";
 import critters from "astro-critters";
 
 // https://astro.build/config
-import vercel from '@astrojs/vercel/static';
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,6 +42,6 @@ export default defineConfig({
   }), mdx(), prefetch(), sitemap(), serviceWorker(), critters(), compress({
     css: false
   }), compressor()],
-  output: "static",
+  output: "server",
   adapter: vercel()
 });
