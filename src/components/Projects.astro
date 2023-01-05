@@ -1,5 +1,6 @@
 ---
 import Project from "./Index/Project.astro";
+import { t } from "i18next";
 
 ---
 
@@ -9,12 +10,12 @@ import Project from "./Index/Project.astro";
           <h2
             class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl"
           >
-            My Projects
+          {t("projects.title")}
           </h2>
         </div>
 
           <Project
-            description="Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way. It's using its own spaced repetition system to allows students to create and share their learning materials."
+            description={t("projects.memnix")}
             image="/moutmout.png"
             link="https://memnix.app"
             name="Memnix"
@@ -24,7 +25,7 @@ import Project from "./Index/Project.astro";
           />
 
           <Project
-              description="Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s."
+              description={t("projects.gauntlet")}
               link="https://github.com/corentings/gauntlet-reborn"
               name="Gauntlet Reborn"
               reversed={false}
@@ -35,7 +36,7 @@ import Project from "./Index/Project.astro";
           />
 
           <Project
-              description="A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar."
+              description={t("projects.uca_edt")}
               link="https://github.com/CorentinGS/uca-edt"
               name="Uca Edt"
               reversed={true}
@@ -45,7 +46,7 @@ import Project from "./Index/Project.astro";
 
           />
           <Project
-            description="Kitsu is a multi-purpose discord bot that generates stats for your server to help you increase the activity and grow quicker."
+            description={t("projects.kitsu")}
             image="https://i.imgur.com/GXKtpOZ.png"
             link="https://github.com/CorentinGS/Kitsu"
             name="Kitsu"
@@ -55,7 +56,7 @@ import Project from "./Index/Project.astro";
 
           />
           <Project
-            description="This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students."
+            description={t("projects.stouuf")}
             link="https://stouuf.net"
             name="Stouuf Website"
             reversed={true}
@@ -66,14 +67,13 @@ import Project from "./Index/Project.astro";
           />
 
           <Project
-              description="This is a website I made for my chess club."
+              description={t("projects.echiquier_nicois")}
               link="https://echiquiernicois.com"
               name="Echiquier niçois"
               reversed={false}
               stack="Wordpress"
               image="/img/en.png"
               ratio={16/9}
-
           />
       </div>
   </section>

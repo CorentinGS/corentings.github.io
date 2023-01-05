@@ -1,6 +1,6 @@
 ---
 import Skill from "./Index/Skill.astro";
-
+import { t } from "i18next";
 import LucideHeart from "~icons/lucide/heart";
 import LogosGopher from "~icons/logos/gopher";
 import LogosJava from "~icons/logos/java";
@@ -18,7 +18,7 @@ import SimpleIconsOpensuse from "~icons/simple-icons/opensuse";
   <div class="mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12">
     <div>
       <h2 class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl">
-        My Favorite Stack
+        {t("skills.title")}
       </h2>
     </div>
     <div class="items-center">
@@ -61,15 +61,15 @@ import SimpleIconsOpensuse from "~icons/simple-icons/opensuse";
           </Skill>
           <div class="col-start-2 mx-auto">
             <Skill
-            link="https://www.youtube.com/watch?v=oHNKTlz1lps"
-            name="Open Suse"
-          >
-            <SimpleIconsOpensuse class="h-16 w-16 md:h-20 md:w-20" />
-          </Skill>
+              link="https://www.youtube.com/watch?v=oHNKTlz1lps"
+              name="Open Suse"
+            >
+              <SimpleIconsOpensuse class="h-16 w-16 md:h-20 md:w-20" />
+            </Skill>
           </div>
- 
+
           <Skill link="https://www.vim.org/" name=":q">
-              <LogosVim class="h-16 w-16 md:h-20 md:w-20" />
+            <LogosVim class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
         </div>
       </div>

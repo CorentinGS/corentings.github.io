@@ -1,6 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import LucideChevronRight from "~icons/lucide/chevron-right";
+import { t } from "i18next";
 
 const { name, stack, description, link, image, reversed, ratio } = Astro.props;
 
@@ -31,7 +32,7 @@ function to_lower(str: string) {
     class="mt-5 mb-8 flex flex-col justify-center sm:w-1/2 sm:pr-16 md:mt-0 md:w-7/12"
   >
     <div class="mb-2 flex">
-      <p class="text-sm font-semibold uppercase text-secondary">Made using</p>
+      <p class="text-sm font-semibold uppercase text-secondary">{t("projects.tools")}</p>
       <LucideChevronRight />
       <p class="text-sm font-semibold uppercase">{stack}</p>
     </div>
@@ -44,7 +45,7 @@ function to_lower(str: string) {
         aria-label={name}
         rel="noopener noreferrer nofollow"
       >
-        <span>Discover {to_lower(name)}</span>
+        <span>{t("projects.discover")} {to_lower(name)}</span>
       </a>
     </div>
   </div>

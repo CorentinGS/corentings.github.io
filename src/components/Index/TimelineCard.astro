@@ -1,7 +1,9 @@
 ---
 import { TimelineCardType } from "../../../utils/types";
-import { Picture, Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import LucideChevronRight from "~icons/lucide/chevron-right";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 
 interface Props {
   name: string;
@@ -76,7 +78,7 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
               {start_date} ・ {end_date}
             </p>
           ) : (
-            <p>Since {start_date}</p>
+            <p>{t("experiences.since")} {start_date}</p>
           )
         }
         {location != null ? <p>・{location}</p> : null}
