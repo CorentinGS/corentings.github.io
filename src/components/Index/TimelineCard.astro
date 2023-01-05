@@ -28,10 +28,7 @@ const {
   right,
 } = Astro.props;
 
-let classContent = right
-  ? "border-l-[6px] "
-  : "border-r-[6px] " +
-    (type === TimelineCardType.School
+let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] md:border-l-[0px] ") + (type === TimelineCardType.School 
       ? "border-primary"
       : type === TimelineCardType.Work
       ? "border-secondary"
@@ -46,9 +43,32 @@ let classContent = right
 >
   <div class="justify-between sm:flex">
     <div>
+      <div class="flex">
       <h3 class="text-xl font-bold capitalize">
         {name}
       </h3>
+      {
+        image != null ? (
+          <a
+            href={link}
+            class="ml-3 flex-shrink-0 sm:hidden"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <Image
+              alt={name}
+              src={image}
+              class="h-10 w-10 rounded-lg object-cover shadow-sm"
+              format="avif"
+              loading="lazy"
+              quality={70}
+              width="64"
+              height="64"
+            />
+          </a>
+        ) : null
+      }
+      </div>
       <div class="mt-1 flex flex-row text-xs font-medium md:text-sm">
         {
           end_date != null ? (
