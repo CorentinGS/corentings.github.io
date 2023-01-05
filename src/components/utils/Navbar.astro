@@ -1,6 +1,8 @@
 ---
 import { Profile } from "../../../utils/config";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
 
 
 const profile = Profile
@@ -36,13 +38,16 @@ const profile = Profile
       <div class="navbar-end hidden text-xl lg:flex">
         <ul class="menu menu-horizontal p-0">
           <li class="px-3">
+            <LanguageSelector showFlag={true} class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content" />
+          </li>
+          <li class="px-3">
             <ThemeSwitcher />
           </li>
           <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/blog"> Blog </a>
+            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/blog"> {t("navbar.blog")} </a>
           </li>
           <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/links"> Links </a>
+            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href="/links"> {t("navbar.links")} </a>
           </li>
           <li>
             <a
@@ -51,7 +56,7 @@ const profile = Profile
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              Resume
+            {t("navbar.resume")}
           </a>
           </li>
         </ul>

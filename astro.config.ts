@@ -22,6 +22,7 @@ import serviceWorker from "astrojs-service-worker";
 import compressor from "astro-compressor";
 
 // https://astro.build/config
+import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 import critters from "astro-critters";
@@ -39,7 +40,7 @@ export default defineConfig({
   },
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), mdx(), prefetch(), sitemap(), serviceWorker(), critters(), compress({
+  }), mdx(), prefetch(), sitemap(), astroI18next(),  serviceWorker(), critters(), compress({
     css: false
   }), compressor()],
   output: "static",

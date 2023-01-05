@@ -1,76 +1,87 @@
 ---
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section class="bg-base-200 lg:py-15 py-6 md:py-10" id="about">
   <div class="container mx-auto px-6 py-8">
     <div class="items-center flex flex-col">
       <h2 class="text-2xl font-bold md:text-3xl lg:text-5xl text-center">
-        About me
+        {t("about.title")}
       </h2>
       <p class="mt-4 text-xl mx-6">
-        Hey, my name is Corentin and I'm 20 years old.<br /><br />
-
-        Currently, I'm studying for a BSC. Computer Science at the <a
-          href="https://www.iu.org/"
-          target="_blank"
-          class="underline decoration-secondary decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer"
-          >IU International University of Applied Sciences.</a
-        ><br /><br />
-
-        I'm also a freelance backend developer and I've been working on several
-        projects for the past year including websites and web applications.<br /> <br />My
-        main programming language is <a
-          href="https://go.dev/"
-          target="_blank"
-          class="underline decoration-accent decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer">Golang</a
-        > but I've also worked with java, python, typescript, C/C++ and more.<br
-        /> I also have experience with databases such as PostgreSQL or MongoDB and
-        I'm familiar with Docker, Docker Compose and even Podman.
-
+        {t("about.presentation")}
         <br /><br />
-
-        Furthermore, I'm a passionate open-source enthusiast and have been
-        contributing to several projects for a few years now. I've also created <a
-          href="https://memnix.app"
-          target="_blank"
-          class="underline decoration-secondary decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer">Memnix</a
-        >, a free and open-source flashcard app for Android and Web.
-
+        <Trans i18nKey="about.study">
+          Currently, I'm studying for a BSC. Computer Science at the <a
+            href="https://www.iu.org/"
+            target="_blank"
+            class="underline decoration-secondary decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer"
+            >IU International University of Applied Sciences.</a
+          >
+        </Trans>
         <br /><br />
+        {t("about.work")}
+        <br />
+        <br />
+        <Trans i18nKey="about.lang">
+          My main programming language is <a
+            href="https://go.dev/"
+            target="_blank"
+            class="underline decoration-accent decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer">Golang</a
+          > but I've also worked with java, python, typescript, C/C++ and more.
+        </Trans><br />
+        {t("about.database")}
+        <br /><br />
+        <Trans i18nKey="about.opensource">
+          Furthermore, I'm a passionate open-source enthusiast and have been
+          contributing to several projects for a few years now. I've also
+          created <a
+            href="https://memnix.app"
+            target="_blank"
+            class="underline decoration-secondary decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer">Memnix</a
+          >, a free and open-source flashcards app for Android and Web.
+        </Trans>
+        <br /><br />
+        <Trans i18nKey="about.community">
+          I like to manage communities and I'm currently the founder of <a
+            href="/discord"
+            target="_blank"
+            class="underline decoration-accent decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer nofollow">The Kafejo</a
+          >, a Discord community for developers and students.
+        </Trans>
 
-        I like to manage communities and I'm currently the founder of <a
-          href="/discord"
-          target="_blank"
-          class="underline decoration-accent decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer nofollow">The Kafejo</a
-        >, a Discord community for developers and students.
         <br />
-        You might also meet me on a chess board as I'm playing a lot and I'm managing
-        a chess community for my friend <a
-          href="https://Stouuf.net/"
-          target="_blank"
-          class="underline decoration-secondary decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer">Stouuf</a
-        > on Discord, Twitch and YouTube.
+        <Trans i18nKey="about.chess">
+          You might also meet me on a chess board as I'm playing a lot and I'm
+          managing a chess community for my friend <a
+            href="https://Stouuf.net/"
+            target="_blank"
+            class="underline decoration-secondary decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer">Stouuf</a
+          > on Discord, Twitch and YouTube.</Trans
+        >
         <br />
         <br />
-
-        I'm also a big fan of Linux and I've been using it since my youngest
-        age. At the moment, I'm using <a
-          href="https://fedora.org/"
-          target="_blank"
-          class="underline decoration-secondary decoration-4 hover:decoration-primary"
-          rel="noopener noreferrer">Fedora</a
-        > as my main operating system and <a
-          href="https://voidlinux.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline decoration-secondary decoration-4 hover:decoration-primary"
-          >Void Linux</a
-        > on my laptop.
+        <Trans i18nKey="about.linux">
+          I'm also a big fan of Linux and I've been using it since my youngest
+          age. At the moment, I'm using <a
+            href="https://fedora.org/"
+            target="_blank"
+            class="underline decoration-secondary decoration-4 hover:decoration-primary"
+            rel="noopener noreferrer">Fedora</a
+          > as my main operating system and <a
+            href="https://voidlinux.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline decoration-secondary decoration-4 hover:decoration-primary"
+            >Void Linux</a
+          > on my laptop.</Trans
+        >
         <br /><br />
       </p>
     </div>
