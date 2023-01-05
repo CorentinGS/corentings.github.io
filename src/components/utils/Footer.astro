@@ -5,50 +5,66 @@ const social = Config;
 const profile = Profile;
 
 import LaMastodon from "~icons/la/mastodon";
-import LucideChevronRight from "~icons/lucide/chevron-right";
-import LucideChevronDown from "~icons/lucide/chevron-down";
 import LucideMail from "~icons/lucide/mail";
 import LucideTwitter from "~icons/lucide/twitter";
 import LucideGithub from "~icons/lucide/github";
 import LucideLinkedin from "~icons/lucide/linkedin";
 import LaDiscord from "~icons/la/discord";
-import { Image } from "@astrojs/image/components";
 ---
 
 <footer class="footer items-center bg-base-200 p-4">
-    <div class="grid-flow-col items-center">
-        <p>Copyright © 2022 - All right reserved - {profile.full_name}</p>
-    </div>
-    <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a href={`mailto:${profile.email}`} target="_blank" aria-label="mail">
-            <LucideMail class="hoveranimation h-6 w-6" />
-        </a>
-        <a href={"https://twitter.com/" + social.twitter} target="_blank" aria-label="twitter">
-            <LucideTwitter class="hoveranimation h-6 w-6" />
-        </a>
-        <a
-            href={social.discord}
-            target="_blank"
-            aria-label="discord"
-        >
-            <LaDiscord class="hoveranimation h-6 w-6" />
-        </a>
-        <a href={"https://github.com/" + social.github} target="_blank" aria-label="github">
-            <LucideGithub class="hoveranimation h-6 w-6" />
-        </a>
-        <a
-            href={"https://www.linkedin.com/in/" + social.linkedin}
-            target="_blank"
-            aria-label="linkedin"
-        >
-            <LucideLinkedin class="hoveranimation h-6 w-6" />
-        </a>
-        <a
-        v-if="social.mastodon !== ''" rel="me"
-        href={social.mastodon}
-        aria-label="mastodon"
-        target="_blank" > 
-        <LaMastodon class="hoveranimation h-6 w-6" />
-      </a>
-    </div>
+  <div class="grid-flow-col items-center">
+    <p>Copyright © 2022 - All right reserved - {profile.full_name}</p>
+  </div>
+  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a
+      href={`mailto:${profile.email}`}
+      target="_blank"
+      aria-label="mail"
+      rel="noopener noreferrer nofollow"
+    >
+      <LucideMail class="hoveranimation h-6 w-6" />
+    </a>
+    <a
+      href={"https://twitter.com/" + social.twitter}
+      target="_blank"
+      aria-label="twitter"
+      rel="noopener noreferrer"
+    >
+      <LucideTwitter class="hoveranimation h-6 w-6" />
+    </a>
+    <a
+      href={social.discord}
+      target="_blank"
+      aria-label="discord"
+      rel="nofollow noopener noreferrer"
+    >
+      <LaDiscord class="hoveranimation h-6 w-6" />
+    </a>
+    <a
+      href={"https://github.com/" + social.github}
+      target="_blank"
+      aria-label="github"
+      rel="me noopener noreferrer"
+    >
+      <LucideGithub class="hoveranimation h-6 w-6" />
+    </a>
+    <a
+      href={"https://www.linkedin.com/in/" + social.linkedin}
+      target="_blank"
+      aria-label="linkedin"
+      rel="me noopener noreferrer"
+    >
+      <LucideLinkedin class="hoveranimation h-6 w-6" />
+    </a>
+    <a
+      v-if="social.mastodon !== ''"
+      rel="me noopener noreferrer"
+      href={social.mastodon}
+      aria-label="mastodon"
+      target="_blank"
+    >
+      <LaMastodon class="hoveranimation h-6 w-6" />
+    </a>
+  </div>
 </footer>

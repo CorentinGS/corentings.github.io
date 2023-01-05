@@ -3,7 +3,7 @@ import { type TimelineCardList, TimelineCardType } from "./types";
 export class Profile {
     static readonly full_name = "Corentin Giaufer Saubert";
     static readonly short_name = "Corentin GS";
-    static readonly title = "Computer Science student at Unice.";
+    static readonly title = "Freelance backend developer";
     static readonly location = "Nice, France";
     static readonly email = "c.giaufersaubert@outlook.com";
     static readonly avatar = "/img/avatar.webp";

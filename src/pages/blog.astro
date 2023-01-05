@@ -2,7 +2,6 @@
 import { BlogPosts } from "../../utils/blog";
 import CardLatest from "../components/blog/CardLatest.astro";
 import CardPrevious from "../components/blog/CardPrevious.astro";
-import Footer from "../components/utils/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 
 const latest = BlogPosts.blogPosts.slice(0, 1);
@@ -22,7 +21,7 @@ const blogPosts = BlogPosts.blogPosts.slice(1);
     <div>
       {
         latest.map((last) => (
-          <a href={last.link} rel="prefetch">
+          <a href={last.link} rel="nofollow prefetch">
             <CardLatest blogPost={last} class="mb-5" />
           </a>
         ))
@@ -33,7 +32,7 @@ const blogPosts = BlogPosts.blogPosts.slice(1);
         <p class="my-4 text-4xl font-bold">Previous</p>
       </div>
       {blogPosts.map((blogPost) => (
-        <a href={blogPost.link} rel="prefetch">
+        <a href={blogPost.link} rel="nofollow prefetch">
           <CardPrevious blogPost={blogPost} class="mb-5" />
         </a>
       ))}

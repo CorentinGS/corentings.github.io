@@ -35,6 +35,8 @@ const { title } = Astro.props;
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="manifest" href="/manifest.json" />
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="theme-color" content="#ffffff">
@@ -68,8 +70,7 @@ const { title } = Astro.props;
       content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
     />
     <link rel="me" href="https://hachyderm.io/@TheLittlePrince"/>
-
-    <title>{title}</title>
+   <title>{title}</title>
   </head>
   <body>
     <main>
@@ -87,14 +88,14 @@ const { title } = Astro.props;
           <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
             <!-- Sidebar content here -->
             <li>
-              <a href="/blog" rel="prefetch">Blog</a>
+              <a href="/blog" rel="nofollow prefetch">Blog</a>
             </li>
             <li>
-              <a href="/links" rel="prefetch"> Links </a>
+              <a href="/links" rel="nofollow prefetch"> Links </a>
             </li>
             <li>
               <a
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 target="_blank"
                 href="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
                 >Resume

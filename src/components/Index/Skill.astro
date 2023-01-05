@@ -3,8 +3,8 @@ const { name, link } = Astro.props;
 ---
 
 <div class="hoveranimation mx-auto hover:skew-x-2 hover:skew-y-2 transform-gpu">
-    <a target="_blank" href={link}>
-        <slot />
-        <p class="mt-2 hover:underline">{name}</p>
-    </a>
+  <a target="_blank" href={link} rel="noopener noreferrer nofollow">
+    <slot />
+    <p class="mt-2 hover:underline">{name}</p>
+  </a>
 </div>

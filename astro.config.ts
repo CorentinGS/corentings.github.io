@@ -19,8 +19,12 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 import compress from "astro-compress";
 import serviceWorker from "astrojs-service-worker";
+import compressor from "astro-compressor";
 
 // https://astro.build/config
+
+// https://astro.build/config
+import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,5 +36,7 @@ export default defineConfig({
   },
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), mdx(), prefetch(), sitemap(), compress({css: false}), serviceWorker()]
+  }), mdx(), prefetch(), sitemap(), serviceWorker(), critters(), compress({
+    css: false
+  }), compressor() ]
 });
