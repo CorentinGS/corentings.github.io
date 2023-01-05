@@ -7,7 +7,7 @@ import LucideGithub from "~icons/lucide/github";
 import LucideLinkedin from "~icons/lucide/linkedin";
 import LaDiscord from "~icons/la/discord";
 import LaMastodon from "~icons/la/mastodon";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 const social = Config;
 const profile = Profile;
 ---
@@ -18,15 +18,16 @@ const profile = Profile;
       <div
         class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
       >
-        <Image
+        <Picture
           src={profile.avatar}
-          format="avif"
-          widths={[200, 400, 800]}
+          formats={["avif", "webp", "png"]}
           alt="avatar"
           class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
-          height="192"
-          width="192"
+          widths={[96, 192, 384]}
+          sizes="(max-width: 192px) 96px, 192px"
           loading={"eager"}
+          aspectRatio={1/1}
+
         />
         <div class="flex-grow sm:pl-8">
           <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">

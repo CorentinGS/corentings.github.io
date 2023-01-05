@@ -30,6 +30,16 @@ export class Profile {
   export class Experiences {
     private static readonly _experiences: TimelineCardList = [
       {
+        name: "BSC. Computer Science",
+        type: TimelineCardType.School,
+        description:
+          "Bachelor's degree in Computer Science at IU International University of Applied Sciences.",
+        start_date: "2023",
+        tools: "",
+        link: "https://www.iu.org/bachelor/computer-science/",
+        image: "/img/iu_logo.png",
+      },
+      {
         name: "Freelance developer",
         type: TimelineCardType.Work,
         description:
@@ -38,9 +48,10 @@ export class Profile {
         tools: "Golang, PostgreSQL, Docker...",
         link: "https://corentings.vercel.app",
       },
+
       {
         name: "Stouuf community manager",
-        type: TimelineCardType.Work,
+        type: TimelineCardType.Personal,
         description:
           "Managing the Stouuf community, website development, events organization and twitch moderation.",
         start_date: "2022",

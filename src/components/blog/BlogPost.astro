@@ -1,7 +1,7 @@
 ---
 import type { BlogPost } from "../../../utils/types";
 import LucideArrowLeft from '~icons/lucide/arrow-left'
-import { Image } from '@astrojs/image/components';
+import { Picture,  Image } from '@astrojs/image/components';
 
 interface Props {
   blogPost: BlogPost;
@@ -21,16 +21,17 @@ const { blogPost } = Astro.props;
     class="blogPost.dark_background===true? 'text-white': ''"
     style="height: 24em"
   >
-    <Image
+    <Picture
       src={blogPost.image}
       class="absolute left-0 top-0 z-0 h-full w-full object-cover"
       alt={blogPost.title}
-      width="1024"
-      height="576"
       aspectRatio="16/9"
       loading={"eager"}
-      format='avif'
-      quality={70}/>
+      formats={["avif", "webp", "png"]}
+      widths={[512, 1024]}
+      sizes="(max-width: 512px) 248px, 512px"
+      aspectRatio={16/9}
+      />
     <div class="absolute bottom-0 left-0 z-20 p-4">
       <span
         class="badge badge-secondary mb-2 inline-flex items-center justify-center px-4 py-1 uppercase"
@@ -42,7 +43,7 @@ const { blogPost } = Astro.props;
       <div class="mt-3 flex">
         <Image
           src={blogPost.author.avatar}
-          format='avif'
+          format='webp'
           quality={50}
           loading={"eager"}
           alt={blogPost.author.name}
