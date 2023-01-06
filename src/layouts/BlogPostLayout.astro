@@ -2,12 +2,15 @@
 import { BlogPosts } from "../../utils/blog";
 import BlogPost from "../components/blog/BlogPost.astro";
 import Navbar from "../components/utils/Navbar.astro";
-import '../styles/global.css'
-const {frontmatter} = Astro.props;
+import "../styles/global.css";
+import { localizePath } from "astro-i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { LanguageSelector } from "astro-i18next/components";
+import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro";
+import { t } from "i18next";
 
-
+const { frontmatter } = Astro.props;
 const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
-
 ---
 
 <!DOCTYPE html>
@@ -64,10 +67,11 @@ const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
       name="twitter:image"
       content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <title>{frontmatter.title}</title>  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <HeadHrefLangs />
+    <title>{frontmatter.title}</title>
+  </head>
   <body>
     <main>
       <div class="drawer">
@@ -86,18 +90,31 @@ const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
           <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
             <!-- Sidebar content here -->
             <li>
-              <a href="/blog" rel="nofollow prefetch">Blog</a>
+              <a href={localizePath("/blog")} rel="nofollow prefetch"
+                >{t("navbar.blog")}</a
+              >
             </li>
             <li>
-              <a href="/links" rel="nofollow prefetch"> Links </a>
+              <a href={localizePath("/links")} rel="nofollow prefetch">
+                {t("navbar.links")}
+              </a>
             </li>
             <li>
               <a
                 rel="noopener noreferrer nofollow"
                 target="_blank"
                 href="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
-                >Resume
+                >{t("navbar.resume")}
               </a>
+            </li>
+            <li class="py-3">
+              <LanguageSelector
+                showFlag={true}
+                class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+              />
+            </li>
+            <li class="py-3">
+              <ThemeSwitcher />
             </li>
           </ul>
         </div>

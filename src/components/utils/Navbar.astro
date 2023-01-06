@@ -5,64 +5,77 @@ import { LanguageSelector } from "astro-i18next/components";
 import { t } from "i18next";
 import { localizePath } from "astro-i18next";
 
-
-const profile = Profile
+const profile = Profile;
 ---
 
-    <div class="navbar bg-base-200">
-      <div class="navbar-start">
-        <div class="flex-none lg:hidden">
-          <label class="btn btn-ghost btn-square" for="my-drawer-3">
-            <svg
-              class="inline-block h-6 w-6 stroke-current"
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              ></path>
-            </svg>
-          </label>
-        </div>
-        <a
-          class="hoveranimation btn btn-ghost text-xl normal-case lg:text-3xl"
-          href={localizePath("/")} rel="prefetch"
-          ><h1 class="font-bold text-secondary">
-            {profile.short_name }
-          </h1>
-        </a>
-      </div>
-      <div class="navbar-end hidden text-xl lg:flex">
-        <ul class="menu menu-horizontal p-0">
-          <li class="px-3">
-            <LanguageSelector showFlag={true} class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content" />
-          </li>
-          <li class="px-3">
-            <ThemeSwitcher />
-          </li>
-          <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href={localizePath("/blog")}> {t("navbar.blog")} </a>
-          </li>
-          <li>
-            <a class="hoveranimation hover:text-accent" rel="nofollow prefetch" href={localizePath("/links")}> {t("navbar.links")} </a>
-          </li>
-          <li>
-            <a
-              class="hoveranimation hover:text-accent"
-              href="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-            {t("navbar.resume")}
-          </a>
-          </li>
-        </ul>
-      </div>
+<div class="navbar bg-base-200">
+  <div class="navbar-start">
+    <div class="flex-none lg:hidden">
+      <label class="btn btn-ghost btn-square" for="my-drawer-3">
+        <svg
+          class="inline-block h-6 w-6 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"></path>
+        </svg>
+      </label>
     </div>
-  
-  <style></style>
-  
+    <a
+      class="hoveranimation btn btn-ghost text-xl normal-case lg:text-3xl"
+      href={localizePath("/")}
+      rel="prefetch"
+      ><h1 class="font-bold text-secondary">
+        {profile.short_name}
+      </h1>
+    </a>
+  </div>
+  <div class="navbar-end hidden text-xl lg:flex">
+    <ul class="menu menu-horizontal p-0">
+      <li class="px-3">
+        <LanguageSelector
+          showFlag={true}
+          class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+        />
+      </li>
+      <li class="px-3">
+        <ThemeSwitcher />
+      </li>
+      <li>
+        <a
+          class="hoveranimation hover:text-accent"
+          rel="nofollow prefetch"
+          href={localizePath("/blog")}
+        >
+          {t("navbar.blog")}
+        </a>
+      </li>
+      <li>
+        <a
+          class="hoveranimation hover:text-accent"
+          rel="nofollow prefetch"
+          href={localizePath("/links")}
+        >
+          {t("navbar.links")}
+        </a>
+      </li>
+      <li>
+        <a
+          class="hoveranimation hover:text-accent"
+          href="https://github.com/CorentinGS/CorentinGS/blob/main/CorentinGS%20CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          {t("navbar.resume")}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style></style>
