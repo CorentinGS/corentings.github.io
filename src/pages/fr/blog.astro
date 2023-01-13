@@ -25,7 +25,7 @@ const blogPosts = BlogPosts.blogPosts.slice(1);
       {
         latest.map((last) => (
           <a href={last.link} rel="nofollow prefetch">
-            <CardLatest blogPost={last} class="mb-5" />
+            <CardLatest blogPost={last} />
           </a>
         ))
       }
@@ -36,7 +36,7 @@ const blogPosts = BlogPosts.blogPosts.slice(1);
       </div>
       {blogPosts.map((blogPost) => (
         <a href={blogPost.link} rel="nofollow prefetch">
-          <CardPrevious blogPost={blogPost} class="mb-5" />
+          <CardPrevious  blogPost={blogPost}  />
         </a>
       ))}
     </div>

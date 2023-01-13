@@ -79,7 +79,7 @@ const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link);
         <input id="my-drawer-3" class="drawer-toggle" type="checkbox" />
         <div class="drawer-content flex flex-col">
           <!-- Navbar -->
-          <Navbar />
+          <Navbar lang={false}/>
           <!-- Page Slot -->
           <BlogPost blogPost={blogPost}>
             <slot />

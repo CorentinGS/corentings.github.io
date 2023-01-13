@@ -6,6 +6,8 @@ import { t } from "i18next";
 import { localizePath } from "astro-i18next";
 
 const profile = Profile;
+const { lang } = Astro.props;
+
 ---
 
 <div class="navbar bg-base-200">
@@ -37,12 +39,16 @@ const profile = Profile;
   </div>
   <div class="navbar-end hidden text-xl lg:flex">
     <ul class="menu menu-horizontal p-0">
-      <li class="px-3">
-        <LanguageSelector
-          showFlag={true}
-          class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
-        />
-      </li>
+      {
+        lang ? (
+          <li class="px-3">
+            <LanguageSelector
+            showFlag={true}
+              class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+            />
+          </li>
+        ) : null
+      }
       <li class="px-3">
         <ThemeSwitcher />
       </li>
