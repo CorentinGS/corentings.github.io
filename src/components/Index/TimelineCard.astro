@@ -63,7 +63,7 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
               class="h-10 w-10 rounded-lg object-cover shadow-sm"
               formats={["avif", "webp", "png"]}
               loading="lazy"
-              widths={[40, 64, 128]}
+              widths={[40]}
               sizes="(max-width: 64px) 40px, 64px"
               aspectRatio={1/1}
             />
@@ -104,11 +104,11 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
         <Picture
               alt={name}
               src={image}
-              class="h-12 w-12 lg:h-16 lg:w-16 rounded-lg object-cover shadow-sm"
+              class="rounded-lg object-cover shadow-sm"
               formats={["avif", "webp", "png"]}
               loading="lazy"
-              widths={[40, 64, 128]}
-              sizes="(max-width: 128px) 64px, 128px"
+              widths={[40, 64]}
+              sizes="(max-width: 64px) 40px, 64px"
               aspectRatio={1/1}
           />
         </a>

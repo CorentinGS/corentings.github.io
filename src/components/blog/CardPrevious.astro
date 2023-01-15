@@ -18,11 +18,23 @@ const { blogPost } = Astro.props;
         src={blogPost.image}
         formats={["avif", "webp", "png"]}
         loading="lazy"
+        widths={[128, 248]}
+        sizes="(max-width: 248px) 100vw, 248px"
+        aspectRatio={1/1}
+        fit="cover"
+        alt={blogPost.title}
+        class="sm:hidden"/>
+
+    <Picture
+        src={blogPost.image}
+        formats={["avif", "webp", "png"]}
+        loading="lazy"
         widths={[248, 512]}
-        sizes="(max-width: 512px) 248px, 512px"
+        sizes="(max-width: 512px) 100vw, 512px"
         aspectRatio={16/9}
         fit="cover"
-        alt={blogPost.title}/>
+        alt={blogPost.title}
+        class="hidden sm:flex"/>
        
     </div>
     <div class="w-3/5 pl-3">
@@ -32,10 +44,10 @@ const { blogPost } = Astro.props;
         <h3 class="text-md mb-3 font-semibold leading-tight">
             {blogPost.title}
         </h3>
-        <p class="mb-3 text-sm font-semibold leading-tight">
+        <p class="flex mb-3 text-sm font-semibold leading-tight">
             {blogPost.description}
         </p>
-        <div class="hidden md:flex w-full items-center text-sm font-medium">
+        <div class="hidden sm:flex w-full items-center text-sm font-medium">
             <Image
                 class="mr-3 h-10 w-10 rounded-full"
                 src={blogPost.author.avatar}
@@ -44,7 +56,7 @@ const { blogPost } = Astro.props;
                 height="64"
                 format='webp'
                 quality={50}
-                aspectRatio="1/1"
+                aspectRatio="3/4"
                 />
             <div class="flex flex-col">
                 <span>{blogPost.author.name}</span>
