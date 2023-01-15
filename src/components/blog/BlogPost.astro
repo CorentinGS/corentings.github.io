@@ -29,8 +29,9 @@ const { blogPost } = Astro.props;
       aspectRatio="16/9"
       loading={"eager"}
       formats={["avif", "webp", "png"]}
-      widths={[512, 1024]}
-      sizes="(max-width: 512px) 248px, 512px"
+      widths={[ 512, 1024, 1515, 2048]}
+      fit="cover"
+      sizes="(max-width: 2048px) 100vw, 2048vw"
       aspectRatio={16/9}
       />
     <div class="absolute bottom-0 left-0 z-20 p-4">
