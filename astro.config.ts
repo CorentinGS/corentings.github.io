@@ -24,11 +24,9 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 import astroI18next from "astro-i18next";
 
-// https://astro.build/config
-import critters from "astro-critters";
 
 // https://astro.build/config
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,18 +45,26 @@ export default defineConfig({
     }),
     mdx(),
     prefetch(),
-    sitemap(),
     astroI18next(),
-    serviceWorker(),
-    critters({
-      path: ".vercel/output/static",
+    sitemap({
+      lastmod: new Date(),
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en-US",
+          fr: "fr-FR"
+        }
+      }
     }),
+    serviceWorker(),
     compress({
       path: ".vercel/output/static",
       css: false,
     }),
     compressor(),
   ],
-  output: "static",
-  adapter: vercel(),
+  output: "server",
+  adapter: vercel({
+    analytics: true,
+  }),
 });
