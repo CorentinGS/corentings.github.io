@@ -6,8 +6,6 @@ import Icons from "unplugin-icons/vite";
 import image from "@astrojs/image";
 
 // https://astro.build/config
-
-// https://astro.build/config
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
@@ -24,9 +22,8 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 import astroI18next from "astro-i18next";
 
-
 // https://astro.build/config
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
@@ -63,7 +60,7 @@ export default defineConfig({
     }),
     compressor(),
   ],
-  output: "server",
+  output: "static",
   adapter: vercel({
     analytics: true,
   }),
