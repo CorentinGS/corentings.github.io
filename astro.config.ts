@@ -32,7 +32,7 @@ import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://corentings.vercel.app",
+  site: "https://corentings.dev",
   vite: {
     plugins: [
       Icons({
