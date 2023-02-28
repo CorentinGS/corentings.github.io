@@ -44,6 +44,6 @@
     "@tailwindcss/typography": "0.5.9"
   },
   "resolutions": {
-    "json5": "2.2.1"
+    "json5": "^2.2.2"
   }
 }
