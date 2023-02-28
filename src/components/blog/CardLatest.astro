@@ -18,7 +18,6 @@ const { blogPost } = Astro.props;
     src={blogPost.image}
     class="absolute left-0 top-0 z-0 h-full w-full object-cover"
     alt={blogPost.title}
-    aspectRatio="16/9"
     loading={"eager"}
     formats={["avif", "webp", "png"]}
     widths={[512, 1024, 1515, 2048]}

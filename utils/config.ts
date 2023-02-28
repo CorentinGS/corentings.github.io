@@ -45,7 +45,7 @@ export class Experiences {
       description: t("experiences.freelance.description"),
       start_date: "2022",
       tools: "Golang, PostgreSQL, Docker...",
-      link: "https://corentings.vercel.app",
+      link: "https://corentings.dev/",
     },
 
     {
