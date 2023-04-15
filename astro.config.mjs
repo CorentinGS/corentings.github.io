@@ -34,13 +34,14 @@ export default defineConfig({
   image: {
     service: "astro/assets/services/sharp"
   },
-  markdown: { shikiConfig: { theme: 'dracula' },     syntaxHighlight: 'shiki', },
+  markdown: { shikiConfig: { theme: "dracula" }, syntaxHighlight: "shiki" },
   integrations: [
     prefetch(),
     tailwind(),
     mdx({
-      shikiConfig: { theme: 'dracula' },
-      syntaxHighlight: 'shiki'}),
+      shikiConfig: { theme: "dracula" },
+      syntaxHighlight: "shiki"
+    }),
     astroI18next(),
     sitemap({
       lastmod: new Date(),
@@ -48,7 +49,7 @@ export default defineConfig({
         defaultLocale: "en",
         locales: {
           en: "en-US",
-          fr: "fr-FR",
+          fr: "fr-FR"
         }
       }
     }),
@@ -59,5 +60,5 @@ export default defineConfig({
     compressor()
   ],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel()
 })
