@@ -34,10 +34,13 @@ export default defineConfig({
   image: {
     service: "astro/assets/services/sharp"
   },
+  markdown: { shikiConfig: { theme: 'dracula' },     syntaxHighlight: 'shiki', },
   integrations: [
     prefetch(),
     tailwind(),
-    mdx(),
+    mdx({
+      shikiConfig: { theme: 'dracula' },
+      syntaxHighlight: 'shiki'}),
     astroI18next(),
     sitemap({
       lastmod: new Date(),
@@ -45,14 +48,10 @@ export default defineConfig({
         defaultLocale: "en",
         locales: {
           en: "en-US",
-          de: "de-DE",
           fr: "fr-FR",
-          ro: "ro-RO",
-          it: "it-IT"
         }
       }
     }),
-    critters(),
     compress({
       path: ".vercel/output/static",
       css: false
@@ -60,8 +59,5 @@ export default defineConfig({
     compressor()
   ],
   output: "server",
-  // adapter: vercel(),
-  adapter: node({
-    mode: "standalone"
-  })
+  adapter: vercel(),
 })

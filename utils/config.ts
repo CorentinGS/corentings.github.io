@@ -1,13 +1,14 @@
 import { t } from "i18next"
 import { TimelineCardType, type TimelineCardList } from "./types"
 
+import imgAvatar from "../src/assets/avatar.webp"
 export class Profile {
   static readonly full_name = "Corentin Giaufer Saubert"
   static readonly short_name = "Corentin GS"
   static readonly title = "Freelance backend developer"
   static readonly location = "Nice, France"
   static readonly email = "c.giaufersaubert@outlook.com"
-  static readonly avatar = "../src/assets/avatar.webp"
+  static readonly avatar = imgAvatar
 }
 
 export class Config {
