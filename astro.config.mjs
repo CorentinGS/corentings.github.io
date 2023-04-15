@@ -43,6 +43,7 @@ export default defineConfig({
       syntaxHighlight: "shiki"
     }),
     astroI18next(),
+    critters(),
     sitemap({
       lastmod: new Date(),
       i18n: {
