@@ -5,7 +5,7 @@ async function get(context) {
     title: "Corentin GS's blog",
     description: "A young programmer journey",
     site: "https://corentings.dev",
-    items: await pagesGlobToRssItems(/* #__PURE__ */ Object.assign({"./blog/docker-and-go.mdx": () => import('../prerender.fd51db21.mjs').then(n => n.e),"./blog/mergesort-parallel.mdx": () => import('../prerender.fd51db21.mjs').then(n => n.d),"./blog/simple-go-vs-goroutines.mdx": () => import('../prerender.fd51db21.mjs').then(n => n.c)})),
+    items: await pagesGlobToRssItems(/* #__PURE__ */ Object.assign({"./blog/docker-and-go.mdx": () => import('../prerender.c33cfb44.mjs').then(n => n.e),"./blog/mergesort-parallel.mdx": () => import('../prerender.c33cfb44.mjs').then(n => n.d),"./blog/simple-go-vs-goroutines.mdx": () => import('../prerender.c33cfb44.mjs').then(n => n.c)})),
     customData: `<language>en-us</language>`
   })
 }
