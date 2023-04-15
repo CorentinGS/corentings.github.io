@@ -1,21 +1,21 @@
 ---
-import { TimelineCardType } from "../../../utils/types";
-import { Picture } from "@astrojs/image/components";
-import LucideChevronRight from "~icons/lucide/chevron-right";
-import { t } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { TimelineCardType } from "../../../utils/types"
+import { Image } from "astro:assets"
+import { t } from "i18next"
+import { Trans } from "astro-i18next/components"
+import { Icon } from "astro-iconify"
 
 interface Props {
-  name: string;
-  description: string;
-  image?: string;
-  end_date?: string;
-  start_date: string;
-  link?: string;
-  location?: string;
-  right?: boolean;
-  tools?: string;
-  type?: TimelineCardType;
+  name: string
+  description: string
+  image?: string
+  end_date?: string
+  start_date: string
+  link?: string
+  location?: string
+  right?: boolean
+  tools?: string
+  type?: TimelineCardType
 }
 const {
   name,
@@ -27,16 +27,20 @@ const {
   location,
   type,
   tools,
-  right,
-} = Astro.props;
+  right
+} = Astro.props
 
-let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] md:border-l-[0px] ") + (type === TimelineCardType.School 
-      ? "border-primary"
-      : type === TimelineCardType.Work
-      ? "border-secondary"
-      : type === TimelineCardType.Course
-      ? "border-success"
-      : "border-accent");
+let classContent =
+  (right
+    ? "border-l-[6px] "
+    : "border-l-[6px] md:border-r-[6px] md:border-l-[0px] ") +
+  (type === TimelineCardType.School
+    ? "border-primary"
+    : type === TimelineCardType.Work
+    ? "border-secondary"
+    : type === TimelineCardType.Course
+    ? "border-success"
+    : "border-accent")
 ---
 
 <div
@@ -46,30 +50,31 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
   <div class="justify-between sm:flex">
     <div>
       <div class="flex">
-      <h3 class="text-xl font-bold capitalize">
-        {name}
-      </h3>
-      {
-        image != null ? (
-          <a
-            href={link}
-            class="ml-3 flex-shrink-0 sm:hidden"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-          >
-            <Picture
-              alt={name}
-              src={image}
-              class="h-10 w-10 rounded-lg object-cover shadow-sm"
-              formats={["avif", "webp", "png"]}
-              loading="lazy"
-              widths={[40]}
-              sizes="(max-width: 64px) 40px, 64px"
-              aspectRatio={1/1}
-            />
-          </a>
-        ) : null
-      }
+        <h3 class="text-xl font-bold capitalize">
+          {name}
+        </h3>
+        {
+          image != null ? (
+            <a
+              href={link}
+              class="ml-3 flex-shrink-0 sm:hidden"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <Image
+                alt={name}
+                src={image}
+                class="h-10 w-10 rounded-lg object-cover shadow-sm"
+                format="avif"
+                loading="lazy"
+                width={64}
+                height={64}
+                aspectRatio={1}
+                quality={"high"}
+              />
+            </a>
+          ) : null
+        }
       </div>
       <div class="mt-1 flex flex-row text-xs font-medium md:text-sm">
         {
@@ -78,16 +83,18 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
               {start_date} ・ {end_date}
             </p>
           ) : (
-            <p>{t("experiences.since")} {start_date}</p>
+            <p>
+              {t("experiences.since")} {start_date}
+            </p>
           )
         }
         {location != null ? <p>・{location}</p> : null}
       </div>
       {
         tools != null ? (
-          <div class="mb-2 flex">
+          <div class="mb-2 flex items-center">
             <p class="text-xs font-medium uppercase md:text-sm">Skills</p>
-            <LucideChevronRight />
+            <Icon name="lucide:chevron-right" class="h-6 w-6" />
             <p class="text-xs font-medium md:text-sm">{tools}</p>
           </div>
         ) : null
@@ -101,15 +108,16 @@ let classContent = (right? "border-l-[6px] ": "border-l-[6px] md:border-r-[6px] 
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
-        <Picture
-              alt={name}
-              src={image}
-              class="rounded-lg object-cover shadow-sm"
-              formats={["avif", "webp", "png"]}
-              loading="lazy"
-              widths={[40, 64]}
-              sizes="(max-width: 64px) 40px, 64px"
-              aspectRatio={1/1}
+          <Image
+            alt={name}
+            src={image}
+            class="rounded-lg object-cover shadow-sm"
+            formats={"avif"}
+            loading="lazy"
+            width={64}
+            height={64}
+            quality={"high"}
+            aspectRatio={1}
           />
         </a>
       ) : null

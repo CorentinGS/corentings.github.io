@@ -1,9 +1,15 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "types": [
-      "unplugin-icons/types/astro",
-    ]
-  }
-
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["astro/client"],
+    "baseUrl": ".",
+    "importsNotUsedAsValues": "remove"
+  },
+  "include": ["**/*", ".eslintrc.cjs"]
 }

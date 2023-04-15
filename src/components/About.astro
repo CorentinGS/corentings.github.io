@@ -1,15 +1,15 @@
 ---
-import { t } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { t } from "i18next"
+import { Trans } from "astro-i18next/components"
 ---
 
-<section class="bg-base-200 lg:py-15 py-6 md:py-10" id="about">
+<section class="lg:py-15 bg-base-200 py-6 md:py-10" id="about">
   <div class="container mx-auto px-6 py-8">
-    <div class="items-center flex flex-col">
-      <h2 class="text-2xl font-bold md:text-3xl lg:text-5xl text-center">
+    <div class="flex flex-col items-center">
+      <h2 class="text-center text-2xl font-bold md:text-3xl lg:text-5xl">
         {t("about.title")}
       </h2>
-      <p class="mt-4 text-xl mx-6">
+      <p class="mx-6 mt-4 text-xl">
         ・{t("about.presentation")}
         <br /><br />
         ₊˚⋆ <Trans i18nKey="about.study">
@@ -35,7 +35,7 @@ import { Trans } from "astro-i18next/components";
         </Trans><br />
         {t("about.database")}
         <br /><br />
-        ・  <Trans i18nKey="about.opensource">
+        ・ <Trans i18nKey="about.opensource">
           Furthermore, I'm a passionate open-source enthusiast and have been
           contributing to several projects for a few years now. I've also
           created <a
@@ -62,8 +62,8 @@ import { Trans } from "astro-i18next/components";
             target="_blank"
             class="underline decoration-secondary decoration-4 hover:decoration-primary"
             rel="noopener noreferrer">Stouuf</a
-          > on Discord, Twitch and YouTube.</Trans
-        >
+          > on Discord, Twitch and YouTube.
+        </Trans>
         <br />
         <br />
         ・ <Trans i18nKey="about.linux">
@@ -79,8 +79,8 @@ import { Trans } from "astro-i18next/components";
             rel="noopener noreferrer"
             class="underline decoration-secondary decoration-4 hover:decoration-primary"
             >Void Linux</a
-          > on my laptop.</Trans
-        >
+          > on my laptop.
+        </Trans>
         <br /><br />
       </p>
     </div>

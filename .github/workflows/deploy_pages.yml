@@ -76,4 +76,3 @@ jobs:
         with:
           publish_dir: ./.output/public
           github_token: ${{ secrets.GITHUB_TOKEN }}
-

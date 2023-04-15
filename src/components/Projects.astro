@@ -1,79 +1,78 @@
 ---
-import Project from "./Index/Project.astro";
-import { t } from "i18next";
+import Project from "./Index/Project.astro"
+import { t } from "i18next"
 
+import imgMemnixLogo from "../assets/moutmout.png"
+import imgGauntlet from "../assets/gauntlet.png"
+import imgUcaEdt from "../assets/edt-uca.png"
+import imgStouufWebsite from "../assets/Stouuf.png"
+import imgEchiquierNicois from "../assets/en.png"
 ---
 
-<section class="bg-base-200 lg:py-15 py-6 md:py-10" >
-      <div class="mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12">
-        <div>
-          <h2
-            class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl"
-          >
-          {t("projects.title")}
-          </h2>
-        </div>
+<section class="lg:py-15 bg-base-200 py-6 md:py-10">
+  <div class="mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12">
+    <div>
+      <h2 class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl">
+        {t("projects.title")}
+      </h2>
+    </div>
 
-          <Project
-            description={t("projects.memnix")}
-            image="/moutmout.png"
-            link="https://memnix.app"
-            name="Memnix"
-            reversed={true}
-            stack="Vue.js・Golang・PostgreSQL・MongoDB"
-            ratio={1/1}
-          />
+    <Project
+      description={t("projects.memnix")}
+      image={imgMemnixLogo}
+      link="https://memnix.app"
+      name="Memnix"
+      reversed={true}
+      stack="Vue.js・Golang・PostgreSQL・MongoDB"
+      ratio={1}
+    />
 
-          <Project
-              description={t("projects.gauntlet")}
-              link="https://github.com/corentings/gauntlet-reborn"
-              name="Gauntlet Reborn"
-              reversed={false}
-              stack="C・SDL2"
-              image="/img/gauntlet.png"
-              ratio={16/6}
+    <Project
+      description={t("projects.gauntlet")}
+      link="https://github.com/corentings/gauntlet-reborn"
+      name="Gauntlet Reborn"
+      reversed={false}
+      stack="C・SDL2"
+      image={imgGauntlet}
+      ratio={16 / 6}
+    />
 
-          />
+    <Project
+      description={t("projects.uca_edt")}
+      link="https://github.com/CorentinGS/uca-edt"
+      name="Uca Edt"
+      reversed={true}
+      stack="Go・Mongo・Docker"
+      image={imgUcaEdt}
+      ratio={16 / 9}
+    />
+    <Project
+      description={t("projects.kitsu")}
+      image="https://i.imgur.com/GXKtpOZ.png"
+      link="https://github.com/CorentinGS/Kitsu"
+      name="Kitsu"
+      stack="PostgreSQL・Golang・Rust"
+      reversed={false}
+      ratio={1}
+    />
+    <Project
+      description={t("projects.stouuf")}
+      link="https://stouuf.net"
+      name="Stouuf Website"
+      reversed={true}
+      stack="Tailwindcss"
+      image={imgStouufWebsite}
+      ratio={16 / 9}
+    />
 
-          <Project
-              description={t("projects.uca_edt")}
-              link="https://github.com/CorentinGS/uca-edt"
-              name="Uca Edt"
-              reversed={true}
-              stack="Go・Mongo・Docker"
-              image="/img/edt-uca.png"
-              ratio={16/9}
-
-          />
-          <Project
-            description={t("projects.kitsu")}
-            image="https://i.imgur.com/GXKtpOZ.png"
-            link="https://github.com/CorentinGS/Kitsu"
-            name="Kitsu"
-            stack="PostgreSQL・Golang・Rust"
-            reversed={false}
-            ratio={1/1}
-
-          />
-          <Project
-            description={t("projects.stouuf")}
-            link="https://stouuf.net"
-            name="Stouuf Website"
-            reversed={true}
-            stack="Tailwindcss"
-            image="/img/Stouuf.png"
-            ratio={16/9}
-
-          />
-
-          <Project
-              description={t("projects.echiquier_nicois")}
-              link="https://echiquiernicois.com"
-              name="Echiquier niçois"
-              reversed={false}
-              stack="Wordpress"
-              image="/img/en.png"
-              ratio={16/9}
-          />
-      </div>
-  </section>
+    <Project
+      description={t("projects.echiquier_nicois")}
+      link="https://echiquiernicois.com"
+      name="Echiquier niçois"
+      reversed={false}
+      stack="Wordpress"
+      image={imgEchiquierNicois}
+      ratio={16 / 9}
+    />
+  </div>
+</section>

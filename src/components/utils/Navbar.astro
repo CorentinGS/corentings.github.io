@@ -1,19 +1,20 @@
 ---
-import { Profile } from "../../../utils/config";
-import ThemeSwitcher from "./ThemeSwitcher.astro";
-import { LanguageSelector } from "astro-i18next/components";
-import { t } from "i18next";
-import { localizePath } from "astro-i18next";
+import { Profile } from "../../../utils/config"
+import ThemeSwitcher from "./ThemeSwitcher.astro"
+import { LanguageSelector } from "astro-i18next/components"
+import { t } from "i18next"
+import { localizePath } from "astro-i18next"
 
-const profile = Profile;
-const { lang } = Astro.props;
+const profile = Profile
+const { lang } = Astro.props
 
+export const prerender = true
 ---
 
 <div class="navbar bg-base-200">
   <div class="navbar-start">
     <div class="flex-none lg:hidden">
-      <label class="btn btn-ghost btn-square" for="my-drawer-3">
+      <label class="btn-ghost btn-square btn" for="my-drawer-3">
         <svg
           class="inline-block h-6 w-6 stroke-current"
           fill="none"
@@ -29,7 +30,7 @@ const { lang } = Astro.props;
       </label>
     </div>
     <a
-      class="hoveranimation btn btn-ghost text-xl normal-case lg:text-3xl"
+      class="hoveranimation btn-ghost btn text-xl normal-case lg:text-3xl"
       href={localizePath("/")}
       rel="prefetch"
       ><h1 class="font-bold text-secondary">
@@ -43,8 +44,8 @@ const { lang } = Astro.props;
         lang ? (
           <li class="px-3">
             <LanguageSelector
-            showFlag={true}
-              class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+              showFlag={true}
+              class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
             />
           </li>
         ) : null
