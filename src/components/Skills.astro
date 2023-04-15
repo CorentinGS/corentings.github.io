@@ -1,20 +1,11 @@
 ---
-import Skill from "./Index/Skill.astro";
-import { t } from "i18next";
-import LucideHeart from "~icons/lucide/heart";
-import LogosGopher from "~icons/logos/gopher";
-import LogosJava from "~icons/logos/java";
-import LogosC from "~icons/logos/c";
-import LogosDockerIcon from "~icons/logos/docker-icon";
-import LogosGitIcon from "~icons/logos/git-icon";
-import LogosRabbitmqIcon from "~icons/logos/rabbitmq-icon";
-import LogosPostgresql from "~icons/logos/postgresql";
-import LogosKotlinIcon from "~icons/logos/kotlin-icon";
-import LogosVim from "~icons/logos/vim";
-import SimpleIconsOpensuse from "~icons/simple-icons/opensuse";
+import Skill from "./Index/Skill.astro"
+import { t } from "i18next"
+
+import { Icon } from "astro-iconify"
 ---
 
-<section class="bg-base-100 lg:py-15 py-6 md:py-10">
+<section class="lg:py-15 bg-base-100 py-6 md:py-10">
   <div class="mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12">
     <div>
       <h2 class="w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl">
@@ -26,50 +17,57 @@ import SimpleIconsOpensuse from "~icons/simple-icons/opensuse";
         <div class="grid grid-cols-4 items-center gap-4 text-center">
           <Skill link="https://go.dev/" name="Golang">
             <div class="indicator">
-              <span class="indicator-item indicator-bottom indicator-start">
-                <LucideHeart
+              <span class="indicator-bottom indicator-start indicator-item">
+                <Icon
+                  name="lucide:heart"
                   class="h-7 w-7 text-accent motion-safe:animate-bounce"
                 />
               </span>
-              <LogosGopher class="h-16 w-16 md:h-20 md:w-20" />
+              <Icon name="logos:gopher" class="h-16 w-16 md:h-20 md:w-20" />
             </div>
           </Skill>
           <Skill link="https://www.java.com/" name="java">
-            <LogosJava class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:java" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
           <Skill link="https://kotlinlang.org/" name="Kotlin">
-            <LogosKotlinIcon class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:kotlin-icon" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
           <Skill
             link="https://en.wikipedia.org/wiki/C_(programming_language)"
             name="C"
           >
-            <LogosC class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:c" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
 
           <Skill link="https://www.postgresql.org/" name="PostgreSQL">
-            <LogosPostgresql class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:postgresql" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
           <Skill link="https://www.rabbitmq.com/" name="RabbitMQ">
-            <LogosRabbitmqIcon class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon
+              name="logos:rabbitmq-icon"
+              class="h-16 w-16 md:h-20 md:w-20"
+            />
           </Skill>
           <Skill link="https://www.docker.com/" name="Docker">
-            <LogosDockerIcon class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:docker-icon" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
           <Skill link="https://git-scm.com/" name="Git">
-            <LogosGitIcon class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:git-icon" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
           <div class="col-start-2 mx-auto">
             <Skill
               link="https://www.youtube.com/watch?v=oHNKTlz1lps"
               name="Open Suse"
             >
-              <SimpleIconsOpensuse class="h-16 w-16 md:h-20 md:w-20" />
+              <Icon
+                name="simple-icons:opensuse"
+                class="h-16 w-16 md:h-20 md:w-20"
+              />
             </Skill>
           </div>
 
           <Skill link="https://www.vim.org/" name=":q">
-            <LogosVim class="h-16 w-16 md:h-20 md:w-20" />
+            <Icon name="logos:vim" class="h-16 w-16 md:h-20 md:w-20" />
           </Skill>
         </div>
       </div>

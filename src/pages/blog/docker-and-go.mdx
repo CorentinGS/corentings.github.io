@@ -8,7 +8,7 @@ link: "/blog/docker-and-go"
 ---
 export const prerender = true;
 
-import { Image } from "@astrojs/image/components";
+export const prerender = true
 
 ## How to optimize a Go deployment with Docker ?
 
@@ -162,12 +162,6 @@ Here is a small infographic that summarizes the evolution of our Docker image.
 It's in French but I think you can understand it anyway.
 <br></br>
 
-<Image
-  class="mt-5 mb-5"
-  src="/img/docker_infographie.jpg"
-  width="800"
-  height="2000"
-  quality={70}
-  alt="Docker Infographic"
-  formats={["avif", "webp"]}
-/>
+![Docker Infographic](../../assets/docker_infographie.jpg)
+
+<img src="../../assets/docker_infographie.jpg" alt="Docker Infographic" />

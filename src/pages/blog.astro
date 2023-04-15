@@ -1,19 +1,19 @@
 ---
-import { changeLanguage } from "i18next";
-import { BlogPosts } from "../../utils/blog";
-import CardLatest from "../components/blog/CardLatest.astro";
-import CardPrevious from "../components/blog/CardPrevious.astro";
-import Layout from "../layouts/Layout.astro";
+import { changeLanguage } from "i18next"
+import { BlogPosts } from "../../utils/blog"
+import CardLatest from "../components/blog/CardLatest.astro"
+import CardPrevious from "../components/blog/CardPrevious.astro"
+import Layout from "../layouts/Layout.astro"
 
-changeLanguage("en");
+changeLanguage("en")
 
-const latest = BlogPosts.blogPosts.slice(0, 1);
-const blogPosts = BlogPosts.blogPosts.slice(1);
-export const prerender = true;
+const latest = BlogPosts.blogPosts.slice(0, 1)
+const blogPosts = BlogPosts.blogPosts.slice(1)
+export const prerender = true
 ---
 
 <Layout title="CorentinGS">
-  <div class="mx-auto mb-4 w-full max-w-screen-lg bg-base-100 p-6 min-h-screen">
+  <div class="mx-auto mb-4 min-h-screen w-full max-w-screen-lg bg-base-100 p-6">
     <div class="header mb-6 flex items-end justify-between">
       <div class="title">
         <p class="mb-3 text-4xl font-bold">My articles</p>
@@ -35,14 +35,15 @@ export const prerender = true;
       <div class="title">
         <p class="my-4 text-4xl font-bold">Previous</p>
       </div>
-      {blogPosts.map((blogPost) => (
-        <a href={blogPost.link} rel="nofollow prefetch">
-          <CardPrevious blogPost={blogPost} />
-        </a>
-      ))}
+      {
+        blogPosts.map((blogPost) => (
+          <a href={blogPost.link} rel="nofollow prefetch">
+            <CardPrevious blogPost={blogPost} />
+          </a>
+        ))
+      }
     </div>
   </div>
-
 </Layout>
 
 <style></style>

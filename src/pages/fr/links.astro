@@ -1,116 +1,124 @@
 ---
-import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import "../../styles/global.css";
-import LucideTwitter from "~icons/lucide/twitter";
-import LucideGithub from "~icons/lucide/github";
-import LucideLinkedin from "~icons/lucide/linkedin";
-import LaDiscord from "~icons/la/discord";
-import LaMastodon from "~icons/la/mastodon";
-import LucideBook from "~icons/lucide/book";
-import LucideInfo from "~icons/lucide/info";
-import LucideArrowRight from "~icons/lucide/arrow-right";
+import { changeLanguage } from "i18next"
+import Layout from "../../layouts/Layout.astro"
+import "../../styles/global.css"
+import { Icon } from "astro-iconify"
 
-changeLanguage("fr");
+changeLanguage("fr")
 
-export const prerender = true;
+export const prerender = true
 ---
 
 <Layout title="CorentinGS">
   <section class="">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="text-center mb-20">
-        <h1 class="sm:text-3xl text-2xl font-bold text-center mb-4">
+    <div class="container mx-auto px-5 py-24">
+      <div class="mb-20 text-center">
+        <h1 class="mb-4 text-center text-2xl font-bold sm:text-3xl">
           My links and socials
         </h1>
-        <p class="leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+        <p class="mx-auto leading-relaxed lg:w-3/4 xl:w-2/4">
           Here are my socials and links to my projects and other stuff.<br />I'm
           also on Discord, so feel free to join my server.
         </p>
       </div>
-      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-        <div class="p-2 sm:w-1/2 w-full">
+      <div class="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="/discord"
             rel="noopener noreferrer nofollow prefetch"
             target="_blank"
-            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LaDiscord class="w-7 h-7 flex-shrink-0 mr-4" />
+            <Icon name="la:discord" class="mr-4 h-7 w-7 flex-shrink-0" />
 
-            <span class="title-font font-medium decoration-accent group-hover:underline" >The Kafejo</span>
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
+              >The Kafejo</span
+            >
           </a>
         </div>
-        <div class="p-2 sm:w-1/2 w-full">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="https://hachyderm.io/@TheLittlePrince"
             target="_blank"
             rel="me noopener noreferrer"
-            class="bg-base-200 group hoveranimation bounce-short rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation bounce-short group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LaMastodon class="w-7 h-7 flex-shrink-0 mr-4 " />
-            <span class="title-font font-medium decoration-accent group-hover:underline"
+            <Icon name="la:mastodon" class="mr-4 h-7 w-7 flex-shrink-0" />
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
               >@TheLittlePrince@hachyderm.io
             </span>
           </a>
         </div>
-        <div class="p-2 sm:w-1/2 w-full">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="https://twitter.com/GSCorentinDev"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LucideTwitter class="w-7 h-7 flex-shrink-0 mr-4" />
+            <Icon name="lucide:twitter" class="mr-4 h-7 w-7 flex-shrink-0" />
 
-            <span class="title-font font-medium decoration-accent group-hover:underline">@GSCorentinDev</span>
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
+              >@GSCorentinDev</span
+            >
           </a>
         </div>
-        <div class="p-2 sm:w-1/2 w-full">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="https://github.com/corentings"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LucideGithub class="w-7 h-7 flex-shrink-0 mr-4" />
+            <Icon name="lucide:github" class="mr-4 h-7 w-7 flex-shrink-0" />
 
-            <span class="title-font font-medium decoration-accent group-hover:underline">@CorentinGS</span>
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
+              >@CorentinGS</span
+            >
           </a>
         </div>
-        <div class="p-2 sm:w-1/2 w-full">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="/blog"
             rel="noopener noreferrer nofollow prefetch"
             target="_blank"
-            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LucideBook class="w-7 h-7 flex-shrink-0 mr-4" />
+            <Icon name="lucide:book" class="mr-4 h-7 w-7 flex-shrink-0" />
 
-            <span class="title-font font-medium decoration-accent group-hover:underline">My blog</span>
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
+              >My blog</span
+            >
           </a>
         </div>
-        <div class="p-2 sm:w-1/2 w-full">
+        <div class="w-full p-2 sm:w-1/2">
           <a
             href="https://www.linkedin.com/in/corentin-giaufer-saubert/"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-base-200 hoveranimation group rounded flex p-4 h-full items-center hover:bg-primary hover:text-primary-content"
+            class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
           >
-            <LucideLinkedin class="w-7 h-7 flex-shrink-0 mr-4" />
+            <Icon name="lucide:linkedin" class="mr-4 h-7 w-7 flex-shrink-0" />
 
-            <span class="title-font font-medium decoration-accent group-hover:underline">Corentin Giaufer--Saubert</span
+            <span
+              class="title-font font-medium decoration-accent group-hover:underline"
+              >Corentin Giaufer--Saubert</span
             >
           </a>
         </div>
       </div>
-      <div class="container mt-10 w-[90%] md:w-[70%] lg:w-[41%] mx-auto">
-        <div class="alert shadow-lg alert-info animate-bounce-short">
+      <div class="container mx-auto mt-10 w-[90%] md:w-[70%] lg:w-[41%]">
+        <div class="alert alert-info animate-bounce-short shadow-lg">
           <div>
-            <LucideInfo class="w-6 h-6 flex-shrink-0 mr-4" />
+            <Icon name="lucide:info" class="mr-4 h-6 w-6 flex-shrink-0" />
             <div>
               <h3 class="font-bold">I created a friendly discord !</h3>
-              <div class="text-xs">Join our community on The Kafejo </div>
+              <div class="text-xs">Join our community on The Kafejo</div>
             </div>
           </div>
           <div class="flex-none">
@@ -118,9 +126,9 @@ export const prerender = true;
               target="_blank"
               rel="noopener noreferrer nofollow"
               href="https://discord.com/invite/wc4PQsd7eE"
-              class="btn btn-md btn-accent hoveranimation "
+              class="hoveranimation btn-accent btn-md btn"
             >
-              <LucideArrowRight />
+              <Icon name="lucide:arrow-right" class="h-6 w-6" />
             </a>
           </div>
         </div>

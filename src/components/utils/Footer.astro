@@ -1,24 +1,19 @@
 ---
-import { Profile, Config } from "../../../utils/config";
+import { Profile, Config } from "../../../utils/config"
 
-const social = Config;
-const profile = Profile;
+import { Icon } from "astro-iconify"
 
-import LaMastodon from "~icons/la/mastodon";
-import LucideMail from "~icons/lucide/mail";
-import LucideTwitter from "~icons/lucide/twitter";
-import LucideGithub from "~icons/lucide/github";
-import LucideLinkedin from "~icons/lucide/linkedin";
-import LaDiscord from "~icons/la/discord";
+const social = Config
+const profile = Profile
 
-
-const copyrightYear = new Date().getFullYear();
-
+const copyrightYear = new Date().getFullYear()
 ---
 
 <footer class="footer items-center bg-base-200 p-4">
   <div class="grid-flow-col items-center">
-    <p>Copyright © {copyrightYear} - All right reserved - {profile.full_name}</p>
+    <p>
+      Copyright © {copyrightYear} - All right reserved - {profile.full_name}
+    </p>
   </div>
   <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a
@@ -27,7 +22,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="mail"
       rel="noopener noreferrer nofollow"
     >
-      <LucideMail class="hoveranimation h-6 w-6" />
+      <Icon name="lucide:mail" class="hoveranimation h-6 w-6" />
     </a>
     <a
       href={"https://twitter.com/" + social.twitter}
@@ -35,7 +30,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="twitter"
       rel="noopener noreferrer"
     >
-      <LucideTwitter class="hoveranimation h-6 w-6" />
+      <Icon name="lucide:twitter" class="hoveranimation h-6 w-6" />
     </a>
     <a
       href={social.discord}
@@ -43,7 +38,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="discord"
       rel="nofollow noopener noreferrer"
     >
-      <LaDiscord class="hoveranimation h-6 w-6" />
+      <Icon name="la:discord" class="hoveranimation h-6 w-6" />
     </a>
     <a
       href={"https://github.com/" + social.github}
@@ -51,7 +46,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="github"
       rel="me noopener noreferrer"
     >
-      <LucideGithub class="hoveranimation h-6 w-6" />
+      <Icon name="lucide:github" class="hoveranimation h-6 w-6" />
     </a>
     <a
       href={"https://www.linkedin.com/in/" + social.linkedin}
@@ -59,7 +54,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="linkedin"
       rel="me noopener noreferrer"
     >
-      <LucideLinkedin class="hoveranimation h-6 w-6" />
+      <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6" />
     </a>
     <a
       v-if="social.mastodon !== ''"
@@ -68,7 +63,7 @@ const copyrightYear = new Date().getFullYear();
       aria-label="mastodon"
       target="_blank"
     >
-      <LaMastodon class="hoveranimation h-6 w-6" />
+      <Icon name="la:mastodon" class="hoveranimation h-6 w-6" />
     </a>
   </div>
 </footer>
