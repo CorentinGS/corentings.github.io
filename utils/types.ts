@@ -26,7 +26,7 @@ export interface BlogPost {
   date: string
   link: string
   category: string
-  author: BlogAuthor
+  author: object
   timeToRead?: string
   dark_background?: boolean
 }

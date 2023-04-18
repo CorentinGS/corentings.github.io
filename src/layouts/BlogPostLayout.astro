@@ -12,9 +12,31 @@ import { t } from "i18next"
 // Import fonts
 import "@fontsource/syne"
 import "@fontsource/nunito"
+import PostHeader from "../components/utils/PostHeader.astro";
 
 const { frontmatter } = Astro.props
 const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link)
+
+let meta: {} = {}
+
+if (blogPost) {
+  meta = {
+    title: blogPost.title,
+    description: blogPost.description,
+    image: blogPost.image,
+    date: blogPost.date,
+    author: "Giaufer Saubert Corentin"
+
+  }
+} else {
+  meta = {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    image: frontmatter.image,
+    date: frontmatter.date,
+  }
+}
+
 ---
 
 <!DOCTYPE html>
@@ -45,32 +67,35 @@ const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link)
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="description" content={frontmatter.description} />
-    <meta name="og:title" content="CorentinGS - Freelance backend developer" />
+    <meta name="description" content={meta.description} />
+    <meta name="og:title" content={meta.title} />
+    <meta name="og:site_name" content="Corentin GS">
+    <meta name="article:author" content={meta.author}>
+    <meta name="article:published_time" content={meta.date}>
     <meta
       name="og:description"
-      content="Personal blog - Freelance backend developer"
+      content={meta.description}
     />
-    <meta name="og:type" content="website" />
+    <meta name="og:type" content="article" />
     <meta name="og:url" content="https://corentings.dev" />
     <meta
       name="og:image"
-      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+      content={meta.image}
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://corentings.dev" />
     <meta name="twitter:creator" content="@CorentinGS" />
     <meta
       name="twitter:title"
-      content="CorentinGS - Freelance backend developer"
+      content={meta.title}
     />
     <meta
       name="twitter:description"
-      content="Personal Blog - Freelance backend developer"
+      content={meta.description}
     />
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+      content={meta.image}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

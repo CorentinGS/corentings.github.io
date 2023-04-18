@@ -1529,14 +1529,13 @@ astro-eslint-parser@^0.13.1, astro-eslint-parser@^0.13.2:
     espree "^9.0.0"
     semver "^7.3.8"
 
-astro-i18next@1.0.0-beta.21:
-  version "1.0.0-beta.21"
-  resolved "https://registry.yarnpkg.com/astro-i18next/-/astro-i18next-1.0.0-beta.21.tgz#f1c2f1b4430f1369cdde690fd14813f7d4cefa23"
-  integrity sha512-1YPqwexumHpK/d9afEoi52CBFTu6k4MYv/oHjsaAasZDvFClU6U5VPttC/OgZcXRYggCM6ee2LOnyHqlmXOeLA==
+astro-i18next@1.0.0-beta.18:
+  version "1.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/astro-i18next/-/astro-i18next-1.0.0-beta.18.tgz#ad12251ad56965f4053a53b0afb71cb6f05b4064"
+  integrity sha512-dOopdHbJvFWprhN9A1HrkOaDaADlivz4R6+6Oz2Mq2Ywwvgz4tDzN+//iUf6mJBYwWAOtcJq2rjAs521aX3cfw==
   dependencies:
     "@proload/core" "^0.3.3"
     "@proload/plugin-tsm" "^0.2.1"
-    i18next "^22.4.10"
     i18next-browser-languagedetector "^7.0.1"
     i18next-fs-backend "^2.1.1"
     i18next-http-backend "^2.1.1"
@@ -3775,13 +3774,6 @@ i18next@22.4.11:
   version "22.4.11"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.4.11.tgz#8b6c9be95176de90d3f10a78af125d95d3a3258d"
   integrity sha512-ShfTzXVMjXdF2iPiT/wbizOrssLh9Ab6VpuVROihLCAu+u25KbZiEYVgsA0W6g0SgjPa/JmGWcUEV/g6cKzEjQ==
-  dependencies:
-    "@babel/runtime" "^7.20.6"
-
-i18next@^22.4.10:
-  version "22.4.14"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.4.14.tgz#18dd94e9adc2618497c7de101a206e1ca3a18727"
-  integrity sha512-VtLPtbdwGn0+DAeE00YkiKKXadkwg+rBUV+0v8v0ikEjwdiJ0gmYChVE4GIa9HXymY6wKapkL93vGT7xpq6aTw==
   dependencies:
     "@babel/runtime" "^7.20.6"
 
