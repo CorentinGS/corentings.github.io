@@ -1,16 +1,15 @@
 ---
-import {themeChange} from "theme-change"
+import { themeChange } from "theme-change"
 
-const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk",]
+const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk"]
 ---
 
 <select
-        data-choose-theme
-        class="select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
+  data-choose-theme
+  class="select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
 >
-    <option disabled selected>Pick your theme</option>
-    {themes.map((theme) =>
-            <option value={theme}>{theme}</option>)}
+  <option disabled selected>Pick your theme</option>
+  {themes.map((theme) => <option value={theme}>{theme}</option>)}
 </select>
 
 <style></style>

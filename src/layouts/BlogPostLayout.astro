@@ -12,7 +12,7 @@ import { t } from "i18next"
 // Import fonts
 import "@fontsource/syne"
 import "@fontsource/nunito"
-import PostHeader from "../components/utils/PostHeader.astro";
+import PostHeader from "../components/utils/PostHeader.astro"
 
 const { frontmatter } = Astro.props
 const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link)
@@ -26,23 +26,26 @@ if (blogPost) {
     image: blogPost.image,
     date: blogPost.date,
     author: "Giaufer Saubert Corentin"
-
   }
 } else {
   meta = {
     title: frontmatter.title,
     description: frontmatter.description,
     image: frontmatter.image,
-    date: frontmatter.date,
+    date: frontmatter.date
   }
 }
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script async src="https://umami.memnix.app/script.js" data-website-id="fca9df7f-70a1-466a-9fc8-d745bb4c33f0"></script>    <script is:inline>
+    <script
+      async
+      src="https://umami.memnix.app/script.js"
+      data-website-id="fca9df7f-70a1-466a-9fc8-d745bb4c33f0"
+    ></script>
+    <script is:inline>
       // ☝️ This script prevent the FART effect.
       if (localStorage.getItem("theme") === null) {
         document.documentElement.setAttribute("data-theme", "light")
@@ -68,34 +71,19 @@ if (blogPost) {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="description" content={meta.description} />
     <meta name="og:title" content={meta.title} />
-    <meta name="og:site_name" content="Corentin GS">
-    <meta name="article:author" content={meta.author}>
-    <meta name="article:published_time" content={meta.date}>
-    <meta
-      name="og:description"
-      content={meta.description}
-    />
+    <meta name="og:site_name" content="Corentin GS" />
+    <meta name="article:author" content={meta.author} />
+    <meta name="article:published_time" content={meta.date} />
+    <meta name="og:description" content={meta.description} />
     <meta name="og:type" content="article" />
     <meta name="og:url" content="https://corentings.dev" />
-    <meta
-      name="og:image"
-      content={meta.image}
-    />
+    <meta name="og:image" content={meta.image} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://corentings.dev" />
     <meta name="twitter:creator" content="@CorentinGS" />
-    <meta
-      name="twitter:title"
-      content={meta.title}
-    />
-    <meta
-      name="twitter:description"
-      content={meta.description}
-    />
-    <meta
-      name="twitter:image"
-      content={meta.image}
-    />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={meta.image} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <HeadHrefLangs />

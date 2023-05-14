@@ -1,9 +1,7 @@
-import { defineConfig } from "astro/config"
+import { defineConfig, sharpImageService } from "astro/config"
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind"
-
-import critters from "astro-critters"
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx"
@@ -13,7 +11,6 @@ import prefetch from "@astrojs/prefetch"
 
 // https://astro.build/config
 import sitemap from "@astrojs/sitemap"
-import node from "@astrojs/node"
 
 // https://astro.build/config
 import compress from "astro-compress"
@@ -32,7 +29,7 @@ export default defineConfig({
     assets: true
   },
   image: {
-    service: "astro/assets/services/sharp"
+    service: sharpImageService()
   },
   markdown: { shikiConfig: { theme: "dracula" }, syntaxHighlight: "shiki" },
   integrations: [
@@ -49,7 +46,8 @@ export default defineConfig({
         defaultLocale: "en",
         locales: {
           en: "en-US",
-          fr: "fr-FR"
+          fr: "fr-FR",
+          de: "de-DE"
         }
       }
     }),
