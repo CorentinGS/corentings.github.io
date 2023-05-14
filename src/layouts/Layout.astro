@@ -28,7 +28,7 @@ const { title } = Astro.props
     <script is:inline>
       // ☝️ This script prevent the FART effect.
       if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "light")
+        document.documentElement.setAttribute("data-theme", "dark")
       } else
         document.documentElement.setAttribute(
           "data-theme",
