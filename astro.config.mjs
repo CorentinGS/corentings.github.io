@@ -2,10 +2,8 @@ import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import prefetch from "@astrojs/prefetch";
-
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 import compress from "astro-compress";
 import compressor from "astro-compressor";
 
@@ -16,6 +14,9 @@ import astroI18next from "astro-i18next";
 import vercel from "@astrojs/vercel/serverless";
 import critters from "astro-critters";
 import node from "@astrojs/node";
+
+// https://astro.build/config
+import purgecss from "astro-purgecss";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,11 +48,11 @@ export default defineConfig({
         de: "de-DE"
       }
     }
-  }), critters(), compress({
+  }), critters(), purgecss(), compress({
     path: ".vercel/output/static",
     css: false
   }), compressor()],
   output: "server",
-   adapter: vercel()
+  adapter: vercel()
   // adapter: node({    mode: "standalone"  })
 });

@@ -42,6 +42,7 @@
     "astro-critters": "^1.1.34",
     "astro-i18next": "1.0.0-beta.21",
     "astro-iconify": "^1.2.0",
+    "astro-purgecss": "^2.0.1",
     "astro-seo": "^0.7.2",
     "autoprefixer": "^10.4.14",
     "daisyui": "^2.51.6",
