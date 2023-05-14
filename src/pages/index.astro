@@ -1,17 +1,16 @@
 ---
-import { changeLanguage } from "i18next"
-import Layout from "../layouts/Layout.astro"
-import Hero from "../components/Hero.astro"
-import About from "../components/About.astro"
-import "../styles/global.css"
-import Skills from "../components/Skills.astro"
-import Projects from "../components/Projects.astro"
-import Experiences from "../components/Experiences.astro"
-import Footer from "../components/utils/Footer.astro"
+import { changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Experiences from "../components/Experiences.astro";
+import Footer from "../components/utils/Footer.astro";
 
-changeLanguage("en")
+changeLanguage("en");
 
-export const prerender = true
+export const prerender = true;
 ---
 
 <Layout title="CorentinGS">
@@ -21,6 +20,7 @@ export const prerender = true
   <Projects />
   <Experiences />
   <Footer />
+
 </Layout>
 
 <style></style>

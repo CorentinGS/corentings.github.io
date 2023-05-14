@@ -1,15 +1,15 @@
 ---
-import { changeLanguage } from "i18next"
-import { BlogPosts } from "../../../utils/blog"
-import CardLatest from "../../components/blog/CardLatest.astro"
-import CardPrevious from "../../components/blog/CardPrevious.astro"
-import Layout from "../../layouts/Layout.astro"
+import { changeLanguage } from "i18next";
+import { BlogPosts } from "../../../utils/blog";
+import CardLatest from "../../components/blog/CardLatest.astro";
+import CardPrevious from "../../components/blog/CardPrevious.astro";
+import Layout from "../../layouts/Layout.astro";
 
-changeLanguage("fr")
+changeLanguage("fr");
 
-const latest = BlogPosts.blogPosts.slice(0, 1)
-const blogPosts = BlogPosts.blogPosts.slice(1)
-export const prerender = true
+const latest = BlogPosts.blogPosts.slice(0, 1);
+const blogPosts = BlogPosts.blogPosts.slice(1);
+export const prerender = true;
 ---
 
 <Layout title="CorentinGS">

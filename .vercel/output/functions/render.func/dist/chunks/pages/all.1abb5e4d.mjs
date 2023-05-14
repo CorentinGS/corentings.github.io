@@ -5,7 +5,7 @@ async function get(context) {
     title: "Corentin GS's blog",
     description: "A young programmer journey",
     site: "https://corentings.dev",
-    items: await pagesGlobToRssItems(/* #__PURE__ */ Object.assign({"./blog/dnf5-step-by-step.mdx": () => import('../prerender.8d7864c8.mjs').then(n => n.e),"./blog/docker-and-go.mdx": () => import('../prerender.8d7864c8.mjs').then(n => n.f),"./blog/mergesort-parallel.mdx": () => import('../prerender.8d7864c8.mjs').then(n => n.d),"./blog/simple-go-vs-goroutines.mdx": () => import('../prerender.8d7864c8.mjs').then(n => n.c)})),
+    items: await pagesGlobToRssItems(/* #__PURE__ */ Object.assign({"./blog/dnf5-step-by-step.mdx": () => import('../prerender.683679dd.mjs').then(n => n.e),"./blog/docker-and-go.mdx": () => import('../prerender.683679dd.mjs').then(n => n.f),"./blog/mergesort-parallel.mdx": () => import('../prerender.683679dd.mjs').then(n => n.d),"./blog/simple-go-vs-goroutines.mdx": () => import('../prerender.683679dd.mjs').then(n => n.c)})),
     customData: `<language>en-us</language>`
   })
 }

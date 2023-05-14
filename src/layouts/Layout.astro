@@ -1,149 +1,137 @@
 ---
 import Navbar from "../components/utils/Navbar.astro"
 import "../styles/global.css"
-import i18next, { t } from "i18next"
-import { HeadHrefLangs } from "astro-i18next/components"
-import { LanguageSelector } from "astro-i18next/components"
+import i18next, {t} from "i18next"
+import {HeadHrefLangs} from "astro-i18next/components"
+import {LanguageSelector} from "astro-i18next/components"
 import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro"
 
-import { localizePath } from "astro-i18next"
+import {localizePath} from "astro-i18next"
 
 // Import fonts
 import "@fontsource/syne"
 import "@fontsource/nunito"
 
 export interface Props {
-  title: string
+    title: string
 }
 
-const { title } = Astro.props
+const {title} = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
-  <head>
-    <link rel="preconnect" href="https://umami.memnix.app" />
+<head>
+    <link rel="preconnect" href="https://umami.memnix.app"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script
-      async
-      src="https://umami.memnix.app/script.js"
-      data-website-id="fca9df7f-70a1-466a-9fc8-d745bb4c33f0"
+            async
+            src="https://umami.memnix.app/script.js"
+            data-website-id="fca9df7f-70a1-466a-9fc8-d745bb4c33f0"
     ></script>
     <script is:inline>
-      // ☝️ This script prevent the FART effect.
-      if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "dark")
-      } else
-        document.documentElement.setAttribute(
-          "data-theme",
-          localStorage.getItem("theme")
-        )
-      // "theme" LocalStorage value is set by the package to remember user preference.
-      // The value is checked and applyed before rendering anything.
+        // ☝️ This script prevent the FART effect.
+        if (localStorage.getItem("theme") === null) {
+            document.documentElement.setAttribute("data-theme", "dark")
+        } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+        // "theme" LocalStorage value is set by the package to remember user preference.
+        // The value is checked and applyed before rendering anything.
     </script>
     <script>
-      import { themeChange } from "theme-change"
-      themeChange()
-      // 👆 you could import the CDN directly instead of these two lines
+        import {themeChange} from "theme-change"
+
+        themeChange()
+        // 👆 you could import the CDN directly instead of these two lines
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://corentings.dev" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="canonical" href="https://corentings.dev"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
     <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="anonymous"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="anonymous"
     />
     <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-      crossorigin="anonymous"
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+            crossorigin="anonymous"
     />
-    <meta name="msapplication-TileColor" content="#38555f" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#38555f" />
-    <meta name="theme-color" content="#38555f" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="CorentinGS - Personal website" />
-    <meta name="og:title" content="CorentinGS - Freelance backend developer" />
+    <meta name="msapplication-TileColor" content="#38555f"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#38555f"/>
+    <meta name="theme-color" content="#38555f"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="description" content="CorentinGS - Personal website"/>
+    <meta name="og:title" content="CorentinGS - Freelance backend developer"/>
     <meta
-      name="og:description"
-      content="Personal blog - Freelance backend developer"
+            name="og:description"
+            content="Personal blog - Freelance backend developer"
     />
-    <meta name="og:type" content="website" />
-    <meta name="og:url" content="https://corentings.dev" />
+    <meta name="og:type" content="website"/>
+    <meta name="og:url" content="https://corentings.dev"/>
     <meta
-      name="og:image"
-      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+            name="og:image"
+            content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
     />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://corentings.dev" />
-    <meta name="twitter:creator" content="@CorentinGS" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://corentings.dev"/>
+    <meta name="twitter:creator" content="@CorentinGS"/>
     <meta
-      name="twitter:title"
-      content="CorentinGS - Freelance backend developer"
-    />
-    <meta
-      name="twitter:description"
-      content="Personal Blog - Freelance backend developer"
+            name="twitter:title"
+            content="CorentinGS - Freelance backend developer"
     />
     <meta
-      name="twitter:image"
-      content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+            name="twitter:description"
+            content="Personal Blog - Freelance backend developer"
     />
-    <link rel="me" href="https://hachyderm.io/@TheLittlePrince" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <HeadHrefLangs />
+    <meta
+            name="twitter:image"
+            content="https://raw.githubusercontent.com/CorentinGS/CorentinGS/main/Banner-metatags.png"
+    />
+    <link rel="me" href="https://hachyderm.io/@TheLittlePrince"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <HeadHrefLangs/>
     <title>{title}</title>
-  </head>
-  <body>
-    <main>
-      <div class="drawer">
-        <input
-          id="my-drawer-3"
-          class="drawer-toggle"
-          type="checkbox"
-          aria-label="drawer"
-        />
-        <div class="drawer-content flex flex-col">
-          <!-- Navbar -->
-          <Navbar lang={true} />
-          <!-- Page Slot -->
-          <slot />
-        </div>
+</head>
+<body>
+<main>
+    <!-- Navbar -->
+    <Navbar lang={true}/>
+    <!-- Page Slot -->
+    <slot/>
 
-        <div class="drawer-side">
-          <label class="drawer-overlay" for="my-drawer-3"></label>
-          <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
-            <!-- Sidebar content here -->
-            <li>
-              <a href={localizePath("/blog")} rel="nofollow prefetch"
-                >{t("navbar.blog")}</a
-              >
-            </li>
-            <li>
-              <a href={localizePath("/links")} rel="nofollow prefetch">
-                {t("navbar.links")}
-              </a>
-            </li>
+    <input type="checkbox" id="my-modal-6" class="modal-toggle"/>
+    <label for="my-modal-6" class="modal cursor-pointer modal-bottom sm:modal-middle">
+        <label class="modal-box relative" for="">
+            <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
 
-            <li class="py-3">
-              <LanguageSelector
-                showFlag={true}
-                class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
-              />
-            </li>
-            <li class="py-3">
-              <ThemeSwitcher />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </main>
-  </body>
+                <li class="py-3">
+                    <ThemeSwitcher/>
+                </li>
+                <li class="py-3">
+                    <LanguageSelector
+                            showFlag={true}
+                            class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
+                    />
+                </li>
+                <li>
+                    <a href={localizePath("/blog")} rel="nofollow prefetch"
+                    >{t("navbar.blog")}</a
+                    >
+                </li>
+                <li>
+                    <a href={localizePath("/links")} rel="nofollow prefetch">
+                        {t("navbar.links")}
+                    </a>
+                </li>
+            </ul>
+        </label>
+    </label>
+</main>
+</body>
 </html>

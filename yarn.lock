@@ -33,6 +33,11 @@
   "resolved" "https://registry.npmjs.org/@antfu/utils/-/utils-0.7.2.tgz"
   "version" "0.7.2"
 
+"@astrojs/alpinejs@^0.2.1":
+  "integrity" "sha512-lIwCw2XUB/3HAstWpqGvUnSH4BnFwXxkSxq+jpkPw0U1mMw4JP4RauGUbD1F2acZXun7T68alJydAF1dLLCv4A=="
+  "resolved" "https://registry.npmjs.org/@astrojs/alpinejs/-/alpinejs-0.2.1.tgz"
+  "version" "0.2.1"
+
 "@astrojs/compiler@^1.0.0", "@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.0", "@astrojs/compiler@^1.4.1", "@astrojs/compiler@>=0.27.0":
   "integrity" "sha512-aXAxapNWZwGN41P+Am/ma/2kAzKOhMNaY6YuvLkUHFv+UZkmDHD6F0fE1sQA2Up0bLjgPQa1VQzoAaii5tZWaA=="
   "resolved" "https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.4.1.tgz"
@@ -797,6 +802,13 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/alpinejs@^3.0.0", "@types/alpinejs@^3.7.1":
+  "integrity" "sha512-gzwyuHXH/meGQQhurMGWlZgMQxe18lMOoSPd7X6CvGoDelHte9EsU7SpTIoRu8yYir0tbHDeaSMdX9LeQz/QtA=="
+  "resolved" "https://registry.npmjs.org/@types/alpinejs/-/alpinejs-3.7.1.tgz"
+  "version" "3.7.1"
+  dependencies:
+    "@vue/reactivity" "^3.2.26"
+
 "@types/babel__core@^7.1.19":
   "integrity" "sha512-+n8dL/9GWblDO0iU6eZAwEIJVr5DWigtle+Q6HLOrh/pdbXOhOtqzq8VPPE2zvNJzSKY4vH/z3iT3tn0A3ypiQ=="
   "resolved" "https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.0.tgz"
@@ -1118,6 +1130,30 @@
   "resolved" "https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.13.tgz"
   "version" "0.0.13"
 
+"@vue/reactivity@^3.2.26":
+  "integrity" "sha512-yX8C4uTgg2Tdj+512EEMnMKbLveoITl7YdQX35AYgx8vBvQGszKiiCN46g4RY6/deeo/5DLbeUUGxCq1qWMf5g=="
+  "resolved" "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.3.2.tgz"
+  "version" "3.3.2"
+  dependencies:
+    "@vue/shared" "3.3.2"
+
+"@vue/reactivity@~3.1.1":
+  "integrity" "sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg=="
+  "resolved" "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.1.5.tgz"
+  "version" "3.1.5"
+  dependencies:
+    "@vue/shared" "3.1.5"
+
+"@vue/shared@3.1.5":
+  "integrity" "sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA=="
+  "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.1.5.tgz"
+  "version" "3.1.5"
+
+"@vue/shared@3.3.2":
+  "integrity" "sha512-0rFu3h8JbclbnvvKrs7Fe5FNGV9/5X2rPD7KmOzhLSUAiQH5//Hq437Gv0fR5Mev3u/nbtvmLl8XgwCU20/ZfQ=="
+  "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.3.2.tgz"
+  "version" "3.3.2"
+
 "abbrev@1":
   "integrity" "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
   "resolved" "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
@@ -1159,6 +1195,13 @@
     "fast-json-stable-stringify" "^2.0.0"
     "json-schema-traverse" "^0.4.1"
     "uri-js" "^4.2.2"
+
+"alpinejs@^3.0.0", "alpinejs@^3.12.1":
+  "integrity" "sha512-GjEmZscHuCPv/XRbzabQLFH3I1+M3TbZqEsLDuYai/Yw+pE1IL7DK4ejRfqBSaysi4wWZ1k5IqVG2aefhWWqsQ=="
+  "resolved" "https://registry.npmjs.org/alpinejs/-/alpinejs-3.12.1.tgz"
+  "version" "3.12.1"
+  dependencies:
+    "@vue/reactivity" "~3.1.1"
 
 "ansi-align@^3.0.1":
   "integrity" "sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w=="
@@ -2111,9 +2154,9 @@
   "version" "5.1.0"
 
 "deepmerge@^4.2.2":
-  "integrity" "sha512-z2wJZXrmeHdvYJp/Ux55wIjqo81G5Bp4c+oELTW+7ar6SogWHajt5a9gO3s3IDaGSAXjDk0vlQKN3rms8ab3og=="
-  "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.0.tgz"
-  "version" "4.3.0"
+  "integrity" "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A=="
+  "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz"
+  "version" "4.3.1"
 
 "default-browser-id@^3.0.0":
   "integrity" "sha512-OZ1y3y0SqSICtE8DE4S8YOE9UZOJ8wO16fKWVP5J1Qz42kV9jcnMVFrEE/noXb/ss3Q4pZIH79kxofzyNNtUNA=="
@@ -5438,6 +5481,11 @@
     "nanoid" "^3.3.6"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
+
+"preact@^10.14.0":
+  "integrity" "sha512-4oh2sf208mKAdL5AQtzXxE387iSGNWMX/YjwMjH6m/XROILKAmx5Pbs2FsXrW7ixoVGGjpfYSBB833vOwYxNxw=="
+  "resolved" "https://registry.npmjs.org/preact/-/preact-10.14.0.tgz"
+  "version" "10.14.0"
 
 "prebuild-install@^7.1.1":
   "integrity" "sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw=="
