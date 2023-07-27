@@ -32,6 +32,7 @@
     "@iconify/json": "^2.2.95",
     "@rollup/plugin-json": "^6.0.0",
     "astro": "^2.9.3",
+    "astro-analytics": "^2.6.0",
     "astro-i18next": "1.0.0-beta.21",
     "astro-iconify": "^1.2.0",
     "astro-seo-schema": "^2.2.0",
