@@ -7,7 +7,6 @@ import {LanguageSelector} from "astro-i18next/components"
 import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro"
 import {SEO} from "astro-seo";
 import { Schema } from "astro-seo-schema"
-import { GoogleAnalytics } from 'astro-analytics';
 
 import {localizePath} from "astro-i18next"
 
@@ -25,7 +24,6 @@ const {title} = Astro.props
 <!DOCTYPE html>
 <html lang={i18next.language}>
 <head>
-    <GoogleAnalytics id="G-YEDCDRGXVG" />
 
     <link rel="preconnect" href="https://umami.memnix.app"/>
 
