@@ -7,6 +7,6 @@ import 'string-width';
 import 'mime/lite.js';
 import 'html-escaper';
 
-const page = () => import('./prerender.39cf013b.mjs').then(n => n.l);
+const page = () => import('./prerender.7c1aa5d8.mjs').then(n => n.g);
 
 export { page };
