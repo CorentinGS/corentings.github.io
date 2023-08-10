@@ -1,0 +1,272 @@
+---
+layout: "../../layouts/BlogPostLayout.astro"
+title: "Solving the Sum of Squares Problem: Unraveling Goroutine Misuse and Optimizing Performance"
+description: "Discover how to optimize performance, avoid common pitfalls, and achieve top-notch results. Ready to conquer the challenges? Let's go!"
+pubDate: "Aug 10, 2023"
+link: "/blog/optimizing-goroutines-sum-of-squares"
+---
+
+export const prerender = true
+
+## Disclaimer: Enhancing Algorithm Discussions
+
+Before delving into the main topic, I want to express my respect for the original post's intent.
+My response aims to provide slight corrections that can benefit readers seeking accurate information. In the spirit of shared learning, I intend to contribute constructively rather than criticize.
+<br></br>Clarifications and alternative viewpoints can foster a deeper understanding of complex concepts. Let's continue engaging in open discussions, embracing diverse insights as we collectively refine our knowledge.
+
+
+{" "}
+
+<br></br>
+
+## Introduction
+
+Greetings, fellow Gophers! Are you ready to explore the intriguing world of Goroutines and unravel the mysteries of the sum of squares problem?
+Recently, a friend learning Go shared a <a href={'https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3'} class="font-bold underline text-accent"  target="_blank" rel="noopener">medium article</a> with me.
+It discussed Goroutines and how they can be used to solve a simple problem: calculating the sum of square numbers in a given array.
+
+In this blog post, we'll delve into how Goroutines, channels, and data structures in Golang can be utilized to tackle the sum of squares problem. We'll also discuss common pitfalls and inefficient practices that can hinder performance.
+Fear not, my friends, for we shall also unveil secrets to optimizing your code and achieving exceptional performance. So, let's embark on this quest together!
+{" "}
+
+<br></br>
+
+## The Sum of Squares Problem: A simple problem
+
+The medium article of my friend addressed the following problem:  "6. Write a program that returns the sum of the squares of each element of an array in Golang."
+
+Easy enough. We need to iterate through every element in the array and add the square of each one.
+
+```go
+func simpleSumSquare(items []int) int {
+	total := 0 // total sum
+	for i := 0; i < len(items); i++ {
+		total += items[i] * items[i] // square the item and add it to the total
+	}
+	return total // return the total sum
+}
+```
+
+Can we simplify it further? The code is reasonably straightforward. However, can we make it faster?
+<br></br>
+
+
+## Goroutines: Harnessing the Power of Concurrency
+
+Goroutines, the superheroes of Golang, are lightweight threads that enable concurrent task execution.
+By utilizing Goroutines, we can execute multiple functions simultaneously, making our code more efficient and faster. But, with great power comes great responsibility.<br></br>
+One common mistake in solving the sum of squares problem is the improper use of Goroutines.
+Some developers create too many Goroutines without proper synchronization, leading to chaos and incorrect results.
+Remember, coordination is crucial!
+
+<br></br>
+
+## Goroutines: Common pitfall
+
+When solving the sum of squares problem, the choice of algorithm and data structures significantly impacts performance.
+The aforementioned medium blog post highlights the use of Goroutines and their potential to substantially improve performance.
+
+```go
+func sumSquare(items []int) int {
+	number := make(chan int)   // channel for sending numbers
+	response := make(chan int) // channel for receiving responses
+
+	var wg sync.WaitGroup // wait group for waiting for all goroutines to finish
+
+	total := 0 // total sum
+
+	// Create a goroutine for each item in the slice
+	for _, item := range items {
+		wg.Add(1)           // increment the wait group counter
+		go func(item int) { // create a goroutine
+			defer wg.Done()    // decrement the wait group counter when the goroutine finishes
+			sum1 := <-number   // receive a number from the number channel
+			sum1 = sum1 * sum1 // square the number
+			response <- sum1   // send the result to the response channel
+		}(item) // pass the item to the goroutine
+		number <- item      // send the item to the number channel
+		total += <-response // receive the result from the response channel
+	}
+
+	defer close(number)   // close the number channel
+	defer close(response) // close the response channel
+
+	wg.Wait() // wait for all goroutines to finish
+
+	return total // return the total sum
+}
+```
+
+This code creates a new goroutine for each item in the array and then performs the squaring operation. It uses channels to pass values between the goroutine and the main thread.
+
+However, is this code correct? As discussed in  <a href={'../mergesort-parallel'} class="font-bold underline text-accent"  target="_blank" rel="prefetch noopener">my previous blog post about the mergesort algorithm</a>, there are better practices than spawning numerous goroutines.
+More than being lightweight is needed to justify using many goroutines; it still uses memory and time, and we must be cautious.
+
+As always, let's benchmark the code!
+
+{" "}
+
+<br></br>
+
+## Benchmarking: The Quest for Ultimate Performance
+Benchmarking lets us measure code performance and compare implementations to identify the best.
+
+With Golang's built-in benchmarking tools, we can easily measure the execution time of our code and identify bottlenecks. By tweaking our implementation and experimenting with different approaches, we can achieve optimal performance and revel in our achievements.
+
+Hence, I've created a small function to benchmark our algorithms using randomly generated arrays of varying sizes to observe their performance at different scales:
+
+```go
+func benchmarkFramework(b *testing.B, sumFunction func([]int) int) {
+	sizes := [][]int{RandomArray(100, 0, 100),
+		RandomArray(1000, 0, 1000),
+		RandomArray(10000, 0, 10000),
+		RandomArray(100000, 0, 100000),
+		RandomArray(1000000, 0, 1000000),
+	}
+	b.ResetTimer()
+	for _, size := range sizes {
+		b.Run(fmt.Sprintf("%d", len(size)), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				sumFunction(size)
+			}
+		})
+	}
+}
+```
+
+Here are the results:
+
+|          name           | time/op |
+|:-----------------------:|:-------:|
+|   SimpleSumSquare/100   | 28.2ns  |
+|  SimpleSumSquare/1000   |  223ns  |
+|  SimpleSumSquare/10000  | 2.25µs  |
+| SimpleSumSquare/100000  | 22.0µs  |
+| SimpleSumSquare/1000000 |  224µs  |
+|            .            |
+|      SumSquare/100      | 75.2µs  |
+|     SumSquare/1000      |  730µs  |
+|     SumSquare/10000     | 7.24ms  |
+|    SumSquare/100000     | 72.4ms  |
+|    SumSquare/1000000    |  739ms  |
+
+{" "}
+<br></br>
+
+As we can see, the simple algorithm outperforms the complex one! Why? Because spawning too many Goroutines slows down the program and consumes a significant amount of memory.
+{" "}
+<br></br>
+
+
+## Data Structures & Algorithms: Choose Wisely
+When solving the sum of squares problem, the choice of data structures and algorithms significantly impacts performance.
+
+I decided to develop a more efficient function. Consequently, I utilized chunks and a Goroutine pool.
+
+A goroutines pool manages a set number of reusable goroutines, reducing overhead in concurrent programs. Chunks break data into segments for parallel processing, optimizing resource use, and enhancing efficiency. Combining these techniques streamlines parallelism, maximizing concurrency benefits.
+
+Here is my code:
+
+```go
+func simpleParallelSumSquare(items []int) int {
+	const chunkSize = 10000
+
+	if len(items) <= 10000 { // Threshold for small slices
+		return simpleSumSquare(items) // Use the simpleSumSquare function
+	}
+
+	// Divide the items into chunks
+	chunks := make([][]int, 0)
+	for i := 0; i < len(items); i += chunkSize {
+		end := i + chunkSize // end index for the chunk
+		if end > len(items) {
+			end = len(items) // last chunk may be smaller than chunkSize
+		}
+		chunks = append(chunks, items[i:end]) // append the chunk to the chunks slice
+	}
+
+	// Create a goroutine for each chunk
+	wg := sync.WaitGroup{}
+	resultChan := make(chan int, len(chunks)) // channel for receiving results
+
+	for _, chunk := range chunks { // iterate over the chunks
+		wg.Add(1)              // increment the wait group counter
+		go func(chunk []int) { // create a goroutine
+			resultChan <- simpleSumSquare(chunk) // send the result to the result channel
+			wg.Done()                            // decrement the wait group counter when the goroutine finishes
+		}(chunk) // pass the chunk to the goroutine
+	}
+
+	wg.Wait()         // Wait for all goroutines to finish
+	close(resultChan) // close the result channel
+
+	// Sum the results
+	total := 0
+	for partialSum := range resultChan {
+		total += partialSum
+	}
+
+	return total // return the total sum
+}
+```
+
+Can this code be improved further? I could reduce the number of allocations and enhance performance. However, I opted for simplicity to better illustrate pitfalls and good practices related to Goroutines.
+
+Is it genuinely efficient? Let's benchmark it, as always!
+
+
+
+|              name               | time/op |
+|:-------------------------------:|:-------:|
+|       SimpleSumSquare/100       | 49.5ns  |
+|      SimpleSumSquare/1000       |  450ns  |
+|      SimpleSumSquare/10000      | 4.41µs  |
+|     SimpleSumSquare/100000      | 43.8µs  |
+|     SimpleSumSquare/1000000     |  437µs  |
+|                .                |         |
+|          SumSquare/100          | 75.2µs  |
+|         SumSquare/1000          |  730µs  |
+|         SumSquare/10000         | 7.24ms  |
+|        SumSquare/100000         | 72.4ms  |
+|        SumSquare/1000000        |  739ms  |
+|                .                |         |
+|   SimpleParallelSumSquare/100   | 49.5ns  |
+|  SimpleParallelSumSquare/1000   |  450ns  |
+|  SimpleParallelSumSquare/10000  | 4.41µs  |
+| SimpleParallelSumSquare/100000  | 18.0µs  |
+| SimpleParallelSumSquare/1000000 | 67.2µs  |
+
+{" "}
+<br></br>
+
+As we can observe, our new code is significantly faster!
+
+## Pitfalls and Bad Practices: The Road to Destruction
+Ah, the treacherous road of pitfalls and bad practices. One common mistake is the excessive creation and destruction of Goroutines.
+Creating Goroutines carries a cost; making too many can slow your program and consume unnecessary resources. So, let's tread carefully and avoid these pitfalls on our path to success.
+
+## Optimization Techniques
+Unleashing the power of optimizations is the key to unlocking your code's full potential.
+From reducing unnecessary memory allocations to leveraging parallelism, the possibilities are endless.
+For instance, employing a worker pool pattern can limit the number of Goroutines created and enable their reuse, resulting in improved performance and reduced overhead.
+
+Furthermore, we can use unsafe features to improve our code's performance but must not sacrifice maintainability and safety for speed if it's not really required.
+If you want to learn more about unsafe features available on Golang, you can look at the code published <a href={'https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square'} class="font-bold underline text-accent"  target="_blank" rel="noopener nofollow"> here on my Github </a>.
+
+## Conclusion: The Sum of Success
+Congratulations, my friends! We've journeyed through Goroutines, channels, and data structures, conquering the sum of squares problem.
+We've learned from our mistakes, optimized our code, and achieved top-notch performance.
+
+But remember, the pursuit of knowledge is everlasting.
+Keep exploring, experimenting, and pushing the boundaries of what's possible. And always remember, with great power comes great responsibility.
+So go forth, my fellow Gophers, may your code be swift, your bugs be few, and your adventures be legendary!
+
+{" "}
+
+
+<br></br>
+
+## References
+
+- <a href={"https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3"} class="font-bold underline text-accent" target="_blank" rel="noopener nofollow">Medium article</a>
+- <a href="https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square" class="font-bold underline text-accent" target="_blank" rel="noopener">Code snippets</a>

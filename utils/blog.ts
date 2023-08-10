@@ -10,6 +10,17 @@ const cgs = {
 export class BlogPosts {
   private static readonly _blogPosts: BlogPostList = [
     {
+      title: "Solving the Sum of Squares Problem: Unraveling Goroutine Misuse and Optimizing Performance",
+        description: "Discover how to optimize performance, avoid common pitfalls, and achieve top-notch results. Ready to conquer the challenges? Let's go!",
+        image:  "https://images.unsplash.com/photo-1547296825-8646e0556e2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=626&q=70",
+        date: "Aug. 10, 2023",
+        link: "/blog/optimizing-goroutines-sum-of-squares",
+        category: "Programming",
+        timeToRead: "10 min",
+        author: cgs,
+        dark_background: false,
+    },
+    {
       title: "Upgrading to dnf5: A step-by-step guide for Fedora users",
       description:
         "Dnf5 is the new, faster, and more powerful package manager for Fedora. This blog post will show you how to replace dnf with dnf5 on your Fedora system.",
