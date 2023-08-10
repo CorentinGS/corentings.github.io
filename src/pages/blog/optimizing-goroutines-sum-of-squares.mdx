@@ -243,13 +243,8 @@ As we can observe, our new code is significantly faster!
 
 ## Pitfalls and Bad Practices: The Road to Destruction
 Ah, the treacherous road of pitfalls and bad practices. One common mistake is the excessive creation and destruction of Goroutines.
-Creating Goroutines carries a cost; making too many can slow your program and consume unnecessary resources. So, let's tread carefully and avoid these pitfalls on our path to success.
-
-## Optimization Techniques
-Unleashing the power of optimizations is the key to unlocking your code's full potential.
-From reducing unnecessary memory allocations to leveraging parallelism, the possibilities are endless.
-For instance, employing a worker pool pattern can limit the number of Goroutines created and enable their reuse, resulting in improved performance and reduced overhead.
-
+Creating Goroutines carries a cost; making too many can slow your program and consume unnecessary resources.
+<br></br>
 Furthermore, we can use unsafe features to improve our code's performance but must not sacrifice maintainability and safety for speed if it's not really required.
 If you want to learn more about unsafe features available on Golang, you can look at the code published <a href={'https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square'} class="font-bold underline text-accent"  target="_blank" rel="noopener nofollow"> here on my Github </a>.
 
