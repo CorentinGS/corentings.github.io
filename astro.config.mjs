@@ -11,7 +11,7 @@ import compressor from "astro-compressor";
 import astroI18next from "astro-i18next";
 
 // https://astro.build/config
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 import critters from "astro-critters";
 import node from "@astrojs/node";
 
@@ -47,7 +47,9 @@ export default defineConfig({
     path: ".vercel/output/static",
     css: false
   }), compressor()],
-  output: "static",
-  adapter: vercel({})
+  output: "server",
+  adapter: vercel({
+    functionPerRoute: false,
+  })
   // adapter: node({    mode: "standalone"  })
 });
