@@ -43,7 +43,7 @@ export default defineConfig({
         de: "de-DE"
       }
     }
-  }), critters(), purgecss(), compress({
+  }), compress({
     path: ".vercel/output/static",
     css: false
   }), compressor()],
