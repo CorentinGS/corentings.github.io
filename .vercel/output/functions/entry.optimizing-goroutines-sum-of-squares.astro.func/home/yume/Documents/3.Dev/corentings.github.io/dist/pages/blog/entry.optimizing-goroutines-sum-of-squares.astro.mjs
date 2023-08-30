@@ -1,7 +1,7 @@
 import { renderers } from '../../renderers.mjs';
 import { onRequest } from '../../_empty-middleware.mjs';
-import { c as createExports, a as adapter } from '../../chunks/entrypoint.1c55f2de.mjs';
-import { manifest } from '../../manifest.b45dff09.mjs';
+import { c as createExports, a as adapter } from '../../chunks/entrypoint.33152fed.mjs';
+import { manifest } from '../../manifest.9966f89a.mjs';
 import '../../chunks/astro.b767b37f.mjs';
 import 'clsx';
 import 'html-escaper';
