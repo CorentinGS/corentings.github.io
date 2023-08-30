@@ -13,6 +13,8 @@ import {t} from "i18next"
 import "@fontsource/syne"
 import "@fontsource/nunito"
 import PostHeader from "../components/utils/PostHeader.astro"
+import {ViewTransitions} from "astro:transitions";
+import {Icon} from "astro-iconify";
 
 const {frontmatter} = Astro.props
 const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link)
@@ -21,11 +23,7 @@ let meta: {} = {}
 
 if (blogPost) {
     meta = {
-        title: blogPost.title,
-        description: blogPost.description,
-        image: blogPost.image,
-        date: blogPost.date,
-        author: "Corentin Giaufer--Saubert"
+        title: blogPost.title, description: blogPost.description, image: blogPost.image, date: blogPost.date, author: "Corentin Giaufer--Saubert"
     }
 } else {
     meta = {
@@ -37,6 +35,8 @@ if (blogPost) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <ViewTransitions/>
+
     <script
             async
             src="https://umami.memnix.app/script.js"
@@ -82,13 +82,17 @@ if (blogPost) {
     <title>{frontmatter.title}</title>
 </head>
 <body>
-<main>
+<main transition:animate="slide">
     <!-- Navbar -->
     <Navbar lang={false}/>
     <!-- Page Slot -->
     <BlogPost blogPost={blogPost}>
         <slot/>
     </BlogPost>
+
+    <div class="fixed bottom-5 right-5 hoveranimation btn-accent btn-sm btn hidden" id="btn-back-to-top">
+        <Icon name="lucide:arrow-up" class="h-6 w-6"/>
+    </div>
 
     <input type="checkbox" id="my-modal-6" class="modal-toggle"/>
     <label for="my-modal-6" class="modal cursor-pointer modal-bottom sm:modal-middle">
@@ -120,3 +124,24 @@ if (blogPost) {
 </main>
 </body>
 </html>
+
+
+<script type="text/javascript" is:inline>
+    mybutton = document.getElementById("btn-back-to-top");
+
+    document.addEventListener('astro:page-load', () => {
+        const backToTop = () => {
+            window.scrollTo({top: 0, behavior: "smooth"});
+        };
+        const onScroll = () => {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                mybutton.classList.remove("hidden");
+            } else {
+                mybutton.classList.add("hidden");
+            }
+        };
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        window.addEventListener("scroll", onScroll);
+    }, {once: true});
+</script>

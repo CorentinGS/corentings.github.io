@@ -6,9 +6,12 @@ import {HeadHrefLangs} from "astro-i18next/components"
 import {LanguageSelector} from "astro-i18next/components"
 import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro"
 import {SEO} from "astro-seo";
-import { Schema } from "astro-seo-schema"
+import {Schema} from "astro-seo-schema"
 
 import {localizePath} from "astro-i18next"
+
+import {ViewTransitions} from 'astro:transitions';
+
 
 // Import fonts
 import "@fontsource/syne"
@@ -25,6 +28,7 @@ const {title} = Astro.props
 <!DOCTYPE html>
 <html lang={i18next.language}>
 <head>
+    <ViewTransitions/>
 
     <link rel="preconnect" href="https://umami.memnix.app"/>
 
@@ -108,7 +112,7 @@ const {title} = Astro.props
                     "https://www.linkedin.com/in/corentin-giaufer-saubert/",
                     "https://github.com/corentings",
                     "https://hachyderm.io/@TheLittlePrince",
-                    ],
+                ],
                 "memberOf": [
                     {
                         "@type": "Organization",
@@ -137,9 +141,6 @@ const {title} = Astro.props
     <!-- Navbar -->
     <Navbar lang={true}/>
     <!-- Page Slot -->
-    <div class="fixed bottom-5 right-5 hoveranimation btn-accent btn-sm btn hidden" id="btn-back-to-top">
-        <Icon name="lucide:arrow-up" class="h-6 w-6" />
-    </div>
     <slot/>
 
     <input type="checkbox" id="my-modal-6" class="modal-toggle"/>
@@ -172,26 +173,3 @@ const {title} = Astro.props
 </main>
 </body>
 </html>
-
-<script type="text/javascript">
-    const mybutton = document.getElementById("btn-back-to-top");
-
-    const scrollFunction = () => {
-        if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-        ) {
-            mybutton.classList.remove("hidden");
-        } else {
-            mybutton.classList.add("hidden");
-        }
-    };
-    const backToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", backToTop);
-
-    window.addEventListener("scroll", scrollFunction);
-</script>

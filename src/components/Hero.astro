@@ -1,105 +1,104 @@
 ---
-import { Config, Profile } from "../../utils/config"
-import { Icon } from "astro-iconify"
+import {Config, Profile} from "../../utils/config"
+import {Icon} from "astro-iconify"
 
-import { Image } from "astro:assets"
+import {Image} from "astro:assets"
 
-import { t } from "i18next"
+import {t} from "i18next"
 
 const social = Config
 const profile = Profile
-
 ---
 
 <section class="hero relative min-h-screen bg-base-100">
-  <div class="hero-content">
-    <div class="flex flex-col">
-      <div
-        class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
-      >
-        <Image
-          src={Profile.avatar}
-          quality={"high"}
-          format="avif"
-          alt="avatar"
-          class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
-          width={192}
-          height={192}
-          loading={"eager"}
-          aspectRatio={1}
-        />
-        <div class="flex-grow sm:pl-8">
-          <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
-            {t("hero.hello")}{" "}
-            {profile.full_name}
-          </h1>
-          <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
-            {t("profile.title")}
-          </h2>
+    <div class="hero-content">
+        <div class="flex flex-col">
+            <div
+                    class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
+            >
+                <Image
+                        src={Profile.avatar}
+                        quality={"high"}
+                        format="avif"
+                        alt="avatar"
+                        class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
+                        width={192}
+                        height={192}
+                        loading={"eager"}
+                        aspectRatio={1}
+                />
+                <div class="flex-grow sm:pl-8">
+                    <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
+                        {t("hero.hello")}{" "}
+                        {profile.full_name}
+                    </h1>
+                    <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
+                        {t("profile.title")}
+                    </h2>
 
-          <div class="inline-flex space-x-4">
-            <span class="text-md uppercase lg:text-lg"> {t("hero.cta")}</span>
-            <Icon name="lucide:chevron-right" class="mx-auto" />
-            <a
-              v-if="social.twitter !== ''"
-              href={"https://twitter.com/" + social.twitter}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              aria-label="twitter"
-              class="my-auto"
-            >
-              <Icon name="lucide:twitter" class="hoveranimation h-6 w-6" />
+                    <div class="inline-flex space-x-4">
+                        <span class="text-md uppercase lg:text-lg"> {t("hero.cta")}</span>
+                        <Icon name="lucide:chevron-right" class="mx-auto"/>
+                        <a
+                                v-if="social.twitter !== ''"
+                                href={"https://twitter.com/" + social.twitter}
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                                aria-label="twitter"
+                                class="my-auto"
+                        >
+                            <Icon name="ri:twitter-x-fill" class="hoveranimation h-6 w-6"/>
+                        </a>
+                        <a
+                                v-if="social.discord !== ''"
+                                href={social.discord}
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                                aria-label="discord"
+                                class="my-auto"
+                        >
+                            <Icon name="la:discord" class="hoveranimation h-6 w-6"/>
+                        </a>
+                        <a
+                                v-if="social.github !== ''"
+                                href={"https://github.com/" + social.github}
+                                target="_blank"
+                                aria-label="github"
+                                rel="noopener noreferrer nofollow"
+                                class="my-auto"
+                        >
+                            <Icon name="lucide:github" class="hoveranimation h-6 w-6"/>
+                        </a>
+                        <a
+                                v-if="social.linkedin !== ''"
+                                href={"https://www.linkedin.com/in/" + social.linkedin}
+                                target="_blank"
+                                aria-label="linkedin"
+                                rel="noopener noreferrer nofollow"
+                                class="my-auto"
+                        >
+                            <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6"/>
+                        </a>
+                        <a
+                                v-if="social.mastodon !== ''"
+                                rel="noopener noreferrer nofollow me"
+                                href={social.mastodon}
+                                aria-label="mastodon"
+                                target="_blank"
+                                class="my-auto"
+                        >
+                            <Icon name="la:mastodon" class="hoveranimation h-6 w-6"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="mx-auto my-10 h-12 w-12">
+                <Icon
+                        name="lucide:chevron-down"
+                        class="animate-bounce"
+                        aria-label="scrolling down"
+                />
             </a>
-            <a
-              v-if="social.discord !== ''"
-              href={social.discord}
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              aria-label="discord"
-              class="my-auto"
-            >
-              <Icon name="la:discord" class="hoveranimation h-6 w-6" />
-            </a>
-            <a
-              v-if="social.github !== ''"
-              href={"https://github.com/" + social.github}
-              target="_blank"
-              aria-label="github"
-              rel="noopener noreferrer nofollow"
-              class="my-auto"
-            >
-              <Icon name="lucide:github" class="hoveranimation h-6 w-6" />
-            </a>
-            <a
-              v-if="social.linkedin !== ''"
-              href={"https://www.linkedin.com/in/" + social.linkedin}
-              target="_blank"
-              aria-label="linkedin"
-              rel="noopener noreferrer nofollow"
-              class="my-auto"
-            >
-              <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6" />
-            </a>
-            <a
-              v-if="social.mastodon !== ''"
-              rel="noopener noreferrer nofollow me"
-              href={social.mastodon}
-              aria-label="mastodon"
-              target="_blank"
-              class="my-auto"
-            >
-              <Icon name="la:mastodon" class="hoveranimation h-6 w-6" />
-            </a>
-          </div>
         </div>
-      </div>
-      <a href="#about" class="mx-auto my-10 h-12 w-12">
-        <Icon
-          name="lucide:chevron-down"
-          class="animate-bounce"
-          aria-label="scrolling down"
-        />
-      </a>
     </div>
-  </div>
 </section>

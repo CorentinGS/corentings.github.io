@@ -97,5 +97,13 @@
       "title": "Hackaton - Climathon Copernicus",
       "description": "Climathon organized by Copernicus at Toulouse to find digitals solutions to the climate crisis. Got the 3rd price."
     }
+  },
+  "contacts": {
+    "title": "My links and socials",
+    "body": "Here are my socials and links to my projects and other stuff.",
+    "discord": "I'm also on Discord, so feel free to join my server.",
+    "blog": "My blog",
+    "notif_title": "I created a friendly discord !",
+    "notif_content": "Join our community on The Kafejo, a friendly discord for developers and students !"
   }
 }

@@ -1,8 +1,8 @@
 ---
 import Timeline from "./Index/Timeline.astro"
 import TimelineCard from "./Index/TimelineCard.astro"
-import { type TimelineCardList, TimelineCardType } from "../../utils/types"
-import { t } from "i18next"
+import {type TimelineCardList, TimelineCardType} from "../../utils/types"
+import {t} from "i18next"
 
 import imgIuLogo from "../assets/iu_logo.png"
 import imgMfStouuf from "../assets/MF_STOUUF.png"
@@ -16,170 +16,170 @@ import imgEstaca from "../assets/estaca.jpg"
 import imgKtk from "../assets/ktk.jpg"
 
 const experiences = [
-  {
-    name: t("experiences.bsc_cs.title"),
-    type: TimelineCardType.School,
-    description: t("experiences.bsc_cs.description"),
-    start_date: "2023",
-    tools: "Java",
-    link: "https://www.iu.org/bachelor/computer-science/",
-    image: imgIuLogo
-  },
-  {
-    name: t("experiences.freelance.title"),
-    type: TimelineCardType.Work,
-    description: t("experiences.freelance.description"),
-    start_date: "2022",
-    tools: "Golang, PostgreSQL, Docker...",
-    link: "https://corentings.dev/"
-  },
+    {
+        name: t("experiences.bsc_cs.title"),
+        type: TimelineCardType.School,
+        description: t("experiences.bsc_cs.description"),
+        start_date: "2023",
+        tools: "Java",
+        link: "https://www.iu.org/bachelor/computer-science/",
+        image: imgIuLogo
+    },
+    {
+        name: t("experiences.freelance.title"),
+        type: TimelineCardType.Work,
+        description: t("experiences.freelance.description"),
+        start_date: "2022",
+        tools: "Golang, PostgreSQL, Docker...",
+        link: "https://corentings.dev/"
+    },
 
-  {
-    name: t("experiences.stouuf.title"),
-    type: TimelineCardType.Personal,
-    description: t("experiences.stouuf.description"),
-    start_date: "2022",
-    tools: "Canva, Tailwindcss",
-    image: imgMfStouuf,
-    link: "https://stouuf.net/"
-  },
-  {
-    name: t("experiences.educative.title"),
-    type: TimelineCardType.Course,
-    description: t("experiences.educative.description"),
-    start_date: "2022",
-    tools: "C, Golang, Data Structure, Java",
-    link: "https://www.Educative.io",
-    image: imgEducative
-  },
-  {
-    name: t("experiences.hackerrank.title"),
-    type: TimelineCardType.Course,
-    description: t("experiences.hackerrank.description"),
-    start_date: "March 2022",
-    end_date: "March 2022",
-    tools: "Golang, Python",
-    link: "https://www.hackerrank.com/certificates/03173cedd98b",
-    image: imgHackerRank
-  },
-  {
-    name: t("experiences.memnix.title"),
-    type: TimelineCardType.Personal,
-    description: t("experiences.memnix.description"),
-    start_date: "2021",
-    image: imgMemnix,
-    link: "https://memnix.app/",
-    tools: "Golang, Nuxt, PostgreSQL, Docker..."
-  },
-  {
-    type: TimelineCardType.School,
-    description: t("experiences.unice.description"),
-    link: "https://univ-cotedazur.fr/",
-    image: imgUca,
-    name: t("experiences.unice.title"),
-    start_date: "September 2021",
-    end_date: "December 2022",
-    location: "Nice, France",
-    tools: "Python, Arduino"
-  },
-  {
-    type: TimelineCardType.Work,
-    description: t("experiences.onetoo.description"),
-    image: imgOneToo,
-    name: t("experiences.onetoo.title"),
-    start_date: "June 2021",
-    end_date: "July 2021",
-    location: "Nice, France",
-    link: "https://www.one-too.com/"
-  },
-  {
-    type: TimelineCardType.School,
-    description: t("experiences.estaca.description"),
-    link: "https://www.estaca.fr/",
-    image: imgEstaca,
-    name: t("experiences.estaca.title"),
-    start_date: "2020",
-    end_date: "2021",
-    location: "Laval, France"
-  },
-  {
-    type: TimelineCardType.School,
-    name: t("experiences.bac.title"),
-    description: t("experiences.bac.description"),
-    start_date: "2020",
-    location: "Valognes, France",
-    link: "https://www.lycee-valognes.fr/"
-  },
-  {
-    type: TimelineCardType.Personal,
-    name: t("experiences.ktk.title"),
-    description: t("experiences.ktk.description"),
-    start_date: "2019",
-    end_date: "2019",
-    link: "https://www.ktkamp.com/",
-    image: imgKtk,
-    location: "Orlando, Florida"
-  },
-  {
-    type: TimelineCardType.Personal,
-    name: t("experiences.ppl.title"),
-    description: t("experiences.ppl.description"),
-    start_date: "2019",
-    location: "Cherbourg, France",
-    link: "https://ac-cherbourg.com/"
-  },
-  {
-    type: TimelineCardType.Work,
-    name: t("experiences.qualialtis.title"),
-    description: t("experiences.qualialtis.description"),
-    start_date: "2018",
-    end_date: "2018",
-    location: "Toulouse, France",
-    tools: "Kubernetes, Helm, Debian",
-    link: "https://www.qualialtis.com/",
-    image: imgQualialtis
-  },
-  {
-    type: TimelineCardType.Personal,
-    name: t("experiences.copernicus.title"),
-    description: t("experiences.copernicus.description"),
-    start_date: "2018",
-    end_date: "2018",
-    location: "Toulouse, France"
-  }
+    {
+        name: t("experiences.stouuf.title"),
+        type: TimelineCardType.Personal,
+        description: t("experiences.stouuf.description"),
+        start_date: "2022",
+        tools: "Canva, Tailwindcss",
+        image: imgMfStouuf,
+        link: "https://stouuf.net/"
+    },
+    {
+        name: t("experiences.educative.title"),
+        type: TimelineCardType.Course,
+        description: t("experiences.educative.description"),
+        start_date: "2022",
+        tools: "C, Golang, Data Structure, Java",
+        link: "https://www.Educative.io",
+        image: imgEducative
+    },
+    {
+        name: t("experiences.hackerrank.title"),
+        type: TimelineCardType.Course,
+        description: t("experiences.hackerrank.description"),
+        start_date: "March 2022",
+        end_date: "March 2022",
+        tools: "Golang, Python",
+        link: "https://www.hackerrank.com/certificates/03173cedd98b",
+        image: imgHackerRank
+    },
+    {
+        name: t("experiences.memnix.title"),
+        type: TimelineCardType.Personal,
+        description: t("experiences.memnix.description"),
+        start_date: "2021",
+        image: imgMemnix,
+        link: "https://memnix.app/",
+        tools: "Golang, Nuxt, PostgreSQL, Docker..."
+    },
+    {
+        type: TimelineCardType.School,
+        description: t("experiences.unice.description"),
+        link: "https://univ-cotedazur.fr/",
+        image: imgUca,
+        name: t("experiences.unice.title"),
+        start_date: "September 2021",
+        end_date: "December 2022",
+        location: "Nice, France",
+        tools: "Python, Arduino"
+    },
+    {
+        type: TimelineCardType.Work,
+        description: t("experiences.onetoo.description"),
+        image: imgOneToo,
+        name: t("experiences.onetoo.title"),
+        start_date: "June 2021",
+        end_date: "July 2021",
+        location: "Nice, France",
+        link: "https://www.one-too.com/"
+    },
+    {
+        type: TimelineCardType.School,
+        description: t("experiences.estaca.description"),
+        link: "https://www.estaca.fr/",
+        image: imgEstaca,
+        name: t("experiences.estaca.title"),
+        start_date: "2020",
+        end_date: "2021",
+        location: "Laval, France"
+    },
+    {
+        type: TimelineCardType.School,
+        name: t("experiences.bac.title"),
+        description: t("experiences.bac.description"),
+        start_date: "2020",
+        location: "Valognes, France",
+        link: "https://www.lycee-valognes.fr/"
+    },
+    {
+        type: TimelineCardType.Personal,
+        name: t("experiences.ktk.title"),
+        description: t("experiences.ktk.description"),
+        start_date: "2019",
+        end_date: "2019",
+        link: "https://www.ktkamp.com/",
+        image: imgKtk,
+        location: "Orlando, Florida"
+    },
+    {
+        type: TimelineCardType.Personal,
+        name: t("experiences.ppl.title"),
+        description: t("experiences.ppl.description"),
+        start_date: "2019",
+        location: "Cherbourg, France",
+        link: "https://ac-cherbourg.com/"
+    },
+    {
+        type: TimelineCardType.Work,
+        name: t("experiences.qualialtis.title"),
+        description: t("experiences.qualialtis.description"),
+        start_date: "2018",
+        end_date: "2018",
+        location: "Toulouse, France",
+        tools: "Kubernetes, Helm, Debian",
+        link: "https://www.qualialtis.com/",
+        image: imgQualialtis
+    },
+    {
+        type: TimelineCardType.Personal,
+        name: t("experiences.copernicus.title"),
+        description: t("experiences.copernicus.description"),
+        start_date: "2018",
+        end_date: "2018",
+        location: "Toulouse, France"
+    }
 ]
 ---
 
 <section class="lg:py-15 container mx-auto w-full bg-base-100 py-6 md:py-10">
-  <div class="items-center lg:flex">
-    <h2 class="mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl">
-      {t("experiences.title")}
-    </h2>
-  </div>
-  <div class="wrap relative h-full overflow-hidden p-10">
-    <div
-      class="border-2-2 absolute left-[3.5rem] h-full border border-dashed border-gray-700 border-opacity-20 md:left-[50%]"
-    >
+    <div class="items-center lg:flex">
+        <h2 class="mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl">
+            {t("experiences.title")}
+        </h2>
     </div>
-    <div>
-      {
-        experiences.map((card, index) => (
-          <Timeline right={index % 2 !== 0}>
-            <TimelineCard
-              description={card.description}
-              end_date={card.end_date}
-              image={card.image}
-              link={card.link}
-              location={card.location}
-              name={card.name}
-              start_date={card.start_date}
-              type={card.type}
-              tools={card.tools}
-              right={index % 2 !== 0}
-            />
-          </Timeline>
-        ))
-      }
+    <div class="wrap relative h-full overflow-hidden p-10">
+        <div
+                class="border-2-2 absolute left-[3.5rem] h-full border border-dashed border-gray-700 border-opacity-20 md:left-[50%]"
+        >
+        </div>
+        <div>
+            {
+                experiences.map((card, index) => (
+                        <Timeline right={index % 2 !== 0}>
+                            <TimelineCard
+                                    description={card.description}
+                                    end_date={card.end_date}
+                                    image={card.image}
+                                    link={card.link}
+                                    location={card.location}
+                                    name={card.name}
+                                    start_date={card.start_date}
+                                    type={card.type}
+                                    tools={card.tools}
+                                    right={index % 2 !== 0}
+                            />
+                        </Timeline>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>
