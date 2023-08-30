@@ -1,0 +1,101 @@
+{
+  "profile": {
+    "title": "Freelance backend developer"
+  },
+  "hero": {
+    "cta": "Let's connect",
+    "hello": "Hello, I'm"
+  },
+  "navbar": {
+    "blog": "Blog",
+    "links": "Contact",
+    "resume": "Resume"
+  },
+  "about": {
+    "title": "About me",
+    "presentation": "Hey, my name is Corentin and I'm 20 years old.",
+    "study": "Currently, I'm studying for a BSC. Computer Science at the <0>IU International University of Applied Sciences.</0>.",
+    "work": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
+    "lang": "My main programming language is <0>Golang</0> but I've also worked with java, python, typescript, C/C++ and more.",
+    "database": "I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
+    "opensource": "Furthermore, I'm a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created <0>Memnix</0>, a free and open-source flashcard app for Android and Web.",
+    "community": "I like to manage communities and I'm currently the founder of <0> The Kafejo </0> a Discord community for developers and students.",
+    "chess": "You might also meet me on a chess board as I'm playing a lot and I'm managing a chess community for my friend <0>Stouuf</0> on Discord, Twitch and YouTube.",
+    "linux": "I'm also a big fan of Linux and I've been using it since my youngest age. At the moment, I'm using <0>Arch Linux</0> as my main operating system and <1>Void Linux</1> on my laptop."
+  },
+  "skills": {
+    "title": "My Favorite Stack"
+  },
+  "projects": {
+    "title": "My Projects",
+    "tools": "Made using",
+    "discover": "Discover",
+    "memnix": "Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way. It's using its own spaced repetition system to allows students to create and share their learning materials.",
+    "gauntlet": "Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s.",
+    "uca_edt": "A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar.",
+    "kitsu": "Kitsu is a multi-purpose discord bot that generates stats for your discord server to help you increase the activity and grow quicker.",
+    "stouuf": "This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students.",
+    "echiquier_nicois": "This is a website I made for my chess club."
+  },
+  "experiences": {
+    "title": "My Experiences",
+    "since": "Since",
+    "skills": "Skills",
+    "bsc_cs": {
+      "title": "IU - BSC. Computer Science",
+      "description": "Bachelor's degree in Computer Science at IU International University of Applied Sciences."
+    },
+    "freelance": {
+      "title": "Freelance - Backend Developer",
+      "description": "Developing websites and web applications for clients."
+    },
+    "stouuf": {
+      "title": "Stouuf - Community Manager",
+      "description": "Managing the Stouuf community, website development, events organization and twitch moderation."
+    },
+    "educative": {
+      "title": "Educative.io - Courses",
+      "description": "Following several courses on Educative.io including but not limited to: Golang, Python, C, Java, Data Structure..."
+    },
+    "hackerrank": {
+      "title": "HackerRank - Certifications",
+      "description": "Obtained the following certifications from HackerRank: Python(Basic), Golang(Basic)"
+    },
+    "memnix": {
+      "title": "Memnix - Lead developer",
+      "description": "Leading the development of the Memnix project, a spaced repetition learning platform."
+    },
+    "unice": {
+      "title": "Unice - Computer Science student",
+      "description": "Studying computer science at Université Nice Côte d'Azur."
+    },
+    "onetoo": {
+      "title": "Onetoo - Internship",
+      "description": "Linux embedded system and QT software development internship. Technical documentation writing and setup of project management tools."
+    },
+    "estaca": {
+      "title": "Estaca - Student",
+      "description": "First year of the aeronautical engineering degree program at Estaca."
+    },
+    "bac": {
+      "title": "Scientific Baccalaureate - Graduate with Honor",
+      "description": "Obtained the Scientific Baccalaureate with honors with Engineering Sciences and English options at Cornat High School in Valognes, France."
+    },
+    "ktk": {
+      "title": "Theatre actor - Addams Family Show",
+      "description": "Performed in the Addams Family Show in Orlando, Florida for Kids Theater Kamp."
+    },
+    "ppl": {
+      "title": "PPL - Private Pilot License",
+      "description": "Preparing for the private pilot license exam (postponed due to covid-19)"
+    },
+    "qualialtis": {
+      "title": "Qualialtis - Intern",
+      "description": "Devops internship at Qualialtis to learn about devops, kubernetes, helm and linux administration."
+    },
+    "copernicus": {
+      "title": "Hackaton - Climathon Copernicus",
+      "description": "Climathon organized by Copernicus at Toulouse to find digitals solutions to the climate crisis. Got the 3rd price."
+    }
+  }
+}
