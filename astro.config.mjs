@@ -21,9 +21,7 @@ import purgecss from "astro-purgecss";
 // https://astro.build/config
 export default defineConfig({
   site: "https://corentings.dev",
-  experimental: {
-    assets: true
-  },
+
   image: {
     service: sharpImageService()
   },
