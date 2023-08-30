@@ -45,11 +45,11 @@ export default defineConfig({
     }
   }), compress({
     path: ".vercel/output/static",
-    css: false
+    CSS: false,
+    HTML: false,
+    JavaScript: false,
   }), compressor()],
   output: "server",
-  adapter: vercel({
-    functionPerRoute: false,
-  })
-  // adapter: node({    mode: "standalone"  })
+  adapter: vercel({functionPerRoute: false})
+  //adapter: node({    mode: "standalone"  })
 });

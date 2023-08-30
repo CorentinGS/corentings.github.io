@@ -1,54 +1,166 @@
-<!DOCTYPE html><html lang=en><head><meta content=true name=astro-view-transitions-enabled><meta content=animate name=astro-view-transitions-fallback><script src=https://umami.memnix.app/script.js async data-website-id=fca9df7f-70a1-466a-9fc8-d745bb4c33f0></script><script>null===localStorage.getItem("theme")?document.documentElement.setAttribute("data-theme","light"):document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"))</script><meta charset=UTF-8><meta content="width=device-width" name=viewport><meta content="Astro v3.0.2" name=generator><link href=/favicon.ico rel=icon><link href=/favicon-32x32.png rel=icon sizes=32x32 type=image/png><link href=/favicon-16x16.png rel=icon sizes=16x16 type=image/png><link href=/apple-touch-icon.png rel=apple-touch-icon sizes=180x180><meta content="How to deploy an optimized Go application with Docker" name=description><meta content="Deploying a Go application with Docker" name=og:title><meta content=CorentinGS name=og:site_name><meta content="Corentin Giaufer--Saubert" name=article:author><meta content="Nov. 09, 2022" name=article:published_time><meta content="How to deploy an optimized Go application with Docker" name=og:description><meta content=article name=og:type><meta content=https://corentings.dev name=og:url><meta content="[object Object]" name=og:image><meta content=summary_large_image name=twitter:card><meta content=https://corentings.dev name=twitter:url><meta content=GSCorentinDev name=twitter:creator><meta content="Deploying a Go application with Docker" name=twitter:title><meta content="How to deploy an optimized Go application with Docker" name=twitter:description><meta content="[object Object]" name=twitter:image><link href=https://corentings.dev/blog/docker-and-go rel=alternate hreflang=en><link href=https://corentings.dev/fr/blog/docker-and-go rel=alternate hreflang=fr><link href=https://corentings.dev/de/blog/docker-and-go rel=alternate hreflang=de><title>How to optimize a Go deployment with Docker</title><link href=/_astro/blog.8a0eabc2.css rel=stylesheet /><link href=/_astro/dnf5-step-by-step.f97649d7.css rel=stylesheet /><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0}}@keyframes astroFadeOut{to{opacity:0}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-new(*),::view-transition-old(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}</style><script src=/_astro/hoisted.2ec8a331.js type=module></script><script src=/_astro/page.30c903a1.js type=module></script><style>[data-astro-transition-scope=astro-b7phifci-1]{view-transition-name:astro-b7phifci-1}@layer astro{::view-transition-old(astro-b7phifci-1){animation-duration:90ms,220ms;animation-timing-function:cubic-bezier(0.76,0,0.24,1),cubic-bezier(0.76,0,0.24,1);animation-fill-mode:both,both;animation-name:astroFadeOut,astroSlideToLeft}::view-transition-new(astro-b7phifci-1){animation-duration:210ms,220ms;animation-timing-function:cubic-bezier(0.76,0,0.24,1),cubic-bezier(0.76,0,0.24,1);animation-delay:30ms;animation-fill-mode:both,both;animation-name:astroFadeIn,astroSlideFromRight}[data-astro-transition=back]::view-transition-old(astro-b7phifci-1){animation-name:astroFadeOut,astroSlideToRight}[data-astro-transition=back]::view-transition-new(astro-b7phifci-1){animation-name:astroFadeIn,astroSlideFromLeft}}[data-astro-transition-fallback=old] [data-astro-transition-scope=astro-b7phifci-1],[data-astro-transition-fallback=old][data-astro-transition-scope=astro-b7phifci-1]{animation-duration:90ms,220ms;animation-timing-function:cubic-bezier(0.76,0,0.24,1),cubic-bezier(0.76,0,0.24,1);animation-fill-mode:both,both;animation-name:astroFadeOut,astroSlideToLeft}[data-astro-transition-fallback=new] [data-astro-transition-scope=astro-b7phifci-1],[data-astro-transition-fallback=new][data-astro-transition-scope=astro-b7phifci-1]{animation-duration:210ms,220ms;animation-timing-function:cubic-bezier(0.76,0,0.24,1),cubic-bezier(0.76,0,0.24,1);animation-delay:30ms;animation-fill-mode:both,both;animation-name:astroFadeIn,astroSlideFromRight}[data-astro-transition=back][data-astro-transition-fallback=old] [data-astro-transition-scope=astro-b7phifci-1],[data-astro-transition=back][data-astro-transition-fallback=old][data-astro-transition-scope=astro-b7phifci-1]{animation-name:astroFadeOut,astroSlideToRight}[data-astro-transition=back][data-astro-transition-fallback=new] [data-astro-transition-scope=astro-b7phifci-1],[data-astro-transition=back][data-astro-transition-fallback=new][data-astro-transition-scope=astro-b7phifci-1]{animation-name:astroFadeIn,astroSlideFromLeft}</style></head><body><main data-astro-transition-scope=astro-b7phifci-1><div class="bg-base-200 navbar"><div class=navbar-start><label class="lg:hidden btn btn-ghost" for=my-modal-6><svg class="h-6 w-6 inline-block stroke-current" viewBox="0 0 24 24" fill=none xmlns=http://www.w3.org/2000/svg><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap=round stroke-linejoin=round stroke-width=2></path></svg></label><a href=/ class="hoveranimation text-xl btn btn-ghost lg:text-3xl normal-case" rel=prefetch><h2 class="font-bold text-primary">Corentin GS</h2></a></div><div class="text-xl hidden items-center lg:flex navbar-end"><ul class="menu menu-horizontal p-0"><li class=px-3><select class="bg-base-200 max-w-xs select select-bordered select-md select-secondary text-base-content" data-choose-theme><option selected=selected disabled=disabled>Pick your theme</option><option value=light>light</option><option value=dark>dark</option><option value=dracula>dracula</option><option value=memnix>memnix</option><option value=luxury>luxury</option><option value=cyberpunk>cyberpunk</option></select></li><li class=my-auto><a href=/blog class="hoveranimation text-xl hover:text-accent" rel="nofollow prefetch">Blog</a></li><li class=my-auto><a href=/links class="hoveranimation text-xl hover:text-accent" rel="nofollow prefetch">Contact</a></li></ul></div></div><div class="w-full relative bg-base-100 min-h-screen p-5"><div class="hoveranimation hidden absolute left-1 lg:block top-[0.5rem] z-10"><a href=/blog class="text-xl btn btn-ghost lg:text-3xl md:text-2xl" rel=prefetch><svg class="h-10 w-10" viewBox="0 0 24 24" astro-icon=lucide:arrow-left><path d="m12 19-7-7 7-7m7 7H5" stroke-linecap=round stroke-linejoin=round stroke-width=2 fill=none stroke=currentColor /></svg></a></div><div class="w-full relative max-w-screen-lg mb-4 md:mb-0 mx-auto text-white" style=height:24em><img alt="Deploying a Go application with Docker" src=/_astro/docker-and-go.f39e84b6_2rMvfT.avif decoding=async height=1024 loading=eager width=1024 aspectRatio=1.7777777777777777 class="w-full absolute h-full left-0 object-cover top-0 z-0"><div class="absolute left-0 bottom-0 p-4 z-20"><span class="items-center badge badge-secondary inline-flex justify-center mb-2 px-4 py-1 uppercase">Programming</span><h1 class="leading-tight text-4xl">Deploying a Go application with Docker</h1><div class="flex mt-3"><img alt="Corentin Giaufer Saubert" src=/_astro/avatar.ab91b8c2_Z1L0Ey9.avif decoding=async height=32 loading=eager width=32 aspectRatio=1/1 class="h-10 w-10 mr-2 object-cover rounded-full"><div><div class="flex flex-col"><span>Corentin Giaufer Saubert</span><span>Nov. 09, 2022 ・5 min</span></div></div></div></div></div><div class="px-4 leading-relaxed lg:px-0 max-w-screen-lg mt-12 mx-auto text-lg"><h2 id=how-to-optimize-a-go-deployment-with-docker>How to optimize a Go deployment with Docker ?</h2><br/><p>In this article, I will present the different steps that led me to optimize the deployment of services in <strong>golang</strong> using <strong>docker</strong>.</p><br/><h2 id=a-simple-dockerfile>A simple Dockerfile</h2><br/><p>When I started Go and deployed a rest api service for my Memnix application, I used a very simple Dockerfile that I had found on the internet.</p><br/><pre class="astro-code dracula" style=background-color:#282a36;overflow-x:auto tabindex=0><code><span class=line><span style=color:#ff79c6>FROM</span><span style=color:#f8f8f2> golang:1.19</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> mkdir -p /go/src/myapp</span></span>
-<span class=line><span style=color:#ff79c6>WORKDIR</span><span style=color:#f8f8f2> /go/src/myapp</span></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> . /go/src/myapp</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go get -d -v</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go install -v</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>EXPOSE</span><span style=color:#f8f8f2> 8080</span></span>
-<span class=line><span style=color:#ff79c6>CMD</span><span style=color:#f8f8f2> [</span><span style=color:#f1fa8c>&quot;/go/bin/myapp&quot;</span><span style=color:#f8f8f2>]</span></span></code></pre><br/><p>The problem is that I ended up with a 2GB image while my project compiled locally without docker and optimized was only 10MB! So I decided to try to optimize the size of my Docker image as much as possible.</p><br/><h2 id=the-first-step-using-a-multi-stage-build>The first step: using a multi-stage build</h2><br/><p>It is possible to separate our Dockerfile in several parts and to use several images:</p><ul><li>One image to build the project</li><li>A minimalist image to deploy it<br/></li></ul><p>This method allows us not to keep the sources and all the development tools provided with the golang image. Thus, we only keep the binaries. I decided to use the <strong>golang:1.19-alpine</strong> image as the <strong>builder</strong>.</p><br/><pre class="astro-code dracula" style=background-color:#282a36;overflow-x:auto tabindex=0><code><span class=line><span style=color:#ff79c6>FROM</span><span style=color:#f8f8f2> golang:1.19-alpine </span><span style=color:#ff79c6>as</span><span style=color:#f8f8f2> builder</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>LABEL</span><span style=color:#f8f8f2> stage=gobuilder</span></span>
-<span class=line><span style=color:#ff79c6>ENV</span><span style=color:#f8f8f2> CGO_ENABLED=0</span></span>
-<span class=line><span style=color:#ff79c6>ENV</span><span style=color:#f8f8f2> GOOS linux</span></span>
-<span class=line><span style=color:#ff79c6>WORKDIR</span><span style=color:#f8f8f2> /build</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> go.mod go.sum .</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go mod download</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> . .</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go get -d -v</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go build -o /app/myapp .</span></span></code></pre><br/><p>This first part of the Dockerfile allows us to copy the sources, to synchronize the packages and to launch the command go build to generate the binary. Once the build is finished, we use a minimalist alpine image that will be used for deployment. We just need to copy the binary from our builder and run it.</p><br/><pre class="astro-code dracula" style=background-color:#282a36;overflow-x:auto tabindex=0><code><span class=line><span style=color:#ff79c6>FROM</span><span style=color:#f8f8f2> alpine:latest</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>WORKDIR</span><span style=color:#f8f8f2> /app</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> --from=builder /app/myapp .</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>EXPOSE</span><span style=color:#f8f8f2> 8080</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>CMD</span><span style=color:#f8f8f2> [</span><span style=color:#f1fa8c>&quot;/app/myapp&quot;</span><span style=color:#f8f8f2>]</span></span></code></pre><br/><p>After testing this new Dockerfile, the final image was 34MB. It’s far from the original 10MB but it’s still much better than 2GB.</p><br/><h2 id=improve-the-build-process>Improve the build process</h2><br/><p>It is possible in Golang to add flags to the build command in order to slightly optimize the binary size. After a little research on internet, I discovered the existence of “-s -w” flags. After testing them locally, I noticed an improvement of a few MB so I decided to add them to my Dockerfile. I also discovered <a href=https://upx.github.io/ class="font-bold text-accent underline">Upx</a> which is a small program that allows to compress binary files to reduce their size. I tested this little software in a terminal and I noticed an improvement of almost <b>50%</b> on the size of the Memnix api. So I also added this step to my Dockerfile.</p><br/><pre class="astro-code dracula" style=background-color:#282a36;overflow-x:auto tabindex=0><code><span class=line><span style=color:#ff79c6>FROM</span><span style=color:#f8f8f2> golang:1.19-alpine </span><span style=color:#ff79c6>as</span><span style=color:#f8f8f2> builder</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>LABEL</span><span style=color:#f8f8f2> stage=gobuilder</span></span>
-<span class=line><span style=color:#ff79c6>ENV</span><span style=color:#f8f8f2> CGO_ENABLED=0</span></span>
-<span class=line><span style=color:#ff79c6>ENV</span><span style=color:#f8f8f2> GOOS linux</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> apk update --no-cache &amp;&amp; apk add upx</span></span>
-<span class=line><span style=color:#ff79c6>WORKDIR</span><span style=color:#f8f8f2> /build</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> go.mod go.sum .</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go mod download</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> . .</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go get -d -v</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> go build -ldflags=</span><span style=color:#f1fa8c>&quot;-s -w&quot;</span><span style=color:#f8f8f2>  -o /app/myapp .</span></span>
-<span class=line><span style=color:#ff79c6>RUN</span><span style=color:#f8f8f2> upx /app/myapp</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>FROM</span><span style=color:#f8f8f2> alpine:3.14</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>WORKDIR</span><span style=color:#f8f8f2> /app</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>COPY</span><span style=color:#f8f8f2> --from=builder /app/myapp .</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>EXPOSE</span><span style=color:#f8f8f2> 8080</span></span>
-<span class=line></span>
-<span class=line><span style=color:#ff79c6>CMD</span><span style=color:#f8f8f2> [</span><span style=color:#f1fa8c>&quot;/app/myapp&quot;</span><span style=color:#f8f8f2>]</span></span></code></pre><br/><p>And here is my new Dockerfile! It may seem much longer and more complex than the first version but in the end, the result is very interesting. After testing this new Dockerfile, the final image is 16Mb so only 6Mb more than the version without Docker which is almost negligible.</p><br/><h2 id=conclusion>Conclusion</h2><br/><p>Docker is a great tool to simplify application development and deployment, but it can be problematic if used incorrectly. This experience helped me understand how to better use Docker and how to optimize my images. This article is inspired by a <a href="https://twitter.com/GSCorentinDev/status/1564536030795075585?s=20&#38;t=l2hgvKBPDMVs4pS6um2HeA" class="font-bold text-accent underline">twitter thread</a> and the complete code of my Dockerfile is available on my <a href=https://github.com/memnix/memnix-rest/blob/e8e52b3d10731df5b2767f0d24bcdcb5d13d72e3/Dockerfile class="font-bold text-accent underline">github</a>. I hope this first article will interest you, don’t hesitate to give me feedback so I can improve for the next articles and share your tips on Docker or Golang!</p><br/><p>Here is a small infographic that summarizes the evolution of our Docker image. It’s in French but I think you can understand it anyway.</p><br/><p><img alt="Docker Infographic" src=/_astro/docker_infographie.2cc25f38_Fa2PE.webp decoding=async height=2000 loading=lazy width=800></p><img alt="Docker Infographic" src=../../assets/docker_infographie.jpg /></div></div><div class="hoveranimation btn bottom-5 btn-accent btn-sm fixed hidden right-5" id=btn-back-to-top><svg class="h-6 w-6" viewBox="0 0 24 24" astro-icon=lucide:arrow-up><path d="m5 12 7-7 7 7m-7 7V5" stroke-linecap=round stroke-linejoin=round stroke-width=2 fill=none stroke=currentColor /></svg></div><input class=modal-toggle id=my-modal-6 type=checkbox><label class="cursor-pointer modal modal-bottom sm:modal-middle" for=my-modal-6><label class="relative modal-box" for=""><ul class="menu bg-base-100 overflow-y-auto p-4 w-80"><li class=py-3><select class="bg-base-200 max-w-xs select select-bordered select-md select-secondary text-base-content" data-choose-theme><option selected=selected disabled=disabled>Pick your theme</option><option value=light>light</option><option value=dark>dark</option><option value=dracula>dracula</option><option value=memnix>memnix</option><option value=luxury>luxury</option><option value=cyberpunk>cyberpunk</option></select></li><li class=py-3><select class="bg-base-200 max-w-xs select select-bordered select-md select-secondary text-base-content my-select-class w-full" onchange="location=this.value"><option value=/blog/docker-and-go selected=true>🇺🇸 English</option><option value=/fr/blog/docker-and-go>🇫🇷 Français</option><option value=/de/blog/docker-and-go>🇩🇪 Deutsch</option></select></li><li><a href=/blog rel="nofollow prefetch">Blog</a></li><li><a href=/links rel="nofollow prefetch">Contact</a></li></ul></label></label></main></body></html><script>mybutton = document.getElementById("btn-back-to-top"); document.addEventListener('astro:page-load', () => { const backToTop = () => { window.scrollTo({top: 0, behavior: "smooth"}); }; const onScroll = () => { if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) { mybutton.classList.remove("hidden"); } else { mybutton.classList.add("hidden"); } }; // When the user clicks on the button, scroll to the top of the document mybutton.addEventListener("click", backToTop); window.addEventListener("scroll", onScroll); }, {once: true});</script>
+<!DOCTYPE html><html lang="en"><head><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script async src="https://umami.memnix.app/script.js" data-website-id="fca9df7f-70a1-466a-9fc8-d745bb4c33f0"></script><script>
+        // ☝️ This script prevent the FART effect.
+        if (localStorage.getItem("theme") === null) {
+            document.documentElement.setAttribute("data-theme", "light")
+        } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+        // "theme" LocalStorage value is set by the package to remember user preference.
+        // The value is checked and applyed before rendering anything.
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v3.0.2"><link rel="icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta name="description" content="How to deploy an optimized Go application with Docker"><meta name="og:title" content="Deploying a Go application with Docker"><meta name="og:site_name" content="CorentinGS"><meta name="article:author" content="Corentin Giaufer--Saubert"><meta name="article:published_time" content="Nov. 09, 2022"><meta name="og:description" content="How to deploy an optimized Go application with Docker"><meta name="og:type" content="article"><meta name="og:url" content="https://corentings.dev"><meta name="og:image" content="[object Object]"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://corentings.dev"><meta name="twitter:creator" content="GSCorentinDev"><meta name="twitter:title" content="Deploying a Go application with Docker"><meta name="twitter:description" content="How to deploy an optimized Go application with Docker"><meta name="twitter:image" content="[object Object]"><link rel="alternate" hreflang="en" href="https://corentings.dev/blog/docker-and-go"><link rel="alternate" hreflang="fr" href="https://corentings.dev/fr/blog/docker-and-go"><link rel="alternate" hreflang="de" href="https://corentings.dev/de/blog/docker-and-go"><title>How to optimize a Go deployment with Docker </title><link rel="stylesheet" href="/_astro/blog.8a0eabc2.css" />
+<link rel="stylesheet" href="/_astro/dnf5-step-by-step.f97649d7.css" />
+<style type="text/css">@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0}}@keyframes astroFadeOut{to{opacity:0}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><script type="module" src="/_astro/hoisted.2ec8a331.js"></script>
+<script type="module" src="/_astro/page.30c903a1.js"></script><style>[data-astro-transition-scope="astro-b7phifci-1"] { view-transition-name: astro-b7phifci-1; }@layer astro { ::view-transition-old(astro-b7phifci-1) { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }::view-transition-new(astro-b7phifci-1) { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back]::view-transition-old(astro-b7phifci-1) { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back]::view-transition-new(astro-b7phifci-1) { 
+	animation-name: astroFadeIn, astroSlideFromLeft; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-b7phifci-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-b7phifci-1"] { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-b7phifci-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-b7phifci-1"] { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-b7phifci-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-b7phifci-1"] { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-b7phifci-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-b7phifci-1"] { 
+	animation-name: astroFadeIn, astroSlideFromLeft; }</style></head><body><main data-astro-transition-scope="astro-b7phifci-1"><!-- Navbar --><div class="navbar bg-base-200"><div class="navbar-start"><label for="my-modal-6" class="btn btn-ghost lg:hidden"><svg class="inline-block h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></label><a class="hoveranimation btn-ghost btn text-xl normal-case lg:text-3xl" href="/" rel="prefetch"><h2 class="font-bold text-primary">Corentin GS</h2></a></div><div class="navbar-end hidden text-xl lg:flex items-center"><ul class="menu menu-horizontal p-0"><li class="px-3"><select data-choose-theme class="select-bordered select-secondary select select-md max-w-xs bg-base-200 text-base-content"><option disabled selected>Pick your theme</option><option value="light">light</option><option value="dark">dark</option><option value="dracula">dracula</option><option value="memnix">memnix</option><option value="luxury">luxury</option><option value="cyberpunk">cyberpunk</option></select></li><li class="my-auto"><a class="hoveranimation hover:text-accent text-xl " rel="nofollow prefetch" href="/blog">Blog</a></li><li class="my-auto"><a class="hoveranimation hover:text-accent text-xl " rel="nofollow prefetch" href="/links">Contact</a></li></ul></div></div><!-- Page Slot --><div class="relative min-h-screen w-full bg-base-100 p-5"><div class="hoveranimation absolute left-1 top-[0.5rem] z-10 hidden lg:block"><a href="/blog" class="btn-ghost btn text-xl md:text-2xl lg:text-3xl" rel="prefetch"><svg viewBox="0 0 24 24" class="h-10 w-10" astro-icon="lucide:arrow-left"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 19-7-7 7-7m7 7H5"/></svg></a></div><div class="text-white relative mx-auto mb-4 w-full max-w-screen-lg md:mb-0" style="height: 24em"><img src="/_astro/docker-and-go.f39e84b6_2rMvfT.avif" class="absolute left-0 top-0 z-0 h-full w-full object-cover" alt="Deploying a Go application with Docker" loading="eager" aspectRatio="1.7777777777777777" width="1024" height="1024" decoding="async"><div class="absolute bottom-0 left-0 z-20 p-4"><span class="badge-secondary badge mb-2 inline-flex items-center justify-center px-4 py-1 uppercase">Programming</span><h1 class="text-4xl leading-tight">Deploying a Go application with Docker</h1><div class="mt-3 flex"><img src="/_astro/avatar.ab91b8c2_Z1L0Ey9.avif" loading="eager" alt="Corentin Giaufer Saubert" aspectRatio="1/1" class="mr-2 h-10 w-10 rounded-full object-cover" width="32" height="32" decoding="async"><div><div class="flex flex-col"><span>Corentin Giaufer Saubert</span><span>Nov. 09, 2022 ・5 min</span></div></div></div></div></div><div class="mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0"><h2 id="how-to-optimize-a-go-deployment-with-docker">How to optimize a Go deployment with Docker ?</h2>
+<br/>
+<p>In this article, I will present the different steps that led me to optimize the deployment of services in <strong>golang</strong>
+using <strong>docker</strong>.</p>
+<br/>
+<h2 id="a-simple-dockerfile">A simple Dockerfile</h2>
+<br/>
+<p>When I started Go and deployed a rest api service for my Memnix application, I used a very simple Dockerfile
+that I had found on the internet.</p>
+<br/>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> golang:1.19</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> mkdir -p /go/src/myapp</span></span>
+<span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /go/src/myapp</span></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> . /go/src/myapp</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go get -d -v</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go install -v</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">EXPOSE</span><span style="color:#F8F8F2"> 8080</span></span>
+<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">&quot;/go/bin/myapp&quot;</span><span style="color:#F8F8F2">]</span></span></code></pre>
+<br/>
+<p>The problem is that I ended up with a 2GB image while my project compiled locally without docker and optimized was only 10MB! So I decided to try to optimize the size of my Docker image as much as possible.</p>
+<br/>
+<h2 id="the-first-step-using-a-multi-stage-build">The first step: using a multi-stage build</h2>
+<br/>
+<p>It is possible to separate our Dockerfile in several parts and to use several images:</p>
+<ul>
+<li>One image to build the project</li>
+<li>A minimalist image to deploy it
+<br/>
+</li>
+</ul>
+<p>This method allows us not to keep the sources and all the development tools provided with the golang image.
+Thus, we only keep the binaries.
+I decided to use the <strong>golang:1.19-alpine</strong> image as the <strong>builder</strong>.</p>
+<br/>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> golang:1.19-alpine </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> builder</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">LABEL</span><span style="color:#F8F8F2"> stage=gobuilder</span></span>
+<span class="line"><span style="color:#FF79C6">ENV</span><span style="color:#F8F8F2"> CGO_ENABLED=0</span></span>
+<span class="line"><span style="color:#FF79C6">ENV</span><span style="color:#F8F8F2"> GOOS linux</span></span>
+<span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /build</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> go.mod go.sum .</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go mod download</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> . .</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go get -d -v</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go build -o /app/myapp .</span></span></code></pre>
+<br/>
+<p>This first part of the Dockerfile allows us to copy the sources, to synchronize the packages and to launch the command go build to generate the binary.
+Once the build is finished, we use a minimalist alpine image that will be used for deployment. We just need to copy the binary from our builder and run it.</p>
+<br/>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> alpine:latest</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /app</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> --from=builder /app/myapp .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">EXPOSE</span><span style="color:#F8F8F2"> 8080</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">&quot;/app/myapp&quot;</span><span style="color:#F8F8F2">]</span></span></code></pre>
+<br/>
+<p>After testing this new Dockerfile, the final image was 34MB. It’s far from the original 10MB but it’s still much better than 2GB.</p>
+<br/>
+<h2 id="improve-the-build-process">Improve the build process</h2>
+<br/>
+<p>It is possible in Golang to add flags to the build command in order to slightly optimize the binary size.
+After a little research on internet, I discovered the existence of “-s -w” flags. After testing them locally, I noticed an improvement of a few MB so I decided to add them to my Dockerfile.
+I also discovered <a href="https://upx.github.io/" class="font-bold underline text-accent">Upx</a> which is a small program that allows to compress binary files to reduce their size.
+I tested this little software in a terminal and I noticed an improvement of almost <b>50%</b> on the size of the Memnix api. So I also added this step to my Dockerfile.</p>
+<br/>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> golang:1.19-alpine </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> builder</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">LABEL</span><span style="color:#F8F8F2"> stage=gobuilder</span></span>
+<span class="line"><span style="color:#FF79C6">ENV</span><span style="color:#F8F8F2"> CGO_ENABLED=0</span></span>
+<span class="line"><span style="color:#FF79C6">ENV</span><span style="color:#F8F8F2"> GOOS linux</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> apk update --no-cache &amp;&amp; apk add upx</span></span>
+<span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /build</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> go.mod go.sum .</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go mod download</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> . .</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go get -d -v</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> go build -ldflags=</span><span style="color:#F1FA8C">&quot;-s -w&quot;</span><span style="color:#F8F8F2">  -o /app/myapp .</span></span>
+<span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> upx /app/myapp</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> alpine:3.14</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /app</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> --from=builder /app/myapp .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">EXPOSE</span><span style="color:#F8F8F2"> 8080</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">&quot;/app/myapp&quot;</span><span style="color:#F8F8F2">]</span></span></code></pre>
+<br/>
+<p>And here is my new Dockerfile! It may seem much longer and more complex than the first version but in the end, the result is very interesting. After testing this new Dockerfile, the final image is 16Mb so only 6Mb more than the version without Docker which is almost negligible.</p>
+<br/>
+<h2 id="conclusion">Conclusion</h2>
+<br/>
+<p>Docker is a great tool to simplify application development and deployment, but it can be problematic if used incorrectly. This experience helped me understand how to better use Docker and how to optimize my images.
+This article is inspired by a <a href="https://twitter.com/GSCorentinDev/status/1564536030795075585?s=20&#38;t=l2hgvKBPDMVs4pS6um2HeA" class="font-bold underline text-accent">twitter thread</a> and the complete code of my Dockerfile is available on my <a href="https://github.com/memnix/memnix-rest/blob/e8e52b3d10731df5b2767f0d24bcdcb5d13d72e3/Dockerfile" class="font-bold underline text-accent">github</a>.
+I hope this first article will interest you, don’t hesitate to give me feedback so I can improve for the next articles and share your tips on Docker or Golang!</p>
+<br/>
+<p>Here is a small infographic that summarizes the evolution of our Docker image.
+It’s in French but I think you can understand it anyway.</p>
+<br/>
+<p><img src="/_astro/docker_infographie.2cc25f38_Fa2PE.webp" alt="Docker Infographic" width="800" height="2000" loading="lazy" decoding="async"></p>
+<img src="../../assets/docker_infographie.jpg" alt="Docker Infographic"/></div></div><div class="fixed bottom-5 right-5 hoveranimation btn-accent btn-sm btn hidden" id="btn-back-to-top"><svg viewBox="0 0 24 24" class="h-6 w-6" astro-icon="lucide:arrow-up"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12 7-7 7 7m-7 7V5"/></svg></div><input type="checkbox" id="my-modal-6" class="modal-toggle"><label for="my-modal-6" class="modal cursor-pointer modal-bottom sm:modal-middle"><label class="modal-box relative" for=""><ul class="menu w-80 overflow-y-auto bg-base-100 p-4"><li class="py-3"><select data-choose-theme class="select-bordered select-secondary select select-md max-w-xs bg-base-200 text-base-content"><option disabled selected>Pick your theme</option><option value="light">light</option><option value="dark">dark</option><option value="dracula">dracula</option><option value="memnix">memnix</option><option value="luxury">luxury</option><option value="cyberpunk">cyberpunk</option></select></li><li class="py-3"><select onchange="location = this.value;" class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"><option value="/blog/docker-and-go" selected="true">🇺🇸 English</option><option value="/fr/blog/docker-and-go">🇫🇷 Français</option><option value="/de/blog/docker-and-go">🇩🇪 Deutsch</option></select></li><li><a href="/blog" rel="nofollow prefetch">Blog</a></li><li><a href="/links" rel="nofollow prefetch">Contact</a></li></ul></label></label></main></body></html><script type="text/javascript">
+    mybutton = document.getElementById("btn-back-to-top");
+
+    document.addEventListener('astro:page-load', () => {
+        const backToTop = () => {
+            window.scrollTo({top: 0, behavior: "smooth"});
+        };
+        const onScroll = () => {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                mybutton.classList.remove("hidden");
+            } else {
+                mybutton.classList.add("hidden");
+            }
+        };
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        window.addEventListener("scroll", onScroll);
+    }, {once: true});
+</script>
