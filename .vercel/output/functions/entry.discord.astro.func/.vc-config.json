@@ -1,5 +1,0 @@
-{
-	"runtime": "nodejs18.x",
-	"handler": "home/yume/Documents/3.Dev/corentings.github.io/dist/pages/fr/entry.discord.astro.mjs",
-	"launcherType": "Nodejs"
-}
