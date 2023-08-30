@@ -2,11 +2,90 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
 			"handle": "filesystem"
 		},
 		{
-			"src": "/.*",
-			"dest": "render"
+			"src": "^\\/_image$",
+			"dest": "entry._image.astro"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "entry.index.astro"
+		},
+		{
+			"src": "^\\/discord\\/?$",
+			"dest": "entry.discord.astro"
+		},
+		{
+			"src": "^\\/rss\\.xml$",
+			"dest": "entry.rss.xml.astro"
+		},
+		{
+			"src": "^\\/links\\/?$",
+			"dest": "entry.links.astro"
+		},
+		{
+			"src": "^\\/blog\\/optimizing-goroutines-sum-of-squares\\/?$",
+			"dest": "entry.optimizing-goroutines-sum-of-squares.astro"
+		},
+		{
+			"src": "^\\/blog\\/simple-go-vs-goroutines\\/?$",
+			"dest": "entry.simple-go-vs-goroutines.astro"
+		},
+		{
+			"src": "^\\/blog\\/mergesort-parallel\\/?$",
+			"dest": "entry.mergesort-parallel.astro"
+		},
+		{
+			"src": "^\\/blog\\/dnf5-step-by-step\\/?$",
+			"dest": "entry.dnf5-step-by-step.astro"
+		},
+		{
+			"src": "^\\/blog\\/docker-and-go\\/?$",
+			"dest": "entry.docker-and-go.astro"
+		},
+		{
+			"src": "^\\/blog\\/?$",
+			"dest": "entry.blog.astro"
+		},
+		{
+			"src": "^\\/de\\/?$",
+			"dest": "entry.de.astro"
+		},
+		{
+			"src": "^\\/de\\/discord\\/?$",
+			"dest": "entry.discord.astro"
+		},
+		{
+			"src": "^\\/de\\/links\\/?$",
+			"dest": "entry.links.astro"
+		},
+		{
+			"src": "^\\/de\\/blog\\/?$",
+			"dest": "entry.blog.astro"
+		},
+		{
+			"src": "^\\/fr\\/?$",
+			"dest": "entry.fr.astro"
+		},
+		{
+			"src": "^\\/fr\\/discord\\/?$",
+			"dest": "entry.discord.astro"
+		},
+		{
+			"src": "^\\/fr\\/links\\/?$",
+			"dest": "entry.links.astro"
+		},
+		{
+			"src": "^\\/fr\\/blog\\/?$",
+			"dest": "entry.blog.astro"
 		}
 	]
 }
