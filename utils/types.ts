@@ -22,7 +22,7 @@ export interface TimelineCardList extends Array<TimelineCard> {}
 export interface BlogPost {
   title: string
   description: string
-  image: string
+  image: ImageMetadata
   date: string
   link: string
   category: string
@@ -35,8 +35,6 @@ export interface BlogPostList extends Array<BlogPost> {}
 
 export interface BlogAuthor {
   name: string
-  avatar: string
+  avatar: ImageMetadata
   link?: string
 }
-
-export interface BlogAuthorMap extends Map<String, BlogAuthor> {}

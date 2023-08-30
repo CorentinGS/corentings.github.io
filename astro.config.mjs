@@ -48,10 +48,6 @@ export default defineConfig({
     css: false
   }), compressor()],
   output: "static",
-  adapter: vercel(
-      {
-        imageService: true,
-      }
-  )
+  adapter: vercel({})
   // adapter: node({    mode: "standalone"  })
 });

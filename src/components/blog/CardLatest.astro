@@ -18,13 +18,12 @@ const { blogPost } = Astro.props
     class="absolute left-0 top-0 z-0 h-full w-full object-cover"
     alt={blogPost.title}
     loading={"eager"}
-    format={"avif"}
-    widths={[512, 1024, 1515, 2048]}
+    formats={["avif", "webp", "png"]}
     fit="cover"
-    sizes="(max-width: 2048px) 100vw, 2048vw"
     aspectRatio={16 / 9}
-    width="2048"
-    height="2048"
+    width="512"
+    height="512"
+    quality={70}
   />
   <div class="absolute bottom-0 left-0 z-20 p-4">
     <h1 class="text-4xl leading-tight">
@@ -34,11 +33,11 @@ const { blogPost } = Astro.props
       <Image
         src={blogPost.author.avatar}
         format="webp"
-        quality={50}
+        quality={30}
         loading={"eager"}
         alt={blogPost.author.name}
-        width="64"
-        height="64"
+        width="48"
+        height="48"
         aspectRatio="1/1"
         class="mr-2 h-10 w-10 rounded-full object-cover"
       />

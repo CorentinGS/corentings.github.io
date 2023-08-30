@@ -4,6 +4,7 @@ import { BlogPosts } from "../../utils/blog";
 import CardLatest from "../components/blog/CardLatest.astro";
 import CardPrevious from "../components/blog/CardPrevious.astro";
 import Layout from "../layouts/Layout.astro";
+import {Icon} from "astro-iconify";
 
 changeLanguage("en");
 
@@ -13,6 +14,7 @@ export const prerender = true;
 ---
 
 <Layout title="CorentinGS">
+
   <div class="mx-auto mb-4 min-h-screen w-full max-w-screen-lg bg-base-100 p-6">
     <div class="header mb-6 flex items-end justify-between">
       <div class="title">
@@ -45,5 +47,3 @@ export const prerender = true;
     </div>
   </div>
 </Layout>
-
-<style></style>
