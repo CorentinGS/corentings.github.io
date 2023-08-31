@@ -4,7 +4,7 @@ import BlogPost from "../components/blog/BlogPost.astro"
 import Navbar from "../components/utils/Navbar.astro"
 import "../styles/global.css"
 import {localizePath} from "astro-i18next"
-import {HeadHrefLangs} from "astro-i18next/components"
+import HeadHrefLangs from "../components/utils/HeadHrefLangs.astro"
 import {LanguageSelector} from "astro-i18next/components"
 import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro"
 import {t} from "i18next"
@@ -12,7 +12,6 @@ import {t} from "i18next"
 // Import fonts
 import "@fontsource/syne"
 import "@fontsource/nunito"
-import PostHeader from "../components/utils/PostHeader.astro"
 import {ViewTransitions} from "astro:transitions";
 import {Icon} from "astro-iconify";
 

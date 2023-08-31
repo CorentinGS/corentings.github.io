@@ -1,0 +1,27 @@
+---
+import i18next from "i18next";
+import {AstroI18next, localizeUrl} from "astro-i18next";
+
+const supportedLanguages = i18next.languages;
+const currentUrl = Astro.url.href;
+const defaultLanguage = AstroI18next.config.defaultLocale;
+
+
+---
+
+<Fragment>
+    <link
+            rel="alternate"
+            hreflang="x-default"
+            href={localizeUrl(currentUrl, defaultLanguage)}
+    />
+    {
+        supportedLanguages.map((supportedLanguage) => (
+                <link
+                        rel="alternate"
+                        hreflang={supportedLanguage}
+                        href={localizeUrl(currentUrl, supportedLanguage)}
+                />
+        ))
+    }
+</Fragment>
