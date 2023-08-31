@@ -4,6 +4,6 @@ import './astro.7e698fde.mjs';
 import 'clsx';
 import 'html-escaper';
 
-const page = () => import('./pages/rss.xml.js.cb8451b2.mjs');
+const page = () => import('./prerender.36f93796.mjs').then(n => n.t);
 
 export { page };

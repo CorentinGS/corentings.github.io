@@ -2,6 +2,7 @@ const noop = () => {};
 export const $ = noop;
 export const B = noop;
 export const P = noop;
+export const T = noop;
 export const a = noop;
 export const b = noop;
 export const c = noop;

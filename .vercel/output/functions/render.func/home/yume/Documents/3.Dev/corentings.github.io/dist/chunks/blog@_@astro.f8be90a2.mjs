@@ -4,6 +4,6 @@ import './astro.7e698fde.mjs';
 import 'clsx';
 import 'html-escaper';
 
-const page = () => import('./prerender.d5d7b51b.mjs').then(n => n.j);
+const page = () => import('./prerender.36f93796.mjs').then(n => n.v);
 
 export { page };
