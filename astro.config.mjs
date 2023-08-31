@@ -12,11 +12,9 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 import vercel from "@astrojs/vercel/serverless";
-import critters from "astro-critters";
 import node from "@astrojs/node";
 
 // https://astro.build/config
-import purgecss from "astro-purgecss";
 
 // https://astro.build/config
 export default defineConfig({
