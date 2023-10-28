@@ -57,13 +57,16 @@ const copyrightYear = new Date().getFullYear()
             <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6"/>
         </a>
         <a
-                v-if="social.mastodon !== ''"
                 rel="me noopener noreferrer"
                 href={social.mastodon}
                 aria-label="mastodon"
                 target="_blank"
         >
             <Icon name="la:mastodon" class="hoveranimation h-6 w-6"/>
+        </a>
+        <a href={social.rss} aria-label="rss" rel="noopener noreferrer"
+        >
+            <Icon name="la:rss" class="hoveranimation h-6 w-6"/>
         </a>
     </div>
 </footer>

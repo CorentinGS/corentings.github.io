@@ -1,15 +1,14 @@
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, a as attachCookiesToResponse, c as createAPIContext, b as callEndpoint, e as callMiddleware, L as Logger, f as AstroIntegrationLogger, g as getSetCookiesFromResponse, manifest } from './manifest.b8fa87bf.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, a as attachCookiesToResponse, c as createAPIContext, b as callEndpoint, e as callMiddleware, L as Logger, f as AstroIntegrationLogger, g as getSetCookiesFromResponse, manifest } from './manifest_d08c186d.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
-import { j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, c as collapseDuplicateSlashes } from './chunks/pages/image-endpoint.js.56d82ea9.mjs';
-import { A as AstroError, G as GetStaticPathsRequired, k as InvalidGetStaticPathsReturn, l as InvalidGetStaticPathsEntry, n as GetStaticPathsExpectedParams, o as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, p as GetStaticPathsRemovedRSSHelper, N as NoMatchingStaticPathFound, q as PrerenderDynamicEndpointPathCollide, t as LocalsNotAnObject, R as ReservedSlotName, v as renderSlotToString, w as renderJSX, x as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, y as ResponseSentError, z as renderPage$1 } from './chunks/astro.7e698fde.mjs';
+import { t as trimSlashes, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, d as collapseDuplicateSlashes } from './chunks/astro-assets-services_1356ad54.mjs';
+import { A as AstroError, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, v as GetStaticPathsRemovedRSSHelper, N as NoMatchingStaticPathFound, w as PrerenderDynamicEndpointPathCollide, x as LocalsNotAnObject, R as ReservedSlotName, y as renderSlotToString, z as renderJSX, B as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, D as ResponseSentError, H as renderPage$1 } from './chunks/astro_a71c612b.mjs';
 import 'clsx';
 import 'node:fs';
 import 'node:http';
 import 'node:tls';
+import buffer from 'node:buffer';
 import crypto from 'node:crypto';
-import { ByteLengthQueuingStrategy, CountQueuingStrategy, ReadableByteStreamController, ReadableStream as ReadableStream$1, ReadableStreamBYOBReader, ReadableStreamBYOBRequest, ReadableStreamDefaultController, ReadableStreamDefaultReader, TransformStream, WritableStream, WritableStreamDefaultController, WritableStreamDefaultWriter } from 'node:stream/web';
-import { File, FormData, Headers as Headers$1, Request as Request$1, Response as Response$1, fetch as fetch$1 } from 'undici';
 import 'fast-glob';
 import nodePath from 'node:path';
 import 'node:url';
@@ -19,7 +18,6 @@ import { renderers } from './renderers.mjs';
 import 'string-width';
 import 'mime';
 import 'path-to-regexp';
-import 'mime/lite.js';
 import 'html-escaper';
 
 let lastMessage;
@@ -69,6 +67,7 @@ const RedirectComponentInstance = {
 };
 const RedirectSinglePageBuiltModule = {
   page: () => Promise.resolve(RedirectComponentInstance),
+  onRequest: (_, next) => next(),
   renderers: []
 };
 
@@ -184,7 +183,9 @@ function stringifyParams(params, route) {
   const validatedParams = Object.entries(params).reduce((acc, next) => {
     validateGetStaticPathsParameter(next, route.component);
     const [key, value] = next;
-    acc[key] = value?.toString();
+    if (value !== void 0) {
+      acc[key] = typeof value === "string" ? trimSlashes(value) : value.toString();
+    }
     return acc;
   }, {});
   return JSON.stringify(route.generate(validatedParams));
@@ -330,6 +331,9 @@ async function getParamsAndProps(opts) {
     return [{}, {}];
   }
   const params = getRouteParams(route, pathname) ?? {};
+  if (routeIsRedirect(route)) {
+    return [params, {}];
+  }
   validatePrerenderEndpointCollision(route, mod, params);
   const staticPaths = await callGetStaticPaths({
     mod,
@@ -502,6 +506,7 @@ function createResult(args) {
     renderers: args.renderers,
     clientDirectives: args.clientDirectives,
     compressHTML: args.compressHTML,
+    partial: args.partial,
     pathname: args.pathname,
     cookies,
     /** This function returns the `Astro` faux-global */
@@ -562,7 +567,7 @@ function createResult(args) {
       hasDirectives: /* @__PURE__ */ new Set(),
       headInTree: false,
       extraHead: [],
-      propagators: /* @__PURE__ */ new Map()
+      propagators: /* @__PURE__ */ new Set()
     }
   };
   return result;
@@ -593,6 +598,7 @@ async function renderPage({ mod, renderContext, env, cookies }) {
     clientDirectives: env.clientDirectives,
     compressHTML: env.compressHTML,
     request: renderContext.request,
+    partial: !!mod.partial,
     site: env.site,
     scripts: renderContext.scripts,
     ssr: env.ssr,
@@ -636,9 +642,7 @@ function createAssetLink(href, base, assetsPrefix) {
 function createStylesheetElement(stylesheet, base, assetsPrefix) {
   if (stylesheet.type === "inline") {
     return {
-      props: {
-        type: "text/css"
-      },
+      props: {},
       children: stylesheet.content
     };
   } else {
@@ -710,6 +714,12 @@ class Pipeline {
    */
   setMiddlewareFunction(onRequest) {
     this.#onRequest = onRequest;
+  }
+  /**
+   * Removes the current middleware function. Subsequent requests won't trigger any middleware.
+   */
+  unsetMiddlewareFunction() {
+    this.#onRequest = void 0;
   }
   /**
    * Returns the current environment
@@ -834,8 +844,6 @@ class App {
   });
   #baseWithoutTrailingSlash;
   #pipeline;
-  #onRequest;
-  #middlewareLoaded;
   #adapterLogger;
   constructor(manifest, streaming = true) {
     this.#manifest = manifest;
@@ -845,7 +853,6 @@ class App {
     this.#routeDataToRouteInfo = new Map(manifest.routes.map((route) => [route.routeData, route]));
     this.#baseWithoutTrailingSlash = removeTrailingForwardSlash(this.#manifest.base);
     this.#pipeline = new SSRRoutePipeline(this.#createEnvironment(streaming));
-    this.#middlewareLoaded = false;
     this.#adapterLogger = new AstroIntegrationLogger(
       this.#logger.options,
       this.#manifest.adapterName
@@ -898,8 +905,6 @@ class App {
     }
     return pathname;
   }
-  // Disable no-unused-vars to avoid breaking signature change
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   match(request, _opts = {}) {
     const url = new URL(request.url);
     if (this.#manifest.assets.has(url.pathname))
@@ -910,19 +915,7 @@ class App {
       return void 0;
     return routeData;
   }
-  async #getOnRequest() {
-    if (this.#manifest.middlewareEntryPoint && !this.#middlewareLoaded) {
-      try {
-        const middleware = await import(this.#manifest.middlewareEntryPoint);
-        this.#pipeline.setMiddlewareFunction(middleware.onRequest);
-      } catch (e) {
-        this.#logger.warn("SSR", "Couldn't load the middleware entry point");
-      }
-    }
-    this.#middlewareLoaded = true;
-  }
   async render(request, routeData, locals) {
-    await this.#getOnRequest();
     if (request.url !== collapseDuplicateSlashes(request.url)) {
       request = new Request(collapseDuplicateSlashes(request.url), request);
     }
@@ -946,6 +939,9 @@ class App {
     );
     let response;
     try {
+      if (mod.onRequest) {
+        this.#pipeline.setMiddlewareFunction(mod.onRequest);
+      }
       response = await this.#pipeline.renderRoute(renderContext, pageModule);
     } catch (err) {
       if (err instanceof EndpointNotFoundError) {
@@ -1023,7 +1019,7 @@ class App {
    * If it is a known error code, try sending the according page (e.g. 404.astro / 500.astro).
    * This also handles pre-rendered /404 or /500 routes
    */
-  async #renderError(request, { status, response: originalResponse }) {
+  async #renderError(request, { status, response: originalResponse, skipMiddleware = false }) {
     const errorRouteData = matchRoute("/" + status, this.#manifestData);
     const url = new URL(request.url);
     if (errorRouteData) {
@@ -1047,9 +1043,22 @@ class App {
           status
         );
         const page = await mod.page();
+        if (skipMiddleware === false && mod.onRequest) {
+          this.#pipeline.setMiddlewareFunction(mod.onRequest);
+        }
+        if (skipMiddleware) {
+          this.#pipeline.unsetMiddlewareFunction();
+        }
         const response2 = await this.#pipeline.renderRoute(newRenderContext, page);
         return this.#mergeResponses(response2, originalResponse);
       } catch {
+        if (skipMiddleware === false && mod.onRequest) {
+          return this.#renderError(request, {
+            status,
+            response: originalResponse,
+            skipMiddleware: true
+          });
+        }
       }
     }
     const response = this.#mergeResponses(new Response(null, { status }), originalResponse);
@@ -1108,40 +1117,7 @@ class App {
   }
 }
 
-const isStackblitz = process.env.SHELL === "/bin/jsh" && process.versions.webcontainer != null;
 function apply() {
-  if (isStackblitz) {
-    const neededPolyfills = {
-      ByteLengthQueuingStrategy,
-      CountQueuingStrategy,
-      ReadableByteStreamController,
-      ReadableStream: ReadableStream$1,
-      ReadableStreamBYOBReader,
-      ReadableStreamBYOBRequest,
-      ReadableStreamDefaultController,
-      ReadableStreamDefaultReader,
-      TransformStream,
-      WritableStream,
-      WritableStreamDefaultController,
-      WritableStreamDefaultWriter,
-      File,
-      FormData,
-      Headers: Headers$1,
-      Request: Request$1,
-      Response: Response$1,
-      fetch: fetch$1
-    };
-    for (let polyfillName of Object.keys(neededPolyfills)) {
-      if (Object.hasOwnProperty.call(globalThis, polyfillName))
-        continue;
-      Object.defineProperty(globalThis, polyfillName, {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        value: neededPolyfills[polyfillName]
-      });
-    }
-  }
   if (!globalThis.crypto) {
     Object.defineProperty(globalThis, "crypto", {
       value: crypto.webcrypto
@@ -1149,7 +1125,7 @@ function apply() {
   }
   if (!globalThis.File) {
     Object.defineProperty(globalThis, "File", {
-      value: File
+      value: buffer.File
     });
   }
 }
@@ -1336,25 +1312,25 @@ const adapter = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   createExports
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0  = () => import('./chunks/image-endpoint@_@js.f770d76f.mjs');
-const _page1  = () => import('./chunks/index@_@astro.09699096.mjs');
-const _page2  = () => import('./chunks/discord@_@astro.7b955b10.mjs');
-const _page3  = () => import('./chunks/rss.f9c20a7a.mjs');
-const _page4  = () => import('./chunks/links@_@astro.24438a57.mjs');
-const _page5  = () => import('./chunks/optimizing-goroutines-sum-of-squares@_@mdx.7ac3fd42.mjs');
-const _page6  = () => import('./chunks/simple-go-vs-goroutines@_@mdx.a298264f.mjs');
-const _page7  = () => import('./chunks/mergesort-parallel@_@mdx.e7efef2a.mjs');
-const _page8  = () => import('./chunks/dnf5-step-by-step@_@mdx.aeac2ea1.mjs');
-const _page9  = () => import('./chunks/docker-and-go@_@mdx.56d9c9e8.mjs');
-const _page10  = () => import('./chunks/blog@_@astro.88bbdcdc.mjs');
-const _page11  = () => import('./chunks/index@_@astro.18e601cb.mjs');
-const _page12  = () => import('./chunks/discord@_@astro.ff61e95e.mjs');
-const _page13  = () => import('./chunks/links@_@astro.6658ff6e.mjs');
-const _page14  = () => import('./chunks/blog@_@astro.41ba6686.mjs');
-const _page15  = () => import('./chunks/index@_@astro.3f829aa8.mjs');
-const _page16  = () => import('./chunks/discord@_@astro.29ab8830.mjs');
-const _page17  = () => import('./chunks/links@_@astro.82452d26.mjs');
-const _page18  = () => import('./chunks/blog@_@astro.21bf8f83.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/image-endpoint.js", _page0],["src/pages/index.astro", _page1],["src/pages/discord.astro", _page2],["src/pages/rss.xml.js", _page3],["src/pages/links.astro", _page4],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page5],["src/pages/blog/simple-go-vs-goroutines.mdx", _page6],["src/pages/blog/mergesort-parallel.mdx", _page7],["src/pages/blog/dnf5-step-by-step.mdx", _page8],["src/pages/blog/docker-and-go.mdx", _page9],["src/pages/blog.astro", _page10],["src/pages/de/index.astro", _page11],["src/pages/de/discord.astro", _page12],["src/pages/de/links.astro", _page13],["src/pages/de/blog.astro", _page14],["src/pages/fr/index.astro", _page15],["src/pages/fr/discord.astro", _page16],["src/pages/fr/links.astro", _page17],["src/pages/fr/blog.astro", _page18]]);
+const _page0  = () => import('./chunks/generic_fedf1278.mjs');
+const _page1  = () => import('./chunks/index_fe0f7c60.mjs');
+const _page2  = () => import('./chunks/discord_40b1486e.mjs');
+const _page3  = () => import('./chunks/rss_5997de85.mjs');
+const _page4  = () => import('./chunks/links_8eeb87a7.mjs');
+const _page5  = () => import('./chunks/optimizing-goroutines-sum-of-squares_9cff052d.mjs');
+const _page6  = () => import('./chunks/simple-go-vs-goroutines_298c7e0e.mjs');
+const _page7  = () => import('./chunks/mergesort-parallel_75dd9375.mjs');
+const _page8  = () => import('./chunks/dnf5-step-by-step_85e06b97.mjs');
+const _page9  = () => import('./chunks/docker-and-go_b058f8e7.mjs');
+const _page10  = () => import('./chunks/blog_24243088.mjs');
+const _page11  = () => import('./chunks/index_d2b49f2d.mjs');
+const _page12  = () => import('./chunks/discord_63aba91e.mjs');
+const _page13  = () => import('./chunks/links_bf0c9735.mjs');
+const _page14  = () => import('./chunks/blog_c1cea65f.mjs');
+const _page15  = () => import('./chunks/index_cc867a3e.mjs');
+const _page16  = () => import('./chunks/discord_fa5332f8.mjs');
+const _page17  = () => import('./chunks/links_83704425.mjs');
+const _page18  = () => import('./chunks/blog_fbb5164b.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/discord.astro", _page2],["src/pages/rss.xml.js", _page3],["src/pages/links.astro", _page4],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page5],["src/pages/blog/simple-go-vs-goroutines.mdx", _page6],["src/pages/blog/mergesort-parallel.mdx", _page7],["src/pages/blog/dnf5-step-by-step.mdx", _page8],["src/pages/blog/docker-and-go.mdx", _page9],["src/pages/blog.astro", _page10],["src/pages/de/index.astro", _page11],["src/pages/de/discord.astro", _page12],["src/pages/de/links.astro", _page13],["src/pages/de/blog.astro", _page14],["src/pages/fr/index.astro", _page15],["src/pages/fr/discord.astro", _page16],["src/pages/fr/links.astro", _page17],["src/pages/fr/blog.astro", _page18]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,

@@ -19,7 +19,9 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: "https://corentings.dev",
-
+  experimental: {
+    devOverlay: true
+  },
   markdown: {
     shikiConfig: {
       theme: "dracula"

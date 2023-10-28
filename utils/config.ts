@@ -7,7 +7,7 @@ export class Profile {
   static readonly short_name = "Corentin GS"
   static readonly title = "Freelance backend developer"
   static readonly location = "Nice, France"
-  static readonly email = "c.giaufersaubert@outlook.com"
+  static readonly email = "contact@corentings.dev"
   static readonly avatar = imgAvatar
 }
 
@@ -27,6 +27,7 @@ export class Config {
   static readonly stackoverflow = ""
   static readonly devto = ""
   static readonly mastodon = "https://hachyderm.io/@TheLittlePrince"
+  static readonly rss = "/rss.xml"
 }
 
 export class Experiences {
