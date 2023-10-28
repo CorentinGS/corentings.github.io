@@ -2,7 +2,7 @@
 import {Config, Profile} from "../../utils/config"
 import {Icon} from "astro-iconify"
 
-import {Image} from "astro:assets"
+import {Picture} from "astro:assets"
 
 import {t} from "i18next"
 
@@ -16,31 +16,32 @@ const profile = Profile
             <div
                     class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
             >
-                <Image
+                <Picture
                         src={Profile.avatar}
                         quality={"high"}
-                        format="avif"
+                        formats={["avif", "webp", "png"]}
                         alt="avatar"
-                        class="mb-4 h-48 w-48 flex-shrink-0 rounded-full object-cover object-center sm:mb-0"
+                        class="mb-4 h-48 w-48 flex-shrink-0 object-cover mask mask-squircle object-center sm:mb-0"
                         width={192}
-                        height={192}
                         loading={"eager"}
                         aspectRatio={1}
                 />
                 <div class="flex-grow sm:pl-8">
+                    <span class="text-xl text-primary uppercase font-bold">{profile.full_name}</span>
                     <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
-                        {t("hero.hello")}{" "}
-                        {profile.full_name}
+                        Freelance Backend Developer
                     </h1>
-                    <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
-                        {t("profile.title")}
+                    <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl text-accent">
+                        I <a class="underline underline-offset-4">code</a>, I <a class="underline underline-offset-4">write</a>, I <a class="underline underline-offset-4">contribute</a>,
+                        I <a class="underline underline-offset-4">materializes dreams</a>
                     </h2>
+                    <h3 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
+                    </h3>
 
                     <div class="inline-flex space-x-4">
                         <span class="text-md uppercase lg:text-lg"> {t("hero.cta")}</span>
                         <Icon name="lucide:chevron-right" class="mx-auto"/>
                         <a
-                                v-if="social.twitter !== ''"
                                 href={"https://twitter.com/" + social.twitter}
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
@@ -50,7 +51,6 @@ const profile = Profile
                             <Icon name="ri:twitter-x-fill" class="hoveranimation h-6 w-6"/>
                         </a>
                         <a
-                                v-if="social.discord !== ''"
                                 href={social.discord}
                                 rel="noopener noreferrer nofollow"
                                 target="_blank"
@@ -60,7 +60,6 @@ const profile = Profile
                             <Icon name="la:discord" class="hoveranimation h-6 w-6"/>
                         </a>
                         <a
-                                v-if="social.github !== ''"
                                 href={"https://github.com/" + social.github}
                                 target="_blank"
                                 aria-label="github"
@@ -70,7 +69,6 @@ const profile = Profile
                             <Icon name="lucide:github" class="hoveranimation h-6 w-6"/>
                         </a>
                         <a
-                                v-if="social.linkedin !== ''"
                                 href={"https://www.linkedin.com/in/" + social.linkedin}
                                 target="_blank"
                                 aria-label="linkedin"
@@ -80,7 +78,6 @@ const profile = Profile
                             <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6"/>
                         </a>
                         <a
-                                v-if="social.mastodon !== ''"
                                 rel="noopener noreferrer nofollow me"
                                 href={social.mastodon}
                                 aria-label="mastodon"

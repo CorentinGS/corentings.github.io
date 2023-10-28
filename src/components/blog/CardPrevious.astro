@@ -1,6 +1,6 @@
 ---
 import type { BlogPost } from "../../../utils/types"
-import { Image } from "astro:assets"
+import { Picture } from "astro:assets"
 
 interface Props {
   blogPost: BlogPost
@@ -13,11 +13,11 @@ const { blogPost } = Astro.props
   class="flex w-full scale-100 transform pb-5 transition-all duration-300 hover:scale-95"
 >
   <div class="block h-40 w-2/5 overflow-hidden rounded object-cover">
-    <Image
+    <Picture
       src={blogPost.image}
-      formats={["avif", "webp", "png"]}
+      formats={["avif", "webp"]}
       loading="lazy"
-      quality={50}
+      quality={40}
       width={256}
       height={256}
       aspectRatio={1}
@@ -26,12 +26,12 @@ const { blogPost } = Astro.props
       class="sm:hidden"
     />
 
-    <Image
+    <Picture
       src={blogPost.image}
-      formats={["avif", "webp", "png"]}
+      formats={["avif", "webp"]}
       loading="lazy"
       aspectRatio={16 / 9}
-      quality={50}
+      quality={40}
       fit="cover"
       alt={blogPost.title}
       width={512}
@@ -50,13 +50,13 @@ const { blogPost } = Astro.props
       {blogPost.description}
     </p>
     <div class="hidden w-full items-center text-sm font-medium sm:flex">
-      <Image
+      <Picture
         class="mr-3 h-10 w-10 rounded-full"
         src={blogPost.author.avatar}
         alt={blogPost.author.name}
         width="48"
         height="48"
-        format="webp"
+        formats={["avif", "webp"]}
         quality={30}
         aspectRatio="3/4"
       />
