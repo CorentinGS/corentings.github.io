@@ -29,9 +29,9 @@
     find-up "^5.0.0"
 
 "@antfu/utils@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.npmjs.org/@antfu/utils/-/utils-0.7.2.tgz"
-  integrity sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.6.tgz#30a046419b9e1ecd276e53d41ab68fb6c558c04d"
+  integrity sha512-pvFiLP2BeOKA/ZOS6jxx4XhKzdVLHDhGlFEaZ2flWWYf2xOqVniqpk38I04DFRyz+L0ASggl7SkItTc+ZLju4w==
 
 "@astrojs/compiler@^1.5.5":
   version "1.6.2"
