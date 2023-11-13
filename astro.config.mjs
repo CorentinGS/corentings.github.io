@@ -1,8 +1,8 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
 
 import compress from "astro-compress";
 import compressor from "astro-compressor";
@@ -12,7 +12,6 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 import vercel from "@astrojs/vercel/serverless";
-import node from "@astrojs/node";
 
 // https://astro.build/config
 
