@@ -1,6 +1,6 @@
 ---
 import { TimelineCardType } from "../../../utils/types"
-import { Image } from "astro:assets"
+import { Picture } from "astro:assets"
 import { t } from "i18next"
 import { Trans } from "astro-i18next/components"
 import { Icon } from "astro-iconify"
@@ -61,16 +61,16 @@ let classContent =
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
-              <Image
+              <Picture
                 alt={name}
                 src={image}
                 class="h-10 w-10 rounded-lg object-cover shadow-sm"
-                format="avif"
+                formats={["avif", "webp", "png"]}
                 loading="lazy"
                 width={64}
                 height={64}
                 aspectRatio={1}
-                quality={"high"}
+                quality={"50"}
               />
             </a>
           ) : null
@@ -108,15 +108,15 @@ let classContent =
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
-          <Image
+          <Picture
             alt={name}
             src={image}
             class="rounded-lg object-cover shadow-sm"
-            format={"avif"}
+            formats={["avif", "webp", "png"]}
             loading="lazy"
             width={64}
             height={64}
-            quality={"high"}
+            quality={"50"}
             aspectRatio={1}
           />
         </a>

@@ -1,11 +1,11 @@
-import type {BlogAuthor, BlogPost, BlogPostList} from "./types"
+import type { BlogAuthor, BlogPost, BlogPostList } from "./types"
 
 import imgAvatar from "../src/assets/avatar.webp"
-import imgOptimizingGoroutines from "../src/assets/blog/optimizing-goroutines-sum-of-squares.webp"
 import imgDnf5 from "../src/assets/blog/dnf5-step-by-step.webp"
-import imgMergesort from "../src/assets/blog/mergesort-parallel.webp"
-import imgSimpleGo from "../src/assets/blog/simple-go-vs-goroutines.webp"
 import imgDocker from "../src/assets/blog/docker-and-go.webp"
+import imgMergesort from "../src/assets/blog/mergesort-parallel.webp"
+import imgOptimizingGoroutines from "../src/assets/blog/optimizing-goroutines-sum-of-squares.webp"
+import imgSimpleGo from "../src/assets/blog/simple-go-vs-goroutines.webp"
 
 
 const cgs: BlogAuthor = {

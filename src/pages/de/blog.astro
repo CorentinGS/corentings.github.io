@@ -14,36 +14,55 @@ export const prerender = true;
 ---
 
 <Layout title="CorentinGS">
-
-  <div class="mx-auto mb-4 min-h-screen w-full max-w-screen-lg bg-base-100 p-6">
-    <div class="header mb-6 flex items-end justify-between">
-      <div class="title">
-        <p class="mb-3 text-4xl font-bold">My articles</p>
-        <p class="text-2xl font-light">
-          Here you can find the latest articles from the blog
-        </p>
-      </div>
+    <div class="fixed bottom-5 right-5 hoveranimation btn-accent btn-sm btn hidden" id="btn-back-to-top">
+        <Icon name="lucide:arrow-up" class="h-6 w-6"/>
     </div>
-    <div>
-      {
-        latest.map((last) => (
-          <a href={last.link} rel="nofollow prefetch">
-            <CardLatest blogPost={last} />
-          </a>
-        ))
-      }
+    <div class="mx-auto mb-4 min-h-screen w-full max-w-screen-lg bg-base-100 p-6">
+        <div class="header mb-6 flex items-end justify-between">
+            <div class="title">
+                <p class="mb-3 text-4xl font-bold">My articles</p>
+                <p class="text-2xl font-light">
+                    Here you can find the latest articles from the blog
+                </p>
+            </div>
+        </div>
+        <div>
+            {latest.map((last) => (<a href={last.link} rel="nofollow prefetch">
+                <CardLatest blogPost={last}/>
+            </a>))}
+        </div>
+        <div>
+            <div class="title">
+                <p class="my-4 text-4xl font-bold">Previous</p>
+            </div>
+            {blogPosts.map((blogPost) => (<a href={blogPost.link} rel="nofollow prefetch">
+                <CardPrevious blogPost={blogPost}/>
+            </a>))}
+        </div>
     </div>
-    <div>
-      <div class="title">
-        <p class="my-4 text-4xl font-bold">Previous</p>
-      </div>
-      {
-        blogPosts.map((blogPost) => (
-          <a href={blogPost.link} rel="nofollow prefetch">
-            <CardPrevious blogPost={blogPost} />
-          </a>
-        ))
-      }
-    </div>
-  </div>
 </Layout>
+
+
+<script type="text/javascript">
+    document.addEventListener('astro:page-load', () => {
+        const backToTop = () => {
+            window.scrollTo({top: 0, behavior: "smooth"});
+        };
+
+        const onScroll = (button) => {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                button.classList.remove("hidden");
+                console.log("show");
+            } else {
+                button.classList.add("hidden");
+                console.log("hide");
+            }
+        };
+
+        // This only runs once.
+        mybutton = document.getElementById("btn-back-to-top");
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        window.addEventListener("scroll", onScroll(mybutton));
+    }, {once: true});
+</script>

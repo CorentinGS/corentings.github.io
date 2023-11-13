@@ -1,6 +1,21 @@
 {
   "headers": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "preview.corentings.dev"
+        }
+      ],
+      "headers" : [
+        {
+          "key" : "X-Robots-Tag",
+          "value" : "noindex"
+        }
+      ]
+    },
+    {
       "source": "/about.js",
       "headers": [
         {

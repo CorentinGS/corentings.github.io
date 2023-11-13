@@ -21,6 +21,14 @@
   .hoveranimation {
     @apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
   }
+
+  .underline-offset-4:hover {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
 }
 
 @layer components {
