@@ -17,6 +17,7 @@ import "@fontsource/syne"
 import "@fontsource/nunito"
 import {Icon} from "astro-iconify";
 import SEO from "../components/utils/SEO.astro";
+import {themeChange} from "theme-change";
 
 export interface Props {
     title: string
@@ -26,7 +27,7 @@ const {title} = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language}>
+<html lang={i18next.language} transition:persist>
 <head>
     <title>Corentin Giaufer Saubert・Freelance・Golang・Chess Lover</title>
 
@@ -37,7 +38,7 @@ const {title} = Astro.props
             src="https://umami.memnix.app/script.js"
             data-website-id="5bf74955-9bdd-4461-8b7b-3d3aacaf94bb"
     ></script>
-    <script is:inline>
+    <script is:inline >
         // ☝️ This script prevent the FART effect.
         if (localStorage.getItem("theme") === null) {
             document.documentElement.setAttribute("data-theme", "dark")
@@ -45,7 +46,26 @@ const {title} = Astro.props
         // "theme" LocalStorage value is set by the package to remember user preference.
         // The value is checked and applyed before rendering anything.
     </script>
+    <script>
+        import {themeChange} from "theme-change"
 
+        const setTheme = () => {
+            if (localStorage.getItem("theme") === null) {
+                document.documentElement.setAttribute("data-theme", "dark")
+            } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+
+            console.log("Theme set to " + localStorage.getItem("theme"))
+
+        }
+        themeChange()
+
+        setTheme()
+
+        // 👆 you could import the CDN directly instead of these two lines
+
+        document.addEventListener('astro:after-swap', setTheme);
+
+    </script>
 
     <meta name="generator" content={Astro.generator}/>
 
@@ -109,7 +129,7 @@ const {title} = Astro.props
             <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
 
                 <li class="py-3">
-                    <ThemeSwitcher/>
+                    <ThemeSwitcher class="mx-auto w-full"/>
                 </li>
                 <li class="py-3">
                     <LanguageSelector
