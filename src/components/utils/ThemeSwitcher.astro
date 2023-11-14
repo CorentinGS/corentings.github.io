@@ -22,15 +22,14 @@ const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk"]
 <style></style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+
+    const createEvent = () => {
         // Get all radio inputs
         const radioInputs = document.querySelectorAll('input[name="theme-dropdown"]');
 
         // Add event listener to each radio input
         radioInputs.forEach(function (input) {
             input.addEventListener('change', function () {
-
-                console.log(input.value);
                 // Update the localStorage with the selected theme
                 localStorage.setItem('theme', input.value);
             });
@@ -44,5 +43,12 @@ const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk"]
                 selectedInput.checked = true;
             }
         }
-    });
+    }
+
+    document.addEventListener('astro:page-load', () => {
+        // This only runs once.
+        createEvent();
+    }, );
+
+    document.addEventListener('DOMContentLoaded', createEvent);
 </script>
