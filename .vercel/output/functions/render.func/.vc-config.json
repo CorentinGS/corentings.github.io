@@ -1,5 +1,6 @@
 {
 	"runtime": "nodejs18.x",
-	"handler": "home/yume/Documents/3.Dev/corentings.github.io/dist/entry.mjs",
-	"launcherType": "Nodejs"
+	"handler": "home/corentings/Documents/3.Dev/corentings.github.io/dist/entry.mjs",
+	"launcherType": "Nodejs",
+	"supportsResponseStreaming": true
 }
