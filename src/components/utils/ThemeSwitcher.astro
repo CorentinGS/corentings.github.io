@@ -1,16 +1,48 @@
 ---
-import {themeChange} from "theme-change"
-
 const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk"]
 ---
 
-<select
-        data-choose-theme
-        class="select-bordered select-secondary select select-md max-w-xs bg-base-200 text-base-content"
->
-    <option disabled selected>Pick your theme</option>
-    {themes.map((theme) =>
-            <option value={theme}>{theme}</option>)}
-</select>
+<div class="dropdown dropdown-bottom">
+    <label tabindex="0" class="btn m-1">
+        Theme
+        <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+        </svg>
+    </label>
+    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52 ">
+        {themes.map((theme) =>
+                <li key={theme}><input type="radio" name="theme-dropdown"
+                                       class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                       aria-label={theme} value={theme}/></li>
+        )}
+    </ul>
+</div>
 
 <style></style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all radio inputs
+        const radioInputs = document.querySelectorAll('input[name="theme-dropdown"]');
+
+        // Add event listener to each radio input
+        radioInputs.forEach(function (input) {
+            input.addEventListener('change', function () {
+
+                console.log(input.value);
+                // Update the localStorage with the selected theme
+                localStorage.setItem('theme', input.value);
+            });
+        });
+
+        // Set the initially selected theme from localStorage
+        const selectedTheme = localStorage.getItem('theme');
+        if (selectedTheme) {
+            const selectedInput = document.querySelector(`input[value="${selectedTheme}"]`);
+            if (selectedInput) {
+                selectedInput.checked = true;
+            }
+        }
+    });
+</script>
