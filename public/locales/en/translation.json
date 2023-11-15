@@ -105,5 +105,10 @@
         "blog": "My blog",
         "notif_title": "I created a friendly discord !",
         "notif_content": "Join our community on The Kafejo, a friendly discord for developers and students !"
+    },
+    "blog": {
+        "title": "My Articles",
+        "description": "Here you can find the latest articles from the blog",
+        "previous": "Previous"
     }
 }
