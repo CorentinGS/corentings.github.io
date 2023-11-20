@@ -1,9 +1,10 @@
 export enum TimelineCardType {
 	School = 0,
 	Work = 1,
-	Personal = 2,
+	Project = 2,
 	Course = 3,
-	Other = 4,
+	Volunteering = 4,
+	Other = 5,
 }
 
 export interface TimelineCard {
