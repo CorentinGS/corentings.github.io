@@ -9,7 +9,7 @@ interface Props {
 const { blogPost } = Astro.props;
 ---
 
-<div class="flex w-full scale-100 transform pb-5 transition-all duration-300 hover:scale-95">
+<article class="flex w-full scale-100 transform pb-5 transition-all duration-300 hover:scale-95">
 	<div class="block h-40 w-2/5 overflow-hidden rounded object-cover">
 		<Picture
 			src={blogPost.image}
@@ -60,8 +60,8 @@ const { blogPost } = Astro.props;
 			/>
 			<div class="flex flex-col">
 				<span>{blogPost.author.name}</span>
-				<span>{blogPost.date} ・{blogPost.timeToRead}</span>
+				<span><time datetime={blogPost.date}> {blogPost.date}</time>・{blogPost.timeToRead}</span>
 			</div>
 		</div>
 	</div>
-</div>
+</article>
