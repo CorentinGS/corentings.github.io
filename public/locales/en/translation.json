@@ -14,8 +14,11 @@
   "about": {
     "title": "About me",
     "presentation": "Hey, my name is Corentin and I'm 20 years old.",
+    "follow": "Follow me on",
+    "work": "Work",
+    "download": "Download CV",
     "study": "Currently, I'm studying for a BSC. Computer Science at the <0>IU International University of Applied Sciences.</0>.",
-    "work": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
+    "code": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
     "lang": "My main programming language is <0>Golang</0> but I've also worked with java, python, typescript, C/C++ and more.",
     "database": "I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
     "opensource": "Furthermore, I'm a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created <0>Memnix</0>, a free and open-source flashcard app for Android and Web.",
@@ -138,5 +141,18 @@
       "title": "Meet CorentinGS",
       "description": "A podcast about my journey as a developer, and my vision of the future."
     }
+  },
+  "write": {
+    "title": "I write articles about programming, chess and more.",
+    "description": "I like to write articles about programming, chess and more.",
+    "read_article": "Read article"
+  },
+  "testimony": {
+    "title": "What My Clients Are Saying"
+  },
+  "freelance": {
+    "title": "I materialize dreams into reality.",
+    "description": "I'm a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
+    "cta": "Let's work together"
   }
 }
