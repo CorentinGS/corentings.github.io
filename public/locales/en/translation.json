@@ -41,6 +41,10 @@
     "title": "My Experiences",
     "since": "Since",
     "skills": "Skills",
+    "chesscom_mod": {
+      "title": "Twitch Moderator - Chess.com",
+      "description": "Moderating the Chesscomfr twitch chanel."
+    },
     "bsc_cs": {
       "title": "IU - BSC. Computer Science",
       "description": "Bachelor's degree in Computer Science at IU International University of Applied Sciences."

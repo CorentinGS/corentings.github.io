@@ -1,0 +1,54 @@
+---
+import Card from "./Card.astro";
+
+
+const talks = [{
+    title: "Introduction to Microservices with Go",
+    date: "2023",
+    location: "Universite Nice Sophia Antipolis",
+    href: "https://gdsc.community.dev/events/details/developer-student-clubs-cote-dazur-university-presents-introduction-aux-microservices-avec-go/",
+    description: "A talk about microservices, and how to build them with Go.",
+    cta: "Learn more",
+},
+    {
+        title: "Introduction to AI and Ethical considerations",
+        date: "2023",
+        location: "Demi-Siècle",
+        description: "A private talk about AI and its ethical considerations.",
+    }]
+
+const podcasts = [{
+    title: "Meet CorentinGS",
+    date: "2023",
+    location: "Avocado Growth : Portrait tech",
+    description: "A podcast about my journey as a developer, and my vision of the future.",
+}]
+---
+
+<div aria-labelledby="Conferences" class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
+    <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
+        <h2 class="text-sm font-semibold">Conferences</h2>
+        <div class="md:col-span-3">
+            <div class="space-y-16">
+                {talks.map(talk => (
+                        <Card {...talk}/>
+                ))}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div aria-labelledby="Podcasts" class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
+    <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
+        <h2 class="text-sm font-semibold">Podcasts</h2>
+        <div class="md:col-span-3">
+            <div class="space-y-16">
+                {podcasts.map(talk => (
+                        <Card {...talk}/>
+                ))}
+
+            </div>
+        </div>
+    </div>
+</div>
