@@ -28,6 +28,7 @@
   },
   "projects": {
     "title": "My Projects",
+    "description": "Here are some of my projects.",
     "tools": "Made using",
     "discover": "Discover",
     "memnix": "Memnix is a project that aims to create tools to facilitate learning for students by working in an organized way. It's using its own spaced repetition system to allows students to create and share their learning materials.",
@@ -39,6 +40,7 @@
   },
   "experiences": {
     "title": "My Experiences",
+    "description": "Here are my experiences and education.",
     "since": "Since",
     "skills": "Skills",
     "chesscom_mod": {
@@ -114,5 +116,27 @@
     "title": "My Articles",
     "description": "Here you can find the latest articles from the blog",
     "previous": "Previous"
+  },
+  "talks": {
+    "title": "I participated in several talks and have been interviewed for different podcasts.",
+    "description": "I've been part of talks and podcasts — such a blast! Being live on stage, the energy, the vibe — it's like we're all in it together. And podcasts? They're my sweet spot. It's not just opinions; it's a genuine conversation, and that's where the real magic happens. Can't wait to share stories and laughs with you! ",
+    "talks": "Talks",
+    "podcasts": "Podcasts",
+    "learn_more": "Learn more",
+    "watch": "Watch",
+    "listen": "Listen",
+    "coming_soon": "Coming soon",
+    "uca_1": {
+      "title": "Introduction to Microservices with Go",
+      "description": "A talk about microservices, and how to build them with Go."
+    },
+    "demi_siecle": {
+      "title": "Introduction to AI and Ethical considerations",
+      "description": "A private talk about AI and its ethical considerations."
+    },
+    "avocado_1": {
+      "title": "Meet CorentinGS",
+      "description": "A podcast about my journey as a developer, and my vision of the future."
+    }
   }
 }

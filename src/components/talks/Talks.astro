@@ -1,33 +1,35 @@
 ---
 import Card from "./Card.astro";
+import {t} from "i18next";
 
 
 const talks = [{
-    title: "Introduction to Microservices with Go",
+    title: t('talks.uca_1.title'),
     date: "2023",
     location: "Universite Nice Sophia Antipolis",
     href: "https://gdsc.community.dev/events/details/developer-student-clubs-cote-dazur-university-presents-introduction-aux-microservices-avec-go/",
-    description: "A talk about microservices, and how to build them with Go.",
-    cta: "Learn more",
+    description: t('talks.uca_1.description'),
+    cta: t('talks.learn_more'),
 },
     {
-        title: "Introduction to AI and Ethical considerations",
+        title: t('talks.demi_siecle.title'),
         date: "2023",
         location: "Demi-Siècle",
-        description: "A private talk about AI and its ethical considerations.",
+        description: t('talks.demi_siecle.description'),
     }]
 
 const podcasts = [{
-    title: "Meet CorentinGS",
+    title: t('talks.avocado_1.title'),
     date: "2023",
     location: "Avocado Growth : Portrait tech",
-    description: "A podcast about my journey as a developer, and my vision of the future.",
+    description: t('talks.avocado_1.description'),
+    cta: t('talks.coming_soon'),
 }]
 ---
 
-<div aria-labelledby="Conferences" class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
+<div aria-labelledby={t('talks.talks')} class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
     <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
-        <h2 class="text-sm font-semibold">Conferences</h2>
+        <h2 class="text-sm font-semibold">{t('talks.talks')}</h2>
         <div class="md:col-span-3">
             <div class="space-y-16">
                 {talks.map(talk => (
@@ -39,9 +41,9 @@ const podcasts = [{
     </div>
 </div>
 
-<div aria-labelledby="Podcasts" class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
+<div aria-labelledby={t('talks.podcasts')} class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
     <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
-        <h2 class="text-sm font-semibold">Podcasts</h2>
+        <h2 class="text-sm font-semibold">{t('talks.podcasts')}</h2>
         <div class="md:col-span-3">
             <div class="space-y-16">
                 {podcasts.map(talk => (

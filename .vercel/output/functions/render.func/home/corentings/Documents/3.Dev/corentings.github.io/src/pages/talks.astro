@@ -1,10 +1,12 @@
 ---
-import {t} from 'i18next';
-import {Trans} from 'astro-i18next/components';
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/utils/Footer.astro";
 import Talks from "../components/talks/Talks.astro";
-import {Icon} from "astro-iconify";
+import { Icon } from "astro-iconify";
+
+changeLanguage("en");
 ---
 <Layout title="CorentinGS">
     <div
@@ -18,16 +20,13 @@ import {Icon} from "astro-iconify";
         <div class="relative px-4 sm:px-8 lg:px-12">
             <div class="relative flex flex-col">
                 <h2 class="text-2xl font-bold md:text-3xl lg:text-5xl">
-                    I participated in several talks and have been interviewed for different podcasts.
+                    {t('talks.title')}
                 </h2>
                 <p class="mt-8 text-xl">
-                    I've been part of talks and podcasts — such a blast! Being live on stage, the energy, the vibe —
-                    it's like we're all in it together. And podcasts? They're my sweet spot. It's not just opinions;
-                    it's a genuine conversation, and that's where the real magic happens. Can't wait to share stories
-                    and laughs with you! 🎙️✨
+                    {t('talks.description')}
+                    🎙️✨
                 </p>
             </div>
-
         </div>
     </section>
     <section class="mx-auto w-full max-w-7xl lg:px-8 pb-10">
@@ -35,14 +34,10 @@ import {Icon} from "astro-iconify";
             <Talks/>
         </div>
     </section>
-
     <Footer/>
-
 </Layout>
 
-
 <script type="text/javascript">
-
     document.addEventListener(
         'astro:page-load',
         () => {
@@ -64,6 +59,5 @@ import {Icon} from "astro-iconify";
             };
         },
     );
-
 
 </script>
