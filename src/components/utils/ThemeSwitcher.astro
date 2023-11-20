@@ -1,54 +1,49 @@
 ---
-const themes = ["light", "dark", "dracula", "memnix", "luxury", "cyberpunk", "black"]
+const themes = ['light', 'dark', 'dracula', 'memnix', 'luxury', 'cyberpunk', 'black'];
 ---
 
-<div class="dropdown dropdown-bottom px-0 mx-0 hover:bg-base-200">
-    <label tabindex="0" class="btn w-[18rem] lg:w-[8rem] max-w-xs text-lg font-normal  no-animation rounded-xs btn-ghost">
-        Theme
-        <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block ml-auto"
-             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-        </svg>
-    </label>
-    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52 ">
-        {themes.map((theme) =>
-                <li key={theme}><input type="radio" name="theme-dropdown"
-                                       class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                       aria-label={theme} value={theme}/></li>
-        )}
-    </ul>
-</div>
+<select
+	data-choose-theme
+	id="theme-select"
+	name="theme-option"
+	class="select select-bordered select-secondary select-md max-w-xs bg-base-200 text-base-content"
+>
+	<option disabled selected>Pick your theme</option>
+	{
+		themes.map((theme) => (
+			<option value={theme}>{theme.charAt(0).toUpperCase() + theme.slice(1)}</option>
+		))
+	}
+</select>
 
 <style></style>
 
 <script>
+	const createEvent = () => {
+		// Get the select element
+		const themeSelect = document.querySelector('#theme-select');
 
-    const createEvent = () => {
-        // Get all radio inputs
-        const radioInputs = document.querySelectorAll('input[name="theme-dropdown"]');
+		// Add event listener to the select element
+		themeSelect.addEventListener('change', function () {
+			// Update the localStorage with the selected theme
+			localStorage.setItem('theme', themeSelect.value);
+			// force new theme
+			console.log('theme changed');
+			document.documentElement.setAttribute('data-theme', themeSelect.value);
+		});
 
-        // Add event listener to each radio input
-        radioInputs.forEach(function (input) {
-            input.addEventListener('change', function () {
-                // Update the localStorage with the selected theme
-                localStorage.setItem('theme', input.value);
-            });
-        });
+		// Set the initially selected theme from localStorage
+		const selectedTheme = localStorage.getItem('theme');
+		if (selectedTheme) {
+			// Set the selected option in the select element
+			themeSelect.value = selectedTheme;
+		}
+	};
 
-        // Set the initially selected theme from localStorage
-        const selectedTheme = localStorage.getItem('theme');
-        if (selectedTheme) {
-            const selectedInput = document.querySelector(`input[value="${selectedTheme}"]`);
-            if (selectedInput) {
-                selectedInput.checked = true;
-            }
-        }
-    }
+	document.addEventListener('astro:page-load', () => {
+		// This only runs once.
+		createEvent();
+	});
 
-    document.addEventListener('astro:page-load', () => {
-        // This only runs once.
-        createEvent();
-    }, );
-
-    document.addEventListener('DOMContentLoaded', createEvent);
+	document.addEventListener('DOMContentLoaded', createEvent);
 </script>

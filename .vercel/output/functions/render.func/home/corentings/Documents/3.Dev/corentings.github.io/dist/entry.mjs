@@ -1,8 +1,8 @@
-import { l as joinPaths, s as slash, p as prependForwardSlash, A as AstroError, m as ReservedSlotName, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, R as ResponseSentError, n as CantRenderPage, r as removeTrailingForwardSlash, o as collapseDuplicateSlashes } from './chunks/astro/assets-service_35dd625e.mjs';
+import { d as appendForwardSlash, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, e as collapseDuplicateSlashes } from './chunks/astro/assets-service_c6401068.mjs';
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_a1053b35.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_84f7d4b7.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
-import { i as renderSlotToString, j as renderJSX, k as chunkToString, l as renderPage$1 } from './chunks/astro/server_d37749a2.mjs';
+import { A as AstroError, R as ReservedSlotName, o as renderSlotToString, p as renderJSX, q as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, t as ResponseSentError, v as CantRenderPage, w as renderPage$1 } from './chunks/astro_6b2906f3.mjs';
 import 'clsx';
 import 'node:fs';
 import 'node:http';
@@ -16,6 +16,7 @@ import 'node:fs/promises';
 import { splitCookiesString } from 'set-cookie-parser';
 import { renderers } from './renderers.mjs';
 
+const routeDataSymbol = Symbol.for("astro.routeData");
 function checkIsLocaleFree(pathname, locales) {
   for (const locale of locales) {
     if (pathname.includes(`/${locale}`)) {
@@ -24,7 +25,7 @@ function checkIsLocaleFree(pathname, locales) {
   }
   return true;
 }
-function createI18nMiddleware(i18n, base) {
+function createI18nMiddleware(i18n, base, trailingSlash) {
   if (!i18n) {
     return void 0;
   }
@@ -32,8 +33,14 @@ function createI18nMiddleware(i18n, base) {
     if (!i18n) {
       return await next();
     }
-    const { locales, defaultLocale, fallback } = i18n;
+    const routeData = Reflect.get(context.request, routeDataSymbol);
+    if (routeData) {
+      if (routeData.type !== "page" && routeData.type !== "fallback") {
+        return await next();
+      }
+    }
     const url = context.url;
+    const { locales, defaultLocale, fallback } = i18n;
     const response = await next();
     if (response instanceof Response) {
       const separators = url.pathname.split("/");
@@ -47,8 +54,12 @@ function createI18nMiddleware(i18n, base) {
           headers: response.headers
         });
       } else if (i18n.routingStrategy === "prefix-always") {
-        if (url.pathname === base || url.pathname === base + "/") {
-          return context.redirect(`${joinPaths(base, i18n.defaultLocale)}`);
+        if (url.pathname === base + "/" || url.pathname === base) {
+          if (trailingSlash === "always") {
+            return context.redirect(`${appendForwardSlash(joinPaths(base, i18n.defaultLocale))}`);
+          } else {
+            return context.redirect(`${joinPaths(base, i18n.defaultLocale)}`);
+          }
         } else if (isLocaleFree) {
           return new Response(null, {
             status: 404,
@@ -74,6 +85,9 @@ function createI18nMiddleware(i18n, base) {
     return response;
   };
 }
+const i18nPipelineHook = (ctx) => {
+  Reflect.set(ctx.request, routeDataSymbol, ctx.route);
+};
 
 let lastMessage;
 let lastMessageCount = 1;
@@ -458,6 +472,9 @@ async function renderPage({ mod, renderContext, env, cookies }) {
 class Pipeline {
   env;
   #onRequest;
+  #hooks = {
+    before: []
+  };
   /**
    * The handler accepts the *original* `Request` and result returned by the endpoint.
    * It must return a `Response`.
@@ -502,6 +519,9 @@ class Pipeline {
    * The main function of the pipeline. Use this function to render any route known to Astro;
    */
   async renderRoute(renderContext, componentInstance) {
+    for (const hook of this.#hooks.before) {
+      hook(renderContext, componentInstance);
+    }
     const result = await this.#tryRenderRoute(
       renderContext,
       this.env,
@@ -577,6 +597,13 @@ class Pipeline {
       default:
         throw new Error(`Couldn't find route of type [${renderContext.route.type}]`);
     }
+  }
+  /**
+   * Store a function that will be called before starting the rendering phase.
+   * @param fn
+   */
+  onBeforeRenderRoute(fn) {
+    this.#hooks.before.push(fn);
   }
 }
 
@@ -712,7 +739,11 @@ class App {
     );
     let response;
     try {
-      let i18nMiddleware = createI18nMiddleware(this.#manifest.i18n, this.#manifest.base);
+      let i18nMiddleware = createI18nMiddleware(
+        this.#manifest.i18n,
+        this.#manifest.base,
+        this.#manifest.trailingSlash
+      );
       if (i18nMiddleware) {
         if (mod.onRequest) {
           this.#pipeline.setMiddlewareFunction(
@@ -721,6 +752,7 @@ class App {
         } else {
           this.#pipeline.setMiddlewareFunction(i18nMiddleware);
         }
+        this.#pipeline.onBeforeRenderRoute(i18nPipelineHook);
       } else {
         if (mod.onRequest) {
           this.#pipeline.setMiddlewareFunction(mod.onRequest);
@@ -1098,25 +1130,25 @@ const adapter = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   createExports
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0  = () => import('./chunks/generic_bb0be8c2.mjs');
-const _page1  = () => import('./chunks/index_1825fe5a.mjs');
-const _page2  = () => import('./chunks/discord_3fd6523b.mjs');
-const _page3  = () => import('./chunks/rss_bf0e6527.mjs');
-const _page4  = () => import('./chunks/links_d670f41a.mjs');
-const _page5  = () => import('./chunks/optimizing-goroutines-sum-of-squares_2c89e842.mjs');
-const _page6  = () => import('./chunks/simple-go-vs-goroutines_1a39dee0.mjs');
-const _page7  = () => import('./chunks/mergesort-parallel_a130610a.mjs');
-const _page8  = () => import('./chunks/dnf5-step-by-step_ffeec4a6.mjs');
-const _page9  = () => import('./chunks/docker-and-go_4953a84a.mjs');
-const _page10  = () => import('./chunks/blog_ef18a556.mjs');
-const _page11  = () => import('./chunks/index_07ca4fa0.mjs');
-const _page12  = () => import('./chunks/discord_7d5624b4.mjs');
-const _page13  = () => import('./chunks/links_537ffaca.mjs');
-const _page14  = () => import('./chunks/blog_c613654b.mjs');
-const _page15  = () => import('./chunks/index_68e744fc.mjs');
-const _page16  = () => import('./chunks/discord_cd647f23.mjs');
-const _page17  = () => import('./chunks/links_08659ab3.mjs');
-const _page18  = () => import('./chunks/blog_6806a78c.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/discord.astro", _page2],["src/pages/rss.xml.js", _page3],["src/pages/links.astro", _page4],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page5],["src/pages/blog/simple-go-vs-goroutines.mdx", _page6],["src/pages/blog/mergesort-parallel.mdx", _page7],["src/pages/blog/dnf5-step-by-step.mdx", _page8],["src/pages/blog/docker-and-go.mdx", _page9],["src/pages/blog.astro", _page10],["src/pages/de/index.astro", _page11],["src/pages/de/discord.astro", _page12],["src/pages/de/links.astro", _page13],["src/pages/de/blog.astro", _page14],["src/pages/fr/index.astro", _page15],["src/pages/fr/discord.astro", _page16],["src/pages/fr/links.astro", _page17],["src/pages/fr/blog.astro", _page18]]);
+const _page0  = () => import('./chunks/generic_270cf70e.mjs');
+const _page1  = () => import('./chunks/index_354bb06c.mjs');
+const _page2  = () => import('./chunks/discord_0989b5e2.mjs');
+const _page3  = () => import('./chunks/rss_b7b8f3b6.mjs');
+const _page4  = () => import('./chunks/links_01435d87.mjs');
+const _page5  = () => import('./chunks/optimizing-goroutines-sum-of-squares_19d91af0.mjs');
+const _page6  = () => import('./chunks/simple-go-vs-goroutines_83f147e0.mjs');
+const _page7  = () => import('./chunks/mergesort-parallel_a282a029.mjs');
+const _page8  = () => import('./chunks/dnf5-step-by-step_ded4abb1.mjs');
+const _page9  = () => import('./chunks/docker-and-go_213d51ef.mjs');
+const _page10  = () => import('./chunks/blog_ddd9ca4f.mjs');
+const _page11  = () => import('./chunks/index_0b49ddc7.mjs');
+const _page12  = () => import('./chunks/discord_e298b213.mjs');
+const _page13  = () => import('./chunks/links_8a8fbd36.mjs');
+const _page14  = () => import('./chunks/blog_f87dd59d.mjs');
+const _page15  = () => import('./chunks/index_4da7c062.mjs');
+const _page16  = () => import('./chunks/discord_8595d475.mjs');
+const _page17  = () => import('./chunks/links_ff5e6d76.mjs');
+const _page18  = () => import('./chunks/blog_fe4123da.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/discord.astro", _page2],["src/pages/rss.xml.js", _page3],["src/pages/links.astro", _page4],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page5],["src/pages/blog/simple-go-vs-goroutines.mdx", _page6],["src/pages/blog/mergesort-parallel.mdx", _page7],["src/pages/blog/dnf5-step-by-step.mdx", _page8],["src/pages/blog/docker-and-go.mdx", _page9],["src/pages/blog.astro", _page10],["src/pages/de/index.astro", _page11],["src/pages/de/discord.astro", _page12],["src/pages/de/links.astro", _page13],["src/pages/de/blog.astro", _page14],["src/pages/fr/index.astro", _page15],["src/pages/fr/discord.astro", _page16],["src/pages/fr/links.astro", _page17],["src/pages/fr/blog.astro", _page18]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,

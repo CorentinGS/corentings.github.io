@@ -1,48 +1,51 @@
 ---
-import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import About from "../../components/About.astro";
-import Skills from "../../components/Skills.astro";
-import Projects from "../../components/Projects.astro";
-import Experiences from "../../components/Experiences.astro";
-import Footer from "../../components/utils/Footer.astro";
-import { Icon } from "astro-iconify";
+import { changeLanguage } from 'i18next';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Skills from '../../components/Skills.astro';
+import Projects from '../../components/Projects.astro';
+import Experiences from '../../components/Experiences.astro';
+import Footer from '../../components/utils/Footer.astro';
+import { Icon } from 'astro-iconify';
 
-changeLanguage("fr");
+changeLanguage('fr');
 
 export const prerender = true;
 ---
 
 <Layout title="CorentinGS">
-    <div class="fixed bottom-12 right-5 hoveranimation btn-accent btn-sm btn z-50" id="btn-back-to-top" transition:persist>
-        <Icon name="lucide:arrow-up" class="h-6 w-6"/>
-    </div>
-    <Hero/>
-    <About/>
-    <Skills/>
-    <Projects/>
-    <Experiences/>
-    <Footer/>
-
+	<div
+		class="hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50"
+		id="btn-back-to-top"
+		transition:persist
+	>
+		<Icon name="lucide:arrow-up" class="h-6 w-6" />
+	</div>
+	<Hero />
+	<About />
+	<Skills />
+	<Projects />
+	<Experiences />
+	<Footer />
 </Layout>
 
 <style></style>
 
-
 <script type="text/javascript">
-    document.addEventListener('astro:page-load', () => {
+	document.addEventListener(
+		'astro:page-load',
+		() => {
+			const backToTop = () => {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			};
 
-        const backToTop = () => {
-            window.scrollTo({top: 0, behavior: "smooth"});
-        };
+			// This only runs once.
+			mybutton = document.getElementById('btn-back-to-top');
+			mybutton.addEventListener('click', backToTop);
 
-        // This only runs once.
-        mybutton = document.getElementById("btn-back-to-top");
-        mybutton.addEventListener("click", backToTop);
-
-
-        // When the user clicks on the button, scroll to the top of the document
-    }, {once: true});
-
+			// When the user clicks on the button, scroll to the top of the document
+		},
+		{ once: true },
+	);
 </script>

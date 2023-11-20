@@ -1,69 +1,67 @@
 ---
-import type { BlogPost } from "../../../utils/types"
-import { Picture } from "astro:assets"
+import type { BlogPost } from '../../../utils/types';
+import { Picture } from 'astro:assets';
 
 interface Props {
-  blogPost: BlogPost
+	blogPost: BlogPost;
 }
 
-const { blogPost } = Astro.props
+const { blogPost } = Astro.props;
 ---
 
-<div
-  class="flex w-full scale-100 transform pb-5 transition-all duration-300 hover:scale-95"
->
-  <div class="block h-40 w-2/5 overflow-hidden rounded object-cover">
-    <Picture
-      src={blogPost.image}
-      formats={["avif", "webp"]}
-      loading="lazy"
-      quality={40}
-      width={256}
-      height={256}
-      aspectRatio={1}
-      fit="cover"
-      alt={blogPost.title}
-      class="sm:hidden"
-    />
+<div class="flex w-full scale-100 transform pb-5 transition-all duration-300 hover:scale-95">
+	<div class="block h-40 w-2/5 overflow-hidden rounded object-cover">
+		<Picture
+			src={blogPost.image}
+			formats={['avif', 'webp']}
+			loading="lazy"
+			quality={40}
+			width={256}
+			height={256}
+			aspectRatio={1}
+			fit="cover"
+			alt={blogPost.title}
+			class="sm:hidden"
+		/>
 
-    <Picture
-      src={blogPost.image}
-      formats={["avif", "webp"]}
-      loading="lazy"
-      aspectRatio={16 / 9}
-      quality={40}
-      fit="cover"
-      alt={blogPost.title}
-      width={512}
-      height={512}
-      class="hidden sm:flex object-cover h-40"
-    />
-  </div>
-  <div class="w-3/5 pl-3">
-    <p class="text-xs font-semibold uppercase">
-      {blogPost.category}
-    </p>
-    <h3 class="text-md mb-3 font-semibold leading-tight">
-      {blogPost.title}
-    </h3>
-    <p class="mb-3 flex text-sm font-semibold leading-tight">
-      {blogPost.description}
-    </p>
-    <div class="hidden w-full items-center text-sm font-medium sm:flex">
-      <Picture
-        class="mr-3 h-10 w-10 rounded-full"
-        src={blogPost.author.avatar}
-        alt={blogPost.author.name}
-        width="48"
-        height="48"
-        formats={["avif", "webp"]}
-        quality={30}
-        aspectRatio="3/4"
-      />
-      <div class="flex flex-col">
-        <span>{blogPost.author.name}</span>
-        <span>{blogPost.date} ・{blogPost.timeToRead}</span>
-      </div>
-    </div>
-  </div>
+		<Picture
+			src={blogPost.image}
+			formats={['avif', 'webp']}
+			loading="lazy"
+			aspectRatio={16 / 9}
+			quality={40}
+			fit="cover"
+			alt={blogPost.title}
+			width={512}
+			height={512}
+			class="hidden h-40 object-cover sm:flex"
+		/>
+	</div>
+	<div class="w-3/5 pl-3">
+		<p class="text-xs font-semibold uppercase">
+			{blogPost.category}
+		</p>
+		<h3 class="text-md mb-3 font-semibold leading-tight">
+			{blogPost.title}
+		</h3>
+		<p class="mb-3 flex text-sm font-semibold leading-tight">
+			{blogPost.description}
+		</p>
+		<div class="hidden w-full items-center text-sm font-medium sm:flex">
+			<Picture
+				class="mr-3 h-10 w-10 rounded-full"
+				src={blogPost.author.avatar}
+				alt={blogPost.author.name}
+				width="48"
+				height="48"
+				formats={['avif', 'webp']}
+				quality={30}
+				aspectRatio="3/4"
+			/>
+			<div class="flex flex-col">
+				<span>{blogPost.author.name}</span>
+				<span>{blogPost.date} ・{blogPost.timeToRead}</span>
+			</div>
+		</div>
+	</div>
 </div>

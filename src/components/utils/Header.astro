@@ -1,0 +1,79 @@
+---
+import { Icon } from 'astro-iconify';
+import ThemeSwitcher from './ThemeSwitcher.astro';
+import { LanguageSelector } from 'astro-i18next/components';
+import { localizePath } from 'astro-i18next';
+import { t } from 'i18next';
+
+const { lang } = Astro.props;
+---
+
+<header class="">
+	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+		<div class="flex lg:flex-1">
+			<a href="#" class="-m-1.5 p-1.5">
+				<span class="sr-only">Corentin GS</span>
+				<img
+					class="h-8 w-auto"
+					src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+					alt=""
+				/>
+			</a>
+		</div>
+		<div class="flex lg:hidden">
+			<button
+				type="button"
+				onclick="my_modal_5.showModal()"
+				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+			>
+				<span class="sr-only">Open main menu</span>
+				<svg
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					aria-hidden="true"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="hidden lg:flex lg:gap-x-12">
+			<a href="#" class="text-sm font-semibold leading-6">Projects</a>
+			<a href="#" class="text-sm font-semibold leading-6">Talks</a>
+			<a href="#" class="text-sm font-semibold leading-6">Experiences</a>
+			<a href="#" class="text-sm font-semibold leading-6">Articles</a>
+		</div>
+		<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+			<ul class="menu menu-horizontal p-0">
+				{
+					lang ? (
+						<li class="my-auto px-3">
+							<LanguageSelector
+								showFlag={true}
+								class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
+							/>
+						</li>
+					) : null
+				}
+				<li class="px-3">
+					<ThemeSwitcher />
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="drawer-side">
+		<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+		<ul class="menu min-h-full w-80 bg-base-200 p-4">
+			<!-- Sidebar content here -->
+			<li><a>Sidebar Item 1</a></li>
+			<li><a>Sidebar Item 2</a></li>
+		</ul>
+	</div>
+	<!-- Mobile menu, show/hide based on menu open state. -->
+</header>

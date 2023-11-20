@@ -1,101 +1,97 @@
 ---
-import {Config, Profile} from "../../utils/config"
-import {Icon} from "astro-iconify"
+import { Config, Profile } from '../../utils/config';
+import { Icon } from 'astro-iconify';
 
-import {Picture} from "astro:assets"
+import { Picture } from 'astro:assets';
 
-import {t} from "i18next"
+import { t } from 'i18next';
 
-const social = Config
-const profile = Profile
+const social = Config;
+const profile = Profile;
 ---
 
 <section class="hero relative min-h-screen bg-base-100">
-    <div class="hero-content">
-        <div class="flex flex-col">
-            <div
-                    class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
-            >
-                <Picture
-                        src={Profile.avatar}
-                        quality={"high"}
-                        formats={["avif", "webp", "png"]}
-                        alt="avatar"
-                        class="mb-4 h-48 w-48 flex-shrink-0 object-cover mask mask-squircle object-center sm:mb-0"
-                        width={192}
-                        loading={"eager"}
-                        aspectRatio={1}
-                />
-                <div class="flex-grow sm:pl-8">
-                    <span class="text-xl text-primary uppercase font-bold">{profile.full_name}</span>
-                    <h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">
-                        Freelance Backend Developer
-                    </h1>
-                    <h2 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl text-accent">
-                        I <a class="underline underline-offset-4">code</a>, I <a class="underline underline-offset-4">write</a>, I <a class="underline underline-offset-4">contribute</a>,
-                        I <a class="underline underline-offset-4">materialize dream</a>
-                    </h2>
-                    <h3 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl">
-                    </h3>
+	<div class="hero-content">
+		<div class="flex flex-col">
+			<div
+				class="my-10 flex flex-col items-center justify-center text-center sm:flex-row sm:justify-start sm:text-left"
+			>
+				<Picture
+					src={Profile.avatar}
+					quality={'high'}
+					formats={['avif', 'webp', 'png']}
+					alt="avatar"
+					class="mask mask-squircle mb-4 h-48 w-48 flex-shrink-0 object-cover object-center sm:mb-0"
+					width={192}
+					loading={'eager'}
+					aspectRatio={1}
+				/>
+				<div class="flex-grow sm:pl-8">
+					<span class="text-xl font-bold uppercase text-primary">{profile.full_name}</span>
+					<h1 class="text-2xl font-bold md:text-3xl lg:text-5xl">Freelance Backend Developer</h1>
+					<h2 class="max-w-3xl py-2 text-xl text-accent md:text-2xl lg:text-3xl">
+						I <a class="underline underline-offset-4">code</a>, I <a
+							class="underline underline-offset-4">write</a
+						>, I <a class="underline underline-offset-4">contribute</a>, I <a
+							class="underline underline-offset-4">materialize dream</a
+						>
+					</h2>
+					<h3 class="max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl"></h3>
 
-                    <div class="inline-flex space-x-4">
-                        <span class="text-md uppercase lg:text-lg"> {t("hero.cta")}</span>
-                        <Icon name="lucide:chevron-right" class="mx-auto"/>
-                        <a
-                                href={"https://twitter.com/" + social.twitter}
-                                target="_blank"
-                                rel="noopener noreferrer nofollow"
-                                aria-label="twitter"
-                                class="my-auto"
-                        >
-                            <Icon name="ri:twitter-x-fill" class="hoveranimation h-6 w-6"/>
-                        </a>
-                        <a
-                                href={social.discord}
-                                rel="noopener noreferrer nofollow"
-                                target="_blank"
-                                aria-label="discord"
-                                class="my-auto"
-                        >
-                            <Icon name="la:discord" class="hoveranimation h-6 w-6"/>
-                        </a>
-                        <a
-                                href={"https://github.com/" + social.github}
-                                target="_blank"
-                                aria-label="github"
-                                rel="noopener noreferrer nofollow"
-                                class="my-auto"
-                        >
-                            <Icon name="lucide:github" class="hoveranimation h-6 w-6"/>
-                        </a>
-                        <a
-                                href={"https://www.linkedin.com/in/" + social.linkedin}
-                                target="_blank"
-                                aria-label="linkedin"
-                                rel="noopener noreferrer nofollow"
-                                class="my-auto"
-                        >
-                            <Icon name="lucide:linkedin" class="hoveranimation h-6 w-6"/>
-                        </a>
-                        <a
-                                rel="noopener noreferrer nofollow me"
-                                href={social.mastodon}
-                                aria-label="mastodon"
-                                target="_blank"
-                                class="my-auto"
-                        >
-                            <Icon name="la:mastodon" class="hoveranimation h-6 w-6"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <a href="#about" class="mx-auto my-10 h-12 w-12">
-                <Icon
-                        name="lucide:chevron-down"
-                        class="animate-bounce"
-                        aria-label="scrolling down"
-                />
-            </a>
-        </div>
-    </div>
+					<div class="inline-flex space-x-4">
+						<span class="text-md uppercase lg:text-lg"> {t('hero.cta')}</span>
+						<Icon name="lucide:chevron-right" class="mx-auto" />
+						<a
+							href={'https://twitter.com/' + social.twitter}
+							target="_blank"
+							rel="noopener noreferrer nofollow"
+							aria-label="twitter"
+							class="my-auto"
+						>
+							<Icon name="ri:twitter-x-fill" class="hoveranimation h-6 w-6" />
+						</a>
+						<a
+							href={social.discord}
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+							aria-label="discord"
+							class="my-auto"
+						>
+							<Icon name="la:discord" class="hoveranimation h-6 w-6" />
+						</a>
+						<a
+							href={'https://github.com/' + social.github}
+							target="_blank"
+							aria-label="github"
+							rel="noopener noreferrer nofollow"
+							class="my-auto"
+						>
+							<Icon name="lucide:github" class="hoveranimation h-6 w-6" />
+						</a>
+						<a
+							href={'https://www.linkedin.com/in/' + social.linkedin}
+							target="_blank"
+							aria-label="linkedin"
+							rel="noopener noreferrer nofollow"
+							class="my-auto"
+						>
+							<Icon name="lucide:linkedin" class="hoveranimation h-6 w-6" />
+						</a>
+						<a
+							rel="noopener noreferrer nofollow me"
+							href={social.mastodon}
+							aria-label="mastodon"
+							target="_blank"
+							class="my-auto"
+						>
+							<Icon name="la:mastodon" class="hoveranimation h-6 w-6" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<a href="#about" class="mx-auto my-10 h-12 w-12">
+				<Icon name="lucide:chevron-down" class="animate-bounce" aria-label="scrolling down" />
+			</a>
+		</div>
+	</div>
 </section>

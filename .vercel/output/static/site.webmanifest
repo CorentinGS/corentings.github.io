@@ -1,20 +1,20 @@
 {
-  "name": "CorentinGS",
-  "short_name": "CorentinGS",
-  "icons": [
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "theme_color": "#38555f",
-  "background_color": "#38555f",
-  "start_url": "https://corentings.dev",
-  "display": "standalone"
+	"name": "CorentinGS",
+	"short_name": "CorentinGS",
+	"icons": [
+		{
+			"src": "/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#38555f",
+	"background_color": "#38555f",
+	"start_url": "https://corentings.dev",
+	"display": "standalone"
 }

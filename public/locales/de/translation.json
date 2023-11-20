@@ -1,109 +1,109 @@
 {
-    "profile": {
-        "title": "Freiberuflicher Backend-Entwickler"
+  "profile": {
+    "title": "Freiberuflicher Backend-Entwickler"
+  },
+  "hero": {
+    "cta": "Let's connect",
+    "hello": "Hallo, ich bin"
+  },
+  "navbar": {
+    "blog": "Blog",
+    "links": "Kontakt",
+    "resume": "Lebenslauf"
+  },
+  "about": {
+    "title": "Über mich",
+    "presentation": "Hey, ich heiße Corentin und bin 20 Jahre alt.",
+    "study": "Ich studiere derzeit B.Sc. Informatik an der <0>IU International University of Applied Sciences.</0>.",
+    "work": "Ich bin auch freiberuflicher Backend-Entwickler und arbeite seit einem Jahr an verschiedenen Projekten, darunter Websites und Webanwendungen.",
+    "lang": "Meine Hauptsprache ist <0>Golang</0>, aber ich habe auch mit Java, Python, TypeScript, C/C++ und mehr gearbeitet.",
+    "database": "Ich habe auch Erfahrung mit Datenbanken wie PostgreSQL oder MongoDB und kenne mich mit Docker, Docker Compose und sogar Podman aus.",
+    "opensource": "Darüber hinaus bin ich ein leidenschaftlicher Open-Source-Enthusiast und habe in den letzten Jahren zu mehreren Projekten beigetragen. Ich habe auch <0>Memnix</0> erstellt, eine kostenlose und Open-Source-Flashcard-App für Android und Web.",
+    "community": "Ich mag es, Communities zu verwalten, und bin derzeit der Gründer von <0>The Kafejo</0>, einer Discord-Community für Entwickler und Studenten.",
+    "chess": "Man könnte mich auch auf einem Schachbrett treffen, da ich viel spiele und eine Schach-Community für meinen Freund <0>Stouuf</0> auf Discord, Twitch und YouTube verwalte.",
+    "linux": "Ich bin auch ein großer Fan von Linux und benutze es seit meiner jüngsten Jugend. Im Moment benutze ich <0>OpenSuse Tumbleweed</0> als mein Hauptbetriebssystem und <1>Void Linux</1> auf meinem Laptop."
+  },
+  "skills": {
+    "title": "Mein bevorzugter Stack"
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "tools": "Erstellt mit",
+    "discover": "Entdecken",
+    "memnix": "Memnix ist ein Projekt, das darauf abzielt, Werkzeuge zur Erleichterung des Lernens für Schülerinnen und Schüler zu schaffen, indem es auf organisierte Weise arbeitet. Es verwendet sein eigenes System des abgestuften Wiederholens, um den Studierenden zu ermöglichen, ihre Lernmaterialien zu erstellen und zu teilen.",
+    "gauntlet": "Gauntlet reborn ist ein Projekt, das darauf abzielt, eine neue Version des Arcade-Spiels Gauntlet aus den 80er Jahren zu schaffen.",
+    "uca_edt": "Ein einfaches Projekt, um UCA (Université Côte d'Azur) Studierenden eine bessere Übersicht über ihren Stundenplan zu geben und ihn in ihren Kalender exportieren zu können.",
+    "kitsu": "Kitsu ist ein multifunktionaler Discord-Bot, der Statistiken für deinen Discord-Server generiert, um dir bei der Steigerung der Aktivität und schnellerem Wachstum zu helfen.",
+    "stouuf": "Dies ist eine Website, die ich für Stouuf, einen französischen Schachlehrer, erstellt habe. Es handelt sich um eine einfache Einzelseiten-Website, die ihm dabei hilft, seine Kurse zu bewerben und neue Schülerinnen und Schüler zu finden.",
+    "echiquier_nicois": "Dies ist eine Website, die ich für meinen Schachclub gemacht habe."
+  },
+  "experiences": {
+    "title": "Meine Erfahrungen",
+    "since": "Seit",
+    "skills": "Fähigkeiten",
+    "bsc_cs": {
+      "title": "IU - BSC. Informatik",
+      "description": "Bachelor-Abschluss in Informatik an der IU International University of Applied Sciences."
     },
-    "hero": {
-        "cta": "Let's connect",
-        "hello": "Hallo, ich bin"
+    "freelance": {
+      "title": "Freiberufler - Backend-Entwickler",
+      "description": "Entwicklung von Websites und Webanwendungen für Kunden."
     },
-    "navbar": {
-        "blog": "Blog",
-        "links": "Kontakt",
-        "resume": "Lebenslauf"
+    "stouuf": {
+      "title": "Stouuf - Community-Manager",
+      "description": "Verwaltung der Stouuf-Community, Website-Entwicklung, Veranstaltungsorganisation und Twitch-Moderation."
     },
-    "about": {
-        "title": "Über mich",
-        "presentation": "Hey, ich heiße Corentin und bin 20 Jahre alt.",
-        "study": "Ich studiere derzeit B.Sc. Informatik an der <0>IU International University of Applied Sciences.</0>.",
-        "work": "Ich bin auch freiberuflicher Backend-Entwickler und arbeite seit einem Jahr an verschiedenen Projekten, darunter Websites und Webanwendungen.",
-        "lang": "Meine Hauptsprache ist <0>Golang</0>, aber ich habe auch mit Java, Python, TypeScript, C/C++ und mehr gearbeitet.",
-        "database": "Ich habe auch Erfahrung mit Datenbanken wie PostgreSQL oder MongoDB und kenne mich mit Docker, Docker Compose und sogar Podman aus.",
-        "opensource": "Darüber hinaus bin ich ein leidenschaftlicher Open-Source-Enthusiast und habe in den letzten Jahren zu mehreren Projekten beigetragen. Ich habe auch <0>Memnix</0> erstellt, eine kostenlose und Open-Source-Flashcard-App für Android und Web.",
-        "community": "Ich mag es, Communities zu verwalten, und bin derzeit der Gründer von <0>The Kafejo</0>, einer Discord-Community für Entwickler und Studenten.",
-        "chess": "Man könnte mich auch auf einem Schachbrett treffen, da ich viel spiele und eine Schach-Community für meinen Freund <0>Stouuf</0> auf Discord, Twitch und YouTube verwalte.",
-        "linux": "Ich bin auch ein großer Fan von Linux und benutze es seit meiner jüngsten Jugend. Im Moment benutze ich <0>OpenSuse Tumbleweed</0> als mein Hauptbetriebssystem und <1>Void Linux</1> auf meinem Laptop."
+    "educative": {
+      "title": "Educative.io - Kurse",
+      "description": "Teilnahme an mehreren Kursen auf Educative.io, einschließlich, aber nicht beschränkt auf: Golang, Python, C, Java, Datenstrukturen ..."
     },
-    "skills": {
-        "title": "Mein bevorzugter Stack"
+    "hackerrank": {
+      "title": "HackerRank - Zertifizierungen",
+      "description": "Erhalt der folgenden Zertifizierungen von HackerRank: Python (Basic), Golang (Basic), Golang(Intermediate)."
     },
-    "projects": {
-        "title": "Meine Projekte",
-        "tools": "Erstellt mit",
-        "discover": "Entdecken",
-        "memnix": "Memnix ist ein Projekt, das darauf abzielt, Werkzeuge zur Erleichterung des Lernens für Schülerinnen und Schüler zu schaffen, indem es auf organisierte Weise arbeitet. Es verwendet sein eigenes System des abgestuften Wiederholens, um den Studierenden zu ermöglichen, ihre Lernmaterialien zu erstellen und zu teilen.",
-        "gauntlet": "Gauntlet reborn ist ein Projekt, das darauf abzielt, eine neue Version des Arcade-Spiels Gauntlet aus den 80er Jahren zu schaffen.",
-        "uca_edt": "Ein einfaches Projekt, um UCA (Université Côte d'Azur) Studierenden eine bessere Übersicht über ihren Stundenplan zu geben und ihn in ihren Kalender exportieren zu können.",
-        "kitsu": "Kitsu ist ein multifunktionaler Discord-Bot, der Statistiken für deinen Discord-Server generiert, um dir bei der Steigerung der Aktivität und schnellerem Wachstum zu helfen.",
-        "stouuf": "Dies ist eine Website, die ich für Stouuf, einen französischen Schachlehrer, erstellt habe. Es handelt sich um eine einfache Einzelseiten-Website, die ihm dabei hilft, seine Kurse zu bewerben und neue Schülerinnen und Schüler zu finden.",
-        "echiquier_nicois": "Dies ist eine Website, die ich für meinen Schachclub gemacht habe."
+    "memnix": {
+      "title": "Memnix - Leitender Entwickler",
+      "description": "Leitung der Entwicklung des Memnix-Projekts, einer Plattform zum abgestuften Wiederholen von Lerninhalten."
     },
-    "experiences": {
-        "title": "Meine Erfahrungen",
-        "since": "Seit",
-        "skills": "Fähigkeiten",
-        "bsc_cs": {
-            "title": "IU - BSC. Informatik",
-            "description": "Bachelor-Abschluss in Informatik an der IU International University of Applied Sciences."
-        },
-        "freelance": {
-            "title": "Freiberufler - Backend-Entwickler",
-            "description": "Entwicklung von Websites und Webanwendungen für Kunden."
-        },
-        "stouuf": {
-            "title": "Stouuf - Community-Manager",
-            "description": "Verwaltung der Stouuf-Community, Website-Entwicklung, Veranstaltungsorganisation und Twitch-Moderation."
-        },
-        "educative": {
-            "title": "Educative.io - Kurse",
-            "description": "Teilnahme an mehreren Kursen auf Educative.io, einschließlich, aber nicht beschränkt auf: Golang, Python, C, Java, Datenstrukturen ..."
-        },
-        "hackerrank": {
-            "title": "HackerRank - Zertifizierungen",
-            "description": "Erhalt der folgenden Zertifizierungen von HackerRank: Python (Basic), Golang (Basic), Golang(Intermediate)."
-        },
-        "memnix": {
-            "title": "Memnix - Leitender Entwickler",
-            "description": "Leitung der Entwicklung des Memnix-Projekts, einer Plattform zum abgestuften Wiederholen von Lerninhalten."
-        },
-        "unice": {
-            "title": "Unice - Informatikstudent",
-            "description": "Studiert Informatik an der Université Nice Côte d'Azur."
-        },
-        "onetoo": {
-            "title": "Onetoo - Praktikum",
-            "description": "Praktikum in der Entwicklung von Linux-Embedded-Systemen und QT-Software. Erstellung von technischer Dokumentation und Einrichtung von Projektmanagement-Tools."
-        },
-        "estaca": {
-            "title": "Estaca - Student",
-            "description": "Erstes Jahr des Studiengangs Aeronautical Engineering an der Estaca."
-        },
-        "bac": {
-            "title": "Scientific Baccalaureate - Mit Auszeichnung abgeschlossen",
-            "description": "Erhielt das Scientific Baccalaureate mit Auszeichnung mit den Schwerpunkten Engineering Sciences und Englisch an der Cornat High School in Valognes, Frankreich."
-        },
-        "ktk": {
-            "title": "Theaterschauspieler - Addams Family Show",
-            "description": "Auftritt in der Addams Family Show in Orlando, Florida für Kids Theater Kamp."
-        },
-        "ppl": {
-            "title": "PPL - Privatpilotenlizenz",
-            "description": "Vorbereitung auf die Prüfung zur Privatpilotenlizenz (verschoben aufgrund von Covid-19)"
-        },
-        "qualialtis": {
-            "title": "Qualialtis - Praktikant",
-            "description": "Devops-Praktikum bei Qualialtis, um Devops, Kubernetes, Helm und Linux-Administration kennenzulernen."
-        },
-        "copernicus": {
-            "title": "Hackathon - Climathon Copernicus",
-            "description": "Climathon von Copernicus in Toulouse organisiert, um digitale Lösungen für die Klimakrise zu finden. Erhielt den 3. Preis."
-        }
+    "unice": {
+      "title": "Unice - Informatikstudent",
+      "description": "Studiert Informatik an der Université Nice Côte d'Azur."
     },
-    "contacts": {
-        "title": "Meine Links und sozialen Netzwerke",
-        "body": "Hier sind meine sozialen Medien und Links zu meinen Projekten.",
-        "discord": "Ich bin auch auf Discord, also fühl dich frei, meinem Server beizutreten.",
-        "blog": "Blog",
-        "notif_title": "Ich habe einen freundlichen Discord erstellt !",
-        "notif_content": "Tritt unserer Community auf The Kafejo bei, einem freundlichen Discord für Entwickler und Studenten!"
+    "onetoo": {
+      "title": "Onetoo - Praktikum",
+      "description": "Praktikum in der Entwicklung von Linux-Embedded-Systemen und QT-Software. Erstellung von technischer Dokumentation und Einrichtung von Projektmanagement-Tools."
+    },
+    "estaca": {
+      "title": "Estaca - Student",
+      "description": "Erstes Jahr des Studiengangs Aeronautical Engineering an der Estaca."
+    },
+    "bac": {
+      "title": "Scientific Baccalaureate - Mit Auszeichnung abgeschlossen",
+      "description": "Erhielt das Scientific Baccalaureate mit Auszeichnung mit den Schwerpunkten Engineering Sciences und Englisch an der Cornat High School in Valognes, Frankreich."
+    },
+    "ktk": {
+      "title": "Theaterschauspieler - Addams Family Show",
+      "description": "Auftritt in der Addams Family Show in Orlando, Florida für Kids Theater Kamp."
+    },
+    "ppl": {
+      "title": "PPL - Privatpilotenlizenz",
+      "description": "Vorbereitung auf die Prüfung zur Privatpilotenlizenz (verschoben aufgrund von Covid-19)"
+    },
+    "qualialtis": {
+      "title": "Qualialtis - Praktikant",
+      "description": "Devops-Praktikum bei Qualialtis, um Devops, Kubernetes, Helm und Linux-Administration kennenzulernen."
+    },
+    "copernicus": {
+      "title": "Hackathon - Climathon Copernicus",
+      "description": "Climathon von Copernicus in Toulouse organisiert, um digitale Lösungen für die Klimakrise zu finden. Erhielt den 3. Preis."
     }
+  },
+  "contacts": {
+    "title": "Meine Links und sozialen Netzwerke",
+    "body": "Hier sind meine sozialen Medien und Links zu meinen Projekten.",
+    "discord": "Ich bin auch auf Discord, also fühl dich frei, meinem Server beizutreten.",
+    "blog": "Blog",
+    "notif_title": "Ich habe einen freundlichen Discord erstellt !",
+    "notif_content": "Tritt unserer Community auf The Kafejo bei, einem freundlichen Discord für Entwickler und Studenten!"
+  }
 }
