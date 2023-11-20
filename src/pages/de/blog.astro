@@ -1,12 +1,12 @@
 ---
-import { changeLanguage } from 'i18next';
-import { BlogPosts } from '../../../utils/blog';
-import CardLatest from '../../components/blog/CardLatest.astro';
-import CardPrevious from '../../components/blog/CardPrevious.astro';
-import Layout from '../../layouts/Layout.astro';
-import { Icon } from 'astro-iconify';
+import { changeLanguage } from "i18next";
+import { BlogPosts } from "../../../utils/blog";
+import CardLatest from "../../components/blog/CardLatest.astro";
+import CardPrevious from "../../components/blog/CardPrevious.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-iconify";
 
-changeLanguage('de');
+changeLanguage("de");
 
 const latest = BlogPosts.blogPosts.slice(0, 1);
 const blogPosts = BlogPosts.blogPosts.slice(1);
