@@ -1,10 +1,10 @@
 ---
-import { t, changeLanguage } from "i18next";
-import { Trans } from "astro-i18next/components";
+import {t, changeLanguage} from "i18next";
+import {Trans} from "astro-i18next/components";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/utils/Footer.astro";
 import Talks from "../components/talks/Talks.astro";
-import { Icon } from "astro-iconify";
+import {Icon} from "astro-iconify";
 
 changeLanguage("en");
 ---
@@ -29,7 +29,6 @@ changeLanguage("en");
                     and laughs with you! 🎙️✨
                 </p>
             </div>
-
         </div>
     </section>
     <section class="mx-auto w-full max-w-7xl lg:px-8 pb-10">
@@ -37,14 +36,10 @@ changeLanguage("en");
             <Talks/>
         </div>
     </section>
-
     <Footer/>
-
 </Layout>
 
-
 <script type="text/javascript">
-
     document.addEventListener(
         'astro:page-load',
         () => {
@@ -66,6 +61,5 @@ changeLanguage("en");
             };
         },
     );
-
 
 </script>
