@@ -835,6 +835,7 @@ const $$Talks$3 = createComponent(async ($$result, $$props, $$slots) => {
     description: t("talks.avocado_1.description"),
     cta: t("talks.coming_soon")
   }];
+  changeLanguage("en");
   return renderTemplate`${maybeRenderHead()}<div${addAttribute(t("talks.talks"), "aria-labelledby")} class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10"><div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"><h2 class="text-sm font-semibold">${t("talks.talks")}</h2><div class="md:col-span-3"><div class="space-y-16">${talks.map((talk) => renderTemplate`${renderComponent($$result, "Card", $$Card, { ...talk })}`)}</div></div></div></div><div${addAttribute(t("talks.podcasts"), "aria-labelledby")} class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10"><div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"><h2 class="text-sm font-semibold">${t("talks.podcasts")}</h2><div class="md:col-span-3"><div class="space-y-16">${podcasts.map((talk) => renderTemplate`${renderComponent($$result, "Card", $$Card, { ...talk })}`)}</div></div></div></div>`;
 }, "/home/corentings/Documents/3.Dev/corentings.github.io/src/components/talks/Talks.astro", void 0);
 
