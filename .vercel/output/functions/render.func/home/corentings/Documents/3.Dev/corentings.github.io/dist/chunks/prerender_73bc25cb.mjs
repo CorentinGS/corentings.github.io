@@ -1,7 +1,5 @@
 const noop = () => {};
-export const $ = noop;
 export const B = noop;
-export const P = noop;
 export const a = noop;
 export const b = noop;
 export const c = noop;
@@ -21,7 +19,3 @@ export const p = noop;
 export const q = noop;
 export const r = noop;
 export const s = noop;
-export const t = noop;
-export const u = noop;
-export const v = noop;
-export const w = noop;

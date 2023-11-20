@@ -1,0 +1,69 @@
+---
+import {t} from 'i18next';
+import {Trans} from 'astro-i18next/components';
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/utils/Footer.astro";
+import Talks from "../components/talks/Talks.astro";
+import {Icon} from "astro-iconify";
+---
+<Layout title="CorentinGS">
+    <div
+            class="hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden"
+            id="btn-back-to-top"
+            transition:persist
+    >
+        <Icon name="lucide:arrow-up" class="h-6 w-6"/>
+    </div>
+    <section class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+            <div class="relative flex flex-col">
+                <h2 class="text-2xl font-bold md:text-3xl lg:text-5xl">
+                    I participated in several talks and have been interviewed for different podcasts.
+                </h2>
+                <p class="mt-8 text-xl">
+                    I've been part of talks and podcasts — such a blast! Being live on stage, the energy, the vibe —
+                    it's like we're all in it together. And podcasts? They're my sweet spot. It's not just opinions;
+                    it's a genuine conversation, and that's where the real magic happens. Can't wait to share stories
+                    and laughs with you! 🎙️✨
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="mx-auto w-full max-w-7xl lg:px-8 pb-10">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+            <Talks/>
+        </div>
+    </section>
+
+    <Footer/>
+
+</Layout>
+
+
+<script type="text/javascript">
+
+    document.addEventListener(
+        'astro:page-load',
+        () => {
+            const backToTop = () => {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            };
+
+            // This only runs once.
+            mybutton = document.getElementById('btn-back-to-top');
+            mybutton.addEventListener('click', backToTop);
+
+            // Hide button when not needed
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.classList.remove('hidden');
+                } else {
+                    mybutton.classList.add('hidden');
+                }
+            };
+        },
+    );
+
+
+</script>

@@ -1,6 +1,6 @@
 import { d as appendForwardSlash, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, e as collapseDuplicateSlashes } from './chunks/astro/assets-service_c6401068.mjs';
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_a1ab6543.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_ecd2fbc8.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
 import { A as AstroError, R as ReservedSlotName, o as renderSlotToString, p as renderJSX, q as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, t as ResponseSentError, v as CantRenderPage, w as renderPage$1 } from './chunks/astro_6b2906f3.mjs';
 import 'clsx';
@@ -1131,26 +1131,27 @@ const adapter = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const _page0  = () => import('./chunks/generic_270cf70e.mjs');
-const _page1  = () => import('./chunks/index_fd9131d1.mjs');
-const _page2  = () => import('./chunks/experiences_ce52bc80.mjs');
-const _page3  = () => import('./chunks/projects_7c54782b.mjs');
-const _page4  = () => import('./chunks/discord_d502b2db.mjs');
-const _page5  = () => import('./chunks/rss_acf57da5.mjs');
-const _page6  = () => import('./chunks/links_56092cc3.mjs');
-const _page7  = () => import('./chunks/optimizing-goroutines-sum-of-squares_79d75cbe.mjs');
-const _page8  = () => import('./chunks/simple-go-vs-goroutines_e0a5dac5.mjs');
-const _page9  = () => import('./chunks/mergesort-parallel_fd791d5b.mjs');
-const _page10  = () => import('./chunks/dnf5-step-by-step_8ef3e81e.mjs');
-const _page11  = () => import('./chunks/docker-and-go_64dd83c7.mjs');
-const _page12  = () => import('./chunks/blog_992132dc.mjs');
-const _page13  = () => import('./chunks/index_e5737b88.mjs');
-const _page14  = () => import('./chunks/discord_84ebe662.mjs');
-const _page15  = () => import('./chunks/links_9a8f0c80.mjs');
-const _page16  = () => import('./chunks/blog_43609932.mjs');
-const _page17  = () => import('./chunks/index_e34e5cfb.mjs');
-const _page18  = () => import('./chunks/discord_f763f3f0.mjs');
-const _page19  = () => import('./chunks/links_d3a849c0.mjs');
-const _page20  = () => import('./chunks/blog_52af1a8b.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/experiences.astro", _page2],["src/pages/projects.astro", _page3],["src/pages/discord.astro", _page4],["src/pages/rss.xml.js", _page5],["src/pages/links.astro", _page6],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page7],["src/pages/blog/simple-go-vs-goroutines.mdx", _page8],["src/pages/blog/mergesort-parallel.mdx", _page9],["src/pages/blog/dnf5-step-by-step.mdx", _page10],["src/pages/blog/docker-and-go.mdx", _page11],["src/pages/blog.astro", _page12],["src/pages/de/index.astro", _page13],["src/pages/de/discord.astro", _page14],["src/pages/de/links.astro", _page15],["src/pages/de/blog.astro", _page16],["src/pages/fr/index.astro", _page17],["src/pages/fr/discord.astro", _page18],["src/pages/fr/links.astro", _page19],["src/pages/fr/blog.astro", _page20]]);
+const _page1  = () => import('./chunks/index_d2bc1a6b.mjs');
+const _page2  = () => import('./chunks/experiences_4fef289e.mjs');
+const _page3  = () => import('./chunks/projects_3bcc2add.mjs');
+const _page4  = () => import('./chunks/discord_2b1eb3c4.mjs');
+const _page5  = () => import('./chunks/rss_3873b9fc.mjs');
+const _page6  = () => import('./chunks/links_a08d9d56.mjs');
+const _page7  = () => import('./chunks/talks_973d1e52.mjs');
+const _page8  = () => import('./chunks/optimizing-goroutines-sum-of-squares_678ee7fe.mjs');
+const _page9  = () => import('./chunks/simple-go-vs-goroutines_e9cd4b18.mjs');
+const _page10  = () => import('./chunks/mergesort-parallel_9547c615.mjs');
+const _page11  = () => import('./chunks/dnf5-step-by-step_e05441de.mjs');
+const _page12  = () => import('./chunks/docker-and-go_94b42c2c.mjs');
+const _page13  = () => import('./chunks/blog_557cacf1.mjs');
+const _page14  = () => import('./chunks/index_f9ed8f3b.mjs');
+const _page15  = () => import('./chunks/discord_e50a92c3.mjs');
+const _page16  = () => import('./chunks/links_8a8923ea.mjs');
+const _page17  = () => import('./chunks/blog_cde7c0f1.mjs');
+const _page18  = () => import('./chunks/index_f3db3ea1.mjs');
+const _page19  = () => import('./chunks/discord_9b20a0cd.mjs');
+const _page20  = () => import('./chunks/links_60abf2d7.mjs');
+const _page21  = () => import('./chunks/blog_942a14b0.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/experiences.astro", _page2],["src/pages/projects.astro", _page3],["src/pages/discord.astro", _page4],["src/pages/rss.xml.js", _page5],["src/pages/links.astro", _page6],["src/pages/talks.astro", _page7],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page8],["src/pages/blog/simple-go-vs-goroutines.mdx", _page9],["src/pages/blog/mergesort-parallel.mdx", _page10],["src/pages/blog/dnf5-step-by-step.mdx", _page11],["src/pages/blog/docker-and-go.mdx", _page12],["src/pages/blog.astro", _page13],["src/pages/de/index.astro", _page14],["src/pages/de/discord.astro", _page15],["src/pages/de/links.astro", _page16],["src/pages/de/blog.astro", _page17],["src/pages/fr/index.astro", _page18],["src/pages/fr/discord.astro", _page19],["src/pages/fr/links.astro", _page20],["src/pages/fr/blog.astro", _page21]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,
