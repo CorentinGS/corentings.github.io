@@ -1,6 +1,7 @@
+
 ---
 import Card from "./Card.astro";
-import {t} from "i18next";
+import {changeLanguage, t} from "i18next";
 
 
 const talks = [{
@@ -25,6 +26,10 @@ const podcasts = [{
     description: t('talks.avocado_1.description'),
     cta: t('talks.coming_soon'),
 }]
+
+changeLanguage("en");
+
+export const prerender = true;
 ---
 
 <div aria-labelledby={t('talks.talks')} class="md:border-l md:border-secondary-100 md:pl-6  mt-20 py-10">
