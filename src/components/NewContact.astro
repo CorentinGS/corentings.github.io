@@ -1,0 +1,168 @@
+---
+import {t} from "i18next";
+import {Icon} from "astro-iconify";
+---
+
+<section class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8">
+    <div class="container mx-auto px-5 py-24">
+        <div class="mb-20 text-center">
+            <h1 class="mb-4 text-center text-2xl font-bold sm:text-3xl">
+                {t('contacts.title')}
+            </h1>
+        </div>
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
+                <div class="lg:order-last" style="opacity: 1; transform: none;">
+                    <form action="https://api.web3forms.com/submit" method="POST"><h2
+                            class="font-display text-base font-semibold">Work inquiries</h2>
+                        <input type="hidden" name="access_key" value="44ccc411-85f0-44d9-acff-d259615a344d">
+                        <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="isolate mt-6 -space-y-px rounded-2xl ">
+                            <div class="group relative z-0 transition-all focus-within:z-10">
+                                <input id=":S1:"
+                                       autocomplete="name"
+                                       placeholder=" "
+                                       class="peer block w-full border border-base-content/90 bg-transparent px-6 pb-4 pt-12 text-base/6
+                                        ring-4 ring-transparent transition focus:outline-none  group-first:rounded-t-2xl group-last:rounded-b-2xl"
+                                       type="text"
+                                       name="name" required><label
+                                    for=":S1:"
+                                    class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
+                                    peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
+                                Name</label>
+                            </div>
+                            <div class="group relative z-0 transition-all focus-within:z-10"><input required id=":S2:"
+                                                                                                    autocomplete="email"
+                                                                                                    placeholder=" "
+                                                                                                    class="peer block w-full border border-base-content/90 bg-transparent px-6 pb-4 pt-12 text-base/6
+                                        ring-4 ring-transparent transition focus:outline-none  group-first:rounded-t-2xl group-last:rounded-b-2xl"
+                                                                                                    type="email"
+                                                                                                    name="email"><label
+                                    for=":S2:"
+                                    class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
+                                    peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
+                                Email</label>
+                            </div>
+                            <div class="group relative z-0 transition-all focus-within:z-10"><input id=":S3:"
+                                                                                                    autocomplete="organization"
+                                                                                                    placeholder=" "
+                                                                                                    class="peer block w-full border border-base-content/90 bg-transparent px-6 pb-4 pt-12 text-base/6
+                                        ring-4 ring-transparent transition focus:outline-none  group-first:rounded-t-2xl group-last:rounded-b-2xl"
+                                                                                                    type="text"
+                                                                                                    name="company"><label
+                                    for=":S3:"
+                                    class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
+                                    peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
+                                Company</label>
+                            </div>
+                            <div class="group relative z-0 transition-all focus-within:z-10"><input id=":S4:"
+                                                                                                    autocomplete="tel"
+                                                                                                    placeholder=" "
+                                                                                                    class="peer block w-full border border-base-content/90 bg-transparent px-6 pb-4 pt-12 text-base/6
+                                        ring-4 ring-transparent transition focus:outline-none  group-first:rounded-t-2xl group-last:rounded-b-2xl"
+                                                                                                    type="tel"
+                                                                                                    name="phone"><label
+                                    for=":S4:"
+                                    class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
+                                    peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
+                                Phone</label>
+                            </div>
+                            <div class="group relative z-0 transition-all focus-within:z-10"><input required id=":S5:"
+                                                                                                    placeholder=" "
+                                                                                                    class="peer block w-full border border-base-content/90 bg-transparent px-6 pb-4 pt-12 text-base/6
+                                        ring-4 ring-transparent transition focus:outline-none  group-first:rounded-t-2xl group-last:rounded-b-2xl"
+                                                                                                    type="text"
+                                                                                                    name="message"><label
+                                    for=":S5:"
+                                    class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
+                                    peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
+                                Message</label>
+
+                            </div>
+                        </div>
+                        <button class="mt-10 inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition btn btn-primary"
+                                type="submit"><span class="relative top-px">Let’s work together</span></button>
+                    </form>
+                </div>
+                <div style="opacity: 1; transform: none;">
+                    <h2 class="font-display text-base font-semibold ">My socials</h2>
+                    <p class="mt-6 text-base">Feel free to contact me using any of the following link</p>
+                    <ul role="list" class="mt-10 grid grid-cols-1 gap-1">
+                        <li class="w-full p-1 sm:w-8/12">
+                            <a
+                                    href="https://hachyderm.io/@TheLittlePrince"
+                                    target="_blank"
+                                    rel="me noopener noreferrer"
+                                    class="hoveranimation bounce-short group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
+                            >
+                                <Icon name="la:mastodon" class="mr-4 h-7 w-7 flex-shrink-0"/>
+                                <span class="title-font font-medium decoration-accent group-hover:underline"
+                                >@TheLittlePrince@hachyderm.io
+						</span>
+                            </a>
+                        </li>
+                        <li class="w-full p-1 sm:w-8/12">
+                            <a
+                                    href="https://github.com/corentings"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
+                            >
+                                <Icon name="lucide:github" class="mr-4 h-7 w-7 flex-shrink-0"/>
+
+                                <span class="title-font font-medium decoration-accent group-hover:underline"
+                                >@CorentinGS</span
+                                >
+                            </a>
+                        </li>
+                        <li class="w-full p-1 sm:w-8/12">
+                            <a
+                                    href="/discord"
+                                    rel="noopener noreferrer nofollow prefetch"
+                                    target="_blank"
+                                    class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
+                            >
+                                <Icon name="la:discord" class="mr-4 h-7 w-7 flex-shrink-0"/>
+
+                                <span class="title-font font-medium decoration-accent group-hover:underline"
+                                >The Kafejo</span
+                                >
+                            </a>
+                        </li>
+                        <li class="w-full p-1 sm:w-8/12">
+                            <a
+                                    href="mailto:contact@corentings.dev"
+                                    rel="noopener noreferrer nofollow prefetch"
+                                    target="_blank"
+                                    class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
+                            >
+                                <Icon name="lucide:mail" class="mr-4 h-7 w-7 flex-shrink-0"/>
+
+                                <span class="title-font font-medium decoration-accent group-hover:underline"
+                                >Email me</span
+                                >
+                            </a>
+                        </li>
+                        <li class="w-full p-1 sm:w-8/12">
+                            <a
+                                    href="https://twitter.com/GSCorentinDev"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
+                            >
+                                <Icon name="ri:twitter-x-fill" class="mr-4 h-7 w-7 flex-shrink-0"/>
+
+                                <span class="title-font font-medium decoration-accent group-hover:underline"
+                                >@GSCorentinDev</span
+                                >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
