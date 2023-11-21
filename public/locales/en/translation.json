@@ -4,19 +4,54 @@
   },
   "hero": {
     "cta": "Let's connect",
-    "hello": "Hello, I'm"
+    "hello": "Hello, I'm",
+    "title": "Freelance backend developer",
+    "i_code": "I <0>code</0>",
+    "i_write": "I <0>write</0>",
+    "i_contrib": "I <0>contribute</0>",
+    "i_materialize": "I <0>materialize dream</0>"
+  },
+  "introduction": {
+    "follow": "Follow me on",
+    "title": "I’m Corentin Giaufer Saubert. I'm 20 and I live in Nice.",
+    "content_a": "Currently, I'm studying for a BSC. Computer Science at the IU International University of Applied Sciences.",
+    "content_b": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications...",
+    "content_c": "My main programming language is Golang but I've also worked with java, python, typescript, C/C++ and more.",
+    "content_d": "I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
+    "content_e": "I'm also a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created Memnix, a free and open-source flashcard app for Android and Web.",
+    "content_f": "I like to manage communities and I'm currently the founder of The Kafejo a Discord community for developers and students.",
+    "content_g": "You might also meet me on a chess board as I'm playing a lot and I'm managing a chess community for my friend Stouuf on Discord, Twitch and YouTube.",
+    "content_h": "I'm also a big fan of Linux and I've been using it since my youngest age. At the moment, I'm using OpenSuse Tumbleweed as my main operating system and Void Linux on my laptop."
+  },
+  "work": {
+    "title": "I code for a living but also as a passion",
+    "content_a": "Currently, I'm studying for a BSC. Computer Science at the IU International University of Applied Sciences..",
+    "content_b": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications...",
+    "content_c": "My main programming language is Golang but I've also worked with java, python, typescript, C/C++ and more.",
+    "content_d": "I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
+    "content_e": "I'm also a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created Memnix, a free and open-source flashcard app for Android and Web.",
+    "content_f": "I like to manage communities and I'm currently the founder of The Kafejo a Discord community for developers and students.",
+    "content_g": "You might also meet me on a chess board as I'm playing a lot and I'm managing a chess community for my friend Stouuf on Discord, Twitch and YouTube.",
+    "content_h": "I'm also a big fan of Linux and I've been using it since my youngest age. At the moment, I'm using OpenSuse Tumbleweed as my main operating system and Void Linux on my laptop.",
+    "role_founder": "Founder",
+    "role_lead": "Lead developer",
+    "until_present": "Until present",
+    "work": "Work",
+    "download_cv": "Download CV"
   },
   "navbar": {
     "blog": "Blog",
     "links": "Contact",
-    "resume": "Resume"
+    "resume": "Resume",
+    "projects": "Projects",
+    "talks": "Talks",
+    "experiences": "Experiences",
+    "articles": "Articles"
   },
   "about": {
     "title": "About me",
     "presentation": "Hey, my name is Corentin and I'm 20 years old.",
-    "follow": "Follow me on",
     "work": "Work",
-    "download": "Download CV",
     "study": "Currently, I'm studying for a BSC. Computer Science at the <0>IU International University of Applied Sciences.</0>.",
     "code": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
     "lang": "My main programming language is <0>Golang</0> but I've also worked with java, python, typescript, C/C++ and more.",
@@ -113,7 +148,16 @@
     "discord": "I'm also on Discord, so feel free to join my server.",
     "blog": "My blog",
     "notif_title": "I created a friendly discord !",
-    "notif_content": "Join our community on The Kafejo, a friendly discord for developers and students !"
+    "notif_content": "Join our community on The Kafejo, a friendly discord for developers and students !",
+    "work_together": "Let's work together",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "company": "Company",
+    "phone": "Phone",
+    "email_me": "Email me",
+    "work_inquiries": "Work inquiries",
+    "my_socials": "My socials"
   },
   "blog": {
     "title": "My Articles",
@@ -148,11 +192,25 @@
     "read_article": "Read article"
   },
   "testimony": {
-    "title": "What My Clients Are Saying"
+    "title": "What My Clients Are Saying",
+    "stouuf": {
+      "job": "Coach",
+      "description": "Corentin is a very talented developer. He is very professional and always delivers on time. He is also very friendly and easy to work with. I highly recommend him."
+    },
+    "kitsu": {
+      "job": "discord server owner",
+      "description": "Corentin is a very talented developer. He is very professional and always delivers on time. He is also very friendly and easy to work with. I highly recommend him."
+    },
+    "memnix": {
+      "job": "founder",
+      "description": "Corentin is a very talented developer. He is very professional and always delivers on time. He is also very friendly and easy to work with. I highly recommend him."
+    }
   },
   "freelance": {
     "title": "I materialize dreams into reality.",
     "description": "I'm a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
-    "cta": "Let's work together"
+    "cta": "Let's work together",
+    "backend_title": "Backend development.",
+    "backend_description": "I create your backend using golang. The rest of the website will be a shell that uses lorem ipsum everywhere."
   }
 }

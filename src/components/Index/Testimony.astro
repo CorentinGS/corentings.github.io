@@ -1,14 +1,19 @@
 ---
+import {ImageMetadata} from "astro";
 interface Props {
     title: string
     description: string
-    image: string
+    image?: ImageMetadata
     name: string
     job: string
 }
 
-const { title, description, image, name, job }= Astro.props
+import {Picture} from 'astro:assets';
 
+
+const {title, description, image, name, job} = Astro.props
+
+const picture = image ? image : "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&w=640&q=75"
 ---
 
 <div class="p-8 border rounded-lg border-base-content/70">
@@ -17,8 +22,9 @@ const { title, description, image, name, job }= Astro.props
     </p>
 
     <div class="flex items-center mt-8 -mx-2">
-        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-base-content/20"
-             src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+        <Picture class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-base-content/20" width="56"
+                 height="56" quality="75" loading="lazy"
+                 src={picture} alt=""/>
 
         <div class="mx-2">
             <h1 class="font-semibold ">{name}</h1>

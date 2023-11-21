@@ -30,7 +30,7 @@ import Service from "./Service.astro";
                                                 <foreignObject width="655" height="680">
                                                     <Picture alt="" loading="lazy"
                                                              width="512" height="512"
-                                                             decoding="async" data-nimg="1"
+                                                             decoding="async" quality="50"
                                                              class="w-full bg-neutral-100 object-cover"
                                                              src={imgMemnix}/>
                                                 </foreignObject>
@@ -52,15 +52,14 @@ import Service from "./Service.astro";
                         <div>
                             <ul role="list"
                                 class="text-base mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-                                <Service title="Backend development."
-                                         description="I create your backend using golang. The rest of the website will be a shell that uses lorem ipsum everywhere."/>
-                                <Service title="Backend development."
-                                         description="I create your backend using golang. The rest of the website will be a shell that uses lorem ipsum everywhere."/>
-                                <Service title="Backend development."
-                                         description="I create your backend using golang. The rest of the website will be a shell that uses lorem ipsum everywhere."/>
-                                <Service title="Backend development."
-                                         description="I create your backend using golang. The rest of the website will be a shell that uses lorem ipsum everywhere."/>
-
+                                <Service title={t("freelance.backend_title")}
+                                         description={t("freelance.backend_description")}/>
+                                <Service title={t("freelance.backend_title")}
+                                         description={t("freelance.backend_description")}/>
+                                <Service title={t("freelance.backend_title")}
+                                         description={t("freelance.backend_description")}/>
+                                <Service title={t("freelance.backend_title")}
+                                         description={t("freelance.backend_description")}/>
                             </ul>
                         </div>
                     </div>
@@ -108,14 +107,14 @@ import Service from "./Service.astro";
 
             <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
                 <Testimony
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero adtempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpaaperiam dolorum, obcaecati corrupti aspernatur a."
-                        name="Stouuf" title="Coach" job="stouuf.net"/>
+                        description={t("testimony.stouuf.description")}
+                        name="Stouuf" title={t("testimony.stouuf.job")} job="stouuf.net"/>
                 <Testimony
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero adtempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpaaperiam dolorum, obcaecati corrupti aspernatur a."
-                        name="Stouuf" title="Coach" job="stouuf.net"/>
+                        description={t("testimony.kitsu.description")}
+                        name="Stouuf" title={t("testimony.kitsu.job")} job="stouuf.net"/>
                 <Testimony
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero adtempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpaaperiam dolorum, obcaecati corrupti aspernatur a."
-                        name="Stouuf" title="Coach" job="stouuf.net"/>
+                    description={t("testimony.memnix.description")}
+                    name="Stouuf" title={t("testimony.memnix.job")} job="stouuf.net"/>
 
             </section>
         </div>

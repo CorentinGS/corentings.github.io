@@ -38,10 +38,10 @@ import Logo from "../Index/Logo.astro";
             </label>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href={localizePath('/projects')} class="text-md font-semibold leading-6">Projects</a>
-            <a href={localizePath('/talks')} class="text-md font-semibold leading-6">Talks</a>
-            <a href={localizePath('/experiences')} class="text-md font-semibold leading-6">Experiences</a>
-            <a href={localizePath('/blog')} class="text-md font-semibold leading-6">Articles</a>
+            <a href={localizePath('/projects')} class="text-md font-semibold leading-6">{t("navbar.projects")}</a>
+            <a href={localizePath('/talks')} class="text-md font-semibold leading-6">{t("navbar.talks")}</a>
+            <a href={localizePath('/experiences')} class="text-md font-semibold leading-6">{t("navbar.experiences")}</a>
+            <a href={localizePath('/blog')} class="text-md font-semibold leading-6">{t("navbar.articles")}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <button class="btn btn-ghost" onclick="my_modal_1.showModal()">

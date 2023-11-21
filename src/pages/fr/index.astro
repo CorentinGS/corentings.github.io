@@ -13,6 +13,7 @@ import Code from "../../components/Code.astro";
 import Freelance from "../../components/Freelance.astro";
 import Write from "../../components/Write.astro";
 import Contact from "../../components/Contact.astro";
+import NewContact from "../../components/NewContact.astro";
 
 changeLanguage("fr");
 
@@ -28,13 +29,12 @@ export const prerender = true;
 		<Icon name="lucide:arrow-up" class="h-6 w-6" />
 	</div>
 	<Hero />
-	<About />
 	<Introduction />
 	<Code />
 	<Skills />
 	<Freelance />
 	<Write />
-	<Contact />
+	<NewContact />
 	<Footer />
 </Layout>
 

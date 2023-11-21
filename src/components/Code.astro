@@ -11,32 +11,11 @@ import {t} from "i18next";
             <div class="relative flex flex-col">
                 <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                     <div class="lg:order-first lg:row-span-2"><h1
-                            class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">I
-                        code for a living but also as a passion.</h1>
+                            class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">{t("work.title")}</h1>
                         <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-                            <p>Currently, I'm studying for a BSC. Computer Science at the IU International University of
-                                Applied Sciences..
-                                I'm also a freelance backend developer and I've been working on several projects for the
-                                past year including websites and web applications..</p>
-                            <p>My main programming language is Golang but I've also worked with java, python,
-                                typescript,
-                                C/C++ and more.
-                                I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar
-                                with
-                                Docker, Docker Compose and even Podman.
-                                Furthermore, I'm a passionate open-source enthusiast and have been contributing to
-                                several
-                                projects for a few years now. I've also created Memnix, a free and open-source flashcard
-                                app
-                                for Android and Web.</p>
-                            <p>I like to manage communities and I'm currently the founder of The Kafejo a Discord
-                                community
-                                for developers and students.
-                                You might also meet me on a chess board as I'm playing a lot and I'm managing a chess
-                                community for my friend Stouuf on Discord, Twitch and YouTube.
-                                I'm also a big fan of Linux and I've been using it since my youngest age. At the moment,
-                                I'm
-                                using OpenSuse Tumbleweed as my main operating system and Void Linux on my laptop.</p>
+                            <p>{t("work.content_a")}{" "}{t("work.content_b")}</p>
+                            <p>{t("work.content_c")} {" "} {t("work.content_d")} {" "} {t("work.content_e")}</p>
+                            <p>{t("work.content_f")} {" "} {t("work.content_g")}{" "} {t("work.content_h")}</p>
                         </div>
                     </div>
                     <div class="space-y-10 lg:pl-16 xl:pl-24">
@@ -49,21 +28,21 @@ import {t} from "i18next";
                                     <path d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
                                           class="stroke-base-content/60"></path>
                                 </svg>
-                                <span class="ml-3">{t("about.work")}</span></h2>
+                                <span class="ml-3">{t("work.work")}</span></h2>
                             <ol class="mt-6 space-y-4">
-                                <Work company="Memnix" role="Founder" startDate="2021" endDate="until Present"
+                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
                                       image={imgMemnix}/>
-                                <Work company="Memnix" role="Founder" startDate="2021" endDate="until Present"
+                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
                                       image={imgMemnix}/>
-                                <Work company="Memnix" role="Founder" startDate="2021" endDate="until Present"
+                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
                                       image={imgMemnix}/>
 
-                                <Work company="Memnix" role="Founder" startDate="2021" endDate="until Present"
+                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
                                       image={imgMemnix}/>
                             </ol>
                             <a class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 btn btn-ghost btn-md
                              transition active:transition-none bg-neutral-800 font-medium group mt-6 w-full"
-                               href="#">{t("about.download")}
+                               href="#">{t("work.download_cv")}
                                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                      class="h-4 w-4 stroke-base-content transition">
                                     <path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" stroke-width="1.5"

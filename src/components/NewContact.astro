@@ -30,7 +30,7 @@ import {Icon} from "astro-iconify";
                                     for=":S1:"
                                     class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
-                                Name</label>
+                                {t("contacts.name")}</label>
                             </div>
                             <div class="group relative z-0 transition-all focus-within:z-10"><input required id=":S2:"
                                                                                                     autocomplete="email"
@@ -42,7 +42,7 @@ import {Icon} from "astro-iconify";
                                     for=":S2:"
                                     class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
-                                Email</label>
+                                {t("contacts.email")}</label>
                             </div>
                             <div class="group relative z-0 transition-all focus-within:z-10"><input id=":S3:"
                                                                                                     autocomplete="organization"
@@ -54,7 +54,7 @@ import {Icon} from "astro-iconify";
                                     for=":S3:"
                                     class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
-                                Company</label>
+                                {t("contacts.company")}</label>
                             </div>
                             <div class="group relative z-0 transition-all focus-within:z-10"><input id=":S4:"
                                                                                                     autocomplete="tel"
@@ -66,7 +66,7 @@ import {Icon} from "astro-iconify";
                                     for=":S4:"
                                     class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
-                                Phone</label>
+                                {t("contacts.phone")}</label>
                             </div>
                             <div class="group relative z-0 transition-all focus-within:z-10"><input required id=":S5:"
                                                                                                     placeholder=" "
@@ -77,17 +77,18 @@ import {Icon} from "astro-iconify";
                                     for=":S5:"
                                     class="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90">
-                                Message</label>
+                                {t("contacts.message")}</label>
 
                             </div>
                         </div>
-                        <button class="mt-10 inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition btn btn-primary"
-                                type="submit"><span class="relative top-px">Let’s work together</span></button>
+                        <button class="mt-10 inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition btn btn-primary hoveranimation"
+                                type="submit"><span class="relative top-px">{t("contacts.work_together")}</span>
+                        </button>
                     </form>
                 </div>
                 <div style="opacity: 1; transform: none;">
-                    <h2 class="font-display text-base font-semibold ">My socials</h2>
-                    <p class="mt-6 text-base">Feel free to contact me using any of the following link</p>
+                    <h2 class="font-display text-base font-semibold ">{t("contacts.my_socials")}</h2>
+                    <p class="mt-6 text-base">{t("contacts.body")}</p>
                     <ul role="list" class="mt-10 grid grid-cols-1 gap-1">
                         <li class="w-full p-1 sm:w-8/12">
                             <a
@@ -140,7 +141,7 @@ import {Icon} from "astro-iconify";
                                 <Icon name="lucide:mail" class="mr-4 h-7 w-7 flex-shrink-0"/>
 
                                 <span class="title-font font-medium decoration-accent group-hover:underline"
-                                >Email me</span
+                                >{t("contacts.email_me")}</span
                                 >
                             </a>
                         </li>
