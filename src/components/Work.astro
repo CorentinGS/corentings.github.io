@@ -23,13 +23,13 @@ const {company, role, startDate, endDate, image} = Astro.props;
     </div>
     <dl class="flex flex-auto flex-wrap gap-x-2">
         <dt class="sr-only">Company</dt>
-        <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        <dd class="w-full flex-none text-sm font-medium ">
             {company}
         </dd>
         <dt class="sr-only">Role</dt>
-        <dd class="text-xs text-zinc-500 dark:text-zinc-400">{role}</dd>
+        <dd class="text-xs ">{role}</dd>
         <dt class="sr-only">Date</dt>
-        <dd class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+        <dd class="ml-auto text-xs"
             aria-label="2019 until Present">
             <time datetime={startDate}>{startDate}</time>
             <span aria-hidden="true">—</span>

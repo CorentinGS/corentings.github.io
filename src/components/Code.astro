@@ -1,8 +1,11 @@
 ---
 import {Picture} from 'astro:assets';
 import imgMemnix from '../assets/moutmout.png';
+import imgTFD from '../assets/logo_tfd.png';
 import Work from "./Work.astro";
 import {t} from "i18next";
+import imgMfStouuf from '../assets/MF_STOUUF.png';
+import imgOneToo from '../assets/onetoo.jpg';
 ---
 
 <section class=" bg-base-200">
@@ -11,11 +14,11 @@ import {t} from "i18next";
             <div class="relative flex flex-col">
                 <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                     <div class="lg:order-first lg:row-span-2"><h1
-                            class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">{t("work.title")}</h1>
-                        <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+                            class="text-4xl font-bold tracking-tight sm:text-5xl">{t("work.title")}</h1>
+                        <div class="mt-6 space-y-7 text-base ">
                             <p>{t("work.content_a")}{" "}{t("work.content_b")}</p>
                             <p>{t("work.content_c")} {" "} {t("work.content_d")} {" "} {t("work.content_e")}</p>
-                            <p>{t("work.content_f")} {" "} {t("work.content_g")}{" "} {t("work.content_h")}</p>
+                            <p>{t("work.content_f")} {" "} {t("work.content_g")}</p>
                         </div>
                     </div>
                     <div class="space-y-10 lg:pl-16 xl:pl-24">
@@ -30,19 +33,23 @@ import {t} from "i18next";
                                 </svg>
                                 <span class="ml-3">{t("work.work")}</span></h2>
                             <ol class="mt-6 space-y-4">
-                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
+                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021"
+                                      endDate={t("work.until_present")}
                                       image={imgMemnix}/>
-                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
-                                      image={imgMemnix}/>
-                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
-                                      image={imgMemnix}/>
-
-                                <Work company="Memnix" role={t("work.role_founder")} startDate="2021" endDate={t("work.until_present")}
-                                      image={imgMemnix}/>
+                                <Work company="Stouuf" role={t("work.role_cm")} startDate="2022"
+                                      endDate={t("work.until_present")}
+                                      image={imgMfStouuf}/>
+                                <Work company="TrustMe" role={t("work.role_lead")} startDate="Nov. 2022"
+                                      endDate="Nov. 2023"
+                                      image={imgTFD}/>
+                                <Work company="OneToo" role={t("work.role_trainee")} startDate="Jun. 2021"
+                                      endDate="Jul. 2021"
+                                      image={imgOneToo}/>
                             </ol>
                             <a class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 btn btn-ghost btn-md
-                             transition active:transition-none bg-neutral-800 font-medium group mt-6 w-full"
-                               href="#">{t("work.download_cv")}
+                            ring-1 ring-offset-base-50 ring-base-content ring-opacity-30
+                             transition active:transition-none font-medium group mt-6 w-full"
+                               href="https://www.linkedin.com/in/corentin-giaufer-saubert/">{t("work.download_cv")}
                                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                      class="h-4 w-4 stroke-base-content transition">
                                     <path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" stroke-width="1.5"
