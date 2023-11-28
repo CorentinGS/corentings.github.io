@@ -14,7 +14,7 @@ import {Icon} from "astro-iconify";
             <div class="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
                 <div class="lg:order-last" style="opacity: 1; transform: none;">
                     <form action="https://api.web3forms.com/submit" method="POST"><h2
-                            class="font-display text-base font-semibold">Work inquiries</h2>
+                            class="font-display text-base font-semibold">{t("contacts.work_inquiries")}</h2>
                         <input type="hidden" name="access_key" value="44ccc411-85f0-44d9-acff-d259615a344d">
                         <input type="hidden" name="subject" value="New Submission from Web3Forms">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -119,8 +119,9 @@ import {Icon} from "astro-iconify";
                         </li>
                         <li class="w-full p-1 sm:w-8/12">
                             <a
+                                    data-astro-prefetch="tap"
                                     href="/discord"
-                                    rel="noopener noreferrer nofollow prefetch"
+                                    rel="noopener noreferrer nofollow"
                                     target="_blank"
                                     class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
                             >
@@ -134,7 +135,7 @@ import {Icon} from "astro-iconify";
                         <li class="w-full p-1 sm:w-8/12">
                             <a
                                     href="mailto:contact@corentings.dev"
-                                    rel="noopener noreferrer nofollow prefetch"
+                                    rel="noopener noreferrer"
                                     target="_blank"
                                     class="hoveranimation group flex h-full items-center rounded bg-base-200 p-4 hover:bg-primary hover:text-primary-content"
                             >

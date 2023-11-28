@@ -138,16 +138,20 @@ const {title} = Astro.props
                             class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
                     />
                 </li>
-                <li><a href={localizePath('/projects')} class="text-md font-semibold leading-6">Projects</a>
+                <li><a href={localizePath('/projects')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Projects</a>
                 </li>
                 <li>
-                    <a href={localizePath('/talks')} class="text-md font-semibold leading-6">Talks</a>
+                    <a href={localizePath('/talks')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Talks</a>
                 </li>
                 <li>
-                    <a href={localizePath('/experiences')} class="text-md font-semibold leading-6">Experiences</a>
+                    <a href={localizePath('/experiences')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Experiences</a>
                 </li>
                 <li>
-                    <a href={localizePath('/blog')} class="text-md font-semibold leading-6">Articles</a>
+                    <a href={localizePath('/blog')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Articles</a>
                 </li>
             </ul>
         </label>

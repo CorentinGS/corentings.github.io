@@ -1,5 +1,4 @@
 import mdx from '@astrojs/mdx';
-import prefetch from '@astrojs/prefetch';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
@@ -15,6 +14,10 @@ export default defineConfig({
 	experimental: {
 		devOverlay: true,
 	},
+	prefetch: {
+		prefetchAll: false,
+		defaultStrategy: 'hover'
+	},
 	markdown: {
 		shikiConfig: {
 			theme: 'dracula',
@@ -22,7 +25,6 @@ export default defineConfig({
 		syntaxHighlight: 'shiki',
 	},
 	integrations: [
-		prefetch(),
 		tailwind(),
 		mdx({
 			shikiConfig: {
@@ -44,8 +46,8 @@ export default defineConfig({
 		}),
 		compress({
 			path: '.vercel/output/static',
-			CSS: false,
-			HTML: false,
+			CSS: true,
+			HTML: true,
 			JavaScript: false,
 		}),
 		compressor(),
