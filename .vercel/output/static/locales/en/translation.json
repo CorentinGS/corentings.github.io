@@ -26,7 +26,7 @@
   "work": {
     "title": "I code for a living but also as a passion",
     "content_a": "Currently, I'm studying for a BSC. Computer Science at the IU International University of Applied Sciences..",
-    "content_b": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications...",
+    "content_b": "I'm also a freelance backend developer and I've been working on several projects for the past year.",
     "content_c": "My main programming language is Golang but I've also worked with java, python, typescript, C/C++ and more.",
     "content_d": "I also have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
     "content_e": "I'm also a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created Memnix, a free and open-source flashcard app for Android and Web.",
@@ -199,8 +199,12 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
     },
     "stouuf": {
-      "job": "Coach",
-      "description": "Corentin is a very talented developer. He is very professional and always delivers on time. He is also very friendly and easy to work with. I highly recommend him."
+      "job": "Chess coach & streamer",
+      "description": "Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more (YouTube, Twitch, etc.). His work is very clean, and on top of that, he is very friendly, attentive, and available. I can only recommend Corentin!"
+    },
+    "placeholder2": {
+      "job": "Job",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
     }
   },
   "freelance": {
