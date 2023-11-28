@@ -31,7 +31,7 @@
         "community": "I like to manage communities and I'm currently the founder of <0> The Kafejo </0> a Discord community for developers and students.",
         "chess": "You might also meet me on a chess board as I'm playing a lot and I'm managing a chess community for my friend <0>Stouuf</0> on Discord, Twitch and YouTube.",
         "linux": "I'm also a big fan of Linux and I've been using it since my youngest age. At the moment, I'm using <0>OpenSuse Tumbleweed</0> as my main operating system and <1>Void Linux</1> on my laptop.",
-        "code": "I'm also a freelance backend developer and I've been working on several projects for the past year including websites and web applications."
+        "code": "I'm also a freelance backend developer and I've been working on several projects for the past years."
     },
     "skills": {
         "title": "My Favorite Stack"
@@ -200,12 +200,12 @@
         },
         "stouuf": {
             "job": "Coach",
-            "description": "Corentin is a very talented developer. He is very professional and always delivers on time. He is also very friendly and easy to work with. I highly recommend him."
+            "description": "Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more. His work is very clean, and on top of that, he is very friendly, attentive, and available."
         }
     },
     "freelance": {
         "title": "I materialize dreams into reality.",
-        "description": "I'm a freelance backend developer and I've been working on several projects for the past year including websites and web applications.",
+        "description": "I'm a freelance backend developer and I've been working on several projects for the past years.",
         "cta": "Let's work together",
         "backend_title": "Strategic Backend Solutions: Golang Development",
         "backend_description": "Experienced in Golang backend development, I focus on creating robust solutions. Utilizing Docker for seamless deployment and management, I navigate databases like PostgreSQL and MongoDB to optimize your application's data handling.",
