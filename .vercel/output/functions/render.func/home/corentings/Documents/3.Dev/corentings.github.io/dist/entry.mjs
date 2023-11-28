@@ -1,6 +1,6 @@
 import { d as appendForwardSlash, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, e as collapseDuplicateSlashes } from './chunks/astro/assets-service_c6401068.mjs';
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_f84163d7.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_f982bb3d.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
 import { A as AstroError, R as ReservedSlotName, o as renderSlotToString, p as renderJSX, q as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, t as ResponseSentError, v as CantRenderPage, w as renderPage$1 } from './chunks/astro_6b2906f3.mjs';
 import 'clsx';
