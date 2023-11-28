@@ -5,7 +5,7 @@ interface Props {
     description: string
     image?: ImageMetadata
     name: string
-    job: string
+    job?: string
 }
 
 import {Picture} from 'astro:assets';
@@ -28,7 +28,8 @@ const picture = image ? image : "https://spotlight.tailwindui.com/_next/image?ur
 
         <div class="mx-2">
             <h1 class="font-semibold ">{name}</h1>
-            <span class="text-sm text-base-content/70">{title}, {job}</span>
+            <span class="text-sm text-base-content/70">{title}</span><span
+                class={job ? "text-sm text-base-content/70" : "text-sm text-base-content/70 hidden"}>, {job}</span>
         </div>
     </div>
 </div>

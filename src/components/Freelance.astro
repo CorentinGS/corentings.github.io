@@ -5,6 +5,7 @@ import Testimony from "./Index/Testimony.astro";
 import {Picture} from 'astro:assets';
 import imgMemnix from '../assets/moutmout.png';
 import Service from "./Service.astro";
+import imgStouuf from '../assets/stouuf2.webp';
 ---
 
 <section class="bg-base-200">
@@ -103,13 +104,13 @@ import Service from "./Service.astro";
 
             <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
                 <Testimony
-                        description={t("testimony.placeholder.description")}
-                        name="John Doe" title={t("testimony.placeholder.job")} job="Placeholder Inc"/>
+                        description={t("testimony.stouuf.description")}
+                        name="Stephane Bressac" title={t("testimony.stouuf.job")} job="" image={imgStouuf}/>
                 <Testimony
                         description={t("testimony.placeholder.description")}
                         name="John Doe" title={t("testimony.placeholder.job")} job="Placeholder Inc"/>
                 <Testimony
-                        description={t("testimony.placeholder.description")}
+                        description={t("testimony.placeholder2.description")}
                         name="John Doe" title={t("testimony.placeholder.job")} job="Placeholder Inc"/>
 
             </section>
