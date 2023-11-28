@@ -3,7 +3,7 @@
         "title": "Développeur backend freelance"
     },
     "hero": {
-        "cta": "Let's connect",
+        "cta": "Connectons-nous",
         "hello": "Salut, je suis",
         "title": "Développeur backend freelance",
         "i_code": "Je <0>code</0>",
@@ -21,48 +21,48 @@
         "articles": "Articles"
     },
     "about": {
-        "title": "A Propos de moi",
+        "title": "À Propos de moi",
         "presentation": "Salut, je m'appelle Corentin et j'ai 20 ans.",
-        "study": "Actuellement, j'étudie pour obtenir une licence d'informatique à <0>IU International University of Applied Sciences.</0>.",
+        "study": "Actuellement, j'étudie pour obtenir une licence en informatique à l'<0>Université internationale des sciences appliquées IU</0>.",
         "work": "Je suis également un développeur backend freelance et je travaille sur plusieurs projets depuis un an, notamment des sites et des applications web.",
-        "lang": "Mon principal langage de programmation est <0>Golang</0> mais j'ai également travaillé avec java, python, typescript, C/C++ et plus encore.",
+        "lang": "Mon principal langage de programmation est <0>Golang</0> mais j'ai également travaillé avec Java, Python, TypeScript, C/C++ et plus encore.",
         "database": "J'ai également de l'expérience avec les bases de données telles que PostgreSQL ou MongoDB et je suis familier avec Docker, Docker Compose et même Podman.",
         "opensource": "De plus, je suis passionné par l'open-source et je contribue à plusieurs projets depuis quelques années maintenant. J'ai également créé <0>Memnix</0>, une application de flashcards open-source pour Android et le Web.",
         "community": "J'aime gérer des communautés et je suis actuellement le fondateur de <0>The Kafejo </0> une communauté Discord pour les développeurs et les étudiants.",
         "chess": "Vous pourriez aussi me rencontrer sur un échiquier car je joue beaucoup et je gère une communauté d'échecs pour mon ami <0>Stouuf</0> sur Discord, Twitch et YouTube.",
-        "linux": "Je suis également un grand fan de Linux et je l'utilise depuis mon plus jeune âge. En ce moment, j'utilise <0>OpenSuse Tumbleweed</0> comme système d'exploitation principal et <1>Void Linux</1> sur mon ordinateur portable.",
+        "linux": "Je suis également un grand fan de Linux et je l'utilise depuis mon plus jeune âge. En ce moment, j'utilise <0>OpenSuse Tumbleweed</0> comme système d'exploitation principal et <1>Fedora</1> sur mon ordinateur portable.",
         "code": "Je suis également développeur backend freelance et j'ai travaillé sur plusieurs projets ces dernières années."
     },
     "skills": {
-        "title": "Mes technos préférées"
+        "title": "Mes technologies préférées"
     },
     "projects": {
         "title": "Mes projets",
-        "tools": "Réalisé avec",
+        "tools": "Réalisés avec",
         "discover": "Découvrir",
         "memnix": "Memnix est un projet qui vise à créer des outils pour faciliter l'apprentissage des étudiants en travaillant de manière organisée. Il utilise son propre système de répétition espacée pour permettre aux étudiants de créer et de partager leur matériel d'apprentissage.",
         "gauntlet": "Gauntlet reborn est un projet qui vise à créer une nouvelle version du jeu d'arcade Gauntlet des années 80.",
         "uca_edt": "Un projet simple pour aider les étudiants de l'UCA (Université Côte d'Azur) à avoir une meilleure vue de leur emploi du temps et à pouvoir l'exporter vers leur agenda.",
-        "kitsu": "Kitsu est un bot discord polyvalent qui génère des statistiques pour votre serveur discord afin de vous aider à augmenter l'activité et à vous développer plus rapidement.",
+        "kitsu": "Kitsu est un bot Discord polyvalent qui génère des statistiques pour votre serveur Discord afin de vous aider à augmenter l'activité et à vous développer plus rapidement.",
         "stouuf": "Un site que j'ai réalisé pour Stouuf, un entraîneur d'échecs français. C'est un simple site web pour l'aider à promouvoir ses cours et trouver de nouveaux étudiants.",
         "echiquier_nicois": "C'est un site web que j'ai créé pour mon club d'échecs.",
         "description": "Voici quelques-uns de mes projets."
     },
     "experiences": {
-        "title": "My Experiences",
-        "since": "Since",
-        "skills": "Skills",
+        "title": "Mes Expériences",
+        "since": "Depuis",
+        "skills": "Compétences",
         "bsc_cs": {
             "title": "IU - BSC. Informatique",
             "description": "Licence en informatique à l'Université internationale des sciences appliquées IU."
         },
         "freelance": {
-            "title": "Freelance - Développeur Backendr",
+            "title": "Freelance - Développeur Backend",
             "description": "Développement de sites et d'applications web pour des clients."
         },
         "stouuf": {
-            "title": "Stouuf - Responsable de la communauté",
-            "description": "Gestion de la communauté Stouuf, développement du site web, organisation d'événements et modération de twitch."
+            "title": "Stouuf - Responsable de la Communauté",
+            "description": "Gestion de la communauté Stouuf, développement du site web, organisation d'événements et modération Twitch."
         },
         "educative": {
             "title": "Educative.io - Cours",
@@ -73,11 +73,11 @@
             "description": "A obtenu les certifications suivantes de HackerRank : Python(Basic), Golang(Basic), Golang(Intermediate)."
         },
         "memnix": {
-            "title": "Memnix - Développeur principal",
+            "title": "Memnix - Développeur Principal",
             "description": "Diriger le développement du projet Memnix, une plateforme d'apprentissage par répétition espacée."
         },
         "unice": {
-            "title": "Unice - Étudiant en informatique",
+            "title": "Unice - Étudiant en Informatique",
             "description": "Étudiant en informatique à l'Université Nice Côte d'Azur."
         },
         "onetoo": {
@@ -89,29 +89,29 @@
             "description": "Première année du programme d'ingénierie aéronautique à l'Estaca."
         },
         "bac": {
-            "title": "Baccalauréat scientifique - Diplômé avec mention très bien",
+            "title": "Baccalauréat Scientifique - Diplômé avec Mention Très Bien",
             "description": "Obtention du baccalauréat scientifique avec mention très bien, options sciences de l'ingénieur et anglais au lycée H. Cornat de Valognes, France."
         },
         "ktk": {
-            "title": "Acteur de théâtre - Addams Family Show",
+            "title": "Acteur de Théâtre - Addams Family Show",
             "description": "A joué dans le spectacle de la famille Addams à Orlando, en Floride, pour le Kids Theater Kamp."
         },
         "ppl": {
-            "title": "PPL - Private Pilot License",
-            "description": "Préparation à l'examen de licence de pilote privé (reporté pour cause de covid-19)"
+            "title": "PPL - Licence de Pilote Privé",
+            "description": "Préparation à l'examen de la licence de pilote privé (reporté en raison de la covid-19)."
         },
         "qualialtis": {
             "title": "Qualialtis - Stage",
-            "description": "Stage Devops chez Qualialtis pour apprendre le devops, kubernetes, helm et l'administration linux."
+            "description": "Stage DevOps chez Qualialtis pour apprendre le DevOps, Kubernetes, Helm et l'administration Linux."
         },
         "copernicus": {
-            "title": "Hackaton - Climathon Copernicus",
+            "title": "Hackathon - Climathon Copernicus",
             "description": "Climathon organisé par Copernicus à Toulouse pour trouver des solutions numériques à la crise climatique. Obtention du 3ème prix."
         },
         "description": "Voici mes expériences et mon parcours éducatif.",
         "chesscom_mod": {
             "title": "Modérateur Twitch - Chess.com",
-            "description": "Modération du canal twitch de Chesscomfr."
+            "description": "Modération du canal Twitch de Chesscomfr."
         }
     },
     "contacts": {
@@ -120,7 +120,7 @@
         "discord": "Je suis aussi sur Discord, n'hésitez pas à m'y rejoindre.",
         "blog": "Mon blog",
         "notif_title": "J'ai créé un serveur Discord !",
-        "notif_content": "Rejoignez nous sur The Kafejo",
+        "notif_content": "Rejoignez-nous sur The Kafejo",
         "work_together": "Travaillons ensemble",
         "name": "Nom",
         "email": "Email",
@@ -132,14 +132,14 @@
         "my_socials": "Mes réseaux sociaux"
     },
     "introduction": {
-        "follow": "Suivez moi sur",
+        "follow": "Suivez-moi sur",
         "title": "Je suis Corentin Giaufer Saubert. J'ai 20 ans et je vis à Nice.",
-        "content_a": "Lorsque je ne code pas, vous pouvez me trouver devant un échiquier ou dans un TIE pour suivre ma quête sans fin du Petit Prince. ",
-        "content_b": "Je suis également passionnée de cinéma, qu'il s'agisse de films, de séries ou d'animes ! J'aime aussi jouer du piano et m'entraîner au volley-ball...",
-        "content_c": "Ma passion pour les échecs remonte à mon enfance. J'ai rapidement eu envie d'aller plus loin et j'ai donc fini par rejoindre un club. Peu de temps après, je participais aux championnats de France. ",
-        "content_d": "Après avoir pratiqué en compétition jusqu'à l'adolescence, je joue à présent pour le plaisir. ",
+        "content_a": "Lorsque je ne code pas, vous pouvez me trouver devant un échiquier ou dans un TIE pour suivre ma quête sans fin du Petit Prince.",
+        "content_b": "Je suis également passionné de cinéma, qu'il s'agisse de films, de séries ou d'animes ! J'aime aussi jouer du piano et m'entraîner au volley-ball...",
+        "content_c": "Ma passion pour les échecs remonte à mon enfance. J'ai rapidement eu envie d'aller plus loin et j'ai donc fini par rejoindre un club. Peu de temps après, je participais aux championnats de France.",
+        "content_d": "Après avoir pratiqué en compétition jusqu'à l'adolescence, je joue à présent pour le plaisir.",
         "content_e": "Je contribue à diverses plateformes et communautés d'échecs, et je suis modérateur sur Twitch pour Chess.com.",
-        "content_f": "Depuis aussi longtemps que je me souvienne, Le Petit Prince a occupé une place spéciale dans mon cœur. Une histoire si simple et pourtant si complexe, si enfantine et pourtant si subtile. Le Petit Prince est devenu une étoile dans mon ciel. ",
+        "content_f": "Depuis aussi longtemps que je me souvienne, Le Petit Prince a occupé une place spéciale dans mon cœur. Une histoire si simple et pourtant si complexe, si enfantine et pourtant si subtile. Le Petit Prince est devenu une étoile dans mon ciel.",
         "content_g": "C'est ainsi que j'ai développé ma passion pour l'aéronautique.",
         "content_h": "Mon intérêt, constant au fil des années, m'a conduit à commencer des leçons de pilotage pendant l'adolescence, et je suis actuellement en train de finaliser ma PPL (Licence de Pilote Privé)."
     },
@@ -166,8 +166,8 @@
         "previous": "Précédent"
     },
     "talks": {
-        "title": "J'ai participé à plusieurs conférences et j'ai été interviewée pour différents podcasts.",
-        "description": "J'ai participé à des talks et des podcasts - quelle expérience incroyable !  Être sur scène, ressentir l'énergie, l'ambiance - c'est un vrai moment de partage. Et les podcasts ? C'est là que je me sens à l'aise. Ce n'est pas juste des opinions ; c'est une conversation authentique où la magie opère. J'ai hâte de partager des histoires et des rires avec vous !",
+        "title": "J'ai participé à plusieurs conférences et j'ai été interviewé pour différents podcasts.",
+        "description": "J'ai participé à des talks et des podcasts - quelle expérience incroyable ! Être sur scène, ressentir l'énergie, l'ambiance - c'est un vrai moment de partage. Et les podcasts ? C'est là que je me sens à l'aise. Ce n'est pas juste des opinions ; c'est une conversation authentique où la magie opère. J'ai hâte de partager des histoires et des rires avec vous !",
         "talks": "Talks",
         "podcasts": "Podcasts",
         "learn_more": "En savoir plus",
@@ -188,19 +188,19 @@
         }
     },
     "write": {
-        "title": "J'écris des articles au sujet de la programmation, des échecs et plus encore.",
-        "description": "J'aime écrire des articles au sujet de la programmation, des échecs et plus encore.",
+        "title": "J'écris des articles sur la programmation, les échecs et bien plus encore.",
+        "description": "J'aime écrire des articles sur la programmation, les échecs et bien plus encore.",
         "read_article": "Lire l'article"
     },
     "testimony": {
-        "title": "Ce Que mes Clients Disent",
+        "title": "Ce Que Mes Clients Disent",
         "placeholder": {
             "job": "Job",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
         },
         "stouuf": {
             "job": "Coach",
-            "description": "Corentin s’est occupé de la création de mon site ainsi que tout ce dont j’avais besoin niveau graphique, audio ou autres. Son travaille est très propre et en prime il est très sympathique, à l’écoute et disponible."
+            "description": "Corentin s'est occupé de la création de mon site ainsi que de tout ce dont j'avais besoin au niveau graphique, audio ou autres. Son travail est très propre, et en prime, il est très sympathique, à l'écoute et disponible."
         }
     },
     "freelance": {
