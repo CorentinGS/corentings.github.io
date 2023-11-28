@@ -1,7 +1,6 @@
 ---
 import {BlogPosts} from "../../utils/blog"
 import BlogPost from "../components/blog/BlogPost.astro"
-import Navbar from "../components/utils/Navbar.astro"
 import "../styles/global.css"
 import {localizePath} from "astro-i18next"
 import HeadHrefLangs from "../components/utils/HeadHrefLangs.astro"
@@ -14,6 +13,7 @@ import "@fontsource/syne"
 import "@fontsource/nunito"
 import {ViewTransitions} from "astro:transitions";
 import {Icon} from "astro-iconify";
+import PostHeader from "../components/utils/PostHeader.astro";
 
 const {frontmatter} = Astro.props
 const blogPost = BlogPosts.getBlogPostByLink(frontmatter.link)
@@ -22,7 +22,11 @@ let meta: {} = {}
 
 if (blogPost) {
     meta = {
-        title: blogPost.title, description: blogPost.description, image: blogPost.image, date: blogPost.date, author: "Corentin Giaufer--Saubert"
+        title: blogPost.title,
+        description: blogPost.description,
+        image: blogPost.image,
+        date: blogPost.date,
+        author: "Corentin Giaufer--Saubert"
     }
 } else {
     meta = {
@@ -82,7 +86,7 @@ if (blogPost) {
 <body>
 <main transition:animate="slide">
     <!-- Navbar -->
-    <Navbar lang={false}/>
+    <PostHeader lang={false}/>
     <!-- Page Slot -->
     <BlogPost blogPost={blogPost}>
         <slot/>
@@ -98,23 +102,22 @@ if (blogPost) {
             <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
 
                 <li class="py-3">
-                    <ThemeSwitcher/>
+                    <ThemeSwitcher class="mx-auto w-full"/>
                 </li>
-                <li class="py-3">
-                    <LanguageSelector
-                            showFlag={true}
-                            class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
-                    />
+                <li><a href={localizePath('/projects')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Projects</a>
                 </li>
                 <li>
-                    <a href={localizePath("/blog")} rel="nofollow prefetch"
-                    >{t("navbar.blog")}</a
-                    >
+                    <a href={localizePath('/talks')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Talks</a>
                 </li>
                 <li>
-                    <a href={localizePath("/links")} rel="nofollow prefetch">
-                        {t("navbar.links")}
-                    </a>
+                    <a href={localizePath('/experiences')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Experiences</a>
+                </li>
+                <li>
+                    <a href={localizePath('/blog')} data-astro-prefetch="tap"
+                       class="text-md font-semibold leading-6">Articles</a>
                 </li>
             </ul>
         </label>

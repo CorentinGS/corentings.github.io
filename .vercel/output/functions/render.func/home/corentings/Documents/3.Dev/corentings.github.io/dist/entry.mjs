@@ -1,8 +1,8 @@
-import { l as joinPaths, s as slash, p as prependForwardSlash, A as AstroError, m as ReservedSlotName, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, R as ResponseSentError, n as CantRenderPage, r as removeTrailingForwardSlash, o as collapseDuplicateSlashes } from './chunks/astro/assets-service_35dd625e.mjs';
+import { d as appendForwardSlash, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, e as collapseDuplicateSlashes } from './chunks/astro/assets-service_faadca22.mjs';
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, r as routeIsRedirect, b as redirectRouteStatus, e as redirectRouteGenerate, f as routeIsFallback, g as attachCookiesToResponse, h as createAPIContext, i as callEndpoint, j as callMiddleware, L as Logger, k as AstroIntegrationLogger, R as RouteCache, m as getSetCookiesFromResponse, n as createRenderContext, manifest } from './manifest_f06dffcb.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, b as computeCurrentLocale, r as routeIsRedirect, e as redirectRouteStatus, f as redirectRouteGenerate, g as routeIsFallback, h as attachCookiesToResponse, i as createAPIContext, j as callEndpoint, k as callMiddleware, L as Logger, m as AstroIntegrationLogger, R as RouteCache, n as getSetCookiesFromResponse, o as createRenderContext, manifest } from './manifest_422f984e.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
-import { i as renderSlotToString, j as renderJSX, k as chunkToString, l as renderPage$1 } from './chunks/astro/server_d37749a2.mjs';
+import { A as AstroError, R as ReservedSlotName, o as renderSlotToString, p as renderJSX, q as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, t as ResponseSentError, v as CantRenderPage, w as renderPage$1 } from './chunks/astro_d1250f0f.mjs';
 import 'clsx';
 import 'node:fs';
 import 'node:http';
@@ -16,6 +16,7 @@ import 'node:fs/promises';
 import { splitCookiesString } from 'set-cookie-parser';
 import { renderers } from './renderers.mjs';
 
+const routeDataSymbol = Symbol.for("astro.routeData");
 function checkIsLocaleFree(pathname, locales) {
   for (const locale of locales) {
     if (pathname.includes(`/${locale}`)) {
@@ -24,7 +25,7 @@ function checkIsLocaleFree(pathname, locales) {
   }
   return true;
 }
-function createI18nMiddleware(i18n, base) {
+function createI18nMiddleware(i18n, base, trailingSlash) {
   if (!i18n) {
     return void 0;
   }
@@ -32,8 +33,14 @@ function createI18nMiddleware(i18n, base) {
     if (!i18n) {
       return await next();
     }
-    const { locales, defaultLocale, fallback } = i18n;
+    const routeData = Reflect.get(context.request, routeDataSymbol);
+    if (routeData) {
+      if (routeData.type !== "page" && routeData.type !== "fallback") {
+        return await next();
+      }
+    }
     const url = context.url;
+    const { locales, defaultLocale, fallback } = i18n;
     const response = await next();
     if (response instanceof Response) {
       const separators = url.pathname.split("/");
@@ -47,8 +54,12 @@ function createI18nMiddleware(i18n, base) {
           headers: response.headers
         });
       } else if (i18n.routingStrategy === "prefix-always") {
-        if (url.pathname === base || url.pathname === base + "/") {
-          return context.redirect(`${joinPaths(base, i18n.defaultLocale)}`);
+        if (url.pathname === base + "/" || url.pathname === base) {
+          if (trailingSlash === "always") {
+            return context.redirect(`${appendForwardSlash(joinPaths(base, i18n.defaultLocale))}`);
+          } else {
+            return context.redirect(`${joinPaths(base, i18n.defaultLocale)}`);
+          }
         } else if (isLocaleFree) {
           return new Response(null, {
             status: 404,
@@ -74,6 +85,9 @@ function createI18nMiddleware(i18n, base) {
     return response;
   };
 }
+const i18nPipelineHook = (ctx) => {
+  Reflect.set(ctx.request, routeDataSymbol, ctx.route);
+};
 
 let lastMessage;
 let lastMessageCount = 1;
@@ -210,7 +224,10 @@ function createModuleScriptElementWithSrc(src, base, assetsPrefix) {
 }
 
 function matchRoute(pathname, manifest) {
-  return manifest.routes.find((route) => route.pattern.test(decodeURI(pathname)));
+  const decodedPathname = decodeURI(pathname);
+  return manifest.routes.find((route) => {
+    return route.pattern.test(decodedPathname) || route.fallbackRoutes.some((fallbackRoute) => fallbackRoute.pattern.test(decodedPathname));
+  });
 }
 
 const clientAddressSymbol$1 = Symbol.for("astro.clientAddress");
@@ -300,6 +317,7 @@ function createResult(args) {
   let cookies = args.cookies;
   let preferredLocale = void 0;
   let preferredLocaleList = void 0;
+  let currentLocale = void 0;
   const result = {
     styles: args.styles ?? /* @__PURE__ */ new Set(),
     scripts: args.scripts ?? /* @__PURE__ */ new Set(),
@@ -355,6 +373,23 @@ function createResult(args) {
           if (args.locales) {
             preferredLocaleList = computePreferredLocaleList(request, args.locales);
             return preferredLocaleList;
+          }
+          return void 0;
+        },
+        get currentLocale() {
+          if (currentLocale) {
+            return currentLocale;
+          }
+          if (args.locales) {
+            currentLocale = computeCurrentLocale(
+              request,
+              args.locales,
+              args.routingStrategy,
+              args.defaultLocale
+            );
+            if (currentLocale) {
+              return currentLocale;
+            }
           }
           return void 0;
         },
@@ -433,7 +468,9 @@ async function renderPage({ mod, renderContext, env, cookies }) {
     status: renderContext.status ?? 200,
     cookies,
     locals: renderContext.locals ?? {},
-    locales: renderContext.locales
+    locales: renderContext.locales,
+    defaultLocale: renderContext.defaultLocale,
+    routingStrategy: renderContext.routingStrategy
   });
   if (mod.frontmatter && typeof mod.frontmatter === "object" && "draft" in mod.frontmatter) {
     env.logger.warn(
@@ -458,6 +495,9 @@ async function renderPage({ mod, renderContext, env, cookies }) {
 class Pipeline {
   env;
   #onRequest;
+  #hooks = {
+    before: []
+  };
   /**
    * The handler accepts the *original* `Request` and result returned by the endpoint.
    * It must return a `Response`.
@@ -502,6 +542,9 @@ class Pipeline {
    * The main function of the pipeline. Use this function to render any route known to Astro;
    */
   async renderRoute(renderContext, componentInstance) {
+    for (const hook of this.#hooks.before) {
+      hook(renderContext, componentInstance);
+    }
     const result = await this.#tryRenderRoute(
       renderContext,
       this.env,
@@ -536,7 +579,9 @@ class Pipeline {
       props: renderContext.props,
       site: env.site,
       adapterName: env.adapterName,
-      locales: renderContext.locales
+      locales: renderContext.locales,
+      routingStrategy: renderContext.routingStrategy,
+      defaultLocale: renderContext.defaultLocale
     });
     switch (renderContext.route.type) {
       case "page":
@@ -566,17 +611,18 @@ class Pipeline {
         }
       }
       case "endpoint": {
-        return await callEndpoint(
-          mod,
-          env,
-          renderContext,
-          onRequest,
-          renderContext.locales
-        );
+        return await callEndpoint(mod, env, renderContext, onRequest);
       }
       default:
         throw new Error(`Couldn't find route of type [${renderContext.route.type}]`);
     }
+  }
+  /**
+   * Store a function that will be called before starting the rendering phase.
+   * @param fn
+   */
+  onBeforeRenderRoute(fn) {
+    this.#hooks.before.push(fn);
   }
 }
 
@@ -678,6 +724,11 @@ class App {
     }
     return pathname;
   }
+  #getPathnameFromRequest(request) {
+    const url = new URL(request.url);
+    const pathname = prependForwardSlash(this.removeBase(url.pathname));
+    return pathname;
+  }
   match(request, _opts = {}) {
     const url = new URL(request.url);
     if (this.#manifest.assets.has(url.pathname))
@@ -699,7 +750,8 @@ class App {
       return this.#renderError(request, { status: 404 });
     }
     Reflect.set(request, clientLocalsSymbol, locals ?? {});
-    const defaultStatus = this.#getDefaultStatusCode(routeData.route);
+    const pathname = this.#getPathnameFromRequest(request);
+    const defaultStatus = this.#getDefaultStatusCode(routeData, pathname);
     const mod = await this.#getModuleForRoute(routeData);
     const pageModule = await mod.page();
     const url = new URL(request.url);
@@ -712,7 +764,11 @@ class App {
     );
     let response;
     try {
-      let i18nMiddleware = createI18nMiddleware(this.#manifest.i18n, this.#manifest.base);
+      let i18nMiddleware = createI18nMiddleware(
+        this.#manifest.i18n,
+        this.#manifest.base,
+        this.#manifest.trailingSlash
+      );
       if (i18nMiddleware) {
         if (mod.onRequest) {
           this.#pipeline.setMiddlewareFunction(
@@ -721,6 +777,7 @@ class App {
         } else {
           this.#pipeline.setMiddlewareFunction(i18nMiddleware);
         }
+        this.#pipeline.onBeforeRenderRoute(i18nPipelineHook);
       } else {
         if (mod.onRequest) {
           this.#pipeline.setMiddlewareFunction(mod.onRequest);
@@ -765,7 +822,9 @@ class App {
         status,
         env: this.#pipeline.env,
         mod: handler,
-        locales: this.#manifest.i18n ? this.#manifest.i18n.locales : void 0
+        locales: this.#manifest.i18n?.locales,
+        routingStrategy: this.#manifest.i18n?.routingStrategy,
+        defaultLocale: this.#manifest.i18n?.defaultLocale
       });
     } else {
       const pathname = prependForwardSlash(this.removeBase(url.pathname));
@@ -797,7 +856,9 @@ class App {
         status,
         mod,
         env: this.#pipeline.env,
-        locales: this.#manifest.i18n ? this.#manifest.i18n.locales : void 0
+        locales: this.#manifest.i18n?.locales,
+        routingStrategy: this.#manifest.i18n?.routingStrategy,
+        defaultLocale: this.#manifest.i18n?.defaultLocale
       });
     }
   }
@@ -870,8 +931,15 @@ class App {
       headers: new Headers(Array.from(headers))
     });
   }
-  #getDefaultStatusCode(route) {
-    route = removeTrailingForwardSlash(route);
+  #getDefaultStatusCode(routeData, pathname) {
+    if (!routeData.pattern.exec(pathname)) {
+      for (const fallbackRoute of routeData.fallbackRoutes) {
+        if (fallbackRoute.pattern.test(pathname)) {
+          return 302;
+        }
+      }
+    }
+    const route = removeTrailingForwardSlash(routeData.route);
     if (route.endsWith("/404"))
       return 404;
     if (route.endsWith("/500"))
@@ -1098,25 +1166,33 @@ const adapter = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   createExports
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0  = () => import('./chunks/generic_bb0be8c2.mjs');
-const _page1  = () => import('./chunks/index_24ffc482.mjs');
-const _page2  = () => import('./chunks/discord_7701ace7.mjs');
-const _page3  = () => import('./chunks/rss_2507ab69.mjs');
-const _page4  = () => import('./chunks/links_2beb4093.mjs');
-const _page5  = () => import('./chunks/optimizing-goroutines-sum-of-squares_6e6b8705.mjs');
-const _page6  = () => import('./chunks/simple-go-vs-goroutines_aaa5ef0c.mjs');
-const _page7  = () => import('./chunks/mergesort-parallel_7834f451.mjs');
-const _page8  = () => import('./chunks/dnf5-step-by-step_1ad46c55.mjs');
-const _page9  = () => import('./chunks/docker-and-go_415d0668.mjs');
-const _page10  = () => import('./chunks/blog_b852d502.mjs');
-const _page11  = () => import('./chunks/index_58d41b43.mjs');
-const _page12  = () => import('./chunks/discord_04eb146c.mjs');
-const _page13  = () => import('./chunks/links_dda88be5.mjs');
-const _page14  = () => import('./chunks/blog_0f6be965.mjs');
-const _page15  = () => import('./chunks/index_7d3bbe0e.mjs');
-const _page16  = () => import('./chunks/discord_e40a5707.mjs');
-const _page17  = () => import('./chunks/links_27afc417.mjs');
-const _page18  = () => import('./chunks/blog_81394eee.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/discord.astro", _page2],["src/pages/rss.xml.js", _page3],["src/pages/links.astro", _page4],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page5],["src/pages/blog/simple-go-vs-goroutines.mdx", _page6],["src/pages/blog/mergesort-parallel.mdx", _page7],["src/pages/blog/dnf5-step-by-step.mdx", _page8],["src/pages/blog/docker-and-go.mdx", _page9],["src/pages/blog.astro", _page10],["src/pages/de/index.astro", _page11],["src/pages/de/discord.astro", _page12],["src/pages/de/links.astro", _page13],["src/pages/de/blog.astro", _page14],["src/pages/fr/index.astro", _page15],["src/pages/fr/discord.astro", _page16],["src/pages/fr/links.astro", _page17],["src/pages/fr/blog.astro", _page18]]);
+const _page0  = () => import('./chunks/generic_8bb05e6a.mjs');
+const _page1  = () => import('./chunks/index_344f92d7.mjs');
+const _page2  = () => import('./chunks/experiences_904309c9.mjs');
+const _page3  = () => import('./chunks/projects_4d7a0304.mjs');
+const _page4  = () => import('./chunks/discord_57cb2820.mjs');
+const _page5  = () => import('./chunks/rss_1323fc2b.mjs');
+const _page6  = () => import('./chunks/talks_c46a0b6a.mjs');
+const _page7  = () => import('./chunks/optimizing-goroutines-sum-of-squares_ad7a11a6.mjs');
+const _page8  = () => import('./chunks/simple-go-vs-goroutines_95d8394b.mjs');
+const _page9  = () => import('./chunks/mergesort-parallel_8d6b72fb.mjs');
+const _page10  = () => import('./chunks/dnf5-step-by-step_fabb235c.mjs');
+const _page11  = () => import('./chunks/docker-and-go_f5d3d274.mjs');
+const _page12  = () => import('./chunks/blog_cd5a9a0a.mjs');
+const _page13  = () => import('./chunks/index_fe39b8fd.mjs');
+const _page14  = () => import('./chunks/experiences_a93126a8.mjs');
+const _page15  = () => import('./chunks/projects_716b78ca.mjs');
+const _page16  = () => import('./chunks/discord_81145c7e.mjs');
+const _page17  = () => import('./chunks/links_ad60e694.mjs');
+const _page18  = () => import('./chunks/talks_210bc316.mjs');
+const _page19  = () => import('./chunks/blog_457f5c27.mjs');
+const _page20  = () => import('./chunks/index_206d3ecd.mjs');
+const _page21  = () => import('./chunks/experiences_b62709a0.mjs');
+const _page22  = () => import('./chunks/projects_c295be1f.mjs');
+const _page23  = () => import('./chunks/discord_0565efe4.mjs');
+const _page24  = () => import('./chunks/links_60003d90.mjs');
+const _page25  = () => import('./chunks/talks_93ade6e7.mjs');
+const _page26  = () => import('./chunks/blog_b72082e0.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/experiences.astro", _page2],["src/pages/projects.astro", _page3],["src/pages/discord.astro", _page4],["src/pages/rss.xml.js", _page5],["src/pages/talks.astro", _page6],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page7],["src/pages/blog/simple-go-vs-goroutines.mdx", _page8],["src/pages/blog/mergesort-parallel.mdx", _page9],["src/pages/blog/dnf5-step-by-step.mdx", _page10],["src/pages/blog/docker-and-go.mdx", _page11],["src/pages/blog.astro", _page12],["src/pages/de/index.astro", _page13],["src/pages/de/experiences.astro", _page14],["src/pages/de/projects.astro", _page15],["src/pages/de/discord.astro", _page16],["src/pages/de/links.astro", _page17],["src/pages/de/talks.astro", _page18],["src/pages/de/blog.astro", _page19],["src/pages/fr/index.astro", _page20],["src/pages/fr/experiences.astro", _page21],["src/pages/fr/projects.astro", _page22],["src/pages/fr/discord.astro", _page23],["src/pages/fr/links.astro", _page24],["src/pages/fr/talks.astro", _page25],["src/pages/fr/blog.astro", _page26]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,

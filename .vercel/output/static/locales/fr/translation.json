@@ -1,107 +1,217 @@
 {
-  "profile": {
-    "title": "Développeur backend freelance"
-  },
-  "hero": {
-    "cta": "Let's connect",
-    "hello": "Salut, je suis"
-  },
-  "navbar": {
-    "blog": "Blog",
-    "links": "Me contacter",
-    "resume": "CV"
-  },
-  "about": {
-    "title": "A Propos de moi",
-    "presentation": "Salut, je m'appelle Corentin et j'ai 20 ans.",
-    "study": "Actuellement, j'étudie pour obtenir une licence d'informatique à <0>IU International University of Applied Sciences.</0>.",
-    "work": "Je suis également un développeur backend freelance et je travaille sur plusieurs projets depuis un an, notamment des sites et des applications web.",
-    "lang": "Mon principal langage de programmation est <0>Golang</0> mais j'ai également travaillé avec java, python, typescript, C/C++ et plus encore.",
-    "database": "J'ai également de l'expérience avec les bases de données telles que PostgreSQL ou MongoDB et je suis familier avec Docker, Docker Compose et même Podman.",
-    "opensource": "De plus, je suis passionné par l'open-source et je contribue à plusieurs projets depuis quelques années maintenant. J'ai également créé <0>Memnix</0>, une application de flashcards open-source pour Android et le Web.",
-    "community": "J'aime gérer des communautés et je suis actuellement le fondateur de <0>The Kafejo </0> une communauté Discord pour les développeurs et les étudiants.",
-    "chess": "Vous pourriez aussi me rencontrer sur un échiquier car je joue beaucoup et je gère une communauté d'échecs pour mon ami <0>Stouuf</0> sur Discord, Twitch et YouTube.",
-    "linux": "Je suis également un grand fan de Linux et je l'utilise depuis mon plus jeune âge. En ce moment, j'utilise <0>OpenSuse Tumbleweed</0> comme système d'exploitation principal et <1>Void Linux</1> sur mon ordinateur portable."
-  },
-  "skills": {
-    "title": "Mes technos préférées"
-  },
-  "projects": {
-    "title": "Mes projets",
-    "tools": "Réalisé avec",
-    "discover": "Découvrir",
-    "memnix": "Memnix est un projet qui vise à créer des outils pour faciliter l'apprentissage des étudiants en travaillant de manière organisée. Il utilise son propre système de répétition espacée pour permettre aux étudiants de créer et de partager leur matériel d'apprentissage.",
-    "gauntlet": "Gauntlet reborn est un projet qui vise à créer une nouvelle version du jeu d'arcade Gauntlet des années 80.",
-    "uca_edt": "Un projet simple pour aider les étudiants de l'UCA (Université Côte d'Azur) à avoir une meilleure vue de leur emploi du temps et à pouvoir l'exporter vers leur agenda.",
-    "kitsu": "Kitsu est un bot discord polyvalent qui génère des statistiques pour votre serveur discord afin de vous aider à augmenter l'activité et à vous développer plus rapidement.",
-    "stouuf": "Un site que j'ai réalisé pour Stouuf, un entraîneur d'échecs français. C'est un simple site web pour l'aider à promouvoir ses cours et trouver de nouveaux étudiants.",
-    "echiquier_nicois": "C'est un site web que j'ai créé pour mon club d'échecs."
-  },
-  "experiences": {
-    "title": "My Experiences",
-    "since": "Since",
-    "skills": "Skills",
-    "bsc_cs": {
-      "title": "IU - BSC. Informatique",
-      "description": "Licence en informatique à l'Université internationale des sciences appliquées IU."
+    "profile": {
+        "title": "Développeur backend freelance"
+    },
+    "hero": {
+        "cta": "Connectons-nous",
+        "hello": "Salut, je suis",
+        "title": "Développeur backend freelance",
+        "i_code": "Je <0>code</0>",
+        "i_write": "J'<0>écris</0>",
+        "i_contrib": "Je <0>contribue</0>",
+        "i_materialize": "Je <0>matérialise les rêves</0>"
+    },
+    "navbar": {
+        "blog": "Blog",
+        "links": "Me contacter",
+        "resume": "CV",
+        "projects": "Projets",
+        "talks": "Talks",
+        "experiences": "Expériences",
+        "articles": "Articles"
+    },
+    "about": {
+        "title": "À Propos de moi",
+        "presentation": "Salut, je m'appelle Corentin et j'ai 20 ans.",
+        "study": "Actuellement, j'étudie pour obtenir une licence en informatique à l'<0>Université internationale des sciences appliquées IU</0>.",
+        "work": "Je suis également un développeur backend freelance et je travaille sur plusieurs projets depuis un an, notamment des sites et des applications web.",
+        "lang": "Mon principal langage de programmation est <0>Golang</0> mais j'ai également travaillé avec Java, Python, TypeScript, C/C++ et plus encore.",
+        "database": "J'ai également de l'expérience avec les bases de données telles que PostgreSQL ou MongoDB et je suis familier avec Docker, Docker Compose et même Podman.",
+        "opensource": "De plus, je suis passionné par l'open-source et je contribue à plusieurs projets depuis quelques années maintenant. J'ai également créé <0>Memnix</0>, une application de flashcards open-source pour Android et le Web.",
+        "community": "J'aime gérer des communautés et je suis actuellement le fondateur de <0>The Kafejo </0> une communauté Discord pour les développeurs et les étudiants.",
+        "chess": "Vous pourriez aussi me rencontrer sur un échiquier car je joue beaucoup et je gère une communauté d'échecs pour mon ami <0>Stouuf</0> sur Discord, Twitch et YouTube.",
+        "linux": "Je suis également un grand fan de Linux et je l'utilise depuis mon plus jeune âge. En ce moment, j'utilise <0>OpenSuse Tumbleweed</0> comme système d'exploitation principal et <1>Fedora</1> sur mon ordinateur portable.",
+        "code": "Je suis également développeur backend freelance et j'ai travaillé sur plusieurs projets ces dernières années."
+    },
+    "skills": {
+        "title": "Mes technologies préférées"
+    },
+    "projects": {
+        "title": "Mes projets",
+        "tools": "Réalisés avec",
+        "discover": "Découvrir",
+        "memnix": "Memnix est un projet qui vise à créer des outils pour faciliter l'apprentissage des étudiants en travaillant de manière organisée. Il utilise son propre système de répétition espacée pour permettre aux étudiants de créer et de partager leur matériel d'apprentissage.",
+        "gauntlet": "Gauntlet reborn est un projet qui vise à créer une nouvelle version du jeu d'arcade Gauntlet des années 80.",
+        "uca_edt": "Un projet simple pour aider les étudiants de l'UCA (Université Côte d'Azur) à avoir une meilleure vue de leur emploi du temps et à pouvoir l'exporter vers leur agenda.",
+        "kitsu": "Kitsu est un bot Discord polyvalent qui génère des statistiques pour votre serveur Discord afin de vous aider à augmenter l'activité et à vous développer plus rapidement.",
+        "stouuf": "Un site que j'ai réalisé pour Stouuf, un entraîneur d'échecs français. C'est un simple site web pour l'aider à promouvoir ses cours et trouver de nouveaux étudiants.",
+        "echiquier_nicois": "C'est un site web que j'ai créé pour mon club d'échecs.",
+        "description": "Voici quelques-uns de mes projets."
+    },
+    "experiences": {
+        "title": "Mes Expériences",
+        "since": "Depuis",
+        "skills": "Compétences",
+        "bsc_cs": {
+            "title": "IU - BSC. Informatique",
+            "description": "Licence en informatique à l'Université internationale des sciences appliquées IU."
+        },
+        "freelance": {
+            "title": "Freelance - Développeur Backend",
+            "description": "Développement de sites et d'applications web pour des clients."
+        },
+        "stouuf": {
+            "title": "Stouuf - Responsable de la Communauté",
+            "description": "Gestion de la communauté Stouuf, développement du site web, organisation d'événements et modération Twitch."
+        },
+        "educative": {
+            "title": "Educative.io - Cours",
+            "description": "Suivi de plusieurs cours sur Educative.io incluant mais non limité à : Golang, Python, C, Java, Structure de données..."
+        },
+        "hackerrank": {
+            "title": "HackerRank - Certifications",
+            "description": "A obtenu les certifications suivantes de HackerRank : Python(Basic), Golang(Basic), Golang(Intermediate)."
+        },
+        "memnix": {
+            "title": "Memnix - Développeur Principal",
+            "description": "Diriger le développement du projet Memnix, une plateforme d'apprentissage par répétition espacée."
+        },
+        "unice": {
+            "title": "Unice - Étudiant en Informatique",
+            "description": "Étudiant en informatique à l'Université Nice Côte d'Azur."
+        },
+        "onetoo": {
+            "title": "Onetoo - Stage",
+            "description": "Stage de développement de systèmes embarqués Linux et de logiciels QT. Rédaction de documentation technique et mise en place d'outils de gestion de projet."
+        },
+        "estaca": {
+            "title": "Estaca - Étudiant",
+            "description": "Première année du programme d'ingénierie aéronautique à l'Estaca."
+        },
+        "bac": {
+            "title": "Baccalauréat Scientifique - Diplômé avec Mention Très Bien",
+            "description": "Obtention du baccalauréat scientifique avec mention très bien, options sciences de l'ingénieur et anglais au lycée H. Cornat de Valognes, France."
+        },
+        "ktk": {
+            "title": "Acteur de Théâtre - Addams Family Show",
+            "description": "A joué dans le spectacle de la famille Addams à Orlando, en Floride, pour le Kids Theater Kamp."
+        },
+        "ppl": {
+            "title": "PPL - Licence de Pilote Privé",
+            "description": "Préparation à l'examen de la licence de pilote privé (reporté en raison de la covid-19)."
+        },
+        "qualialtis": {
+            "title": "Qualialtis - Stage",
+            "description": "Stage DevOps chez Qualialtis pour apprendre le DevOps, Kubernetes, Helm et l'administration Linux."
+        },
+        "copernicus": {
+            "title": "Hackathon - Climathon Copernicus",
+            "description": "Climathon organisé par Copernicus à Toulouse pour trouver des solutions numériques à la crise climatique. Obtention du 3ème prix."
+        },
+        "description": "Voici mes expériences et mon parcours éducatif.",
+        "chesscom_mod": {
+            "title": "Modérateur Twitch - Chess.com",
+            "description": "Modération du canal Twitch de Chesscomfr."
+        }
+    },
+    "contacts": {
+        "title": "Mes réseaux sociaux",
+        "body": "Voici mes réseaux sociaux et les liens vers mes projets.",
+        "discord": "Je suis aussi sur Discord, n'hésitez pas à m'y rejoindre.",
+        "blog": "Mon blog",
+        "notif_title": "J'ai créé un serveur Discord !",
+        "notif_content": "Rejoignez-nous sur The Kafejo",
+        "work_together": "Travaillons ensemble",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "company": "Entreprise",
+        "phone": "Téléphone",
+        "email_me": "Envoyez-moi un e-mail",
+        "work_inquiries": "Contacts professionnels",
+        "my_socials": "Mes réseaux sociaux"
+    },
+    "introduction": {
+        "follow": "Suivez-moi sur",
+        "title": "Je suis Corentin Giaufer Saubert. J'ai 20 ans et je vis à Nice.",
+        "content_a": "Lorsque je ne code pas, vous pouvez me trouver devant un échiquier ou dans un TIE pour suivre ma quête sans fin du Petit Prince.",
+        "content_b": "Je suis également passionné de cinéma, qu'il s'agisse de films, de séries ou d'animes ! J'aime aussi jouer du piano et m'entraîner au volley-ball...",
+        "content_c": "Ma passion pour les échecs remonte à mon enfance. J'ai rapidement eu envie d'aller plus loin et j'ai donc fini par rejoindre un club. Peu de temps après, je participais aux championnats de France.",
+        "content_d": "Après avoir pratiqué en compétition jusqu'à l'adolescence, je joue à présent pour le plaisir.",
+        "content_e": "Je contribue à diverses plateformes et communautés d'échecs, et je suis modérateur sur Twitch pour Chess.com.",
+        "content_f": "Depuis aussi longtemps que je me souvienne, Le Petit Prince a occupé une place spéciale dans mon cœur. Une histoire si simple et pourtant si complexe, si enfantine et pourtant si subtile. Le Petit Prince est devenu une étoile dans mon ciel.",
+        "content_g": "C'est ainsi que j'ai développé ma passion pour l'aéronautique.",
+        "content_h": "Mon intérêt, constant au fil des années, m'a conduit à commencer des leçons de pilotage pendant l'adolescence, et je suis actuellement en train de finaliser ma PPL (Licence de Pilote Privé)."
+    },
+    "work": {
+        "title": "Je code par passion",
+        "content_a": "Actuellement, je poursuis des études en informatique pour obtenir un BSC à l'Université Internationale des Sciences Appliquées IU.",
+        "content_b": "Je suis également développeur backend indépendant et j'ai travaillé sur plusieurs projets au cours de la dernière année.",
+        "content_c": "Mon langage principal est le Golang, mais j'ai également travaillé avec Java, Python, TypeScript, C/C++ et bien d'autres.",
+        "content_d": "J'ai également de l'expérience avec des bases de données telles que PostgreSQL ou MongoDB, et je suis familier avec Docker, Docker Compose et même Podman.",
+        "content_e": "Je suis aussi un passionné d'open source et je contribue à plusieurs projets depuis quelques années. J'ai créé Memnix, une application de cartes mémoire gratuite et open source pour Android et le Web.",
+        "content_f": "J'aime gérer des communautés, et je suis le fondateur de The Kafejo, une communauté Discord dédiée aux développeurs et aux étudiants.",
+        "content_g": "Je suis également un grand fan de Linux que j'utilise depuis mon plus jeune âge. En ce moment, j'utilise OpenSuse comme système d'exploitation principal et Fedora sur mon ordinateur portable.",
+        "role_founder": "Fondateur",
+        "role_lead": "Développeur principal",
+        "role_cm": "Community manager",
+        "role_trainee": "Développeur stagiaire",
+        "until_present": "Jusqu'à présent",
+        "work": "Travail",
+        "download_cv": "Télécharger le CV"
+    },
+    "blog": {
+        "title": "Mes Articles",
+        "description": "Vous trouverez ici les derniers articles du blog",
+        "previous": "Précédent"
+    },
+    "talks": {
+        "title": "J'ai participé à plusieurs conférences et j'ai été interviewé pour différents podcasts.",
+        "description": "J'ai participé à des talks et des podcasts - quelle expérience incroyable ! Être sur scène, ressentir l'énergie, l'ambiance - c'est un vrai moment de partage. Et les podcasts ? C'est là que je me sens à l'aise. Ce n'est pas juste des opinions ; c'est une conversation authentique où la magie opère. J'ai hâte de partager des histoires et des rires avec vous !",
+        "talks": "Talks",
+        "podcasts": "Podcasts",
+        "learn_more": "En savoir plus",
+        "watch": "Regarder",
+        "listen": "Écouter",
+        "coming_soon": "Prochainement",
+        "uca_1": {
+            "title": "Introduction aux Microservices avec Go",
+            "description": "Une conférence sur les microservices, et comment les construire avec Go."
+        },
+        "demi_siecle": {
+            "title": "Introduction à l'IA et aux considérations éthiques.",
+            "description": "Un Talk sur l'IA et ses considérations éthiques."
+        },
+        "avocado_1": {
+            "title": "Rencontrer CorentinGS",
+            "description": "Un podcast sur mon parcours de développeur et ma vision de l'avenir."
+        }
+    },
+    "write": {
+        "title": "J'écris des articles sur la programmation, les échecs et bien plus encore.",
+        "description": "J'aime écrire des articles sur la programmation, les échecs et bien plus encore.",
+        "read_article": "Lire l'article"
+    },
+    "testimony": {
+        "title": "Ce Que Mes Clients Disent",
+        "placeholder": {
+            "job": "Job",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        },
+        "stouuf": {
+            "job": "Coach",
+            "description": "Corentin s'est occupé de la création de mon site ainsi que de tout ce dont j'avais besoin au niveau graphique, audio ou autres. Son travail est très propre, et en prime, il est très sympathique, à l'écoute et disponible."
+        }
     },
     "freelance": {
-      "title": "Freelance - Développeur Backendr",
-      "description": "Développement de sites et d'applications web pour des clients."
-    },
-    "stouuf": {
-      "title": "Stouuf - Responsable de la communauté",
-      "description": "Gestion de la communauté Stouuf, développement du site web, organisation d'événements et modération de twitch."
-    },
-    "educative": {
-      "title": "Educative.io - Cours",
-      "description": "Suivi de plusieurs cours sur Educative.io incluant mais non limité à : Golang, Python, C, Java, Structure de données..."
-    },
-    "hackerrank": {
-      "title": "HackerRank - Certifications",
-      "description": "A obtenu les certifications suivantes de HackerRank : Python(Basic), Golang(Basic), Golang(Intermediate)."
-    },
-    "memnix": {
-      "title": "Memnix - Développeur principal",
-      "description": "Diriger le développement du projet Memnix, une plateforme d'apprentissage par répétition espacée."
-    },
-    "unice": {
-      "title": "Unice - Étudiant en informatique",
-      "description": "Étudiant en informatique à l'Université Nice Côte d'Azur."
-    },
-    "onetoo": {
-      "title": "Onetoo - Stage",
-      "description": "Stage de développement de systèmes embarqués Linux et de logiciels QT. Rédaction de documentation technique et mise en place d'outils de gestion de projet."
-    },
-    "estaca": {
-      "title": "Estaca - Étudiant",
-      "description": "Première année du programme d'ingénierie aéronautique à l'Estaca."
-    },
-    "bac": {
-      "title": "Baccalauréat scientifique - Diplômé avec mention très bien",
-      "description": "Obtention du baccalauréat scientifique avec mention très bien, options sciences de l'ingénieur et anglais au lycée H. Cornat de Valognes, France."
-    },
-    "ktk": {
-      "title": "Acteur de théâtre - Addams Family Show",
-      "description": "A joué dans le spectacle de la famille Addams à Orlando, en Floride, pour le Kids Theater Kamp."
-    },
-    "ppl": {
-      "title": "PPL - Private Pilot License",
-      "description": "Préparation à l'examen de licence de pilote privé (reporté pour cause de covid-19)"
-    },
-    "qualialtis": {
-      "title": "Qualialtis - Stage",
-      "description": "Stage Devops chez Qualialtis pour apprendre le devops, kubernetes, helm et l'administration linux."
-    },
-    "copernicus": {
-      "title": "Hackaton - Climathon Copernicus",
-      "description": "Climathon organisé par Copernicus à Toulouse pour trouver des solutions numériques à la crise climatique. Obtention du 3ème prix."
+        "title": "Je transforme les rêves en réalité.",
+        "description": "Je suis un développeur backend freelance et j'ai travaillé sur plusieurs projets ces dernières années.",
+        "cta": "Travaillons ensemble",
+        "backend_title": "Solutions stratégiques de backend : Développement Golang",
+        "backend_description": "Expérimenté dans le développement backend en Golang, je me concentre sur la création de solutions robustes. En utilisant Docker pour un déploiement et une gestion fluides, je maîtrise les bases de données telles que PostgreSQL et MongoDB afin d'optimiser la gestion des données de votre application.",
+        "frontend_title": "Sites web soigneusement conçus : Développement avec Astro et Vue",
+        "frontend_description": "Dévoué à la création de sites web précis, je me spécialise dans Astro et VueJS. Découvrez la fusion de l'innovation et de la fonctionnalité pour une présence en ligne exceptionnelle.",
+        "maintenance_title": "Services de maintenance préventive",
+        "maintenance_description": "Garantissant une excellence durable, je propose des services de maintenance. Confiez votre infrastructure numérique à mes soins méticuleux et profitez de la tranquillité d'esprit qui accompagne une infrastructure numérique bien entretenue."
     }
-  },
-  "contacts": {
-    "title": "Mes réseaux sociaux",
-    "blog": "Mon blog",
-    "notif_title": "J'ai créé un serveur Discord !",
-    "notif_content": "Rejoignez nous sur The Kafejo"
-  }
 }

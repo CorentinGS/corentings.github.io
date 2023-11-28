@@ -1,0 +1,119 @@
+---
+import {t} from "i18next";
+import Testimony from "./Index/Testimony.astro";
+
+import {Picture} from 'astro:assets';
+import imgMemnix from '../assets/moutmout.png';
+import Service from "./Service.astro";
+import imgStouuf from '../assets/stouuf2.webp';
+---
+
+<section class="bg-base-200">
+    <div class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8 ">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+            <div class="relative flex flex-col items-center">
+                <h2 class="mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl">
+                    {t('freelance.title')}
+                </h2>
+                <p class="mt-8 text-xl">
+                    {t('freelance.description')}
+                </p>
+            </div>
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-16">
+                <div class="mx-auto max-w-2xl lg:max-w-none">
+                    <div class="lg:flex lg:items-center lg:justify-end">
+                        <div class="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
+                            <div class="w-[33.75rem] flex-none lg:w-[45rem]" style="opacity: 1; transform: none;">
+                                <div class="justify-center lg:justify-end relative flex aspect-[719/680] w-full grayscale">
+                                    <svg viewBox="0 0 655 680" fill="none" class="h-full">
+                                        <g clip-path="url(#:S1:-clip)" class="group">
+                                            <g class="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+                                                <foreignObject width="655" height="680">
+                                                    <Picture alt="" loading="lazy"
+                                                             width="512" height="512"
+                                                             decoding="async" quality="50"
+                                                             class="w-full bg-neutral-100 object-cover"
+                                                             src={imgMemnix}/>
+                                                </foreignObject>
+                                            </g>
+                                            <use href="#:S1:-shape" stroke-width="2"
+                                                 class="stroke-neutral-950/10"></use>
+                                        </g>
+                                        <defs>
+                                            <clipPath id=":S1:-clip">
+                                                <path id=":S1:-shape"
+                                                      d="M537.827 9.245A11.5 11.5 0 0 1 549.104 0h63.366c7.257 0 12.7 6.64 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 586.87 151h-28.275a15.999 15.999 0 0 0-15.689 12.862l-59.4 297c-1.98 9.901 5.592 19.138 15.689 19.138h17.275l.127.001c.85.009 1.701.074 2.549.009 11.329-.874 21.411-7.529 24.88-25.981.002-.012.016-.016.023-.007.008.009.022.005.024-.006l24.754-123.771A11.5 11.5 0 0 1 580.104 321h63.366c7.257 0 12.7 6.639 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 617.87 472H559c-22.866 0-28.984 7.98-31.989 25.931-.004.026-.037.035-.052.014-.015-.02-.048-.013-.053.012l-24.759 123.798A11.5 11.5 0 0 1 490.87 631h-29.132a14.953 14.953 0 0 0-14.664 12.021c-4.3 21.502-23.18 36.979-45.107 36.979H83.502c-29.028 0-50.8-26.557-45.107-55.021l102.4-512C145.096 91.477 163.975 76 185.902 76h318.465c10.136 0 21.179-5.35 23.167-15.288l10.293-51.467Zm-512 160A11.5 11.5 0 0 1 37.104 160h63.366c7.257 0 12.7 6.639 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 74.87 311H11.504c-7.257 0-12.7-6.639-11.277-13.755l25.6-128Z"
+                                                      fill-rule="evenodd" clip-rule="evenodd"></path>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <ul role="list"
+                                class="text-base mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+                                <Service title={t("freelance.backend_title")}
+                                         description={t("freelance.backend_description")}/>
+                                <Service title={t("freelance.frontend_title")}
+                                         description={t("freelance.frontend_description")}/>
+                                <Service title={t("freelance.maintenance_title")}
+                                         description={t("freelance.maintenance_description")}/>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-base-100 ">
+    <div class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8">
+        <div class="container px-6 py-10 mx-auto">
+            <div class="mt-6 md:flex md:items-center md:justify-between">
+                <div>
+                    <h1 class="text-2xl font-semibold capitalize lg:text-3xl">
+                        {t('testimony.title')}
+                    </h1>
+
+                    <div class="flex mx-auto mt-6">
+                        <span class="inline-block w-40 h-1 bg-accent/70 rounded-full"></span>
+                        <span class="inline-block w-3 h-1 mx-1 bg-accent/70 rounded-full"></span>
+                        <span class="inline-block w-1 h-1 bg-accent/70  rounded-full"></span>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8 md:mt-0 hidden">
+                    <button title="left arrow" class="p-2 mx-3 transition-colors duration-300 btn btn-circle btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+
+                    <button title="right arrow"
+                            class="p-2 mx-3 transition-colors duration-300 btn btn-circle btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
+                <Testimony
+                        description={t("testimony.stouuf.description")}
+                        name="Stephane Bressac" title={t("testimony.stouuf.job")} job="" image={imgStouuf}/>
+                <Testimony
+                        description={t("testimony.placeholder.description")}
+                        name="John Doe" title={t("testimony.placeholder.job")} job="Placeholder Inc"/>
+                <Testimony
+                        description={t("testimony.placeholder.description")}
+                        name="John Doe" title={t("testimony.placeholder.job")} job="Placeholder Inc"/>
+
+            </section>
+        </div>
+    </div>
+</section>
