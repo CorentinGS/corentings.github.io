@@ -1,60 +1,54 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import compress from 'astro-compress';
+import compress from "astro-compress";
+
 import compressor from 'astro-compressor';
 import astroI18next from 'astro-i18next';
 import { defineConfig } from 'astro/config';
-
 import vercel from '@astrojs/vercel/serverless';
+
+import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://corentings.dev',
-	experimental: {
-		devOverlay: true,
-	},
-	prefetch: {
-		prefetchAll: false,
-		defaultStrategy: 'hover'
-	},
-	markdown: {
-		shikiConfig: {
-			theme: 'dracula',
-		},
-		syntaxHighlight: 'shiki',
-	},
-	integrations: [
-		tailwind(),
-		mdx({
-			shikiConfig: {
-				theme: 'dracula',
-			},
-			syntaxHighlight: 'shiki',
-		}),
-		astroI18next(),
-		sitemap({
-			lastmod: new Date(),
-			i18n: {
-				defaultLocale: 'en',
-				locales: {
-					en: 'en-US',
-					fr: 'fr-FR',
-					de: 'de-DE',
-				},
-			},
-		}),
-		compress({
-			path: '.vercel/output/static',
-			CSS: true,
-			HTML: true,
-			JavaScript: false,
-		}),
-		compressor(),
-	],
-	output: 'server',
-	adapter: vercel({
-		functionPerRoute: false,
-	}),
-	//adapter: node({    mode: "standalone"  })
+  site: 'https://corentings.dev',
+  experimental: {
+    devOverlay: true
+  },
+  prefetch: {
+    prefetchAll: false,
+    defaultStrategy: 'hover'
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'dracula'
+    },
+    syntaxHighlight: 'shiki'
+  },
+  integrations: [tailwind(), mdx({
+    shikiConfig: {
+      theme: 'dracula'
+    },
+    syntaxHighlight: 'shiki'
+  }), astroI18next(), sitemap({
+    lastmod: new Date(),
+    i18n: {
+      defaultLocale: 'en',
+      locales: {
+        en: 'en-US',
+        fr: 'fr-FR',
+        de: 'de-DE'
+      }
+    }
+  }), compress({
+    path: ".vercel/output/static",
+    CSS: false,
+    HTML: true,
+    JavaScript: false,
+  }), critters(), compressor()],
+  output: 'server',
+  adapter: vercel({
+    functionPerRoute: false
+  })
 });

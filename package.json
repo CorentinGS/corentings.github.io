@@ -29,6 +29,7 @@
     "@rollup/plugin-json": "^6.0.1",
     "astro": "^3.6.1",
     "astro-analytics": "^2.7.0",
+    "astro-critters": "^2.0.11",
     "astro-i18next": "1.0.0-beta.21",
     "astro-iconify": "^1.2.0",
     "astro-seo-schema": "^3.2.1",
