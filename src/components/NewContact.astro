@@ -16,7 +16,7 @@ import {Icon} from "astro-iconify";
                     <form method="POST" id="form"><h2
                             class="font-display text-base font-semibold">{t("contacts.work_inquiries")}</h2>
                         <input type="hidden" name="access_key" value="44ccc411-85f0-44d9-acff-d259615a344d">
-                        <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                        <input type="hidden" name="subject" value="New contact from corentings.dev">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="isolate mt-6 -space-y-px rounded-2xl ">
                             <div class="group relative z-0 transition-all focus-within:z-10">
@@ -165,15 +165,15 @@ import {Icon} from "astro-iconify";
             </div>
         </div>
         <div role="alert" class="alert mt-10 hidden" id="alert-loading">
-            <span class="loading loading-dots loading-sm text-accent"></span><span> Sending Email</span>
+            <span class="loading loading-dots loading-sm text-accent"></span><span>{t("contacts.sending_form")}</span>
         </div>
         <div role="alert" class="alert mt-10 hidden" id="alert-success">
             <Icon name="lucide:mail-check" class="h-7 w-7 flex-shrink-0 stroke-success text-success"/>
-            <span>Email Sent</span>
+            <span>{t("contacts.sent_form")}</span>
         </div>
         <div role="alert" class="alert mt-10 hidden" id="alert-error">
             <Icon name="lucide:mail-warning" class="h-7 w-7 flex-shrink-0 stroke-error text-error"/>
-            <span>Error while sending the form, please try again or contact me directly by email</span>
+            <span>{t("contacts.error_form")}</span>
         </div>
     </div>
 

@@ -129,7 +129,10 @@
     "phone": "Phone",
     "email_me": "Email me",
     "work_inquiries": "Work inquiries",
-    "my_socials": "My socials"
+    "my_socials": "My socials",
+    "sending_form": "Sending form...",
+    "sent_form": "Form sent !",
+    "error_form": "Error while sending form ! Please try again later or contact me directly."
   },
   "introduction": {
     "follow": "Follow me on",
