@@ -129,7 +129,10 @@
         "phone": "Téléphone",
         "email_me": "Envoyez-moi un e-mail",
         "work_inquiries": "Contacts professionnels",
-        "my_socials": "Mes réseaux sociaux"
+        "my_socials": "Mes réseaux sociaux",
+        "sending_form": "Envoi du formulaire...",
+        "sent_form": "Formulaire envoyé !",
+        "error_form": "Erreur lors de l'envoi du formulaire ! Veuillez réessayer plus tard ou me contacter directement."
     },
     "introduction": {
         "follow": "Suivez-moi sur",

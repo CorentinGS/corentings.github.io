@@ -3,47 +3,47 @@ const themes = ['light', 'dark', 'dracula', 'memnix', 'luxury', 'cyberpunk', 'bl
 ---
 
 <select
-	data-choose-theme
-	id="theme-select"
-	name="theme-option"
-	class="select select-bordered select-secondary select-md max-w-xs bg-base-200 text-base-content"
+        data-choose-theme
+        id="theme-select"
+        name="theme-option"
+        class="select select-bordered select-secondary select-md max-w-xs bg-base-200 text-base-content"
 >
-	<option disabled selected>Pick your theme</option>
-	{
-		themes.map((theme) => (
-			<option value={theme}>{theme.charAt(0).toUpperCase() + theme.slice(1)}</option>
-		))
-	}
+    <option disabled selected>Pick your theme</option>
+    {
+        themes.map((theme) => (
+                <option value={theme}>{theme.charAt(0).toUpperCase() + theme.slice(1)}</option>
+        ))
+    }
 </select>
 
 <style></style>
 
-<script>
-	const createEvent = () => {
-		// Get the select element
-		const themeSelect = document.querySelector('#theme-select');
+<script type="text/javascript">
+    const createEvent = () => {
+        // Get the select element
+        const themeSelect = document.querySelector('#theme-select');
 
-		// Add event listener to the select element
-		themeSelect.addEventListener('change', function () {
-			// Update the localStorage with the selected theme
-			localStorage.setItem('theme', themeSelect.value);
-			// force new theme
-			console.log('theme changed');
-			document.documentElement.setAttribute('data-theme', themeSelect.value);
-		});
+        // Add event listener to the select element
+        themeSelect.addEventListener('change', function () {
+            // Update the localStorage with the selected theme
+            localStorage.setItem('theme', themeSelect.value);
+            // force new theme
+            console.log('theme changed');
+            document.documentElement.setAttribute('data-theme', themeSelect.value);
+        });
 
-		// Set the initially selected theme from localStorage
-		const selectedTheme = localStorage.getItem('theme');
-		if (selectedTheme) {
-			// Set the selected option in the select element
-			themeSelect.value = selectedTheme;
-		}
-	};
+        // Set the initially selected theme from localStorage
+        const selectedTheme = localStorage.getItem('theme');
+        if (selectedTheme) {
+            // Set the selected option in the select element
+            themeSelect.value = selectedTheme;
+        }
+    };
 
-	document.addEventListener('astro:page-load', () => {
-		// This only runs once.
-		createEvent();
-	});
+    document.addEventListener('astro:page-load', () => {
+        // This only runs once.
+        createEvent();
+    });
 
-	document.addEventListener('DOMContentLoaded', createEvent);
+    document.addEventListener('DOMContentLoaded', createEvent);
 </script>
