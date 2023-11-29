@@ -3,8 +3,8 @@ import {t} from "i18next";
 import {Icon} from "astro-iconify";
 ---
 
-<section class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8">
-    <div class="container mx-auto px-5 py-24">
+<section class="lg:py-15 py-6 md:py-20 mx-auto w-full max-w-7xl lg:px-8">
+    <div class=" container mx-auto px-5 py-10">
         <div class="mb-20 text-center">
             <h1 class="mb-4 text-center text-2xl font-bold sm:text-3xl">
                 {t('contacts.title')}
@@ -13,7 +13,7 @@ import {Icon} from "astro-iconify";
         <div class="mx-auto max-w-2xl lg:max-w-none">
             <div class="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
                 <div class="lg:order-last" style="opacity: 1; transform: none;">
-                    <form action="https://api.web3forms.com/submit" method="POST"><h2
+                    <form method="POST" id="form"><h2
                             class="font-display text-base font-semibold">{t("contacts.work_inquiries")}</h2>
                         <input type="hidden" name="access_key" value="44ccc411-85f0-44d9-acff-d259615a344d">
                         <input type="hidden" name="subject" value="New Submission from Web3Forms">
@@ -164,7 +164,76 @@ import {Icon} from "astro-iconify";
                 </div>
             </div>
         </div>
+        <div role="alert" class="alert mt-10 hidden" id="alert-loading">
+            <span class="loading loading-dots loading-sm text-accent"></span><span> Sending Email</span>
+        </div>
+        <div role="alert" class="alert mt-10 hidden" id="alert-success">
+            <Icon name="lucide:mail-check" class="h-7 w-7 flex-shrink-0 stroke-success text-success"/>
+            <span>Email Sent</span>
+        </div>
+        <div role="alert" class="alert mt-10 hidden" id="alert-error">
+            <Icon name="lucide:mail-warning" class="h-7 w-7 flex-shrink-0 stroke-error text-error"/>
+            <span>Error while sending the form, please try again or contact me directly by email</span>
+        </div>
     </div>
+
 </section>
 
-<script src="https://web3forms.com/client/script.js" async defer></script>
+<script type="text/javascript">
+    // fetch and process form data
+    async function processFormData(url, form) {
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+            return await response.json();
+        }
+    }
+
+    // reset form and hide alerts
+    function resetForm(form, alertLoading, alertSuccess, alertError, delay = 3000) {
+        form.reset();
+        alertLoading.classList.add('hidden');
+        setTimeout(() => {
+            alertSuccess.classList.add('hidden');
+            alertError.classList.add('hidden');
+        }, delay);
+    }
+
+    document.addEventListener('astro:page-load', () => {
+        const form = document.getElementById('form');
+        const alertLoading = document.getElementById('alert-loading');
+        const alertSuccess = document.getElementById('alert-success');
+        const alertError = document.getElementById('alert-error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            alertLoading.classList.remove('hidden');
+
+            try {
+                await processFormData('https://api.web3forms.com/submit', form);
+                alertLoading.classList.add('hidden');
+                alertSuccess.classList.remove('hidden');
+            } catch (error) {
+                alertLoading.classList.add('hidden');
+                alertError.classList.remove('hidden');
+            } finally {
+                resetForm(form, alertLoading, alertSuccess, alertError);
+            }
+        });
+    });
+
+</script>
