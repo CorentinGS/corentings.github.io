@@ -129,7 +129,10 @@
         "phone": "Telefon",
         "email_me": "E-Mail an mich senden",
         "work_inquiries": "Arbeitsanfragen",
-        "my_socials": "Meine sozialen Netzwerke"
+        "my_socials": "Meine sozialen Netzwerke",
+        "sending_form": "",
+        "sent_form": "",
+        "error_form": ""
     },
     "introduction": {
         "follow": "",
