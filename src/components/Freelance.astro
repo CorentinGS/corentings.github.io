@@ -3,7 +3,7 @@ import {t} from "i18next";
 import Testimony from "./Index/Testimony.astro";
 
 import {Picture} from 'astro:assets';
-import imgMemnix from '../assets/moutmout.png';
+import imgTalk from '../assets/talk1.jpg';
 import Service from "./Service.astro";
 import imgStouuf from '../assets/stouuf2.webp';
 ---
@@ -30,10 +30,11 @@ import imgStouuf from '../assets/stouuf2.webp';
                                             <g class="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
                                                 <foreignObject width="655" height="680">
                                                     <Picture alt="" loading="lazy"
-                                                             width="512" height="512"
-                                                             decoding="async" quality="50"
+                                                             width="1024" height="1024"
+                                                             formats={["avif", "webp"]}
+                                                             decoding="async" quality="60"
                                                              class="w-full bg-neutral-100 object-cover"
-                                                             src={imgMemnix}/>
+                                                             src={imgTalk}/>
                                                 </foreignObject>
                                             </g>
                                             <use href="#:S1:-shape" stroke-width="2"

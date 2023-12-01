@@ -23,8 +23,9 @@ const picture = image ? image : "https://spotlight.tailwindui.com/_next/image?ur
 
     <div class="flex items-center mt-8 -mx-2">
         <Picture class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-base-content/20" width="56"
-                 height="56" quality="75" loading="lazy"
-                 src={picture} alt=""/>
+                 height="56" quality="60" loading="lazy" decoding="async"
+                 formats={["avif", "webp"]}
+                 src={picture} alt={name}/>
 
         <div class="mx-2">
             <h1 class="font-semibold ">{name}</h1>

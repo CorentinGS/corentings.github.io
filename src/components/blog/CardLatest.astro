@@ -18,12 +18,13 @@ const { blogPost } = Astro.props;
 		class="absolute left-0 top-0 z-0 h-full w-full object-cover"
 		alt={blogPost.title}
 		loading={'eager'}
+		decoding="async"
 		formats={['avif', 'webp']}
 		fit="cover"
 		aspectRatio={16 / 9}
 		width="512"
 		height="512"
-		quality={50}
+		quality={40}
 	/>
 	<div class="absolute bottom-0 left-0 z-20 p-4">
 		<h1 class="text-4xl leading-tight">
