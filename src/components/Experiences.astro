@@ -15,14 +15,22 @@ import imgUca from '../assets/uca.png';
 import imgEstaca from '../assets/estaca.jpg';
 import imgKtk from '../assets/ktk.jpg';
 import imgChesscom from '../assets/chesscom_logo.png';
+import imgFfe from '../assets/ffe_logo.png';
 
 const experiences = [
+    {
+        name: t('experiences.referee.title'),
+        type: TimelineCardType.Work,
+        description: t('experiences.referee.description'),
+        start_date: '2024',
+        link: 'http://www.echecs.asso.fr/%28rpoos355juwbzbqlethyfg55%29/FicheJoueur.aspx?Id=591532',
+        image: imgFfe,
+    },
     {
         name: t('experiences.chesscom_mod.title'),
         type: TimelineCardType.Volunteering,
         description: t('experiences.chesscom_mod.description'),
         start_date: '2023',
-        tools: 'Twitch',
         link: 'https://twitch.com/chesscomfr',
         image: imgChesscom,
     },
