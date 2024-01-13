@@ -12,7 +12,11 @@
 			"handle": "filesystem"
 		},
 		{
-			"src": "/.*",
+			"src": "^\\/_image$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/rss\\.xml\\/?$",
 			"dest": "render"
 		}
 	]
