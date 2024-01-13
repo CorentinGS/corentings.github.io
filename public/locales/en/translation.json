@@ -99,6 +99,10 @@
     "chesscom_mod": {
       "title": "Twitch Moderator - Chess.com",
       "description": "Moderating the Chesscomfr twitch channel."
+    },
+    "referee": {
+      "title": "Chess Referee - FFE",
+      "description": "Refereeing chess tournaments for the French Federation."
     }
   },
   "contacts": {
