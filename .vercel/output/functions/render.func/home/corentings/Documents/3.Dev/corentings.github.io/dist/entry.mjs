@@ -1,7 +1,7 @@
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_0Tfenk-p.mjs';
 import { serialize, parse } from 'cookie';
 import { A as AstroError, R as ResponseSentError, o as MiddlewareNoDataOrNextCalled, p as MiddlewareNotAResponse, G as GetStaticPathsRequired, q as InvalidGetStaticPathsReturn, t as InvalidGetStaticPathsEntry, v as GetStaticPathsExpectedParams, w as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, x as PrerenderDynamicEndpointPathCollide, y as LocalsNotAnObject, z as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, B as renderEndpoint, D as ReservedSlotName, H as renderSlotToString, J as renderJSX, K as chunkToString, O as CantRenderPage, Q as renderPage$1 } from './chunks/astro_4wcqqFgk.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_RKkZ-oyt.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_R8Rf2MDT.mjs';
 import 'kleur/colors';
 import 'clsx';
 import 'node:fs';
@@ -2068,32 +2068,32 @@ const adapter = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const _page0  = () => import('./chunks/generic_Ugmmv4Pb.mjs');
-const _page1  = () => import('./chunks/index_LB_RD-Ma.mjs');
-const _page2  = () => import('./chunks/experiences_BDz666qR.mjs');
-const _page3  = () => import('./chunks/projects_lX7DLpDR.mjs');
-const _page4  = () => import('./chunks/discord_I2UTqW3c.mjs');
-const _page5  = () => import('./chunks/rss_dM92zPZF.mjs');
-const _page6  = () => import('./chunks/talks_haUhyGn2.mjs');
-const _page7  = () => import('./chunks/optimizing-goroutines-sum-of-squares__CQh1oXn.mjs');
-const _page8  = () => import('./chunks/simple-go-vs-goroutines_ySVzRnhW.mjs');
-const _page9  = () => import('./chunks/mergesort-parallel_59yNMaNI.mjs');
-const _page10  = () => import('./chunks/dnf5-step-by-step_jNIQOHFA.mjs');
-const _page11  = () => import('./chunks/docker-and-go_ldbPNX-c.mjs');
-const _page12  = () => import('./chunks/blog_pfrIwmKu.mjs');
-const _page13  = () => import('./chunks/index_dHYUBlxD.mjs');
-const _page14  = () => import('./chunks/experiences_TiH2aW7Y.mjs');
-const _page15  = () => import('./chunks/projects_KSTIx4uq.mjs');
-const _page16  = () => import('./chunks/discord_joisHq0u.mjs');
-const _page17  = () => import('./chunks/links_TKZZomom.mjs');
-const _page18  = () => import('./chunks/talks_qUxaMCwv.mjs');
-const _page19  = () => import('./chunks/blog_QsWUKs38.mjs');
-const _page20  = () => import('./chunks/index__xkrSzXl.mjs');
-const _page21  = () => import('./chunks/experiences_zOWl6auZ.mjs');
-const _page22  = () => import('./chunks/projects_5wWU72vk.mjs');
-const _page23  = () => import('./chunks/discord_7JKGLkLo.mjs');
-const _page24  = () => import('./chunks/links_1Uxif3yk.mjs');
-const _page25  = () => import('./chunks/talks_n1X_Y3FB.mjs');
-const _page26  = () => import('./chunks/blog_Jje2NAG8.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/experiences.astro", _page2],["src/pages/projects.astro", _page3],["src/pages/discord.astro", _page4],["src/pages/rss.xml.js", _page5],["src/pages/talks.astro", _page6],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page7],["src/pages/blog/simple-go-vs-goroutines.mdx", _page8],["src/pages/blog/mergesort-parallel.mdx", _page9],["src/pages/blog/dnf5-step-by-step.mdx", _page10],["src/pages/blog/docker-and-go.mdx", _page11],["src/pages/blog.astro", _page12],["src/pages/de/index.astro", _page13],["src/pages/de/experiences.astro", _page14],["src/pages/de/projects.astro", _page15],["src/pages/de/discord.astro", _page16],["src/pages/de/links.astro", _page17],["src/pages/de/talks.astro", _page18],["src/pages/de/blog.astro", _page19],["src/pages/fr/index.astro", _page20],["src/pages/fr/experiences.astro", _page21],["src/pages/fr/projects.astro", _page22],["src/pages/fr/discord.astro", _page23],["src/pages/fr/links.astro", _page24],["src/pages/fr/talks.astro", _page25],["src/pages/fr/blog.astro", _page26]]);
+const _page1  = () => import('./chunks/index_xAufQi5s.mjs');
+const _page2  = () => import('./chunks/experiences_STpKWGVs.mjs');
+const _page3  = () => import('./chunks/projects_bkBv50mv.mjs');
+const _page4  = () => import('./chunks/discord_vbiOvohA.mjs');
+const _page5  = () => import('./chunks/rss_WYmU1kgo.mjs');
+const _page6  = () => import('./chunks/talks_MCyA-F0_.mjs');
+const _page7  = () => import('./chunks/optimizing-goroutines-sum-of-squares_ICRWZPpP.mjs');
+const _page8  = () => import('./chunks/simple-go-vs-goroutines_GgfnBN2R.mjs');
+const _page9  = () => import('./chunks/mergesort-parallel_1pfoPbDx.mjs');
+const _page10  = () => import('./chunks/dnf5-step-by-step_FLd3gJZh.mjs');
+const _page11  = () => import('./chunks/docker-and-go_f15gOvA2.mjs');
+const _page12  = () => import('./chunks/blog_VpHcZwJV.mjs');
+const _page13  = () => import('./chunks/index_C93WCO4j.mjs');
+const _page14  = () => import('./chunks/experiences_In6i_4FB.mjs');
+const _page15  = () => import('./chunks/projects_nm7V5byR.mjs');
+const _page16  = () => import('./chunks/discord_FzLiZaJv.mjs');
+const _page17  = () => import('./chunks/links_oT-89X3p.mjs');
+const _page18  = () => import('./chunks/talks_k9JACeAh.mjs');
+const _page19  = () => import('./chunks/blog_-_huK0O9.mjs');
+const _page20  = () => import('./chunks/index_a7oJXJS7.mjs');
+const _page21  = () => import('./chunks/experiences_gC2eDq6r.mjs');
+const _page22  = () => import('./chunks/projects_yvxisUzr.mjs');
+const _page23  = () => import('./chunks/discord_clws9dpW.mjs');
+const _page24  = () => import('./chunks/links_z_fq9mQs.mjs');
+const _page25  = () => import('./chunks/talks_QuTIwNXP.mjs');
+const _page26  = () => import('./chunks/blog_mkLSB1ET.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/experiences.astro", _page2],["src/pages/projects.astro", _page3],["src/pages/discord.astro", _page4],["src/pages/rss.xml.js", _page5],["src/pages/talks.astro", _page6],["src/pages/blog/optimizing-goroutines-sum-of-squares.mdx", _page7],["src/pages/blog/simple-go-vs-goroutines.mdx", _page8],["src/pages/blog/mergesort-parallel.mdx", _page9],["src/pages/blog/dnf5-step-by-step.mdx", _page10],["src/pages/blog/docker-and-go.mdx", _page11],["src/pages/blog.astro", _page12],["src/pages/de/index.astro", _page13],["src/pages/de/experiences.astro", _page14],["src/pages/de/projects.astro", _page15],["src/pages/de/discord.astro", _page16],["src/pages/de/links.astro", _page17],["src/pages/de/talks.astro", _page18],["src/pages/de/blog.astro", _page19],["src/pages/fr/index.astro", _page20],["src/pages/fr/experiences.astro", _page21],["src/pages/fr/projects.astro", _page22],["src/pages/fr/discord.astro", _page23],["src/pages/fr/links.astro", _page24],["src/pages/fr/talks.astro", _page25],["src/pages/fr/blog.astro", _page26]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,
