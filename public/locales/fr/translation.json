@@ -112,6 +112,10 @@
     "chesscom_mod": {
       "title": "Modérateur Twitch - Chess.com",
       "description": "Modération du canal Twitch de Chesscomfr."
+    },
+    "referee": {
+      "title": "Arbitre d'échecs - FFE",
+      "description": "Arbitrage de tournois d'échecs pour la Fédération française."
     }
   },
   "contacts": {
@@ -207,7 +211,7 @@
     },
     "justin": {
       "job": "GDSC Lead",
-      "description": "Corentin a su répondre à toutes nos attentes avec enthousiasme et profesionnalisme. Je lui fais entièrement confiance pour de futures collaborations."
+      "description": "Corentin a su répondre à toutes nos attentes avec enthousiasme et professionnalisme. Je lui fais entièrement confiance pour de futures collaborations."
     }
   },
   "freelance": {
