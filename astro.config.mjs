@@ -4,13 +4,19 @@ import tailwind from '@astrojs/tailwind';
 import compress from "astro-compress";
 import compressor from 'astro-compressor';
 import astroI18next from 'astro-i18next';
-import { defineConfig } from 'astro/config';
+import {defineConfig, sharpImageService, squooshImageService} from 'astro/config';
 import vercel from '@astrojs/vercel/serverless';
 
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://corentings.dev',
+  image: {
+    service:
+        process.env.NODE_ENV === "production"
+            ? sharpImageService()
+            : squooshImageService(),
+  },
   prefetch: {
     prefetchAll: false,
     defaultStrategy: 'hover'

@@ -47,6 +47,8 @@ function to_lower(str: string) {
                     class="flex text-secondary hover:text-primary"
                     aria-label={t('projects.discover') + ' ' + to_lower(name)}
                     rel="noopener noreferrer"
+                    data-umami-event="Project link clicked"
+                    data-umami-name={name}
             >
                 <span>{t('projects.discover')}{' '}{to_lower(name)}</span>
             </a>
