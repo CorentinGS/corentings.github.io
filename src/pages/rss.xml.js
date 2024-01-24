@@ -1,4 +1,4 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss'
 
 export async function get(context) {
 	return rss({
@@ -6,6 +6,6 @@ export async function get(context) {
 		description: 'A young programmer journey',
 		site: import.meta.env.SITE,
 		items: await pagesGlobToRssItems(import.meta.glob('./blog/*.mdx')),
-		customData: `<language>en-us</language>`,
-	});
+		customData: `<language>en-us</language>`
+	})
 }

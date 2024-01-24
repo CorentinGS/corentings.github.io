@@ -1,0 +1,12 @@
+{
+	"packages": ["nodejs@20", "yarn@1.22"],
+	"shell": {
+		"init_hook": ["yarn install", "yarn add sharp --ignore-engines"],
+		"scripts": {
+			"dev": "yarn dev --host",
+			"build": "yarn build",
+			"start": "yarn run serve",
+			"preview": "yarn run build && yarn run preview"
+		}
+	}
+}

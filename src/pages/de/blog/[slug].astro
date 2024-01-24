@@ -1,0 +1,25 @@
+---
+import { changeLanguage } from 'i18next'
+export const prerender = true
+import { getEntryBySlug, getCollection } from 'astro:content'
+import BlogPostLayout from '../../../layouts/BlogPostLayout.astro'
+
+changeLanguage('de')
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection('blog')
+	return allPosts.map((post) => ({
+		params: {
+			slug: post.slug
+		}
+	}))
+}
+const { slug } = Astro.params
+const entry = await getEntryBySlug('blog', slug!)
+const { id, collection, data } = entry
+const { Content } = await entry.render()
+---
+
+<BlogPostLayout meta={{ id, collection, slug }} content={data}>
+	<Content />
+</BlogPostLayout>

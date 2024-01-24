@@ -1,17 +1,17 @@
-import type { BlogAuthor, BlogPost, BlogPostList } from './types';
+import type { BlogAuthor, BlogPost, BlogPostList } from './types'
 
-import imgAvatar from '../src/assets/avatar.webp';
-import imgDnf5 from '../src/assets/blog/dnf5-step-by-step.webp';
-import imgDocker from '../src/assets/blog/docker-and-go.webp';
-import imgMergesort from '../src/assets/blog/mergesort-parallel.webp';
-import imgOptimizingGoroutines from '../src/assets/blog/optimizing-goroutines-sum-of-squares.webp';
-import imgSimpleGo from '../src/assets/blog/simple-go-vs-goroutines.webp';
+import imgAvatar from 'src/assets/avatar.webp'
+import imgDnf5 from 'src/assets/blog/dnf5-step-by-step.webp'
+import imgDocker from 'src/assets/blog/docker-and-go.webp'
+import imgMergesort from 'src/assets/blog/mergesort-parallel.webp'
+import imgOptimizingGoroutines from 'src/assets/blog/optimizing-goroutines-sum-of-squares.webp'
+import imgSimpleGo from 'src/assets/blog/simple-go-vs-goroutines.webp'
 
 const cgs: BlogAuthor = {
 	name: 'Corentin Giaufer Saubert',
 	avatar: imgAvatar,
-	link: '',
-};
+	link: ''
+}
 
 export class BlogPosts {
 	private static readonly _blogPosts: BlogPostList = [
@@ -26,7 +26,7 @@ export class BlogPosts {
 			category: 'Programming',
 			timeToRead: '10 min',
 			author: cgs,
-			dark_background: false,
+			dark_background: false
 		},
 		{
 			title: 'Upgrading to dnf5: A step-by-step guide for Fedora users',
@@ -38,7 +38,7 @@ export class BlogPosts {
 			category: 'Programming',
 			timeToRead: '3 min',
 			author: cgs,
-			dark_background: true,
+			dark_background: true
 		},
 		{
 			title: 'Merge Sort using Goroutines',
@@ -50,7 +50,7 @@ export class BlogPosts {
 			category: 'Programming',
 			timeToRead: '6 min',
 			author: cgs,
-			dark_background: true,
+			dark_background: true
 		},
 		{
 			title: 'Simple Function vs Goroutines',
@@ -62,7 +62,7 @@ export class BlogPosts {
 			category: 'Programming',
 			timeToRead: '10 min',
 			author: cgs,
-			dark_background: false,
+			dark_background: false
 		},
 		{
 			title: 'Deploying a Go application with Docker',
@@ -73,15 +73,19 @@ export class BlogPosts {
 			category: 'Programming',
 			timeToRead: '5 min',
 			author: cgs,
-			dark_background: true,
-		},
-	];
+			dark_background: true
+		}
+	]
 
 	static get blogPosts(): BlogPostList {
-		return this._blogPosts;
+		return this._blogPosts
 	}
 
 	static getBlogPostByLink(link: string): BlogPost | any {
-		return this._blogPosts.find((post) => post.link === link);
+		return this._blogPosts.find((post) => post.link === link)
+	}
+
+	static getBlogPostFirst(): BlogPost | any {
+		return this._blogPosts[0]
 	}
 }

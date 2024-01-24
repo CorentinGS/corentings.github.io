@@ -20,24 +20,24 @@ module.exports = {
 					'"Apple Color Emoji"',
 					'"Segoe UI Emoji"',
 					'"Segoe UI Symbol"',
-					'"Noto Color Emoji"',
-				],
+					'"Noto Color Emoji"'
+				]
 			},
 			animation: {
 				// Bounces 5 times 1s equals 5 seconds
-				'bounce-short': 'bounce 3s ease-in-out 2',
-			},
-		},
+				'bounce-short': 'bounce 3s ease-in-out 2'
+			}
+		}
 	},
 	variants: {
-		extend: {},
+		extend: {}
 	},
 
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/aspect-ratio'),
-		require('daisyui'),
+		require('daisyui')
 	],
 
 	daisyui: {
@@ -55,8 +55,8 @@ module.exports = {
 					warning: '#F6D73C',
 					error: '#E83B55',
 					'base-content': '#333333',
-					'--rounded-btn': '1.9rem',
-				},
+					'--rounded-btn': '1.9rem'
+				}
 			},
 			{
 				dark: {
@@ -71,8 +71,8 @@ module.exports = {
 					warning: '#F6D73C',
 					error: '#E83B55',
 					'base-content': '#f2f2f7',
-					'--rounded-btn': '1.9rem',
-				},
+					'--rounded-btn': '1.9rem'
+				}
 			},
 			'dracula',
 			'luxury',
@@ -91,10 +91,10 @@ module.exports = {
 					error: '#E83B55',
 					'primary-content': '#4d1600',
 					'success-content': '#102742',
-					'error-content': '#000000',
-				},
+					'error-content': '#000000'
+				}
 			},
-			'black',
-		],
-	},
-};
+			'black'
+		]
+	}
+}

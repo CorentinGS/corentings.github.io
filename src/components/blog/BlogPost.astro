@@ -1,13 +1,9 @@
 ---
-import type {BlogPost} from '../../../utils/types';
+import type {BlogPost} from 'src/utils/types';
 import {Picture} from 'astro:assets';
 import {Icon} from 'astro-iconify';
 
-interface Props {
-    blogPost: BlogPost;
-}
 
-const {blogPost} = Astro.props;
 ---
 
 <div class="relative min-h-screen w-full bg-base-100 p-5">

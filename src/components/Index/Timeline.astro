@@ -1,5 +1,5 @@
 ---
-const { right } = Astro.props;
+const { right } = Astro.props
 ---
 
 <div
@@ -7,9 +7,9 @@ const { right } = Astro.props;
 		? 'right-timeline mb-8 flex w-full items-center justify-between'
 		: 'right-timeline mb-8 flex w-full items-center justify-between md:flex-row-reverse'}
 >
-	<div class="order-1 hidden w-5/12 md:flex"></div>
-	<div class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-neutral shadow-xl">
-		<div class="mx-auto text-lg font-semibold"></div>
+	<div class='order-1 hidden w-5/12 md:flex'></div>
+	<div class='z-20 order-1 flex size-8 items-center rounded-full bg-neutral shadow-xl'>
+		<div class='mx-auto text-lg font-semibold'></div>
 	</div>
 	<slot />
 </div>

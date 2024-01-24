@@ -1,22 +1,22 @@
 ---
-import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Experiences from "../../components/Experiences.astro";
-import Footer from "../../components/utils/Footer.astro";
-import { Icon } from "astro-iconify";
+import { changeLanguage } from 'i18next'
+import Layout from '../../layouts/Layout.astro'
+import Experiences from '../../components/Experiences.astro'
+import Footer from '../../components/utils/Footer.astro'
+import { Icon } from 'astro-iconify'
 
-changeLanguage("fr");
+changeLanguage('fr')
 
-export const prerender = true;
+export const prerender = true
 ---
 
-<Layout title="CorentinGS">
+<Layout title='CorentinGS'>
 	<div
-		class="hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden"
-		id="btn-back-to-top"
+		class='hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden'
+		id='btn-back-to-top'
 		transition:persist
 	>
-		<Icon name="lucide:arrow-up" class="h-6 w-6" />
+		<Icon name='lucide:arrow-up' class='size-6' />
 	</div>
 	<Experiences />
 	<Footer />
@@ -24,29 +24,23 @@ export const prerender = true;
 
 <style></style>
 
-<script type="text/javascript">
+<script type='text/javascript'>
+	document.addEventListener('astro:page-load', () => {
+		const backToTop = () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}
 
-	document.addEventListener(
-		'astro:page-load',
-		() => {
-			const backToTop = () => {
-				window.scrollTo({ top: 0, behavior: 'smooth' });
-			};
+		// This only runs once.
+		mybutton = document.getElementById('btn-back-to-top')
+		mybutton.addEventListener('click', backToTop)
 
-			// This only runs once.
-			mybutton = document.getElementById('btn-back-to-top');
-			mybutton.addEventListener('click', backToTop);
-
-			// Hide button when not needed
-			window.onscroll = function () {
-				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-					mybutton.classList.remove('hidden');
-				} else {
-					mybutton.classList.add('hidden');
-				}
-			};
-		},
-	);
-
-
+		// Hide button when not needed
+		window.onscroll = function () {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.classList.remove('hidden')
+			} else {
+				mybutton.classList.add('hidden')
+			}
+		}
+	})
 </script>

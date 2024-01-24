@@ -1,30 +1,48 @@
 ---
-import {BlogPosts} from "../../utils/blog";
+import {BlogPosts} from 'src/utils/blog'
 
-import {t} from "i18next";
-import DiscoverCard from "./blog/DiscoverCard.astro";
+import {getCollection} from "astro:content";
+import type {CollectionEntry} from "astro:content";
 
-const posts = BlogPosts.blogPosts.slice(0, 3);
+
+import {t} from 'i18next'
+import DiscoverCard from './blog/DiscoverCard.astro'
+import {getPosts} from "../utils";
+import PostCard from "./blog/PostCard.astro";
+
+const posts: CollectionEntry<'blog'>[] = await getPosts(3)
 ---
 
-<section class="bg-base-200">
-    <div class="lg:py-15 py-6 md:py-10 mx-auto w-full max-w-7xl lg:px-8">
-        <div class="relative px-4 sm:px-8 lg:px-12">
-            <div class="relative flex flex-col items-center">
-                <h2 class="mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl">
+<section class='bg-base-200'>
+    <div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
+        <div class='relative px-4 sm:px-8 lg:px-12'>
+            <div class='relative flex flex-col items-center'>
+                <h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
                     {t('write.title')}
                 </h2>
-                <p class="mt-8 text-xl">
+                <p class='mt-8 text-xl'>
                     {t('write.description')}
                 </p>
             </div>
 
-            <div class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10">
-                {posts.map((post, index) => (
-                        <DiscoverCard post={post}/>
-                ))}
-            </div>
+            <div
+                    class='mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10'
+            >
+                {
+                    posts.map(async (post) => {
+                        const { remarkPluginFrontmatter } = await post.render()
 
+                        return (
+                                <DiscoverCard
+                                        id={post.id}
+                                        data={post.data}
+                                        slug={post.slug}
+                                        readTime={remarkPluginFrontmatter.minutesRead}
+                                />
+                        )
+                    })
+                }
+            </div>
         </div>
     </div>
 </section>

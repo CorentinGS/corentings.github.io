@@ -1,15 +1,24 @@
-/** @type {import('eslint').Linter.Config} */
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: ['tailwindcss'],
-  extends: ['plugin:tailwindcss/recommended'],
-  rules: {
-    'tailwindcss/migration-from-tailwind-2': 'off',
-    'tailwindcss/no-custom-classname': 'off',
-  },
-  settings: {
-    tailwindcss: {
-      config: './tailwind.config.cjs',
-    },
-  },
-  ignorePatterns: ['**/.astro/**'],
-};
+	extends: ['plugin:astro/recommended'],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		tsconfigRootDir: __dirname,
+		sourceType: 'module',
+		ecmaVersion: 'latest'
+	},
+	overrides: [
+		{
+			files: ['*.astro'],
+			parser: 'astro-eslint-parser',
+			parserOptions: {
+				parser: '@typescript-eslint/parser',
+				extraFileExtensions: ['.astro']
+			},
+			rules: {
+				// override/add rules settings here, such as:
+				'astro/no-set-html-directive': 'error'
+			}
+		}
+	]
+}

@@ -1,33 +1,33 @@
-import { t } from 'i18next';
-import { TimelineCardType, type TimelineCardList } from './types';
+import { t } from 'i18next'
+import { TimelineCardType, type TimelineCardList } from './types'
 
-import imgAvatar from '../src/assets/avatar.webp';
+import imgAvatar from 'src/assets/avatar.webp'
 export class Profile {
-	static readonly full_name = 'Corentin Giaufer Saubert';
-	static readonly short_name = 'Corentin GS';
-	static readonly title = 'Freelance backend developer';
-	static readonly location = 'Nice, France';
-	static readonly email = 'contact@corentings.dev';
-	static readonly avatar = imgAvatar;
+	static readonly full_name = 'Corentin Giaufer Saubert'
+	static readonly short_name = 'Corentin GS'
+	static readonly title = 'Freelance backend developer'
+	static readonly location = 'Nice, France'
+	static readonly email = 'contact@corentings.dev'
+	static readonly avatar = imgAvatar
 }
 
 export class Config {
-	static readonly twitter = 'GSCorentinDev';
-	static readonly facebook = '';
-	static readonly instagram = '';
-	static readonly youtube = '';
-	static readonly github = 'CorentinGS';
-	static readonly linkedin = 'corentin-giaufer-saubert/';
-	static readonly medium = '';
-	static readonly patreon = '';
-	static readonly discord = 'https://discord.gg/wc4PQsd7eE';
-	static readonly telegram = '';
-	static readonly reddit = '';
-	static readonly twitch = '';
-	static readonly stackoverflow = '';
-	static readonly devto = '';
-	static readonly mastodon = 'https://hachyderm.io/@TheLittlePrince';
-	static readonly rss = '/rss.xml';
+	static readonly twitter = 'GSCorentinDev'
+	static readonly facebook = ''
+	static readonly instagram = ''
+	static readonly youtube = ''
+	static readonly github = 'CorentinGS'
+	static readonly linkedin = 'corentin-giaufer-saubert/'
+	static readonly medium = ''
+	static readonly patreon = ''
+	static readonly discord = 'https://discord.gg/wc4PQsd7eE'
+	static readonly telegram = ''
+	static readonly reddit = ''
+	static readonly twitch = ''
+	static readonly stackoverflow = ''
+	static readonly devto = ''
+	static readonly mastodon = 'https://hachyderm.io/@TheLittlePrince'
+	static readonly rss = '/rss.xml'
 }
 
 export class Experiences {
@@ -39,7 +39,7 @@ export class Experiences {
 			start_date: '2023',
 			tools: 'Java',
 			link: 'https://www.iu.org/bachelor/computer-science/',
-			image: '',
+			image: ''
 		},
 		{
 			name: t('experiences.freelance.title'),
@@ -47,7 +47,7 @@ export class Experiences {
 			description: t('experiences.freelance.description'),
 			start_date: '2022',
 			tools: 'Golang, PostgreSQL, Docker...',
-			link: 'https://corentings.dev/',
+			link: 'https://corentings.dev/'
 		},
 
 		{
@@ -57,7 +57,7 @@ export class Experiences {
 			start_date: '2022',
 			tools: 'Canva, Tailwindcss',
 			image: '',
-			link: 'https://stouuf.net/',
+			link: 'https://stouuf.net/'
 		},
 		{
 			name: t('experiences.educative.title'),
@@ -67,7 +67,7 @@ export class Experiences {
 			tools: 'C, Golang, Data Structure, Java',
 			link: 'https://www.Educative.io',
 			image:
-				'https://res.cloudinary.com/practicaldev/image/fetch/s---FKkgQBv--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/246442/81bbdd1a-3596-4e44-b522-758c0839afa6.png',
+				'https://res.cloudinary.com/practicaldev/image/fetch/s---FKkgQBv--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/246442/81bbdd1a-3596-4e44-b522-758c0839afa6.png'
 		},
 		{
 			name: t('experiences.hackerrank.title'),
@@ -77,7 +77,7 @@ export class Experiences {
 			end_date: 'March 2022',
 			tools: 'Golang, Python',
 			link: 'https://www.hackerrank.com/certificates/03173cedd98b',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png',
+			image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png'
 		},
 		{
 			name: t('experiences.memnix.title'),
@@ -86,7 +86,7 @@ export class Experiences {
 			start_date: '2021',
 			image: 'https://github.com/memnix/memnix/blob/main/assets/images/moutmout.png?raw=true',
 			link: 'https://memnix.app/',
-			tools: 'Golang, Nuxt, PostgreSQL, Docker...',
+			tools: 'Golang, Nuxt, PostgreSQL, Docker...'
 		},
 		{
 			type: TimelineCardType.School,
@@ -98,7 +98,7 @@ export class Experiences {
 			start_date: 'September 2021',
 			end_date: 'December 2022',
 			location: 'Nice, France',
-			tools: 'Python, Arduino',
+			tools: 'Python, Arduino'
 		},
 		{
 			type: TimelineCardType.Work,
@@ -109,7 +109,7 @@ export class Experiences {
 			start_date: 'June 2021',
 			end_date: 'July 2021',
 			location: 'Nice, France',
-			link: 'https://www.one-too.com/',
+			link: 'https://www.one-too.com/'
 		},
 		{
 			type: TimelineCardType.School,
@@ -119,7 +119,7 @@ export class Experiences {
 			name: t('experiences.estaca.title'),
 			start_date: '2020',
 			end_date: '2021',
-			location: 'Laval, France',
+			location: 'Laval, France'
 		},
 		{
 			type: TimelineCardType.School,
@@ -127,7 +127,7 @@ export class Experiences {
 			description: t('experiences.bac.description'),
 			start_date: '2020',
 			location: 'Valognes, France',
-			link: 'https://www.lycee-valognes.fr/',
+			link: 'https://www.lycee-valognes.fr/'
 		},
 		{
 			type: TimelineCardType.Personal,
@@ -138,7 +138,7 @@ export class Experiences {
 			link: 'https://www.ktkamp.com/',
 			image:
 				'https://images.squarespace-cdn.com/content/v1/5f402f8de96cb40645d516ba/1602983171206-LM9GX2J3VWHV3US6C2MH/ktk+logo.jpg?format=1500w',
-			location: 'Orlando, Florida',
+			location: 'Orlando, Florida'
 		},
 		{
 			type: TimelineCardType.Personal,
@@ -146,7 +146,7 @@ export class Experiences {
 			description: t('experiences.ppl.description'),
 			start_date: '2019',
 			location: 'Cherbourg, France',
-			link: 'https://ac-cherbourg.com/',
+			link: 'https://ac-cherbourg.com/'
 		},
 		{
 			type: TimelineCardType.Work,
@@ -157,7 +157,7 @@ export class Experiences {
 			location: 'Toulouse, France',
 			tools: 'Kubernetes, Helm, Debian',
 			link: 'https://www.qualialtis.com/',
-			image: '/img/logo_qualialtis.png',
+			image: '/img/logo_qualialtis.png'
 		},
 		{
 			type: TimelineCardType.Personal,
@@ -165,11 +165,11 @@ export class Experiences {
 			description: t('experiences.copernicus.description'),
 			start_date: '2018',
 			end_date: '2018',
-			location: 'Toulouse, France',
-		},
-	];
+			location: 'Toulouse, France'
+		}
+	]
 
 	static get experiences(): TimelineCardList {
-		return this._experiences;
+		return this._experiences
 	}
 }

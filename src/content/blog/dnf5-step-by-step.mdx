@@ -1,9 +1,11 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
 title: "Upgrading to dnf5: A step-by-step guide for Fedora users"
 description: "Dnf5 is the new, faster, and more powerful package manager for Fedora. This blog post will show you how to replace dnf with dnf5 on your Fedora system."
 pubDate: "April 29, 2023"
-link: "/blog/dnf5-step-by-step"
+author: "Corentin GS"
+heroImage: '../../assets/blog/dnf5-step-by-step.webp'
+category: 'Category 1'
+tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
 ---
 
 export const prerender = true
@@ -28,7 +30,10 @@ DNF is an old, single-threaded package manager with much legacy code. It's writt
 
 Upgrading to DNF5 offers several benefits, including improved speed and efficiency.
 DNF5 is designed to be faster and more efficient than DNF, which can help speed up your system's package installation and update process.
-<br></br>Additionally, as it will be the default package manager in <a href={'https://github.com/rpm-software-management/dnf5/issues/411'} class="font-bold underline text-accent"  target="_blank" rel="noopener">Fedora 39</a>, starting to use it now and reporting any bugs you encounter will help the developers fix them before the release.
+<br></br>Additionally, as it will be the default package manager in <a
+    href={'https://github.com/rpm-software-management/dnf5/issues/411'} class="font-bold underline text-accent"
+    target="_blank" rel="noopener">Fedora
+    39</a>, starting to use it now and reporting any bugs you encounter will help the developers fix them before the release.
 
 <br></br>
 
@@ -41,14 +46,16 @@ DNF5 is designed to be faster and more efficient than DNF, which can help speed 
 To install DNF5 from the unstable repository, run the following command:
 
 ```bash
-dnf copr enable rpmsoftwaremanagement/dnf5-unstable ; dnf install dnf5 dnf5-plugins
+dnf copr enable rpmsoftwaremanagement/dnf5-unstable ;
+dnf install dnf5 dnf5-plugins
 ```
 <br></br>
 
 If you're using sudo, use this command instead:
 
 ```bash
-sudo dnf copr enable rpmsoftwaremanagement/dnf5-unstable ; sudo dnf install dnf5 dnf5-plugins
+sudo dnf copr enable rpmsoftwaremanagement/dnf5-unstable ;
+sudo dnf install dnf5 dnf5-plugins
 ```
 <br></br>
 
@@ -90,8 +97,10 @@ Remember that DNF5 is still in development and not ready for production use. It 
 
 DNF5 may still have some bugs, so it's essential to experiment with it and keep this blog post up-to-date with the latest changes.
 This guide helped you upgrade to DNF5. If you have any questions or suggestions, feel free to contact me on
-<a href="https://twitter.com/GSCorentinDev" target="_blank" rel="noopener" class="font-bold underline text-accent">Twitter</a> or
-<a href="https://corentings.dev/discord" target="_blank" rel="noopener" class="font-bold underline text-accent">Discord</a>.
+<a href="https://twitter.com/GSCorentinDev" target="_blank" rel="noopener"
+   class="font-bold underline text-accent">Twitter</a> or
+<a href="https://corentings.dev/discord" target="_blank" rel="noopener"
+   class="font-bold underline text-accent">Discord</a>.
 
 
 <br></br>
