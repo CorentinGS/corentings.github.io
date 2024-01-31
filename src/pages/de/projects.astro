@@ -1,16 +1,16 @@
 ---
-import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Projects from "../../components/Projects.astro";
-import Footer from "../../components/utils/Footer.astro";
-import { Icon } from "astro-iconify";
+import { changeLanguage } from 'i18next'
+import Layout from '../../layouts/Layout.astro'
+import Projects from '../../components/Projects.astro'
+import Footer from '../../components/utils/Footer.astro'
+import { Icon } from 'astro-iconify'
 
-changeLanguage("de");
+changeLanguage('de')
 
-export const prerender = true;
+export const prerender = true
 ---
 
-<Layout title='CorentinGS'>
+<Layout title='Projects'>
 	<div
 		class='hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden'
 		id='btn-back-to-top'

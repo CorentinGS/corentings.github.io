@@ -2,31 +2,30 @@
 import '@fontsource/syne'
 import '@fontsource/nunito'
 
-import {AstroFont} from "astro-font";
-import {join} from "path";
+import { AstroFont } from 'astro-font'
+import { join } from 'path'
 ---
 
-
 <AstroFont
-        config={[
-            {
-                name: "Lufga",
-                src: [
-                    {
-                        style: 'normal',
-                        weight: '400',
-                        path: './public/fonts/Lufga-Regular.woff2'
-                    },
-                    {
-                        style: 'bold',
-                        weight: '700',
-                        path: './public/fonts/Lufga-Bold.woff2'
-                    },
-                ],
-                preload: false,
-                display: "swap",
-                selector: "body",
-                fallback: "sans-serif",
-            },
-        ]}
+	config={[
+		{
+			name: 'Lufga',
+			src: [
+				{
+					style: 'normal',
+					weight: '400',
+					path: './public/fonts/Lufga-Regular.woff2'
+				},
+				{
+					style: 'bold',
+					weight: '700',
+					path: './public/fonts/Lufga-Bold.woff2'
+				}
+			],
+			preload: false,
+			display: 'swap',
+			selector: 'body',
+			fallback: 'sans-serif'
+		}
+	]}
 />

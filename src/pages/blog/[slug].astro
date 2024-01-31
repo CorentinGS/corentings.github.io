@@ -1,36 +1,38 @@
 ---
-import { changeLanguage } from "i18next";
-export const prerender = true;
-import { getEntryBySlug, getCollection } from "astro:content";
-import BlogPostLayout from "src/layouts/BlogPostLayout.astro";
-import { type CollectionEntry, getCollection } from "astro:content";
-import ListRelatedPosts from "@/components/blog/ListRelatedPosts";
-import Share from "@/components/blog/Share";
-import TableOfContents from "@/components/blog/TableOfContents";
-import { getPosts } from "@/utils";
-import SButton from "@/components/mdx/SButton";
-import Code from "@/components/mdx/Code";
+import { changeLanguage } from 'i18next'
+export const prerender = true
+import { getEntryBySlug, getCollection } from 'astro:content'
+import BlogPostLayout from 'src/layouts/BlogPostLayout.astro'
+import { type CollectionEntry, getCollection } from 'astro:content'
+import ListRelatedPosts from '@/components/blog/ListRelatedPosts'
+import Share from '@/components/blog/Share'
+import TableOfContents from '@/components/blog/TableOfContents'
+import { getPosts } from '@/utils'
+import SButton from '@/components/mdx/SButton'
+import Code from '@/components/mdx/Code'
 
-changeLanguage("en");
+changeLanguage('en')
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog')
 export async function getStaticPaths() {
-    const posts = await getPosts();
-    return posts.map((post) => ({
-        params: { slug: post.slug },
-        props: post
-    }));
+	const posts = await getPosts()
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post
+	}))
 }
-type Props = CollectionEntry<"blog">;
-const post = Astro.props;
-const MAX_POSTS = 3;
+type Props = CollectionEntry<'blog'>
+const post = Astro.props
+const MAX_POSTS = 3
 const getRelatedPosts = (post: Props) => {
-    const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase());
-    const relatedPosts = posts.filter((p) => p.slug !== post.slug && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase())));
-    return relatedPosts.slice(0, MAX_POSTS);
-};
-const relatedPosts = getRelatedPosts(post);
-const { Content, headings, remarkPluginFrontmatter } = await post.render();
+	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
+	const relatedPosts = posts.filter(
+		(p) => p.slug !== post.slug && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
+	)
+	return relatedPosts.slice(0, MAX_POSTS)
+}
+const relatedPosts = getRelatedPosts(post)
+const { Content, headings, remarkPluginFrontmatter } = await post.render()
 ---
 
 <BlogPostLayout

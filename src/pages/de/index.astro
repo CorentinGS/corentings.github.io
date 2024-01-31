@@ -1,26 +1,25 @@
 ---
-import { changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Skills from "../../components/Skills.astro";
-import Footer from "../../components/utils/Footer.astro";
-import { Icon } from "astro-iconify";
-import Introduction from "../../components/Introduction.astro";
-import Code from "../../components/Code.astro";
-import Freelance from "../../components/Freelance.astro";
-import Write from "../../components/Write.astro";
-import NewContact from "../../components/NewContact.astro";
+import { changeLanguage } from 'i18next'
+import Layout from '../../layouts/Layout.astro'
+import Hero from '../../components/Hero.astro'
+import Skills from '../../components/Skills.astro'
+import Footer from '../../components/utils/Footer.astro'
+import { Icon } from 'astro-iconify'
+import Introduction from '../../components/Introduction.astro'
+import Code from '../../components/Code.astro'
+import Freelance from '../../components/Freelance.astro'
+import Write from '../../components/Write.astro'
+import NewContact from '../../components/NewContact.astro'
 
-changeLanguage("de");
+changeLanguage('de')
 
-export const prerender = true;
+export const prerender = true
 ---
 
-<Layout title='CorentinGS'>
+<Layout title='Home'>
 	<div
 		class='hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden'
 		id='btn-back-to-top'
-		transition:persist
 	>
 		<Icon name='lucide:arrow-up' class='size-6' />
 	</div>

@@ -6,12 +6,13 @@ import ListPosts from 'src/components/blog/ListPosts.astro'
 import { getPosts } from '@/utils'
 import ListCategories from 'src/components/blog/ListCategories.astro'
 
-changeLanguage('de')
+changeLanguage('fr')
 
 const posts = await getPosts(10)
+export const prerender = true
 ---
 
-<Layout title='CorentinGS'>
+<Layout title='Blog'>
 	<div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
 		<div class='header py-2 mb-3 flex items-end justify-between'>
 			<div class='title'>
