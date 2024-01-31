@@ -13,7 +13,8 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 export default defineConfig({
 	site: 'https://corentings.dev',
 	image: {
-		service: process.env.NODE_ENV === 'production' ? sharpImageService() : squooshImageService()
+		// service: process.env.NODE_ENV === 'production' ? sharpImageService() : squooshImageService()
+		service: squooshImageService()
 	},
 	prefetch: {
 		prefetchAll: false,
