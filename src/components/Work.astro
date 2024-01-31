@@ -1,39 +1,44 @@
 ---
-import imgMemnix from "../assets/moutmout.png";
+import imgMemnix from '../assets/moutmout.png'
 interface Props {
-    company: string;
-    role: string;
-    startDate: string;
-    endDate: string;
-    image: ImageMetadata;
+	company: string
+	role: string
+	startDate: string
+	endDate: string
+	image: ImageMetadata
 }
-import {Picture} from 'astro:assets';
-import {ImageMetadata} from "astro";
+import { Picture } from 'astro:assets'
+import { ImageMetadata } from 'astro'
 
-const {company, role, startDate, endDate, image} = Astro.props;
+const { company, role, startDate, endDate, image } = Astro.props
 ---
 
-<li class="flex gap-4">
-    <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full">
-        <Picture alt="" loading="lazy" width="64" aspectRatio={1} decoding="async"
-                 formats={['avif', 'webp', 'png']}
-                 quality={'low'}
-                 class="h-8 w-8 mask mask-circle  object-cover" src={image}
-        />
-    </div>
-    <dl class="flex flex-auto flex-wrap gap-x-2">
-        <dt class="sr-only">Company</dt>
-        <dd class="w-full flex-none text-sm font-medium ">
-            {company}
-        </dd>
-        <dt class="sr-only">Role</dt>
-        <dd class="text-xs ">{role}</dd>
-        <dt class="sr-only">Date</dt>
-        <dd class="ml-auto text-xs"
-            aria-label="2019 until Present">
-            <time datetime={startDate}>{startDate}</time>
-            <span aria-hidden="true">—</span>
-            <time datetime={endDate}>{endDate}</time>
-        </dd>
-    </dl>
+<li class='flex gap-4'>
+	<div class='relative mt-1 flex size-10 flex-none items-center justify-center rounded-full'>
+		<Picture
+			alt=''
+			loading='lazy'
+			width='64'
+			aspectRatio={1}
+			decoding='async'
+			formats={['avif', 'webp', 'png']}
+			quality={'low'}
+			class='mask mask-circle size-8 object-cover'
+			src={image}
+		/>
+	</div>
+	<dl class='flex flex-auto flex-wrap gap-x-2'>
+		<dt class='sr-only'>Company</dt>
+		<dd class='w-full flex-none text-sm font-medium'>
+			{company}
+		</dd>
+		<dt class='sr-only'>Role</dt>
+		<dd class='text-xs'>{role}</dd>
+		<dt class='sr-only'>Date</dt>
+		<dd class='ml-auto text-xs' aria-label='2019 until Present'>
+			<time datetime={startDate}>{startDate}</time>
+			<span aria-hidden='true'>—</span>
+			<time datetime={endDate}>{endDate}</time>
+		</dd>
+	</dl>
 </li>

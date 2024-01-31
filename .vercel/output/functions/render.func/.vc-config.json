@@ -1,6 +1,6 @@
 {
 	"runtime": "nodejs20.x",
-	"handler": "home/corentings/Documents/3.Dev/corentings.github.io/dist/entry.mjs",
+	"handler": "home/yume/WebstormProjects/corentings.github.io/dist/entry.mjs",
 	"launcherType": "Nodejs",
 	"supportsResponseStreaming": true
 }

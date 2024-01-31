@@ -1,67 +1,65 @@
 ---
-import type {BlogPost} from '../../../utils/types';
-import {Picture} from 'astro:assets';
-import {Icon} from 'astro-iconify';
-
-interface Props {
-    blogPost: BlogPost;
-}
-
-const {blogPost} = Astro.props;
+import type { BlogPost } from 'src/utils/types'
+import { Picture } from 'astro:assets'
+import { Icon } from 'astro-iconify'
 ---
 
-<div class="relative min-h-screen w-full bg-base-100 p-5">
-    <div class="hoveranimation absolute left-1 top-[0.5rem] z-10 hidden lg:block">
-        <a href="/blog" class="btn btn-ghost text-xl md:text-2xl lg:text-3xl" data-astro-prefetch="hover">
-            <Icon name="lucide:arrow-left" class="h-10 w-10"/>
-        </a>
-    </div>
-    <div
-            class={(blogPost.dark_background === true ? 'text-white' : 'text-black') +
-                ' relative mx-auto mb-4 w-full max-w-screen-lg md:mb-0'}
-            style="height: 24em"
-    >
-        <Picture
-                src={blogPost.image}
-                class="absolute left-0 top-0 z-0 h-full w-full object-cover"
-                alt={blogPost.title}
-                loading={'eager'}
-                formats={['avif', 'webp']}
-                aspectRatio={16 / 9}
-                quality={'50'}
-                width={512}
-                height={512}
-        />
-        <div class="absolute bottom-0 left-0 z-20 p-4">
+<div class='relative min-h-screen w-full bg-base-100 p-5'>
+	<div class='hoveranimation absolute left-1 top-[0.5rem] z-10 hidden lg:block'>
+		<a
+			href='/blog'
+			class='btn btn-ghost text-xl md:text-2xl lg:text-3xl'
+			data-astro-prefetch='hover'
+		>
+			<Icon name='lucide:arrow-left' class='h-10 w-10' />
+		</a>
+	</div>
+	<div
+		class={(blogPost.dark_background === true ? 'text-white' : 'text-black') +
+			' relative mx-auto mb-4 w-full max-w-screen-lg md:mb-0'}
+		style='height: 24em'
+	>
+		<Picture
+			src={blogPost.image}
+			class='absolute left-0 top-0 z-0 h-full w-full object-cover'
+			alt={blogPost.title}
+			loading={'eager'}
+			formats={['avif', 'webp']}
+			aspectRatio={16 / 9}
+			quality={'50'}
+			width={512}
+			height={512}
+		/>
+		<div class='absolute bottom-0 left-0 z-20 p-4'>
 			<span
-                    class="badge badge-secondary mb-2 inline-flex items-center justify-center px-4 py-1 uppercase"
-            >{blogPost.category}</span
-            >
-            <h1 class="text-4xl leading-tight">
-                {blogPost.title}
-            </h1>
-            <div class="mt-3 flex">
-                <Picture
-                        src={blogPost.author.avatar}
-                        formats={['avif', 'webp']}
-                        quality={50}
-                        loading={'eager'}
-                        alt={blogPost.author.name}
-                        width="32"
-                        height="32"
-                        aspectRatio="1/1"
-                        class="mr-2 h-10 w-10 rounded-full object-cover"
-                />
-                <div>
-                    <div class="flex flex-col">
-                        <span>{blogPost.author.name}</span>
-                        <span>{blogPost.date} ・{blogPost.timeToRead}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0">
-        <slot/>
-    </div>
+				class='badge badge-secondary mb-2 inline-flex items-center justify-center px-4 py-1 uppercase'
+				>{blogPost.category}</span
+			>
+			<h1 class='text-4xl leading-tight'>
+				{blogPost.title}
+			</h1>
+			<div class='mt-3 flex'>
+				<Picture
+					src={blogPost.author.avatar}
+					formats={['avif', 'webp']}
+					quality={50}
+					loading={'eager'}
+					alt={blogPost.author.name}
+					width='32'
+					height='32'
+					aspectRatio='1/1'
+					class='mr-2 h-10 w-10 rounded-full object-cover'
+				/>
+				<div>
+					<div class='flex flex-col'>
+						<span>{blogPost.author.name}</span>
+						<span>{blogPost.date} ・{blogPost.timeToRead}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
+		<slot />
+	</div>
 </div>

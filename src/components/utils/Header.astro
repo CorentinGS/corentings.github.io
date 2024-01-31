@@ -1,99 +1,120 @@
 ---
-import {Icon} from 'astro-iconify';
-import ThemeSwitcher from './ThemeSwitcher.astro';
-import {LanguageSelector} from 'astro-i18next/components';
-import {localizePath} from 'astro-i18next';
-import {t} from 'i18next';
-import {Profile} from '../../../utils/config';
-import {Picture} from 'astro:assets';
+import { Icon } from 'astro-iconify'
+import ThemeSwitcher from './ThemeSwitcher.astro'
+import { LanguageSelector } from 'astro-i18next/components'
+import { localizePath } from 'astro-i18next'
+import { t } from 'i18next'
+import { Profile } from 'src/utils/config'
+import { Picture } from 'astro:assets'
 
-const {lang} = Astro.props;
-const profile = Profile;
+const { lang } = Astro.props
+const profile = Profile
 
-import Logo from "../Index/Logo.astro";
+import Logo from '../Index/Logo.astro'
 ---
 
-<header class="">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-            <a href={localizePath('/')} class="-m-1.5 p-1.5 flex hoveranimation text-xl normal-case lg:text-3xl"
-               data-astro-prefetch="hover">
-                <Logo class="w-8 h-8 mr-2"/>
-            </a>
-        </div>
-        <div class="flex lg:hidden">
-            <label for="my-modal-6" class="btn btn-ghost lg:hidden">
-                <svg
-                        class="inline-block h-6 w-6 stroke-current"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                            d="M4 6h16M4 12h16M4 18h16"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"></path>
-                </svg>
-            </label>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-            <a href={localizePath('/projects')} class="text-md font-semibold leading-6"
-               data-astro-prefetch="hover">{t("navbar.projects")}</a>
-            <a href={localizePath('/talks')} class="text-md font-semibold leading-6"
-               data-astro-prefetch="hover">{t("navbar.talks")}</a>
-            <a href={localizePath('/experiences')} class="text-md font-semibold leading-6"
-               data-astro-prefetch="hover">{t("navbar.experiences")}</a>
-            <a href={localizePath('/blog')} class="text-md font-semibold leading-6"
-               data-astro-prefetch="hover">{t("navbar.articles")}</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <button class="btn btn-ghost" onclick="my_modal_1.showModal()">
-                <Icon name="lucide:settings" class="w-6 h-6"/>
-            </button>
-            <dialog id="my_modal_1" class="modal">
-                <div class="modal-box">
-                    <!-- Modal header -->
-                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                        <h3 class="text-lg font-semibold">
-                            Customize your experience
-                        </h3>
-                        <form method="dialog">
-                            <button class="btn btn-ghost" data-modal-close>
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                     viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                          stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </form>
-
-                    </div>
-                    <!-- Modal body -->
-                    <form action="#" class="p-4 md:p-5">
-                        <div class="grid gap-4 mb-4 grid-cols-2">
-                            <div class="col-span-2 sm:col-span-1">
-                                <label for="language" class="block mb-2 text-sm font-medium">Language</label>
-                                <LanguageSelector
-                                        id="language"
-                                        showFlag={true}
-                                        class="my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content"
-                                />
-                            </div>
-                            <div class="col-span-2">
-                                <label for="theme" class="block mb-2 text-sm font-medium">Theme</label>
-                                <ThemeSwitcher id="theme"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <form method="dialog" class="modal-backdrop">
-                    <button>close</button>
-                </form>
-            </dialog>
-        </div>
-    </nav>
-    <!-- Main modal -->
-    <!-- Mobile menu, show/hide based on menu open state. -->
+<header class=''>
+	<nav class='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
+		<div class='flex lg:flex-1'>
+			<a
+				href={localizePath('/')}
+				class='hoveranimation -m-1.5 flex p-1.5 text-xl normal-case lg:text-3xl'
+				data-astro-prefetch='hover'
+			>
+				<Logo class='mr-2 size-8' />
+			</a>
+		</div>
+		<div class='flex lg:hidden'>
+			<label for='my-modal-6' class='btn btn-ghost lg:hidden'>
+				<svg
+					class='inline-block size-6 stroke-current'
+					fill='none'
+					viewBox='0 0 24 24'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M4 6h16M4 12h16M4 18h16'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+						stroke-width='2'></path>
+				</svg>
+			</label>
+		</div>
+		<div class='hidden lg:flex lg:gap-x-12'>
+			<a
+				href={localizePath('/projects')}
+				class='text-md font-semibold leading-6'
+				data-astro-prefetch='hover'>{t('navbar.projects')}</a
+			>
+			<a
+				href={localizePath('/talks')}
+				class='text-md font-semibold leading-6'
+				data-astro-prefetch='hover'>{t('navbar.talks')}</a
+			>
+			<a
+				href={localizePath('/experiences')}
+				class='text-md font-semibold leading-6'
+				data-astro-prefetch='hover'>{t('navbar.experiences')}</a
+			>
+			<a
+				href={localizePath('/blog')}
+				class='text-md font-semibold leading-6'
+				data-astro-prefetch='hover'>{t('navbar.articles')}</a
+			>
+		</div>
+		<div class='hidden lg:flex lg:flex-1 lg:justify-end'>
+			<button class='btn btn-ghost' onclick='my_modal_1.showModal()'>
+				<Icon name='lucide:settings' class='size-6' />
+			</button>
+			<dialog id='my_modal_1' class='modal'>
+				<div class='modal-box'>
+					<!-- Modal header -->
+					<div class='flex items-center justify-between rounded-t border-b p-4 md:p-5'>
+						<p class='text-lg font-semibold'>Customize your experience</p>
+						<form method='dialog'>
+							<button class='btn btn-ghost' data-modal-close>
+								<svg
+									class='size-3'
+									aria-hidden='true'
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 14 14'
+								>
+									<path
+										stroke='currentColor'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										stroke-width='2'
+										d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'></path>
+								</svg>
+								<span class='sr-only'>Close modal</span>
+							</button>
+						</form>
+					</div>
+					<!-- Modal body -->
+					<form action='#' class='p-4 md:p-5'>
+						<div class='mb-4 grid grid-cols-2 gap-4'>
+							<div class='col-span-2 sm:col-span-1'>
+								<label for='language' class='mb-2 block text-sm font-medium'>Language</label>
+								<LanguageSelector
+									id='language'
+									showFlag={true}
+									class='my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content'
+								/>
+							</div>
+							<div class='col-span-2'>
+								<label for='theme' class='mb-2 block text-sm font-medium'>Theme</label>
+								<ThemeSwitcher id='theme' />
+							</div>
+						</div>
+					</form>
+				</div>
+				<form method='dialog' class='modal-backdrop'>
+					<button>close</button>
+				</form>
+			</dialog>
+		</div>
+	</nav>
+	<!-- Main modal -->
+	<!-- Mobile menu, show/hide based on menu open state. -->
 </header>

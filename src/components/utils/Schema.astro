@@ -1,0 +1,49 @@
+---
+import { Schema } from 'astro-seo-schema'
+
+const { title, description, ogImage } = Astro.props
+---
+
+<Schema
+	item={{
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Corentin Giaufer--Saubert',
+		alternateName: 'CorentinGS',
+		jobTitle: 'Freelance Backend Developer',
+		description:
+			"I'm a 20-year-old freelance backend developer and BSC. Computer Science student with a passion for technology and open-source. Explore my projects, including Memnix, an open-source flashcard app, and discover vibrant communities I manage. Join me on an innovative journey through technology and creativity.",
+		alumniOf: {
+			'@type': 'CollegeOrUniversity',
+			name: ['Estaca', "Université Côte d'Azur", 'IU International University of Applied Sciences']
+		},
+		url: 'https://corentings.dev',
+		image: 'https://corentings.dev/favicon-32x32.png',
+		sameAs: [
+			'https://twitter.com/GSCorentinDev',
+			'https://www.linkedin.com/in/corentin-giaufer-saubert/',
+			'https://github.com/corentings',
+			'https://hachyderm.io/@TheLittlePrince'
+		],
+		memberOf: [
+			{
+				'@type': 'Organization',
+				name: 'The Kafejo',
+				url: 'https://corentings.dev/discord'
+			},
+			{
+				'@type': 'Organization',
+				name: 'Memnix',
+				url: 'https://memnix.app'
+			}
+		],
+		knowsAbout: ['Golang', 'Linux', 'Docker', 'Computer Science', 'Chess', 'C/C++'],
+		email: 'contact@corentings.dev',
+		knowsLanguage: ['French', 'English'],
+		worksFor: {
+			'@type': 'Organization',
+			name: 'CorentinGS',
+			url: 'https://corentings.dev'
+		}
+	}}
+/>

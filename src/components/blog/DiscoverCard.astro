@@ -1,32 +1,52 @@
 ---
-import {BlogPost} from "../../../utils/types";
-import {getImage} from "astro:assets";
+import { BlogPost } from 'src/utils/types'
+import { getImage } from 'astro:assets'
+import FormattedDate from './FormattedDate.astro'
 
-interface Props {
-    post: BlogPost;
-}
-
-const {post} = Astro.props;
+const {
+	id,
+	data: { title, description, pubDate, heroImage, category },
+	readTime,
+	slug
+} = Astro.props
 ---
 
-
-<article class="group relative flex flex-col items-start">
-    <h2 class="text-base font-semibold tracking-tight">
-        <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-base-200 opacity-0 transition group-hover:scale-100 group-hover:opacity-100  sm:-inset-x-6 sm:rounded-2xl"></div>
-        <a href={post.link} data-astro-prefetch="hover"
-           data-umami-event="Discover Blog Post Clicked" data-umami-title={post.title}
-        ><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">{post.title}</span></a></h2>
-    <time class="relative z-10 order-first mb-3 flex items-center text-sm text-base-content/60 pl-3.5"
-          datetime={post.date}><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"><span
-            class="h-4 w-0.5 rounded-full bg-base-content/60"></span></span>{post.date}
-    </time>
-    <p class="relative z-10 mt-2 text-sm text-base-content/70">{post.description}</p>
-    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-primary">Read article
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
-            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-        </svg>
-    </div>
+<article class='group relative flex flex-col items-start'>
+	<h2 class='text-base font-semibold tracking-tight'>
+		<div
+			class='absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-base-200 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl'
+		>
+		</div>
+		<a
+			href={`/blog/${slug}/`}
+			data-astro-prefetch='hover'
+			data-umami-event='Discover Blog Post Clicked'
+			data-umami-title={title}
+			><span class='absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl'></span><span
+				class='relative z-10'>{title}</span
+			></a
+		>
+	</h2>
+	<time
+		class='relative z-10 order-first mb-3 flex items-center text-sm text-base-content/60 pl-3.5'
+		datetime={pubDate}
+		><span class='absolute inset-y-0 left-0 flex items-center' aria-hidden='true'
+			><span class='h-4 w-0.5 rounded-full bg-base-content/60'></span></span
+		>
+		<FormattedDate date={pubDate} />
+	</time>
+	<p class='relative z-10 mt-2 text-sm text-base-content/70'>{description}</p>
+	<div
+		aria-hidden='true'
+		class='relative z-10 mt-4 flex items-center text-sm font-medium text-primary'
+	>
+		Read article
+		<svg viewBox='0 0 16 16' fill='none' aria-hidden='true' class='ml-1 h-4 w-4 stroke-current'>
+			<path
+				d='M6.75 5.75 9.25 8l-2.5 2.25'
+				stroke-width='1.5'
+				stroke-linecap='round'
+				stroke-linejoin='round'></path>
+		</svg>
+	</div>
 </article>

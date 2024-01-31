@@ -1,162 +1,85 @@
 ---
-import Navbar from "../components/utils/Navbar.astro"
-import "../styles/global.css"
-import i18next, {t} from "i18next"
-import HeadHrefLangs from "../components/utils/HeadHrefLangs.astro"
-import {LanguageSelector} from "astro-i18next/components"
-import ThemeSwitcher from "../components/utils/ThemeSwitcher.astro"
-import {Schema} from "astro-seo-schema"
+import i18next, { t } from 'i18next'
+import HeadHrefLangs from '../components/utils/HeadHrefLangs.astro'
+import { LanguageSelector } from 'astro-i18next/components'
+import ThemeSwitcher from '../components/utils/ThemeSwitcher.astro'
 
-import {localizePath} from "astro-i18next"
+import { localizePath } from 'astro-i18next'
 
-import {ViewTransitions} from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 
-
-// Import fonts
-import "@fontsource/syne"
-import "@fontsource/nunito"
-import {Icon} from "astro-iconify";
-import SEO from "../components/utils/SEO.astro";
-import {themeChange} from "theme-change";
-import Header from "../components/utils/Header.astro";
+import { Icon } from 'astro-iconify'
+import Header from '../components/utils/Header.astro'
+import BaseHead from '../components/utils/BaseHead.astro'
+import ProviderTheme from '../components/utils/ProviderTheme.astro'
 
 export interface Props {
-    title: string
+	title: string
 }
 
-const {title} = Astro.props
+const { title, description, image, articleDate } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang={i18next.language} transition:persist>
-<head>
-    <title>Corentin Giaufer Saubert・Freelance・Golang・Chess Lover</title>
+<!doctype html>
+<html lang={i18next.language} class='scroll-smooth'>
+	<head>
+		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 
-    <ViewTransitions fallback='swap'/>
+		<HeadHrefLangs />
 
-    <script
-            async
-            src="https://umami.memnix.app/script.js"
-            data-website-id="5bf74955-9bdd-4461-8b7b-3d3aacaf94bb"
-            data-domains="corentings.dev"
-    ></script>
-    <script is:inline>
-        // ☝️ This script prevent the FART effect.
-        if (localStorage.getItem("theme") === null) {
-            document.documentElement.setAttribute("data-theme", "dark")
-        } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
-        // "theme" LocalStorage value is set by the package to remember user preference.
-        // The value is checked and applyed before rendering anything.
-    </script>
-    <script>
-        import {themeChange} from "theme-change"
+		<ProviderTheme />
+	</head>
+	<body>
+		<main>
+			<!-- Navbar -->
+			<Header lang={true} />
+			<!-- Page Slot -->
+			<slot />
 
-        const setTheme = () => {
-            if (localStorage.getItem("theme") === null) {
-                document.documentElement.setAttribute("data-theme", "dark")
-            } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
-
-            console.log("Theme set to " + localStorage.getItem("theme"))
-
-        }
-        themeChange()
-
-        setTheme()
-
-        // 👆 you could import the CDN directly instead of these two lines
-
-        document.addEventListener('astro:after-swap', setTheme);
-
-    </script>
-
-    <meta name="generator" content={Astro.generator}/>
-
-    <SEO/>
-
-    <HeadHrefLangs/>
-
-    <Schema
-            item={{
-                "@context": "https://schema.org",
-                "@type": "Person",
-                name: "Corentin Giaufer--Saubert",
-                alternateName: "CorentinGS",
-                jobTitle: "Freelance Backend Developer",
-                description: "I'm a 20-year-old freelance backend developer and BSC. Computer Science student with a passion for technology and open-source. Explore my projects, including Memnix, an open-source flashcard app, and discover vibrant communities I manage. Join me on an innovative journey through technology and creativity.",
-                alumniOf: {
-                    "@type": "CollegeOrUniversity",
-                    name: ["Université Côte d'Azur", "IU International University of Applied Sciences"],
-                },
-                url: "https://corentings.dev",
-                image: "https://corentings.dev/favicon-32x32.png",
-                sameAs: [
-                    "https://twitter.com/GSCorentinDev",
-                    "https://www.linkedin.com/in/corentin-giaufer-saubert/",
-                    "https://github.com/corentings",
-                    "https://hachyderm.io/@TheLittlePrince",
-                ],
-                "memberOf": [
-                    {
-                        "@type": "Organization",
-                        "name": "The Kafejo",
-                        "url": "https://corentings.dev/discord"
-                    },
-                    {
-                        "@type": "Organization",
-                        "name": "Memnix",
-                        "url": "https://memnix.app"
-                    },
-                ],
-                knowsAbout: ["Golang", "Linux", "Docker", "Computer Science", "Chess", "C/C++"],
-                email: "contact@corentings.dev",
-                "knowsLanguage": ["French", "English"],
-                "worksFor": {
-                    "@type": "Organization",
-                    "name": "CorentinGS",
-                    "url": "https://corentings.dev",
-                },
-            }}
-    />
-</head>
-<body>
-<main>
-    <!-- Navbar -->
-    <Header lang={true}/>
-    <!-- Page Slot -->
-    <slot/>
-
-    <input type="checkbox" id="my-modal-6" class="modal-toggle"/>
-    <label for="my-modal-6" class="modal cursor-pointer modal-bottom sm:modal-middle">
-        <label class="modal-box relative" for="">
-            <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
-
-                <li class="py-3">
-                    <ThemeSwitcher class="mx-auto w-full"/>
-                </li>
-                <li class="py-3">
-                    <LanguageSelector
-                            showFlag={true}
-                            class="my-select-class select-bordered select-secondary select select-md w-full max-w-xs bg-base-200 text-base-content"
-                    />
-                </li>
-                <li><a href={localizePath('/projects')} data-astro-prefetch="tap"
-                       class="text-md font-semibold leading-6">Projects</a>
-                </li>
-                <li>
-                    <a href={localizePath('/talks')} data-astro-prefetch="tap"
-                       class="text-md font-semibold leading-6">Talks</a>
-                </li>
-                <li>
-                    <a href={localizePath('/experiences')} data-astro-prefetch="tap"
-                       class="text-md font-semibold leading-6">Experiences</a>
-                </li>
-                <li>
-                    <a href={localizePath('/blog')} data-astro-prefetch="tap"
-                       class="text-md font-semibold leading-6">Articles</a>
-                </li>
-            </ul>
-        </label>
-    </label>
-</main>
-</body>
+			<input type='checkbox' id='my-modal-6' class='modal-toggle' />
+			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
+				<label class='modal-box relative' for=''>
+					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
+						<li class='py-3'>
+							<ThemeSwitcher class='mx-auto w-full' />
+						</li>
+						<li class='py-3'>
+							<LanguageSelector
+								showFlag={true}
+								class='my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content'
+							/>
+						</li>
+						<li>
+							<a
+								href={localizePath('/projects')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Projects</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/talks')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Talks</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/experiences')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Experiences</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/blog')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Articles</a
+							>
+						</li>
+					</ul>
+				</label>
+			</label>
+		</main>
+	</body>
 </html>
