@@ -13,19 +13,19 @@
 		},
 		{
 			"src": "^\\/_image$",
-			"dest": "render"
+			"dest": "_render"
 		},
 		{
 			"src": "^\\/de\\/blog(?:\\/(.*?))?\\/?$",
-			"dest": "render"
+			"dest": "_render"
 		},
 		{
 			"src": "^\\/fr\\/blog(?:\\/(.*?))?\\/?$",
-			"dest": "render"
+			"dest": "_render"
 		},
 		{
 			"src": "^\\/rss\\.xml\\/?$",
-			"dest": "render"
+			"dest": "_render"
 		}
 	]
 }
