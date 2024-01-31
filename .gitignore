@@ -1,0 +1,16 @@
+# Ruby Gems
+*.gem
+
+# Design Files
+*.psd
+*.ai
+/node_modules/
+.vscode
+.idea
+*.log
+
+diff.txt
+dist
+
+node_modules
+.env

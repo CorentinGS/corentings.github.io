@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/Layout";
+import ListPosts from "@/components/blog/ListPosts";
+import ListCategories from "@/components/blog/ListCategories";
+import { sluglify, unsluglify, getCategories, getPosts } from "@/utils";
+import { siteConfig } from "@/data/site.config";
+import Pagination from "@/components/blog/Pagination";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("de");
+
+export const prerender = true;
+export async function getStaticPaths({ paginate }: any) {
+    const categories = await getCategories();
+    const allPosts = await getPosts();
+    return categories.flatMap((category: string) => {
+        const unsluglifyNameCategory = unsluglify(category!.toLowerCase());
+        const filteredPosts = allPosts.filter((post) => post.data.category.toLowerCase() === unsluglifyNameCategory);
+        return paginate(filteredPosts, {
+            params: {
+                category: sluglify(category.toLowerCase())
+            },
+            pageSize: siteConfig.paginationSize
+        });
+    });
+}
+const params = Astro.params;
+const { page } = Astro.props;
+const unsluglifyNameCategory = unsluglify(params.category!.toLowerCase());
+const posts = page.data;
+---
+
+<Layout title={params.category}>
+	<div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
+		<div class='title header py-2 mb-3 flex items-end justify-between'>
+			<h1 class='text-5xl font-bold first-letter:uppercase'>
+				{unsluglifyNameCategory}
+			</h1>
+		</div>
+		<ListCategories activeCategory={params.category} />
+		<ListPosts posts={posts} />
+		<Pagination page={page} />
+	</div>
+</Layout>

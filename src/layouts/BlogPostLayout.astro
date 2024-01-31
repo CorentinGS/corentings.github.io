@@ -1,0 +1,199 @@
+---
+import '../styles/global.css'
+import { localizePath } from 'astro-i18next'
+import HeadHrefLangs from '../components/utils/HeadHrefLangs.astro'
+import { LanguageSelector } from 'astro-i18next/components'
+import ThemeSwitcher from '../components/utils/ThemeSwitcher.astro'
+import { t } from 'i18next'
+import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
+
+import { Icon } from 'astro-iconify'
+import PostHeader from '../components/utils/PostHeader.astro'
+import { Picture } from 'astro:assets'
+import FormattedDate from '../components/blog/FormattedDate.astro'
+import Tag from '../components/blog/Tag.astro'
+import BaseHead from "../components/utils/BaseHead.astro";
+import ProviderTheme from "../components/utils/ProviderTheme.astro";
+
+type Props = {
+	id: CollectionEntry<'blog'>['id']
+	data: CollectionEntry<'blog'>['data']
+	headings: MarkdownHeading[]
+	readTime: string
+}
+
+const { data, readTime, headings, id } = Astro.props
+const { title, description, pubDate, heroImage, tags } = data
+
+const articleDate = pubDate.toISOString()
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<BaseHead title={title} description={description} ogImage={heroImage?.src} articleDate={articleDate} />
+
+		<HeadHrefLangs />
+
+		<ProviderTheme />
+	</head>
+	<body>
+		<main transition:animate='slide'>
+			<!-- Navbar -->
+			<PostHeader lang={false} />
+			<!-- Page Slot -->
+			<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
+				<div class='hoveranimation absolute left-5 top-[0.5rem] z-10 hidden lg:block'>
+					<a
+						href='/blog'
+						class='btn btn-ghost text-xl md:text-2xl lg:text-3xl'
+						data-astro-prefetch='hover'
+					>
+						<Icon name='lucide:arrow-left' class='h-10 w-10' />
+					</a>
+				</div>
+				<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
+					<header class='mb-3 flex flex-col justify-center items-center gap-6'>
+						<div class='flex flex-col gap-2'>
+							<div class='flex items-center justify-center gap-x-1'>
+								<p class='text-center text-sm text-opacity-50'>
+									Published
+									<FormattedDate date={pubDate} />
+								</p>
+								<p class='text-center text-sm text-opacity-50 font-bold'>
+									- {readTime}
+								</p>
+							</div>
+							<h1 class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold'>
+								{title}
+							</h1>
+						</div>
+
+						<div class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5'>
+							{tags.map((tag) => <Tag tag={tag} />)}
+						</div>
+					</header>
+
+					<>
+						{
+							heroImage && (
+								<Picture
+									src={heroImage}
+									width={1000}
+									height={500}
+									quality={80}
+									formats={['webp', 'avif']}
+									loading='eager'
+									class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
+									alt={`img of ${title}`}
+								/>
+							)
+						}
+					</>
+
+					<hr />
+
+					<div>
+						<slot />
+					</div>
+				</div>
+			</article>
+
+			<div
+				class='hoveranimation btn btn-accent btn-sm fixed bottom-5 right-5 hidden'
+				id='btn-back-to-top'
+			>
+				<Icon name='lucide:arrow-up' class='size-6' />
+			</div>
+
+			<input type='checkbox' id='my-modal-6' class='modal-toggle' />
+			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
+				<label class='modal-box relative' for=''>
+					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
+						<li class='py-3'>
+							<ThemeSwitcher class='mx-auto w-full' />
+						</li>
+						<li>
+							<a
+								href={localizePath('/projects')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Projects</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/talks')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Talks</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/experiences')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Experiences</a
+							>
+						</li>
+						<li>
+							<a
+								href={localizePath('/blog')}
+								data-astro-prefetch='tap'
+								class='text-md font-semibold leading-6'>Articles</a
+							>
+						</li>
+					</ul>
+				</label>
+			</label>
+		</main>
+	</body><script>
+		const fnObserver = () => {
+			function handleIntersection(
+				entries: IntersectionObserverEntry[],
+				observer: IntersectionObserver
+			) {
+				entries.forEach((entry) => {
+					const index = document.querySelector(`aside a[href="#${entry.target.id}"]`)
+
+					if (entry.isIntersecting) {
+						index?.classList.remove('bg-base-200') // remove bg
+						index?.classList.add(
+							'bg-secondary',
+							'text-secondary-content',
+							'font-bold',
+							'transition-colors',
+							'duration-200'
+						)
+					} else {
+						index?.classList.add('bg-base-200') // add bg
+						index?.classList.remove(
+							'bg-secondary',
+							'text-secondary-content',
+							'font-bold',
+							'transition-colors',
+							'duration-200'
+						)
+					}
+				})
+			}
+
+			const headings = document.querySelectorAll(
+				'div.prose h1, div.prose h2, div.prose h3, div.prose h4, div.prose h5, div.prose h6'
+			)
+
+			const options = {
+				root: null,
+				rootMargin: ' 15% 0px 0% 0px ',
+				threshold: 1
+			}
+
+			const observer = new IntersectionObserver(handleIntersection, options)
+
+			headings.forEach((heading) => {
+				observer.observe(heading)
+			})
+		}
+		fnObserver()
+		document.addEventListener('astro:after-swap', fnObserver)
+	</script>
+</html>

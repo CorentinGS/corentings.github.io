@@ -1,0 +1,60 @@
+---
+import Skill from './Index/Skill.astro'
+import { t } from 'i18next'
+
+import { Icon } from 'astro-iconify'
+---
+
+<section class='lg:py-15 bg-base-100 py-6 md:py-10'>
+	<div class='mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12'>
+		<div>
+			<h2 class='w-full text-center text-3xl font-bold sm:text-4xl md:text-5xl'>
+				{t('skills.title')}
+			</h2>
+		</div>
+		<div class='items-center'>
+			<div class='mt-8 lg:mt-0'>
+				<div class='grid grid-cols-4 items-center gap-4 text-center'>
+					<Skill link='https://go.dev/' name='Golang'>
+						<div class='indicator'>
+							<span class='indicator-item indicator-start indicator-bottom'>
+								<Icon name='lucide:heart' class='size-7 text-accent motion-safe:animate-bounce' />
+							</span>
+							<Icon name='logos:gopher' class='size-16 md:size-20' />
+						</div>
+					</Skill>
+					<Skill link='https://www.java.com/' name='java'>
+						<Icon name='logos:java' class='size-16 md:size-20' />
+					</Skill>
+					<Skill link='https://kotlinlang.org/' name='Kotlin'>
+						<Icon name='logos:kotlin-icon' class='size-16 md:size-20' />
+					</Skill>
+					<Skill link='https://en.wikipedia.org/wiki/C_(programming_language)' name='C'>
+						<Icon name='logos:c' class='size-16 md:size-20' />
+					</Skill>
+
+					<Skill link='https://www.postgresql.org/' name='PostgreSQL'>
+						<Icon name='logos:postgresql' class='size-16 md:size-20' />
+					</Skill>
+					<Skill link='https://www.rabbitmq.com/' name='RabbitMQ'>
+						<Icon name='logos:rabbitmq-icon' class='size-16 md:size-20' />
+					</Skill>
+					<Skill link='https://www.docker.com/' name='Docker'>
+						<Icon name='logos:docker-icon' class='size-16 md:size-20' />
+					</Skill>
+					<Skill link='https://git-scm.com/' name='Git'>
+						<Icon name='logos:git-icon' class='size-16 md:size-20' />
+					</Skill>
+					<div class='col-start-2 mx-auto'>
+						<Skill link='https://www.youtube.com/watch?v=oHNKTlz1lps' name='Open Suse'>
+							<Icon name='simple-icons:opensuse' class='size-16 md:size-20' />
+						</Skill>
+					</div>
+					<Skill link='https://www.vim.org/' name=':q'>
+						<Icon name='logos:vim' class='size-16 md:size-20' />
+					</Skill>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,81 @@
+---
+import '@fontsource/syne'
+import '@fontsource/nunito'
+
+import {AstroFont} from "astro-font";
+import {join} from "path";
+---
+
+
+<AstroFont
+        config={[
+            {
+                name: "Lufga",
+                src: [
+                    {
+                        style: 'normal',
+                        weight: '400',
+                        path: './public/fonts/Lufga-Regular.woff2'
+                    },
+                    {
+                        style: 'bold',
+                        weight: '700',
+                        path: './public/fonts/Lufga-Bold.woff2'
+                    },
+                ],
+                preload: false,
+                display: "swap",
+                selector: "body",
+                fallback: "sans-serif",
+            },
+        ]}
+/>
+
+<AstroFont
+        config={[
+            {
+                preload: false,
+                display: 'swap',
+                name: 'Manrope',
+                fallback: 'sans-serif',
+                src: [
+                    {
+                        weight: '200',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-ExtraLight.woff2')
+                    },
+                    {
+                        weight: '300',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-Light.woff2')
+                    },
+                    {
+                        weight: '400',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-Regular.woff2')
+                    },
+                    {
+                        weight: '500',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-Medium.woff2')
+                    },
+                    {
+                        weight: '600',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-SemiBold.woff2')
+                    },
+                    {
+                        weight: '700',
+                        preload: true,
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-Bold.woff2')
+                    },
+                    {
+                        weight: '800',
+                        style: 'normal',
+                        path: join(process.cwd(), 'public', 'fonts', 'Manrope-ExtraBold.woff2')
+                    }
+                ]
+            }
+        ]}
+/>

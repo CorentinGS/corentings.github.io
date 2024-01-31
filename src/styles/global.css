@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+	}
+
+	h1 {
+		font-family: 'Syne', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+	}
+
+	h2 {
+		font-family: 'Syne', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-size: 2rem;
+	}
+
+	.hoveranimation {
+		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
+	}
+
+	.underline-offset-4:hover {
+		transition: all 0.3s ease-in-out;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 4px;
+	}
+
+	.prose code {
+		@apply text-base;
+	}
+
+	/* prose styles here */
+	.prose h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply !important;
+	}
+}
+
+.glass {
+	background: rgba(57, 56, 56, 0.52);
+	backdrop-filter: blur(13px) saturate(150%);
+	-webkit-backdrop-filter: blur(13px) saturate(150%);
+	z-index: -1;
+}
+
+.shadow {
+	box-shadow: -5px 3px 8px 1px rgba(0, 0, 0, 0.12);
+}
+
+@layer components {
+	.btn {
+		@apply rounded-lg;
+	}
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}

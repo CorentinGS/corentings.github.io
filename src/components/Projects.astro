@@ -1,0 +1,77 @@
+---
+import Project from './Index/Project.astro'
+import { t } from 'i18next'
+
+import imgMemnixLogo from '../assets/moutmout.png'
+import imgGauntlet from '../assets/gauntlet.png'
+import imgUcaEdt from '../assets/edt-uca.png'
+import imgStouufWebsite from '../assets/Stouuf.png'
+import imgEchiquierNicois from '../assets/en.png'
+import imgKitsu from '../assets/kitsu.png'
+---
+
+<section class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
+	<div class='relative px-4 sm:px-8 lg:px-12'>
+		<div class='relative flex flex-col items-center'>
+			<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
+				{t('projects.title')}
+			</h2>
+			<p class='mt-8 text-xl'>
+				{t('projects.description')}
+			</p>
+		</div>
+	</div>
+</section>
+<section class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
+	<div class='mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12'>
+		<div class='relative px-4 sm:px-8 lg:px-12'>
+			<Project
+				description={t('projects.memnix')}
+				image={imgMemnixLogo}
+				link='https://github.com/memnix/'
+				name='Memnix'
+				reversed={true}
+				stack='Vue.js・Golang・PostgreSQL・MongoDB'
+				ratio={1}
+			/>
+
+			<Project
+				description={t('projects.gauntlet')}
+				link='https://github.com/corentings/gauntlet-reborn'
+				name='Gauntlet Reborn'
+				reversed={false}
+				stack='C・SDL2'
+				image={imgGauntlet}
+				ratio={16 / 6}
+			/>
+
+			<Project
+				description={t('projects.uca_edt')}
+				link='https://github.com/CorentinGS/uca-edt'
+				name='Uca Edt'
+				reversed={true}
+				stack='Golang・Mongo・Docker'
+				image={imgUcaEdt}
+				ratio={16 / 9}
+			/>
+			<Project
+				description={t('projects.kitsu')}
+				image={imgKitsu}
+				link='https://github.com/CorentinGS/Kitsu'
+				name='Kitsu'
+				stack='PostgreSQL・Golang・Rust'
+				reversed={false}
+				ratio={1}
+			/>
+			<Project
+				description={t('projects.stouuf')}
+				link='https://stouuf.net'
+				name='Stouuf Website'
+				reversed={true}
+				stack='Tailwindcss'
+				image={imgStouufWebsite}
+				ratio={16 / 9}
+			/>
+		</div>
+	</div>
+</section>

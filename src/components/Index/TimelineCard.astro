@@ -1,0 +1,123 @@
+---
+import { TimelineCardType } from 'src/utils/types'
+import { Picture } from 'astro:assets'
+import { t } from 'i18next'
+import { Trans } from 'astro-i18next/components'
+import { Icon } from 'astro-iconify'
+
+interface Props {
+	name: string
+	description: string
+	image?: string
+	end_date?: string
+	start_date: string
+	link?: string
+	location?: string
+	right?: boolean
+	tools?: string
+	type?: TimelineCardType
+}
+const { name, description, image, link, start_date, end_date, location, type, tools, right } =
+	Astro.props
+
+let classContent =
+	(right ? 'border-l-[6px] ' : 'border-l-[6px] md:border-r-[6px] md:border-l-[0px] ') +
+	(type === TimelineCardType.Work
+		? 'border-primary'
+		: type === TimelineCardType.School
+			? 'border-secondary'
+			: type === TimelineCardType.Volunteering
+				? 'border-info'
+				: type === TimelineCardType.Project
+					? 'border-accent'
+					: type === TimelineCardType.Course
+						? 'border-success'
+						: type === TimelineCardType.Other
+							? 'border-warning'
+							: 'border-base-200')
+---
+
+<div
+	class={classContent +
+		' hoveranimation order-1 w-10/12 transform-gpu rounded-lg bg-base-200 px-6 py-4 shadow-xl hover:skew-y-2 hover:skew-x-2 hover:shadow-2xl md:w-5/12'}
+>
+	<div class='justify-between sm:flex'>
+		<div>
+			<div class='flex'>
+				<h3 class='text-xl font-bold capitalize'>
+					{name}
+				</h3>
+				{
+					image != null ? (
+						<a
+							href={link}
+							class='ml-3 flex-shrink-0 sm:hidden'
+							rel='noopener noreferrer nofollow'
+							target='_blank'
+						>
+							<Picture
+								alt={name}
+								src={image}
+								class='size-10 rounded-lg object-cover shadow-sm'
+								formats={['avif', 'webp', 'png']}
+								loading='lazy'
+								width={64}
+								height={64}
+								aspectRatio={1}
+								quality={'30'}
+							/>
+						</a>
+					) : null
+				}
+			</div>
+			<div class='mt-1 flex flex-row text-xs font-medium md:text-sm'>
+				{
+					end_date != null ? (
+						<p>
+							{start_date} ・ {end_date}
+						</p>
+					) : (
+						<p>
+							{t('experiences.since')} {'  '} {start_date}
+						</p>
+					)
+				}
+				{location != null ? <p>・{location}</p> : null}
+			</div>
+			{
+				tools != null ? (
+					<div class='mb-2 flex items-center'>
+						<p class='text-xs font-medium uppercase md:text-sm'>Skills</p>
+						<Icon name='lucide:chevron-right' class='size-6' />
+						<p class='text-xs font-medium md:text-sm'>{tools}</p>
+					</div>
+				) : null
+			}
+		</div>
+		{
+			image != null ? (
+				<a
+					href={link}
+					class='ml-3 hidden flex-shrink-0 sm:block'
+					rel='noopener noreferrer nofollow'
+					target='_blank'
+				>
+					<Picture
+						alt={name}
+						src={image}
+						class='rounded-lg object-cover shadow-sm'
+						formats={['avif', 'webp', 'png']}
+						loading='lazy'
+						width={64}
+						height={64}
+						quality={'50'}
+						aspectRatio={1}
+					/>
+				</a>
+			) : null
+		}
+	</div>
+	<p class='text-sm leading-snug tracking-wide'>
+		{description}
+	</p>
+</div>
