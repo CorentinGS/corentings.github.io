@@ -59,6 +59,9 @@ export default defineConfig({
 	],
 	output: 'server',
 	adapter: vercel({
-		functionPerRoute: false
+		functionPerRoute: false,
+		imageService: true,
+		devImageService: 'squoosh',
+
 	})
 })
