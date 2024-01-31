@@ -1,7 +1,7 @@
 ---
 import { siteConfig } from '@/data/site.config'
 const message = siteConfig.shareMessage
-import {Icon} from 'astro-iconify'
+import { Icon } from 'astro-iconify'
 
 const URL = Astro.url.href
 ---
@@ -12,19 +12,18 @@ const URL = Astro.url.href
 		<li>
 			<a
 				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
-				aria-label='Share on Twitter'>
-				<Icon name='ri:twitter-x-fill' class='hoveranimation size-6' />
-			</a
+				aria-label='Share on Twitter'
 			>
+				<Icon name='ri:twitter-x-fill' class='hoveranimation size-6' />
+			</a>
 		</li>
 		<li>
 			<a
 				href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL}`}
 				aria-label='Share on LinkedIn'
 			>
-				<Icon name='lucide:linkedin' class='hoveranimation size-6'/>
-			</a
-			>
+				<Icon name='lucide:linkedin' class='hoveranimation size-6' />
+			</a>
 		</li>
 	</ul>
 </div>
