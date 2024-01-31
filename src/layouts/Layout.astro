@@ -14,29 +14,28 @@ import { ViewTransitions } from 'astro:transitions'
 import '@fontsource/syne'
 import '@fontsource/nunito'
 import { Icon } from 'astro-iconify'
-import SEO from '../components/utils/SEO.astro'
+import SEO from '../components/utils/Schema.astro'
 import { themeChange } from 'theme-change'
 import Header from '../components/utils/Header.astro'
+import BaseHead from "../components/utils/BaseHead.astro";
 
 export interface Props {
 	title: string
 }
 
-const { title } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang={i18next.language} transition:persist>
+<html lang={i18next.language}>
 	<head>
 		<title>Corentin Giaufer Saubert・Freelance・Golang・Chess Lover</title>
 
 		<ViewTransitions fallback='swap' />
 
-		<script
-			async
-			src='https://umami.memnix.app/script.js'
-			data-website-id='5bf74955-9bdd-4461-8b7b-3d3aacaf94bb'
-			data-domains='corentings.dev'></script>
+		<BaseHead />
+
+
 		<script is:inline>
 			// ☝️ This script prevent the FART effect.
 			if (localStorage.getItem('theme') === null) {
@@ -64,55 +63,9 @@ const { title } = Astro.props
 			document.addEventListener('astro:after-swap', setTheme)
 		</script>
 
-		<meta name='generator' content={Astro.generator} />
-
-		<SEO />
 
 		<HeadHrefLangs />
 
-		<Schema
-			item={{
-				'@context': 'https://schema.org',
-				'@type': 'Person',
-				name: 'Corentin Giaufer--Saubert',
-				alternateName: 'CorentinGS',
-				jobTitle: 'Freelance Backend Developer',
-				description:
-					"I'm a 20-year-old freelance backend developer and BSC. Computer Science student with a passion for technology and open-source. Explore my projects, including Memnix, an open-source flashcard app, and discover vibrant communities I manage. Join me on an innovative journey through technology and creativity.",
-				alumniOf: {
-					'@type': 'CollegeOrUniversity',
-					name: ["Université Côte d'Azur", 'IU International University of Applied Sciences']
-				},
-				url: 'https://corentings.dev',
-				image: 'https://corentings.dev/favicon-32x32.png',
-				sameAs: [
-					'https://twitter.com/GSCorentinDev',
-					'https://www.linkedin.com/in/corentin-giaufer-saubert/',
-					'https://github.com/corentings',
-					'https://hachyderm.io/@TheLittlePrince'
-				],
-				memberOf: [
-					{
-						'@type': 'Organization',
-						name: 'The Kafejo',
-						url: 'https://corentings.dev/discord'
-					},
-					{
-						'@type': 'Organization',
-						name: 'Memnix',
-						url: 'https://memnix.app'
-					}
-				],
-				knowsAbout: ['Golang', 'Linux', 'Docker', 'Computer Science', 'Chess', 'C/C++'],
-				email: 'contact@corentings.dev',
-				knowsLanguage: ['French', 'English'],
-				worksFor: {
-					'@type': 'Organization',
-					name: 'CorentinGS',
-					url: 'https://corentings.dev'
-				}
-			}}
-		/>
 	</head>
 	<body>
 		<main>
