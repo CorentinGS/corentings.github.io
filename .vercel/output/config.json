@@ -24,10 +24,6 @@
 			"dest": "render"
 		},
 		{
-			"src": "^\\/blog(?:\\/(.*?))?\\/?$",
-			"dest": "render"
-		},
-		{
 			"src": "^\\/rss\\.xml\\/?$",
 			"dest": "render"
 		}
