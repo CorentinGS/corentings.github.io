@@ -1106,6 +1106,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
+"@fastify/busboy@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.0.tgz#0709e9f4cb252351c609c6e6d8d6779a8d25edff"
+  integrity sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==
+
 "@floating-ui/core@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.6.0.tgz#fa41b87812a16bf123122bf945946bae3fdf7fc1"
@@ -3655,6 +3660,39 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
+"@unpic/astro@^0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@unpic/astro/-/astro-0.0.41.tgz#ca4a781bd3ec9d0c085f600485af6c70967a79c7"
+  integrity sha512-25lVLmb2YiX+waix1PzCL2/46FUdLfrWpQXy9xPJuD2ejTdvswvJrD54WpRAAoS7Er0TaoV9XxJEMbJphZB5hw==
+  dependencies:
+    "@unpic/core" "^0.0.44"
+    "@unpic/pixels" "^1.2.1"
+    "@unpic/placeholder" "^0.1.2"
+    blurhash "^2.0.5"
+
+"@unpic/core@^0.0.44":
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/@unpic/core/-/core-0.0.44.tgz#e4092a89370807a6931d74ca237f597324c69d89"
+  integrity sha512-UVZH0ti+8oo2WYvxN0KwDYyGmcxqQq0KBt1ANVjUQwT70ucG0OZmIrOXky/ra48P/jN59LNJ8fRZJcAWkxhUeg==
+  dependencies:
+    unpic "^3.16.0"
+
+"@unpic/pixels@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@unpic/pixels/-/pixels-1.2.1.tgz#500da8a2b06e302bf8405436070eb7cd880d60fc"
+  integrity sha512-KM1+LhMALb8J12ZfEcmuK0qKOwUCQNO9cTkjhlJ3lQIoOxf6QcMDdylltOPDAvkAMl3ysR5BLWy7x9edkh7odA==
+  dependencies:
+    jpeg-js "0.4.4"
+    pngjs "7.0.0"
+    undici "^5.21.0"
+
+"@unpic/placeholder@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@unpic/placeholder/-/placeholder-0.1.2.tgz#ccf0a42095fa7934ecf7a7523445a450c8eed52b"
+  integrity sha512-O++tS97biojo5sqn5TeTt+jUjl5gWOdIQuOXe8YluTJWq4L0GM6VuTkaspNpsmxHfioJw/6YBirzOpG4t87l8Q==
+  dependencies:
+    blurhash "^2.0.5"
+
 "@vercel/analytics@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.2.tgz"
@@ -4355,6 +4393,11 @@ bl@^5.0.0:
     buffer "^6.0.3"
     inherits "^2.0.4"
     readable-stream "^3.4.0"
+
+blurhash@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/blurhash/-/blurhash-2.0.5.tgz#efde729fc14a2f03571a6aa91b49cba80d1abe4b"
+  integrity sha512-cRygWd7kGBQO3VEhPiTgq4Wc43ctsM+o46urrmPOiuAe+07fzlSB9OJVdpgDL0jPqXUVQ9ht7aq7kxOeJHRK+w==
 
 body-parser@1.20.1:
   version "1.20.1"
@@ -7731,6 +7774,11 @@ jotai@^1.7.2:
   resolved "https://registry.yarnpkg.com/jotai/-/jotai-1.13.1.tgz#20cc46454cbb39096b12fddfa635b873b3668236"
   integrity sha512-RUmH1S4vLsG3V6fbGlKzGJnLrDcC/HNb5gH2AeA9DzuJknoVxSGvvg8OBB7lke+gDc4oXmdVsaKn/xDUhWZ0vw==
 
+jpeg-js@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.4.tgz#a9f1c6f1f9f0fa80cdb3484ed9635054d28936aa"
+  integrity sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==
+
 js-sha1@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/js-sha1/-/js-sha1-0.6.0.tgz#adbee10f0e8e18aa07cdea807cf08e9183dbc7f9"
@@ -10413,6 +10461,11 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+pngjs@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-7.0.0.tgz#a8b7446020ebbc6ac739db6c5415a65d17090e26"
+  integrity sha512-LKWqWJRhstyYo9pGvgor/ivk2w94eSjE3RGVuzLGlr3NmD8bf7RcYGze1mNdEHRP6TRP6rMuDHk5t44hnTRyow==
+
 popmotion@11.0.3:
   version "11.0.3"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.3.tgz#565c5f6590bbcddab7a33a074bb2ba97e24b0cc9"
@@ -12673,6 +12726,13 @@ undici-types@~5.26.4:
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
+undici@^5.21.0:
+  version "5.28.2"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.28.2.tgz#fea200eac65fc7ecaff80a023d1a0543423b4c91"
+  integrity sha512-wh1pHJHnUeQV5Xa8/kyQhO7WFa8M34l026L5P/+2TYiakvGy5Rdc8jWZVyG7ieht/0WgJLEd3kcU5gKx+6GC8w==
+  dependencies:
+    "@fastify/busboy" "^2.0.0"
+
 unherit@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/unherit/-/unherit-3.0.1.tgz"
@@ -12860,6 +12920,11 @@ unixify@^1.0.0:
   integrity sha512-6bc58dPYhCMHHuwxldQxO3RRNZ4eCogZ/st++0+fcC1nr0jiGUtAdBJ2qzmLQWSxbtz42pWt4QQMiZ9HvZf5cg==
   dependencies:
     normalize-path "^2.1.1"
+
+unpic@^3.16.0:
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/unpic/-/unpic-3.16.0.tgz#b32372ffc6ff840c7fb61e0d099035bdaed88351"
+  integrity sha512-XXvQGL+fvzwEX3aPXggTCrzySFPqvpC8r1LKy5ft9573AoX8CrszmA0uOzi6xgylCvvqFg46IDOudJKzM2lQ5A==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
