@@ -1,19 +1,21 @@
 ---
-title: "Goroutine vs Simple function"
-description: "Goroutine vs Simple function"
-pubDate: "Jan 12, 2023"
-author: "Corentin GS"
-heroImage: '../../assets/blog/simple-go-vs-goroutines.webp'
-category: 'Category 1'
-tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
+author: Corentin GS
+heroImage: ../../assets/blog/simple-go-vs-goroutines.webp
+category: Programming
+description: Goroutine vs Simple function
+pubDate: 2023-01-11T23:00:00.000Z
+tags:
+  - Optimization
+  - Benchmark
+  - Golang
+title: Goroutine vs Simple function
 ---
+
 ## Goroutine vs Simple function
 
 This is a simple example of why goroutines might be **overkill** for some tasks and less efficient than a simple function.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Structures
 
@@ -46,9 +48,7 @@ type SafePineApple struct {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 ## Conversion
 
@@ -69,18 +69,14 @@ func (p *Pineapple) ToSafePineApple() SafePineApple {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 ## Use case
 
 In our use case we have an **array of Pineapple objects** coming from our database that we want to convert to **SafePineApple objects** and store them in a **new array**.
 The **order of the objects** in the array should be the same as the original array as it has already been sorted by a sql query.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Simple function
 
@@ -99,15 +95,11 @@ func SimpleConvertPineApplesToSafety(pineapples []Pineapple) []SafePineApple {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 This function is very **simple** and **easy to understand**. We loop through the array of Pineapple objects and convert them to SafePineApple objects.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Goroutine without mutex
 
@@ -146,16 +138,12 @@ func GoroutinesNoMutexConvertPineApplesToSafety(pineapples []Pineapple) []SafePi
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 This function is a bit more **complex** than the simple function. We use a goroutine to convert the first half while the other half is handled by the main thread.
 We use a **WaitGroup** to wait for the goroutine to finish before returning the results.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Goroutine with mutex
 
@@ -198,16 +186,12 @@ func GoroutinesConvertPineApplesToSafety(pineapples []Pineapple) []SafePineApple
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 This function make use of the mutex to lock the slice when writing to it.
 This makes sure that the goroutine and the main thread don't write to the same index at the same time but instead wait for the other to finish.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Benchmark
 
@@ -237,9 +221,7 @@ func Benchmark_SimpleConvertPineApplesToSafety(b *testing.B) {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 To run the benchmark we use the following command:
 
@@ -247,9 +229,7 @@ To run the benchmark we use the following command:
 go test -bench=. -benchtime 5s > benchmark.txt && benchstat benchmark.txt
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 Benchstat is a tool that can be used to compare the results of benchmarks.
 
@@ -274,9 +254,7 @@ Benchmark_NoMutexGoroutinesConvertPineApplesToSafety-5000-32               257µ
 Benchmark_NoMutexGoroutinesConvertPineApplesToSafety-10000-32              533µs ± 0%
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 As you can see the **simple function is the fastest**.
 
@@ -285,20 +263,16 @@ As you can see the **simple function is the fastest**.
 The reason why the simple function is the fastest is that the process of converting the Pineapple objects to SafePineApple objects is very fast.
 The time it takes to create the goroutines and wait for them to finish is longer than the time it takes to convert the Pineapple objects to SafePineApple objects.
 
-{" "}
-
-<br></br>
+<br />
 
 Furthermore, in our goroutines implementation we have to convert the Pineapple objects then lock the mutex, write to the slice and unlock the mutex.
 This is a lot of **overhead for a very simple task**.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Conclusion
 
-_Don't use goroutines when you don't need them._ That may seem obvious, but it's easy to forget when you're trying to optimize your code.
+*Don't use goroutines when you don't need them.* That may seem obvious, but it's easy to forget when you're trying to optimize your code.
 In this example the overhead of creating the goroutines and waiting for them to finish is **longer** than the time it takes to convert the Pineapple objects to SafePineApple objects.
 
 Goroutines are great for tasks that take a **long time to complete** and can be done in parallel.
@@ -307,9 +281,7 @@ I would suggest to write the **simplest code possible** and then benchmark it to
 Moreover, simple code is **easier to read and maintain** than complex code, that's why writing complex code might not be necessary if performance is not an issue.
 **I'd prefer to have a simple function that takes a few milliseconds longer to complete than a complex function.**
 
-{" "}
-
-<br></br>
+<br />
 
 ## Code
 

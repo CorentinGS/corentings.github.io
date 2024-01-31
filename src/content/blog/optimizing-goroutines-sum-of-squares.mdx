@@ -1,34 +1,34 @@
 ---
-title: "Solving the Sum of Squares Problem: Optimizing Performance"
-description: "Discover how to optimize performance, avoid common pitfalls, and achieve top-notch results. Ready to conquer the challenges? Let's go!"
-pubDate: "Aug 10, 2023"
-author: "Corentin GS"
-heroImage: '../../assets/blog/optimizing-goroutines-sum-of-squares.webp'
-category: 'Category 1'
-tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
+author: Corentin GS
+heroImage: ../../assets/blog/optimizing-goroutines-sum-of-squares.webp
+category: Programming
+description: >-
+  Discover how to optimize performance, avoid common pitfalls, and achieve
+  top-notch results. Ready to conquer the challenges? Let's go!
+pubDate: 2023-08-09T22:00:00.000Z
+tags:
+  - Algorithm
+  - Golang
+title: 'Solving the Sum of Squares Problem: Optimizing Performance'
 ---
+
 ## Disclaimer: Enhancing Algorithm Discussions
 
 Before delving into the main topic, I want to express my respect for the original post's intent.
-My response aims to provide slight corrections that can benefit readers seeking accurate information. In the spirit of shared learning, I intend to contribute constructively rather than criticize.
-<br></br>Clarifications and alternative viewpoints can foster a deeper understanding of complex concepts. Let's continue engaging in open discussions, embracing diverse insights as we collectively refine our knowledge.
+My response aims to provide slight corrections that can benefit readers seeking accurate information. In the spirit of shared learning, I intend to contribute constructively rather than criticize. <br />Clarifications and alternative viewpoints can foster a deeper understanding of complex concepts. Let's continue engaging in open discussions, embracing diverse insights as we collectively refine our knowledge.
 
-
-{" "}
-
-<br></br>
+<br />
 
 ## Introduction
 
 Greetings, fellow Gophers! Are you ready to explore the intriguing world of Goroutines and unravel the mysteries of the sum of squares problem?
-Recently, a friend learning Go shared a <a href={'https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3'} class="font-bold underline text-accent"  target="_blank" rel="noopener">medium article</a> with me.
+Recently, a friend learning Go shared a <a href={'https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3'} class="font-bold underline text-accent" target="_blank" rel="noopener">medium article</a> with me.
 It discussed Goroutines and how they can be used to solve a simple problem: calculating the sum of square numbers in a given array.
 
 In this blog post, we'll delve into how Goroutines, channels, and data structures in Golang can be utilized to tackle the sum of squares problem. We'll also discuss common pitfalls and inefficient practices that can hinder performance.
 Fear not, my friends, for we shall also unveil secrets to optimizing your code and achieving exceptional performance. So, let's embark on this quest together!
-{" "}
 
-<br></br>
+<br />
 
 ## The Sum of Squares Problem: A simple problem
 
@@ -47,18 +47,18 @@ func simpleSumSquare(items []int) int {
 ```
 
 Can we simplify it further? The code is reasonably straightforward. However, can we make it faster?
-<br></br>
 
+<br />
 
 ## Goroutines: Harnessing the Power of Concurrency
 
 Goroutines, the superheroes of Golang, are lightweight threads that enable concurrent task execution.
-By utilizing Goroutines, we can execute multiple functions simultaneously, making our code more efficient and faster. But, with great power comes great responsibility.<br></br>
+By utilizing Goroutines, we can execute multiple functions simultaneously, making our code more efficient and faster. But, with great power comes great responsibility.<br />
 One common mistake in solving the sum of squares problem is the improper use of Goroutines.
 Some developers create too many Goroutines without proper synchronization, leading to chaos and incorrect results.
 Remember, coordination is crucial!
 
-<br></br>
+<br />
 
 ## Goroutines: Common pitfall
 
@@ -98,16 +98,15 @@ func sumSquare(items []int) int {
 
 This code creates a new goroutine for each item in the array and then performs the squaring operation. It uses channels to pass values between the goroutine and the main thread.
 
-However, is this code correct? As discussed in  <a href={'../mergesort-parallel'} class="font-bold underline text-accent"  target="_blank" rel="prefetch noopener">my previous blog post about the mergesort algorithm</a>, there are better practices than spawning numerous goroutines.
+However, is this code correct? As discussed in  <a href={'../mergesort-parallel'} class="font-bold underline text-accent" target="_blank" rel="prefetch noopener">my previous blog post about the mergesort algorithm</a>, there are better practices than spawning numerous goroutines.
 More than being lightweight is needed to justify using many goroutines; it still uses memory and time, and we must be cautious.
 
 As always, let's benchmark the code!
 
-{" "}
-
-<br></br>
+<br />
 
 ## Benchmarking: The Quest for Ultimate Performance
+
 Benchmarking lets us measure code performance and compare implementations to identify the best.
 
 With Golang's built-in benchmarking tools, we can easily measure the execution time of our code and identify bottlenecks. By tweaking our implementation and experimenting with different approaches, we can achieve optimal performance and revel in our achievements.
@@ -135,29 +134,28 @@ func benchmarkFramework(b *testing.B, sumFunction func([]int) int) {
 
 Here are the results:
 
-|          name           | time/op |
-|:-----------------------:|:-------:|
-|   SimpleSumSquare/100   | 49.5ns  |
-|  SimpleSumSquare/1000   |  450ns  |
-|  SimpleSumSquare/10000  | 4.41µs  |
-| SimpleSumSquare/100000  | 43.8µs  |
+|           name          | time/op |
+| :---------------------: | :-----: |
+|   SimpleSumSquare/100   |  49.5ns |
+|   SimpleSumSquare/1000  |  450ns  |
+|  SimpleSumSquare/10000  |  4.41µs |
+|  SimpleSumSquare/100000 |  43.8µs |
 | SimpleSumSquare/1000000 |  437µs  |
-|            .            |
-|      SumSquare/100      | 75.2µs  |
-|     SumSquare/1000      |  730µs  |
-|     SumSquare/10000     | 7.24ms  |
-|    SumSquare/100000     | 72.4ms  |
+|            .            |         |
+|      SumSquare/100      |  75.2µs |
+|      SumSquare/1000     |  730µs  |
+|     SumSquare/10000     |  7.24ms |
+|     SumSquare/100000    |  72.4ms |
 |    SumSquare/1000000    |  739ms  |
 
-{" "}
-<br></br>
+<br />
 
 As we can see, the simple algorithm outperforms the complex one! Why? Because spawning too many Goroutines slows down the program and consumes a significant amount of memory.
-{" "}
-<br></br>
 
+<br />
 
 ## Data Structures & Algorithms: Choose Wisely
+
 When solving the sum of squares problem, the choice of data structures and algorithms significantly impacts performance.
 
 I decided to develop a more efficient function. Consequently, I utilized chunks and a Goroutine pool.
@@ -213,40 +211,42 @@ Can this code be improved further? I could reduce the number of allocations and 
 
 Is it genuinely efficient? Let's benchmark it, as always!
 
-
-|              name               | time/op |
-|:-------------------------------:|:-------:|
-|       SimpleSumSquare/100       | 49.5ns  |
-|      SimpleSumSquare/1000       |  450ns  |
-|      SimpleSumSquare/10000      | 4.41µs  |
-|     SimpleSumSquare/100000      | 43.8µs  |
+|               name              | time/op |
+| :-----------------------------: | :-----: |
+|       SimpleSumSquare/100       |  49.5ns |
+|       SimpleSumSquare/1000      |  450ns  |
+|      SimpleSumSquare/10000      |  4.41µs |
+|      SimpleSumSquare/100000     |  43.8µs |
 |     SimpleSumSquare/1000000     |  437µs  |
 |                .                |         |
-|          SumSquare/100          | 75.2µs  |
-|         SumSquare/1000          |  730µs  |
-|         SumSquare/10000         | 7.24ms  |
-|        SumSquare/100000         | 72.4ms  |
+|          SumSquare/100          |  75.2µs |
+|          SumSquare/1000         |  730µs  |
+|         SumSquare/10000         |  7.24ms |
+|         SumSquare/100000        |  72.4ms |
 |        SumSquare/1000000        |  739ms  |
 |                .                |         |
-|   SimpleParallelSumSquare/100   | 49.5ns  |
-|  SimpleParallelSumSquare/1000   |  450ns  |
-|  SimpleParallelSumSquare/10000  | 4.41µs  |
-| SimpleParallelSumSquare/100000  | 18.0µs  |
-| SimpleParallelSumSquare/1000000 | 67.2µs  |
+|   SimpleParallelSumSquare/100   |  49.5ns |
+|   SimpleParallelSumSquare/1000  |  450ns  |
+|  SimpleParallelSumSquare/10000  |  4.41µs |
+|  SimpleParallelSumSquare/100000 |  18.0µs |
+| SimpleParallelSumSquare/1000000 |  67.2µs |
 
-{" "}
-<br></br>
+<br />
 
 As we can observe, our new code is significantly faster!
 
 ## Pitfalls and Bad Practices: The Road to Destruction
+
 Ah, the treacherous road of pitfalls and bad practices. One common mistake is the excessive creation and destruction of Goroutines.
 Creating Goroutines carries a cost; making too many can slow your program and consume unnecessary resources.
-<br></br>
+
+<br />
+
 Furthermore, we can use unsafe features to improve our code's performance but must not sacrifice maintainability and safety for speed if it's not really required.
-If you want to learn more about unsafe features available on Golang, you can look at the code published <a href={'https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square'} class="font-bold underline text-accent"  target="_blank" rel="noopener nofollow"> here on my Github </a>.
+If you want to learn more about unsafe features available on Golang, you can look at the code published <a href={'https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square'} class="font-bold underline text-accent" target="_blank" rel="noopener nofollow"> here on my Github </a>.
 
 ## Conclusion: The Sum of Success
+
 Congratulations, my friends! We've journeyed through Goroutines, channels, and data structures, conquering the sum of squares problem.
 We've learned from our mistakes, optimized our code, and achieved top-notch performance.
 
@@ -254,12 +254,9 @@ But remember, the pursuit of knowledge is everlasting.
 Keep exploring, experimenting, and pushing the boundaries of what's possible. And always remember, with great power comes great responsibility.
 So go forth, my fellow Gophers, may your code be swift, your bugs be few, and your adventures be legendary!
 
-{" "}
-
-
-<br></br>
+<br />
 
 ## References
 
-- <a href={"https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3"} class="font-bold underline text-accent" target="_blank" rel="noopener nofollow">Medium article</a>
-- <a href="https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square" class="font-bold underline text-accent" target="_blank" rel="noopener">Code snippets</a>
+* <a href={"https://medium.com/@ShivamSouravJha/golang-only-things-i-know-for-the-interview-4322d29d67a3"} class="font-bold underline text-accent" target="_blank" rel="noopener nofollow">Medium article</a>
+* <a href="https://github.com/CorentinGS/go-teaching/tree/main/goroutines_sum_square" class="font-bold underline text-accent" target="_blank" rel="noopener">Code snippets</a>

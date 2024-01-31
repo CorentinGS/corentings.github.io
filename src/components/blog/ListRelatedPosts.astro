@@ -29,7 +29,7 @@ const { posts } = Astro.props
 							/>
 						</div>
 						<header class='flex justify-center items-center overflow-ellipsis truncate'>
-							<a class='font-medium  hover:underline' href={`/post/${post.slug}/`}>
+							<a class='font-medium  hover:underline' href={`/blog/${post.slug}/`}>
 								{post.data.title}
 							</a>
 						</header>
@@ -37,7 +37,7 @@ const { posts } = Astro.props
 				)
 			})
 		) : (
-			<span class='text-gray-500'>There are no related posts yet. 😢</span>
+			<span class='text-base-content/50'>There are no related posts yet. 😢</span>
 		)
 	}
 </section>

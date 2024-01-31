@@ -1,35 +1,35 @@
 ---
-title: "Merge Sort using Goroutines"
-description: "This is a simple example of how to use goroutines to implement a merge sort algorithm."
-pubDate: "Jan 12, 2023"
-author: "Corentin GS"
-heroImage: '../../assets/blog/mergesort-parallel.webp'
-category: 'Category 1'
-tags: ['JavaScript', 'css', 'HTML5', 'GitHub']
+author: Corentin GS
+heroImage: ../../assets/blog/mergesort-parallel.webp
+category: Programming
+description: >-
+  This is a simple example of how to use goroutines to implement a merge sort
+  algorithm.
+pubDate: 2023-01-11T23:00:00.000Z
+tags:
+  - Benchmark
+  - Algorithm
+  - Golang
+title: Merge Sort using Goroutines
 ---
+
 ## Parallel Merge Sort vs Simple Merge Sort
 
 This is a simple example of how to use goroutines to **parallelize** a merge sort algorithm.
 We compare the performance of a simple merge sort algorithm with a parallel merge sort algorithm that uses goroutines.
 
-{" "}
-
-<br></br>
+<br />
 
 ## The Merge Sort Algorithm
 
 The merge sort algorithm is a divide and conquer algorithm that recursively splits the input array into two halves,
 sorts each half, and then merges the two sorted halves into a single sorted array.
 
-{" "}
-
-<br></br>
+<br />
 
 To speed up the merge sort algorithm, we use insertion sort for small subarrays (less than 12 elements).
 
-{" "}
-
-<br></br>
+<br />
 
 The implementation of the algorithm uses generics to allow sorting of any type of numbers.
 
@@ -52,9 +52,7 @@ func MergeSort[T Number](items []T) []T {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 ## The Merge Sort Algorithm with Goroutines
 
@@ -64,9 +62,7 @@ To prevent the creation of too many goroutines, we use a **threshold** to determ
 If the size of the input array is less than the threshold,
 we use a simple merge sort algorithm instead of a parallel one.
 
-{" "}
-
-<br></br>
+<br />
 
 Here we use a threshold of 512 elements. We can benchmark the performance of the algorithm with
 different thresholds to find the optimal threshold, but we will not do that in this example.
@@ -100,9 +96,7 @@ func ParallelMerge[T Number](items []T) []T {
 }
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 ## Benchmarking the Merge Sort Algorithms
 
@@ -110,9 +104,7 @@ Now we can benchmark our merge sort algorithms to compare their **performance**.
 
 To benchmark the algorithms, we use arrays of different sizes and **measure the time** it takes to sort the arrays.
 
-{" "}
-
-<br></br>
+<br />
 
 To run the benchmark we use the following command:
 
@@ -120,9 +112,7 @@ To run the benchmark we use the following command:
 go test -bench=. -benchtime 5s > benchmark.txt && benchstat benchmark.txt
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 Benchstat is a tool that can be used to compare the results of benchmarks.
 
@@ -141,31 +131,23 @@ MergesortWithGoroutines/100000     2.71ms ± 0%
 MergesortWithGoroutines/1000000    29.0ms ± 0%
 ```
 
-{" "}
-
-<br></br>
+<br />
 
 As we can see, the parallel merge sort algorithm is **much faster** than the simple merge sort algorithm for **large arrays**.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Why is the Parallel Merge Sort Algorithm Faster?
 
 The parallel merge sort algorithm is faster because it uses goroutines to sort the two halves of the input array in **parallel**.
 The simple merge sort algorithm sorts the two halves of the input array **sequentially**.
 
-{" "}
-
-<br></br>
+<br />
 
 As discussed in the previous article, the cost of **creating a goroutine can be high**.
 So we should use a parallel merge sort algorithm only when the size of the input array is **large enough to justify the cost** of creating goroutines.
 
-{" "}
-
-<br></br>
+<br />
 
 ## Conclusion
 
