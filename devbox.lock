@@ -1,23 +1,23 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "nodejs@18": {
-      "last_modified": "2024-01-14T03:55:27Z",
-      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#nodejs_18",
+    "nodejs@20": {
+      "last_modified": "2024-01-27T14:55:31Z",
+      "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#nodejs_20",
       "source": "devbox-search",
-      "version": "18.19.0",
+      "version": "20.11.0",
       "systems": {
         "aarch64-darwin": {
-          "store_path": "/nix/store/jvp3jsc9dwn64ycnjalw959811lj7x3g-nodejs-18.19.0"
+          "store_path": "/nix/store/kwwq75mfw7xch7vx40sdn5sbxp5ibmgd-nodejs-20.11.0"
         },
         "aarch64-linux": {
-          "store_path": "/nix/store/0b7li2bh1zl86dn2zbcwyrjp7wbbg1q9-nodejs-18.19.0"
+          "store_path": "/nix/store/9w2340q4fl45sfmllsgicbv2n2xhzjsw-nodejs-20.11.0"
         },
         "x86_64-darwin": {
-          "store_path": "/nix/store/s87scp45c388gaa4jd27kyh66hr4vfwb-nodejs-18.19.0"
+          "store_path": "/nix/store/zgmy5yc85d3mkz6zdmazv799c45f2gkh-nodejs-20.11.0"
         },
         "x86_64-linux": {
-          "store_path": "/nix/store/6fy84r0hj7vdqzdzjn9gva18fzdl510z-nodejs-18.19.0"
+          "store_path": "/nix/store/d6lkbndr98lcn8spbqxfq52f2ldvqhks-nodejs-20.11.0"
         }
       }
     },
