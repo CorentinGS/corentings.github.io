@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"Crafting-the-chiquier-Niois-Website.mdx": {
+	id: "Crafting-the-chiquier-Niois-Website.mdx";
+  slug: "crafting-the-chiquier-niois-website";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "dnf5-step-by-step.mdx": {
 	id: "dnf5-step-by-step.mdx";
   slug: "dnf5-step-by-step";
