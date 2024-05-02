@@ -1265,19 +1265,19 @@
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
 "@fontsource/do-hyeon@^5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@fontsource/do-hyeon/-/do-hyeon-5.0.17.tgz#f7e72b0c1d65bdd53cb3cffa7ce0ee223f32cbc6"
-  integrity sha512-/lU52wJtl+t3HuVMMSMYmBBKUMqK2XqGgN5YECLlQDlLSsNgsV7WpBL+neqctmOp2dPfvTggcOxQFbbFNPuyhg==
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/do-hyeon/-/do-hyeon-5.0.19.tgz#20d9e2364dab0ca86d472ead83e2cbb9bb05d621"
+  integrity sha512-nppPOyUA0+CT6gICb865u5q3y1oSqfS6WIwupF4jVoVtLvWc1xk/5ZmDNKr14GqsklNmGKCeSiSydjWwZp2/Rg==
 
 "@fontsource/nunito@^5.0.16":
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.16.tgz#7283fc487d9c2d7edb3be3ce8298647f85e9d463"
-  integrity sha512-55Au63Sm2ux/Aef4JenA8HJKEH1mpEMvZCYR7f4pnlOQ9linVwa1/dzPh2GDnt2H5uUK7hK2JmPCyskrldm8+w==
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.18.tgz#a5b2e306d4ac33e3b61c125a15554a282c430ee5"
+  integrity sha512-B7BS7ab43z5x9X6shdvwtHiYI73Y6kJvnHBJhoIdbqYbVGRf6kGMRfipH9dbmLsjL6elfxoAB3q75V23/qqE/g==
 
 "@fontsource/syne@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@fontsource/syne/-/syne-5.0.18.tgz#70552a2cbeb5fa9864ed70e102f5f4854fc30c07"
-  integrity sha512-zH4MmhoTrNd1ssbnjbfgZjQhYTtBxK6Jt1M8DG29rPXKE/ivui+qcKImdCrW33jEuE4xsU1myeglTdUL3Aa3cw==
+  version "5.0.20"
+  resolved "https://registry.yarnpkg.com/@fontsource/syne/-/syne-5.0.20.tgz#df28a619b7c167e23d31dd9f9810577d7b124655"
+  integrity sha512-i/JAznVfbi6bhBBaotpKmO0P8kimvsjBokHySUcbY1eDEzyocPC8PqkNfMHVdv6IqUlwP6ddIo2B3J5f2or+Qw==
 
 "@formatjs/ecma402-abstract@1.18.2":
   version "1.18.2"
