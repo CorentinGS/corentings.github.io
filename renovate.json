@@ -1,11 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [ "config:recommended", ":disableRateLimiting", "group:recommended", "security:openssf-scorecard", "npm:unpublishSafe" ],
+  "extends": [ "config:recommended", "group:allNonMajor",":disableRateLimiting", "group:recommended", "security:openssf-scorecard", "npm:unpublishSafe" ],
   "ignoreDeps": ["i18next"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
-      "matchCurrentVersion": "!/^0/", 
       "automerge": true
     },
   ]
