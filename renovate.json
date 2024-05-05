@@ -6,6 +6,6 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
       "automerge": true
-    },
+    }
   ]
 }
