@@ -1,10 +1,8 @@
 ---
-import { Schema } from 'astro-seo-schema'
-
-const { title, description, ogImage } = Astro.props
+import { Schema as AstroSchema } from 'astro-seo-schema'
 ---
 
-<Schema
+<AstroSchema
 	item={{
 		'@context': 'https://schema.org',
 		'@type': 'Person',

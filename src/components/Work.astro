@@ -1,5 +1,4 @@
 ---
-import imgMemnix from '../assets/moutmout.png'
 interface Props {
 	company: string
 	role: string
@@ -8,7 +7,7 @@ interface Props {
 	image: ImageMetadata
 }
 import { Picture } from 'astro:assets'
-import { ImageMetadata } from 'astro'
+import type { ImageMetadata } from 'astro'
 
 const { company, role, startDate, endDate, image } = Astro.props
 ---
@@ -19,7 +18,7 @@ const { company, role, startDate, endDate, image } = Astro.props
 			alt=''
 			loading='lazy'
 			width='64'
-			aspectRatio={1}
+			height='64'
 			decoding='async'
 			formats={['avif', 'webp', 'png']}
 			quality={'low'}

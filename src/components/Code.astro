@@ -1,11 +1,11 @@
 ---
-import { Picture } from 'astro:assets'
 import imgMemnix from '../assets/moutmout.png'
 import imgTFD from '../assets/logo_tfd.png'
 import Work from './Work.astro'
 import { t } from 'i18next'
 import imgMfStouuf from '../assets/MF_STOUUF.png'
 import imgOneToo from '../assets/onetoo.jpg'
+import { Trans } from 'astro-i18next/components'
 ---
 
 <section class='bg-base-200'>
@@ -18,7 +18,11 @@ import imgOneToo from '../assets/onetoo.jpg'
 						<div class='mt-6 space-y-7 text-base'>
 							<p>{t('work.content_a')}{' '}{t('work.content_b')}</p>
 							<p>{t('work.content_c')} {' '} {t('work.content_d')} {' '} {t('work.content_e')}</p>
-							<p>{t('work.content_f')} {' '} {t('work.content_g')}</p>
+							<p>{t('work.content_f')} {' '} 
+								<Trans i18nKey='work.content_g'>
+									<a  href="https://projectbluefin.io/" rel="noreferrer noopener" class='underline underline-offset-4'>Bluefin</a>
+								</Trans>
+								</p>
 						</div>
 					</div>
 					<div class='space-y-10 lg:pl-16 xl:pl-24'>
