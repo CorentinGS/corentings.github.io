@@ -1,13 +1,9 @@
 ---
-import { BlogPosts } from 'src/utils/blog'
-
-import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 
 import { t } from 'i18next'
 import DiscoverCard from './blog/DiscoverCard.astro'
 import { getPosts } from '../utils'
-import PostCard from './blog/PostCard.astro'
 
 const posts: CollectionEntry<'blog'>[] = await getPosts(3)
 ---

@@ -20,19 +20,7 @@
 		"experiences": "Experiences",
 		"articles": "Articles"
 	},
-	"about": {
-		"title": "About me",
-		"presentation": "Hey, my name is Corentin and I'm 20 years old.",
-		"study": "Currently, I'm pursuing a BSc in Computer Science at IU International University of Applied Sciences</0>.",
-		"work": "Work",
-		"lang": "My primary programming language is <0>Golang</0> but I've worked with java, python, typescript, C/C++ and more.",
-		"database": "I have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
-		"opensource": "Furthermore, I'm a passionate open-source enthusiast and have been contributing to various projects for several years. I've also created <0>Memnix</0>, a free and open-source flashcard app for Android and the Web.",
-		"community": "I enjoy managing communities, and I'm currently the founder of <0> The Kafejo </0>, a Discord community for developers and students",
-		"chess": "You might also find me over a chessboard, as I play frequently and manage a chess community for my friend <0>Stouuf</0> on Discord, Twitch, and YouTube.",
-		"linux": "I'm a devoted Linux enthusiast, using <0>OpenSuse Tumbleweed</0> as my primary operating system and <1>Fedora</1> on my laptop.",
-		"code": "I'm a freelance backend developer and I've been working on several projects for the past years."
-	},
+
 	"skills": {
 		"title": "My Favorite Stack"
 	},
@@ -158,7 +146,7 @@
 		"content_d": "I have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman.",
 		"content_e": "I'm a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created Memnix, a free and open-source flashcard app for Android and Web.",
 		"content_f": "I like to manage communities and I'm currently the founder of The Kafejo a Discord community for developers and students.",
-		"content_g": "I'm a devoted Linux enthusiast, using OpenSuse Tumbleweed as my primary operating system and Fedora on my laptop.",
+		"content_g": "I'm a devoted Linux enthusiast, using <0>Bluefin</0> (Fedora Silverblue) as my main operating system",
 		"role_founder": "Founder",
 		"role_lead": "Lead developer",
 		"role_cm": "Community manager",
@@ -192,6 +180,10 @@
 		"avocado_1": {
 			"title": "Meet CorentinGS",
 			"description": "A podcast about my journey as a developer, and my vision of the future."
+		},
+		"uca_2": {
+			"title": "Workshop: Introduction to Go",
+			"description": "A workshop about Go, and how to get started with it."
 		}
 	},
 	"write": {
@@ -220,8 +212,8 @@
 		"cta": "Let's work together",
 		"backend_title": "Strategic Backend Solutions: Golang Development",
 		"backend_description": "Experienced in Golang backend development, I focus on creating robust solutions. Utilizing Docker for seamless deployment and management, I navigate databases like PostgreSQL and MongoDB to optimize your application's data handling.",
-		"frontend_title": "Precision-Crafted Websites: Astro and Vue Development",
-		"frontend_description": "Dedicated to crafting precise websites, I specialize in Astro and VueJS. Experience the fusion of innovation and functionality for an exceptional online presence.",
+		"frontend_title": "Precision-Crafted Websites: Astro and HTMX Development",
+		"frontend_description": "Dedicated to crafting precise websites, I specialize in Astro and HTMX. Experience the fusion of innovation and functionality for an exceptional online presence.",
 		"maintenance_title": "Proactive Maintenance Services",
 		"maintenance_description": "Ensuring enduring excellence, I offer maintenance services. Entrust your digital infrastructure to my meticulous care, enjoy the peace of mind that comes with a well-maintained digital infrastructure."
 	}

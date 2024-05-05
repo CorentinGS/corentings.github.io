@@ -32,7 +32,7 @@ let classContent =
 					? 'border-accent'
 					: type === TimelineCardType.Course
 						? 'border-success'
-						: type === TimelineCardType.Other
+						: type === TimelineCardType.Others
 							? 'border-warning'
 							: 'border-base-200')
 ---
@@ -63,7 +63,6 @@ let classContent =
 								loading='lazy'
 								width={64}
 								height={64}
-								aspectRatio={1}
 								quality={'30'}
 							/>
 						</a>
@@ -111,7 +110,6 @@ let classContent =
 						width={64}
 						height={64}
 						quality={'50'}
-						aspectRatio={1}
 					/>
 				</a>
 			) : null
