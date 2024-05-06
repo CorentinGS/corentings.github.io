@@ -158,7 +158,7 @@
 		"content_d": "J'ai également de l'expérience avec des bases de données telles que PostgreSQL ou MongoDB, et je suis familier avec Docker, Docker Compose et même Podman.",
 		"content_e": "Je suis aussi un passionné d'open source et je contribue à plusieurs projets depuis quelques années. J'ai créé Memnix, une application de cartes mémoire gratuite et open source pour Android et le Web.",
 		"content_f": "J'aime gérer des communautés, et je suis le fondateur de The Kafejo, une communauté Discord dédiée aux développeurs et aux étudiants.",
-		"content_g": "Je suis également un grand fan de Linux que j'utilise depuis mon plus jeune âge. En ce moment, j'utilise OpenSuse comme système d'exploitation principal et Fedora sur mon ordinateur portable.",
+		"content_g": "Je suis un adepte de Linux, utilisant <0>Bluefin</0> (Fedora Silverblue) comme système d'exploitation principal",
 		"role_founder": "Fondateur",
 		"role_lead": "Développeur principal",
 		"role_cm": "Community manager",
@@ -192,6 +192,10 @@
 		"avocado_1": {
 			"title": "Rencontrer CorentinGS",
 			"description": "Un podcast sur mon parcours de développeur et ma vision de l'avenir."
+		},
+		"uca_2": {
+			"title": "Workshop: Introduction au Go",
+			"description": "Un workshop sur Go et comment débuter avec ce langage."
 		}
 	},
 	"write": {
@@ -220,8 +224,8 @@
 		"cta": "Travaillons ensemble",
 		"backend_title": "Solutions stratégiques de backend : Développement Golang",
 		"backend_description": "Expérimenté dans le développement backend en Golang, je me concentre sur la création de solutions robustes. En utilisant Docker pour un déploiement et une gestion fluides, je maîtrise les bases de données telles que PostgreSQL et MongoDB afin d'optimiser la gestion des données de votre application.",
-		"frontend_title": "Sites web soigneusement conçus : Développement avec Astro et Vue",
-		"frontend_description": "Dévoué à la création de sites web précis, je me spécialise dans Astro et VueJS. Découvrez la fusion de l'innovation et de la fonctionnalité pour une présence en ligne exceptionnelle.",
+		"frontend_title": "Sites web soigneusement conçus : Développement avec Astro et HTMX",
+		"frontend_description": "Dévoué à la création de sites web précis, je me spécialise dans Astro et HTMX. Découvrez la fusion de l'innovation et de la fonctionnalité pour une présence en ligne exceptionnelle.",
 		"maintenance_title": "Services de maintenance préventive",
 		"maintenance_description": "Garantissant une excellence durable, je propose des services de maintenance. Confiez votre infrastructure numérique à mes soins méticuleux et profitez de la tranquillité d'esprit qui accompagne une infrastructure numérique bien entretenue."
 	}
