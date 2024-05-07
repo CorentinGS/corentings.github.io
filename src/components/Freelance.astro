@@ -1,5 +1,4 @@
 ---
-import { t } from 'i18next'
 import Testimony from './Index/Testimony.astro'
 
 import { Picture } from 'astro:assets'
@@ -15,10 +14,10 @@ import imgGnark from '../assets/david.webp'
 		<div class='relative px-4 sm:px-8 lg:px-12'>
 			<div class='relative flex flex-col items-center'>
 				<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
-					{t('freelance.title')}
+					I materialize dreams into reality.
 				</h2>
 				<p class='mt-8 text-xl'>
-					{t('freelance.description')}
+					I'm a freelance backend developer and I've been working on several projects for the past years.
 				</p>
 			</div>
 			<div class='mx-auto mt-16 max-w-7xl px-6 lg:px-8'>
@@ -66,16 +65,16 @@ import imgGnark from '../assets/david.webp'
 						<div>
 							<ul role='list' class='mt-16 text-base lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4'>
 								<Service
-									title={t('freelance.backend_title')}
-									description={t('freelance.backend_description')}
+									title="Strategic Backend Solutions: Golang Development"
+									description="Experienced in Golang backend development, I focus on creating robust solutions. Utilizing Docker for seamless deployment and management, I navigate databases like PostgreSQL and MongoDB to optimize your application's data handling."
 								/>
 								<Service
-									title={t('freelance.frontend_title')}
-									description={t('freelance.frontend_description')}
+									title="Precision-Crafted Websites: Astro and HTMX Development"
+									description="Dedicated to crafting precise websites, I specialize in Astro and HTMX. Experience the fusion of innovation and functionality for an exceptional online presence."
 								/>
 								<Service
-									title={t('freelance.maintenance_title')}
-									description={t('freelance.maintenance_description')}
+									title="Proactive Maintenance Services"
+									description="Ensuring enduring excellence, I offer maintenance services. Entrust your digital infrastructure to my meticulous care, enjoy the peace of mind that comes with a well-maintained digital infrastructure."
 								/>
 							</ul>
 						</div>
@@ -91,7 +90,7 @@ import imgGnark from '../assets/david.webp'
 			<div class='mt-6 md:flex md:items-center md:justify-between'>
 				<div>
 					<h1 class='text-2xl font-semibold capitalize lg:text-3xl'>
-						{t('testimony.title')}
+						What My Clients Are Saying
 					</h1>
 
 					<div class='mx-auto mt-6 flex'>
@@ -138,23 +137,23 @@ import imgGnark from '../assets/david.webp'
 
 			<section class='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:mt-12 xl:grid-cols-3'>
 				<Testimony
-					description={t('testimony.stouuf.description')}
+					description="Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more. His work is meticulous, and on top of that, he is very friendly, attentive, and available."
 					name='Stephane Bressac'
-					title={t('testimony.stouuf.job')}
+					title="Coach"
 					job=''
 					image={imgStouuf}
 				/>
 				<Testimony
-					description={t('testimony.justin.description')}
+					description="Corentin was able to meet all our expectations with enthusiasm and professionalism. I trust him completely for future collaborations."
 					name='Justin Diter'
-					title={t('testimony.justin.job')}
+					title="GDSC Lead"
 					job='Université de Nice'
 					image={imgJustin}
 				/>
 				<Testimony
-					description={t('testimony.gnark.description')}
+					description="I've had the opportunity to work with Corentin on various projects, always with an eye for detail and finding the best solutions. Corentin will guide you in developing a resilient, high-performance backend."
 					name='David Barbier'
-					title={t('testimony.gnark.job')}
+					title="Freelancer"
 					job=''
 					image={imgGnark}
 				/>

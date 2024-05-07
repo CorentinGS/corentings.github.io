@@ -1,10 +1,7 @@
 ---
 import { Icon } from 'astro-iconify'
 import ThemeSwitcher from './ThemeSwitcher.astro'
-import { LanguageSelector } from 'astro-i18next/components'
-import { localizePath } from 'astro-i18next'
-import { t } from 'i18next'
-import { Profile } from 'src/utils/config'
+
 
 import Logo from '../Index/Logo.astro'
 ---
@@ -13,7 +10,7 @@ import Logo from '../Index/Logo.astro'
 	<nav class='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
 		<div class='flex lg:flex-1'>
 			<a
-				href={localizePath('/')}
+				href={'/'}
 				class='hoveranimation -m-1.5 flex p-1.5 text-xl normal-case lg:text-3xl'
 				data-astro-prefetch='hover'
 			>
@@ -38,24 +35,24 @@ import Logo from '../Index/Logo.astro'
 		</div>
 		<div class='hidden lg:flex lg:gap-x-12'>
 			<a
-				href={localizePath('/projects')}
+				href={'/projects'}
 				class='text-md font-semibold leading-6'
-				data-astro-prefetch='hover'>{t('navbar.projects')}</a
+				data-astro-prefetch='hover'>{"Projects"}</a
 			>
 			<a
-				href={localizePath('/talks')}
+				href={'/talks'}
 				class='text-md font-semibold leading-6'
-				data-astro-prefetch='hover'>{t('navbar.talks')}</a
+				data-astro-prefetch='hover'>{"Talks"}</a
 			>
 			<a
-				href={localizePath('/experiences')}
+				href={'/experiences'}
 				class='text-md font-semibold leading-6'
-				data-astro-prefetch='hover'>{t('navbar.experiences')}</a
+				data-astro-prefetch='hover'>{"Experiences"}</a
 			>
 			<a
-				href={localizePath('/blog')}
+				href={'/blog'}
 				class='text-md font-semibold leading-6'
-				data-astro-prefetch='hover'>{t('navbar.articles')}</a
+				data-astro-prefetch='hover'>{"Articles"}</a
 			>
 		</div>
 		<div class='hidden lg:flex lg:flex-1 lg:justify-end'>
@@ -90,14 +87,6 @@ import Logo from '../Index/Logo.astro'
 					<!-- Modal body -->
 					<form action='#' class='p-4 md:p-5'>
 						<div class='mb-4 grid grid-cols-2 gap-4'>
-							<div class='col-span-2 sm:col-span-1'>
-								<label for='language' class='mb-2 block text-sm font-medium'>Language</label>
-								<LanguageSelector
-									id='language'
-									showFlag={true}
-									class='my-select-class select select-bordered select-secondary select-md w-full max-w-xs bg-base-200 text-base-content'
-								/>
-							</div>
 							<div class='col-span-2'>
 								<label for='theme' class='mb-2 block text-sm font-medium'>Theme</label>
 								<ThemeSwitcher id='theme' />

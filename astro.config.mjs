@@ -39,7 +39,6 @@ export default defineConfig({
 			},
 			drafts: true
 		}),
-		astroI18next(),
 		sitemap({
 			lastmod: new Date(),
 			i18n: {
@@ -52,13 +51,13 @@ export default defineConfig({
 			}
 		}),
 		compress({
-			path: '.vercel/output/static',
+			path: 'dist',
 			CSS: false,
 			HTML: false,
 			JavaScript: false
 		}),
 		compressor()
 	],
-	output: 'server',
-	adapter: cloudflare()
+	output: 'static',
+	// adapter: cloudflare()
 })

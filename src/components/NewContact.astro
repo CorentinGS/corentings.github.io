@@ -1,5 +1,4 @@
 ---
-import { t } from 'i18next'
 import { Icon } from 'astro-iconify'
 ---
 
@@ -7,14 +6,14 @@ import { Icon } from 'astro-iconify'
 	<div class='container mx-auto px-5 py-10'>
 		<div class='mb-20 text-center'>
 			<h1 class='mb-4 text-center text-2xl font-bold sm:text-3xl'>
-				{t('contacts.title')}
+				My links and socials
 			</h1>
 		</div>
 		<div class='mx-auto max-w-2xl lg:max-w-none'>
 			<div class='grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2'>
 				<div class='lg:order-last' style='opacity: 1; transform: none;'>
 					<form method='POST' id='form'>
-						<h2 class='font-display text-base font-semibold'>{t('contacts.work_inquiries')}</h2>
+						<h2 class='font-display text-base font-semibold'>Work inquiries</h2>
 						<input type='hidden' name='access_key' value='44ccc411-85f0-44d9-acff-d259615a344d' />
 						<input type='hidden' name='subject' value='New contact from corentings.dev' />
 						<input type='checkbox' name='botcheck' class='hidden' style='display: none;' />
@@ -34,7 +33,7 @@ import { Icon } from 'astro-iconify'
 									class='pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90'
 								>
-									{t('contacts.name')}</label
+									Name</label
 								>
 							</div>
 							<div class='group relative z-0 transition-all focus-within:z-10'>
@@ -52,7 +51,7 @@ import { Icon } from 'astro-iconify'
 									class='pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90'
 								>
-									{t('contacts.email')}</label
+									Email</label
 								>
 							</div>
 							<div class='group relative z-0 transition-all focus-within:z-10'>
@@ -69,7 +68,7 @@ import { Icon } from 'astro-iconify'
 									class='pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90'
 								>
-									{t('contacts.company')}</label
+									Company</label
 								>
 							</div>
 							<div class='group relative z-0 transition-all focus-within:z-10'>
@@ -86,7 +85,7 @@ import { Icon } from 'astro-iconify'
 									class='pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90'
 								>
-									{t('contacts.phone')}</label
+									Phone</label
 								>
 							</div>
 							<div class='group relative z-0 transition-all focus-within:z-10'>
@@ -103,7 +102,7 @@ import { Icon } from 'astro-iconify'
 									class='pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base-content/90
                                     peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-base-content/90'
 								>
-									{t('contacts.message')}</label
+									Message</label
 								>
 							</div>
 						</div>
@@ -111,13 +110,13 @@ import { Icon } from 'astro-iconify'
 							class='hoveranimation btn btn-primary mt-10 inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition'
 							data-umami-event='Submit contact form'
 							type='submit'
-							><span class='relative top-px'>{t('contacts.work_together')}</span>
+							><span class='relative top-px'>Let's work together</span>
 						</button>
 					</form>
 				</div>
 				<div style='opacity: 1; transform: none;'>
-					<h2 class='font-display text-base font-semibold'>{t('contacts.my_socials')}</h2>
-					<p class='mt-6 text-base'>{t('contacts.body')}</p>
+					<h2 class='font-display text-base font-semibold'>My socials</h2>
+					<p class='mt-6 text-base'>Here are my socials and links to my projects and other information.</p>
 					<ul role='list' class='mt-10 grid grid-cols-1 gap-1'>
 						<li class='w-full p-1 sm:w-8/12'>
 							<a
@@ -175,7 +174,7 @@ import { Icon } from 'astro-iconify'
 								<Icon name='lucide:mail' class='mr-4 size-7 flex-shrink-0' />
 
 								<span class='title-font font-medium decoration-accent group-hover:underline'
-									>{t('contacts.email_me')}</span
+									>Email me</span
 								>
 							</a>
 						</li>
@@ -204,7 +203,7 @@ import { Icon } from 'astro-iconify'
 			id='alert-loading'
 		>
 			<span class='loading loading-dots loading-sm text-accent'></span><span
-				>{t('contacts.sending_form')}</span
+				>Sending form...</span
 			>
 		</div>
 		<div
@@ -213,7 +212,7 @@ import { Icon } from 'astro-iconify'
 			id='alert-success'
 		>
 			<Icon name='lucide:mail-check' class='size-7 flex-shrink-0 stroke-success text-success' />
-			<span>{t('contacts.sent_form')}</span>
+			<span>Form sent !</span>
 		</div>
 		<div
 			role='alert'
@@ -221,7 +220,7 @@ import { Icon } from 'astro-iconify'
 			id='alert-error'
 		>
 			<Icon name='lucide:mail-warning' class='size-7 flex-shrink-0 stroke-error text-error' />
-			<span>{t('contacts.error_form')}</span>
+			<span>Error while sending form ! Please try again later or contact me directly.</span>
 		</div>
 	</div>
 </section>

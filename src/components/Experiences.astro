@@ -2,7 +2,6 @@
 import Timeline from './Index/Timeline.astro'
 import TimelineCard from './Index/TimelineCard.astro'
 import { TimelineCardType } from 'src/utils/types'
-import { t } from 'i18next'
 
 import imgIuLogo from '../assets/iu_logo.png'
 import imgMfStouuf from '../assets/MF_STOUUF.png'
@@ -20,69 +19,69 @@ import imgEN from '../assets/logo_en.png'
 
 const experiences = [
 	{
-		name: t('experiences.en_bureau.title'),
+		name: "Board Member",
 		type: TimelineCardType.Volunteering,
-		description: t('experiences.en_bureau.description'),
+		description: "Board member of the Echiquier Niçois chess club.",
 		start_date: '2024',
 		link: 'https://echiquiernicois.com',
 		image: imgEN
 	},
 	{
-		name: t('experiences.referee.title'),
+		name: "Chess Referee - FFE",
 		type: TimelineCardType.Volunteering,
-		description: t('experiences.referee.description'),
+		description: "Refereeing chess tournaments for the French Federation.",
 		start_date: '2024',
 		link: 'http://www.echecs.asso.fr/%28rpoos355juwbzbqlethyfg55%29/FicheJoueur.aspx?Id=591532',
 		image: imgFfe
 	},
 	{
-		name: t('experiences.chesscom_mod.title'),
+		name: "Twitch Moderator - Chess.com",
 		type: TimelineCardType.Volunteering,
-		description: t('experiences.chesscom_mod.description'),
+		description: "Moderating the Chesscomfr twitch channel.",
 		start_date: '2023',
 		link: 'https://twitch.com/chesscomfr',
 		image: imgChesscom
 	},
 	{
-		name: t('experiences.bsc_cs.title'),
+		name: "IU - BSC. Computer Science",
 		type: TimelineCardType.School,
-		description: t('experiences.bsc_cs.description'),
+		description: "Bachelor's degree in Computer Science from IU International University of Applied Sciences.",
 		start_date: '2023',
 		tools: 'German, Java, Operating System',
 		link: 'https://www.iu.org/bachelor/computer-science/',
 		image: imgIuLogo
 	},
 	{
-		name: t('experiences.freelance.title'),
+		name: "Freelance - Backend Developer",
 		type: TimelineCardType.Work,
-		description: t('experiences.freelance.description'),
+		description: "Developing websites and web applications for clients.",
 		start_date: '2022',
 		tools: 'Golang, PostgreSQL, Docker...',
 		link: 'https://corentings.dev/'
 	},
 
 	{
-		name: t('experiences.stouuf.title'),
+		name: "Stouuf - Community Manager",
 		type: TimelineCardType.Volunteering,
-		description: t('experiences.stouuf.description'),
+		description: "Managing the Stouuf community, website development, events organization and twitch moderation.",
 		start_date: '2022',
 		tools: 'Canva, Tailwindcss, Youtube, Twitch',
 		image: imgMfStouuf,
 		link: 'https://stouuf.net/'
 	},
 	{
-		name: t('experiences.educative.title'),
+		name: "Educative.io - Courses",
 		type: TimelineCardType.Course,
-		description: t('experiences.educative.description'),
+		description: "Following several courses on Educative.io including but not limited to: Golang, Python, C, Java, Data Structure...",
 		start_date: '2022',
 		tools: 'C, Golang, Data Structure, Java',
 		link: 'https://www.Educative.io',
 		image: imgEducative
 	},
 	{
-		name: t('experiences.hackerrank.title'),
+		name: "HackerRank - Certifications",
 		type: TimelineCardType.Course,
-		description: t('experiences.hackerrank.description'),
+		description: "Obtained the following certifications from HackerRank: Python(Basic), Golang(Basic), Golang(Intermediate).",
 		start_date: 'March 2022',
 		end_date: 'March 2022',
 		tools: 'Golang, Python',
@@ -90,9 +89,9 @@ const experiences = [
 		image: imgHackerRank
 	},
 	{
-		name: t('experiences.memnix.title'),
+		name: "Memnix - Lead developer",
 		type: TimelineCardType.Project,
-		description: t('experiences.memnix.description'),
+		description: "Leading the development of the Memnix project, a spaced repetition learning platform.",
 		start_date: '2021',
 		image: imgMemnix,
 		link: 'https://memnix.app/',
@@ -100,10 +99,10 @@ const experiences = [
 	},
 	{
 		type: TimelineCardType.School,
-		description: t('experiences.unice.description'),
+		description: "Studying computer science at Université Nice Côte d'Azur.",
 		link: 'https://univ-cotedazur.fr/',
 		image: imgUca,
-		name: t('experiences.unice.title'),
+		name: "Unice - Computer Science student",
 		start_date: 'September 2021',
 		end_date: 'December 2022',
 		location: 'Nice, France',
@@ -111,9 +110,9 @@ const experiences = [
 	},
 	{
 		type: TimelineCardType.Work,
-		description: t('experiences.onetoo.description'),
+		description: "Linux embedded system and QT software development internship. Technical documentation writing and setup of project management tools.",
 		image: imgOneToo,
-		name: t('experiences.onetoo.title'),
+		name: "Onetoo - Internship",
 		start_date: 'June 2021',
 		end_date: 'July 2021',
 		location: 'Nice, France',
@@ -121,26 +120,26 @@ const experiences = [
 	},
 	{
 		type: TimelineCardType.School,
-		description: t('experiences.estaca.description'),
+		description: "First year of the aeronautical engineering degree program at Estaca.",
 		link: 'https://www.estaca.fr/',
 		image: imgEstaca,
-		name: t('experiences.estaca.title'),
+		name: "Estaca - Student",
 		start_date: '2020',
 		end_date: '2021',
 		location: 'Laval, France'
 	},
 	{
 		type: TimelineCardType.School,
-		name: t('experiences.bac.title'),
-		description: t('experiences.bac.description'),
+		name: "Scientific Baccalaureate - Graduate with Honor",
+		description: "Obtained the Scientific Baccalaureate with honors with Engineering Sciences and English options at Cornat High School in Valognes, France.",
 		start_date: '2020',
 		location: 'Valognes, France',
 		link: 'https://www.lycee-valognes.fr/'
 	},
 	{
 		type: TimelineCardType.Others,
-		name: t('experiences.ktk.title'),
-		description: t('experiences.ktk.description'),
+		name: "Theatre actor - Addams Family Show",
+		description: "Performed in the Addams Family Show in Orlando, Florida for Kids Theater Kamp.",
 		start_date: '2019',
 		end_date: '2019',
 		link: 'https://www.ktkamp.com/',
@@ -149,16 +148,16 @@ const experiences = [
 	},
 	{
 		type: TimelineCardType.Others,
-		name: t('experiences.ppl.title'),
-		description: t('experiences.ppl.description'),
+		name: "PPL - Private Pilot License",
+		description: "Preparing for the private pilot license exam (postponed due to covid-19)",
 		start_date: '2019',
 		location: 'Cherbourg, France',
 		link: 'https://ac-cherbourg.com/'
 	},
 	{
 		type: TimelineCardType.Work,
-		name: t('experiences.qualialtis.title'),
-		description: t('experiences.qualialtis.description'),
+		name: "Qualialtis - Intern",
+		description: "Devops internship at Qualialtis to learn about devops, kubernetes, helm and linux administration.",
 		start_date: '2018',
 		end_date: '2018',
 		location: 'Toulouse, France',
@@ -168,8 +167,8 @@ const experiences = [
 	},
 	{
 		type: TimelineCardType.Others,
-		name: t('experiences.copernicus.title'),
-		description: t('experiences.copernicus.description'),
+		name: "Hackaton - Climathon Copernicus",
+		description: "Climathon organized by Copernicus at Toulouse to find digitals solutions to the climate crisis. Got the 3rd price.",
 		start_date: '2018',
 		end_date: '2018',
 		location: 'Toulouse, France'
@@ -181,10 +180,10 @@ const experiences = [
 	<div class='relative px-4 sm:px-8 lg:px-12'>
 		<div class='relative flex flex-col items-center'>
 			<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
-				{t('experiences.title')}
+				My Experiences
 			</h2>
 			<p class='mt-8 text-xl'>
-				{t('experiences.description')}
+				Here are my experiences and education.
 			</p>
 		</div>
 	</div>

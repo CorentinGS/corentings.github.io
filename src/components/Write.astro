@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
-import { t } from 'i18next'
 import DiscoverCard from './blog/DiscoverCard.astro'
 import { getPosts } from '../utils'
 
@@ -13,10 +12,10 @@ const posts: CollectionEntry<'blog'>[] = await getPosts(3)
 		<div class='relative px-4 sm:px-8 lg:px-12'>
 			<div class='relative flex flex-col items-center'>
 				<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
-					{t('write.title')}
+					I write articles about programming, chess and more.
 				</h2>
 				<p class='mt-8 text-xl'>
-					{t('write.description')}
+					I like to write articles about programming, chess and more.
 				</p>
 			</div>
 

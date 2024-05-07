@@ -1,6 +1,5 @@
 ---
 import Project from './Index/Project.astro'
-import { t } from 'i18next'
 
 import imgMemnixLogo from '../assets/moutmout.png'
 import imgGauntlet from '../assets/gauntlet.png'
@@ -15,10 +14,10 @@ import imgChessbet from '../assets/chessbet.png'
 	<div class='relative px-4 sm:px-8 lg:px-12'>
 		<div class='relative flex flex-col items-center'>
 			<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>
-				{t('projects.title')}
+				My Projects
 			</h2>
 			<p class='mt-8 text-xl'>
-				{t('projects.description')}
+				Here are some of my projects.
 			</p>
 		</div>
 	</div>
@@ -27,7 +26,7 @@ import imgChessbet from '../assets/chessbet.png'
 	<div class='mx-auto flex max-w-7xl flex-col space-y-12 px-8 xl:px-12'>
 		<div class='relative px-4 sm:px-8 lg:px-12'>
 			<Project
-				description={t('projects.memnix')}
+				description="Memnix is a project that aims to create tools to facilitate learning for students in an organized way. It utilizes its spaced repetition system, enabling students to create and share learning materials."
 				image={imgMemnixLogo}
 				link='https://github.com/memnix/'
 				name='Memnix'
@@ -37,7 +36,7 @@ import imgChessbet from '../assets/chessbet.png'
 			/>
 
 			<Project
-				description={t('projects.chessbet')}
+				description="Chessbet is a project that aims to create a platform for chess betting. It will allow users to bet on their favorite players. The project is still in development."
 				link='https://github.com/corentings/chessbet'
 				name='Chessbet'
 				reversed={false}
@@ -46,7 +45,7 @@ import imgChessbet from '../assets/chessbet.png'
 				ratio={1}
 			/>
 			<Project
-				description={t('projects.echiquier_nicois')}
+				description="This is a website I made for my chess club. It uses Astro and TailwindCSS to create a simple and fast website. TinaCMS allows members to easily update the blog with new articles."
 				link='https://echiquiernicois.com'
 				name='Echiquier Nicois'
 				reversed={true}
@@ -56,7 +55,7 @@ import imgChessbet from '../assets/chessbet.png'
 			/>
 
 			<Project
-				description={t('projects.gauntlet')}
+				description="Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s."
 				link='https://github.com/corentings/gauntlet-reborn'
 				name='Gauntlet Reborn'
 				reversed={false}
@@ -66,7 +65,7 @@ import imgChessbet from '../assets/chessbet.png'
 			/>
 
 			<Project
-				description={t('projects.uca_edt')}
+				description="A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar."
 				link='https://github.com/CorentinGS/uca-edt'
 				name='Uca Edt'
 				reversed={true}
@@ -75,7 +74,7 @@ import imgChessbet from '../assets/chessbet.png'
 				ratio={16 / 9}
 			/>
 			<Project
-				description={t('projects.kitsu')}
+				description="Kitsu is a multi-purpose discord bot that generates stats for your discord server to help you increase the activity and grow quicker."
 				image={imgKitsu}
 				link='https://github.com/CorentinGS/Kitsu'
 				name='Kitsu'
@@ -84,7 +83,7 @@ import imgChessbet from '../assets/chessbet.png'
 				ratio={1}
 			/>
 			<Project
-				description={t('projects.stouuf')}
+				description="This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students."
 				link='https://stouuf.net'
 				name='Stouuf Website'
 				reversed={true}

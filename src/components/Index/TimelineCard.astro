@@ -1,7 +1,6 @@
 ---
 import { TimelineCardType } from 'src/utils/types'
 import { Picture } from 'astro:assets'
-import { t } from 'i18next'
 import { Icon } from 'astro-iconify'
 
 interface Props {
@@ -76,7 +75,7 @@ let classContent =
 						</p>
 					) : (
 						<p>
-							{t('experiences.since')} {'  '} {start_date}
+							{"Since"} {'  '} {start_date}
 						</p>
 					)
 				}
