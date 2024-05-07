@@ -10,9 +10,10 @@
 *.log
 
 diff.txt
-dist
+
 
 node_modules
 .env
 .astro
 .pnpm-store
+*.lock
