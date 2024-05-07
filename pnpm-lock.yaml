@@ -68,6 +68,9 @@ dependencies:
   i18next:
     specifier: 22.4.11
     version: 22.4.11
+  mdast-util-to-string:
+    specifier: ^4.0.0
+    version: 4.0.0
   prettier-config-standard:
     specifier: ^7.0.0
     version: 7.0.0(prettier@3.2.5)
