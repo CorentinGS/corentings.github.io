@@ -8,6 +8,7 @@ import imgUcaEdt from '../assets/edt-uca.png'
 import imgStouufWebsite from '../assets/Stouuf.png'
 import imgEchiquierNicois from '../assets/en.png'
 import imgKitsu from '../assets/kitsu.png'
+import imgChessbet from '../assets/chessbet.png'
 ---
 
 <section class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
@@ -33,6 +34,25 @@ import imgKitsu from '../assets/kitsu.png'
 				reversed={true}
 				stack='HTMX・Golang・PostgreSQL・MongoDB'
 				ratio={1}
+			/>
+
+			<Project
+				description={t('projects.chessbet')}
+				link='https://github.com/corentings/chessbet'
+				name='Chessbet'
+				reversed={false}
+				stack='Golang・PostgreSQL・HTMX'
+				image={imgChessbet}
+				ratio={1}
+			/>
+			<Project
+				description={t('projects.echiquier_nicois')}
+				link='https://echiquiernicois.com'
+				name='Echiquier Nicois'
+				reversed={true}
+				stack='Astro・Tailwindcss・TinaCMS'
+				image={imgEchiquierNicois}
+				ratio={16 / 9}
 			/>
 
 			<Project

@@ -32,8 +32,9 @@
 		"uca_edt": "A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar.",
 		"kitsu": "Kitsu is a multi-purpose discord bot that generates stats for your discord server to help you increase the activity and grow quicker.",
 		"stouuf": "This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students.",
-		"echiquier_nicois": "This is a website I made for my chess club.",
-		"description": "Here are some of my projects."
+		"echiquier_nicois": "This is a website I made for my chess club. It uses Astro and TailwindCSS to create a simple and fast website. TinaCMS allows members to easily update the blog with new articles.",
+		"description": "Here are some of my projects.",
+		"chessbet": "Chessbet is a project that aims to create a platform for chess betting. It will allow users to bet on their favorite players. The project is still in development."
 	},
 	"experiences": {
 		"title": "My Experiences",
@@ -103,6 +104,10 @@
 		"referee": {
 			"title": "Chess Referee - FFE",
 			"description": "Refereeing chess tournaments for the French Federation."
+		},
+		"en_bureau": {
+			"title": "Board Member",
+			"description": "Board member of the Echiquier Niçois chess club."
 		}
 	},
 	"contacts": {
