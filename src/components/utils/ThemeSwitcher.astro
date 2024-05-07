@@ -30,6 +30,8 @@ const themes = ['light', 'dark', 'dracula', 'memnix', 'luxury', 'cyberpunk', 'bl
 			// force new theme
 			console.log('theme changed')
 			document.documentElement.setAttribute('data-theme', themeSelect.value)
+			// trigger a full page reload
+			location.reload()
 		})
 
 		// Set the initially selected theme from localStorage
