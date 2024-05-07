@@ -45,48 +45,9 @@ import Logo from '../Index/Logo.astro'
 			>
 		</div>
 		<div class='hidden lg:flex lg:flex-1 lg:justify-end'>
-			<button class='btn btn-ghost' onclick='my_modal_1.showModal()'>
-				<Icon name='lucide:settings' class='size-6' />
-			</button>
-			<dialog id='my_modal_1' class='modal'>
-				<div class='modal-box'>
-					<!-- Modal header -->
-					<div class='flex items-center justify-between rounded-t border-b p-4 md:p-5'>
-						<p class='text-lg font-semibold'>Customize your experience</p>
-						<form method='dialog'>
-							<button class='btn btn-ghost' data-modal-close>
-								<svg
-									class='size-3'
-									aria-hidden='true'
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 14 14'
-								>
-									<path
-										stroke='currentColor'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'></path>
-								</svg>
-								<span class='sr-only'>Close modal</span>
-							</button>
-						</form>
-					</div>
-					<!-- Modal body -->
-					<form action='#' class='p-4 md:p-5'>
-						<div class='mb-4 grid grid-cols-2 gap-4'>
-							<div class='col-span-2'>
-								<label for='theme' class='mb-2 block text-sm font-medium'>Theme</label>
-								<ThemeSwitcher id='theme' />
-							</div>
-						</div>
-					</form>
-				</div>
-				<form method='dialog' class='modal-backdrop'>
-					<button>close</button>
-				</form>
-			</dialog>
+			<a href="https://github.com/corentings">
+				<Icon name='lucide:github' class='hoveranimation size-6' />
+			</a>
 		</div>
 	</nav>
 	<!-- Main modal -->
