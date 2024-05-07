@@ -49,6 +49,6 @@ export default defineConfig({
 		}),
 		compressor()
 	],
-	output: 'hybrid',
-	adapter: cloudflare()
+	output: 'static',
+	// adapter: cloudflare()
 })
