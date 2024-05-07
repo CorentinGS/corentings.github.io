@@ -18,7 +18,6 @@ const titleSeparator = '•'
 
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 
-import SpeedInsights from '@vercel/speed-insights/astro'
 
 import Fonts from './Fonts.astro'
 import Schema from './Schema.astro'
@@ -82,8 +81,6 @@ import Schema from './Schema.astro'
 	data-website-id='5bf74955-9bdd-4461-8b7b-3d3aacaf94bb'
 	data-domains='corentings.dev'></script>
 
-<!-- Speed Insights -->
-<SpeedInsights />
 
 <!-- Schema -->
 <Schema title={title} description={description} ogImage={socialImageURL} />

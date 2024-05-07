@@ -1,7 +1,6 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import compress from 'astro-compress'
 import compressor from 'astro-compressor'
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config'
 
@@ -41,12 +40,7 @@ export default defineConfig({
 		sitemap({
 			lastmod: new Date(),
 		}),
-		compress({
-			path: 'dist',
-			CSS: false,
-			HTML: false,
-			JavaScript: false
-		}),
+		(await import("@playform/compress")).default(),
 		compressor()
 	],
 	output: 'hybrid',
