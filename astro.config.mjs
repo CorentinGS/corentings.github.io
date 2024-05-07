@@ -3,7 +3,6 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import compress from 'astro-compress'
 import compressor from 'astro-compressor'
-import astroI18next from 'astro-i18next'
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config'
 
 import cloudflare from '@astrojs/cloudflare';
@@ -41,14 +40,6 @@ export default defineConfig({
 		}),
 		sitemap({
 			lastmod: new Date(),
-			i18n: {
-				defaultLocale: 'en',
-				locales: {
-					en: 'en-US',
-					fr: 'fr-FR',
-					de: 'de-DE'
-				}
-			}
 		}),
 		compress({
 			path: 'dist',
@@ -58,6 +49,6 @@ export default defineConfig({
 		}),
 		compressor()
 	],
-	output: 'static',
-	// adapter: cloudflare()
+	output: 'hybrid',
+	adapter: cloudflare()
 })
