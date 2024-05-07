@@ -58,9 +58,5 @@ export default defineConfig({
 		compressor()
 	],
 	output: 'server',
-	adapter: vercel({
-		functionPerRoute: false,
-		imageService: false,
-		devImageService: 'squoosh'
-	})
+	adapter: cloudflare()
 })
