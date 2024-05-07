@@ -20,19 +20,6 @@
 		"experiences": "Expériences",
 		"articles": "Articles"
 	},
-	"about": {
-		"title": "À Propos de moi",
-		"presentation": "Salut, je m'appelle Corentin et j'ai 20 ans.",
-		"study": "Actuellement, j'étudie pour obtenir une licence en informatique à l'<0>Université internationale des sciences appliquées IU</0>.",
-		"work": "Je suis également un développeur backend freelance et je travaille sur plusieurs projets depuis un an, notamment des sites et des applications web.",
-		"lang": "Mon principal langage de programmation est <0>Golang</0> mais j'ai également travaillé avec Java, Python, TypeScript, C/C++ et plus encore.",
-		"database": "J'ai également de l'expérience avec les bases de données telles que PostgreSQL ou MongoDB et je suis familier avec Docker, Docker Compose et même Podman.",
-		"opensource": "De plus, je suis passionné par l'open-source et je contribue à plusieurs projets depuis quelques années maintenant. J'ai également créé <0>Memnix</0>, une application de flashcards open-source pour Android et le Web.",
-		"community": "J'aime gérer des communautés et je suis actuellement le fondateur de <0>The Kafejo </0> une communauté Discord pour les développeurs et les étudiants.",
-		"chess": "Vous pourriez aussi me rencontrer sur un échiquier car je joue beaucoup et je gère une communauté d'échecs pour mon ami <0>Stouuf</0> sur Discord, Twitch et YouTube.",
-		"linux": "Je suis également un grand fan de Linux et je l'utilise depuis mon plus jeune âge. En ce moment, j'utilise <0>OpenSuse Tumbleweed</0> comme système d'exploitation principal et <1>Fedora</1> sur mon ordinateur portable.",
-		"code": "Je suis également développeur backend freelance et j'ai travaillé sur plusieurs projets ces dernières années."
-	},
 	"skills": {
 		"title": "Mes technologies préférées"
 	},

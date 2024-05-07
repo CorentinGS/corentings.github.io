@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"engines": {
-        "node": "20.12.x"
-    },
+		"node": "20.12.x"
+	},
 	"scripts": {
 		"dev": "astro dev --host",
 		"start": "astro dev",

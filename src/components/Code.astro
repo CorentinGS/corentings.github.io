@@ -18,11 +18,17 @@ import { Trans } from 'astro-i18next/components'
 						<div class='mt-6 space-y-7 text-base'>
 							<p>{t('work.content_a')}{' '}{t('work.content_b')}</p>
 							<p>{t('work.content_c')} {' '} {t('work.content_d')} {' '} {t('work.content_e')}</p>
-							<p>{t('work.content_f')} {' '} 
+							<p>
+								{t('work.content_f')}
+								{' '}
 								<Trans i18nKey='work.content_g'>
-									<a  href="https://projectbluefin.io/" rel="noreferrer noopener" class='underline underline-offset-4'>Bluefin</a>
+									<a
+										href='https://projectbluefin.io/'
+										rel='noreferrer noopener'
+										class='underline underline-offset-4'>Bluefin</a
+									>
 								</Trans>
-								</p>
+							</p>
 						</div>
 					</div>
 					<div class='space-y-10 lg:pl-16 xl:pl-24'>

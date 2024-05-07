@@ -1,5 +1,5 @@
 ---
-import { themeChange } from 'theme-change'
+
 ---
 
 <script is:inline>
@@ -16,7 +16,8 @@ import { themeChange } from 'theme-change'
 	const setTheme = () => {
 		if (localStorage.getItem('theme') === null) {
 			document.documentElement.setAttribute('data-theme', 'dark')
-		} else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') ?? 'dark')
+		} else
+			document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') ?? 'dark')
 
 		console.log('Theme set to ' + localStorage.getItem('theme'))
 	}
