@@ -1,11 +1,9 @@
 ---
 import { Config, Profile } from 'src/utils/config'
 import { Icon } from 'astro-iconify'
-import { Trans } from 'astro-i18next/components'
 
 import { Picture } from 'astro:assets'
 
-import { t } from 'i18next'
 
 const social = Config
 const profile = Profile
@@ -29,28 +27,20 @@ const profile = Profile
 				/>
 				<div class='flex-grow sm:pl-8'>
 					<span class='text-xl font-bold uppercase text-primary'>{profile.full_name}</span>
-					<h1 class='text-2xl font-bold md:text-3xl lg:text-5xl'>{t('hero.title')}</h1>
+					<h1 class='text-2xl font-bold md:text-3xl lg:text-5xl'>Freelance backend developer</h1>
 					<h2 class='max-w-3xl py-2 text-xl text-accent md:text-2xl lg:text-3xl'>
-						<Trans i18nKey='hero.i_code'>
 							I <span class='underline underline-offset-4'>code</span>
-						</Trans>
 						{', '}
-						<Trans i18nKey='hero.i_write'>
 							I <span class='underline underline-offset-4'>write</span>
-						</Trans>
 						{', '}
-						<Trans i18nKey='hero.i_contrib'>
 							I <span class='underline underline-offset-4'>contribute</span>
-						</Trans>
 						{', '}
-						<Trans i18nKey='hero.i_materialize'>
 							I <span class='underline underline-offset-4'>materialize dream</span>
-						</Trans>
 					</h2>
 					<h3 class='max-w-3xl py-2 text-xl md:text-2xl lg:text-3xl'></h3>
 
 					<div class='inline-flex space-x-4'>
-						<span class='text-md uppercase lg:text-lg'> {t('hero.cta')}</span>
+						<span class='text-md uppercase lg:text-lg'>Let's connect</span>
 						<Icon name='lucide:chevron-right' class='mx-auto' />
 						<a
 							href={'https://twitter.com/' + social.twitter}

@@ -2,10 +2,8 @@
 import imgMemnix from '../assets/moutmout.png'
 import imgTFD from '../assets/logo_tfd.png'
 import Work from './Work.astro'
-import { t } from 'i18next'
 import imgMfStouuf from '../assets/MF_STOUUF.png'
 import imgOneToo from '../assets/onetoo.jpg'
-import { Trans } from 'astro-i18next/components'
 ---
 
 <section class='bg-base-200'>
@@ -14,20 +12,40 @@ import { Trans } from 'astro-i18next/components'
 			<div class='relative flex flex-col'>
 				<div class='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
 					<div class='lg:order-first lg:row-span-2'>
-						<h1 class='text-4xl font-bold tracking-tight sm:text-5xl'>{t('work.title')}</h1>
+						<h1 class='text-4xl font-bold tracking-tight sm:text-5xl'>
+							{'I code for a living but also as a passion'}
+						</h1>
 						<div class='mt-6 space-y-7 text-base'>
-							<p>{t('work.content_a')}{' '}{t('work.content_b')}</p>
-							<p>{t('work.content_c')} {' '} {t('work.content_d')} {' '} {t('work.content_e')}</p>
 							<p>
-								{t('work.content_f')}
+								{
+									"Currently, I'm studying for a BSC. Computer Science at the IU International University of Applied Sciences."
+								}{' '}
+								{
+									"I'm a freelance backend developer and I've been working on several projects for the past years..."
+								}
+							</p>
+							<p>
+								{
+									"My main programming language is Golang but I've worked with java, python, typescript, C/C++ and more."
+								}
 								{' '}
-								<Trans i18nKey='work.content_g'>
-									<a
-										href='https://projectbluefin.io/'
-										rel='noreferrer noopener'
-										class='underline underline-offset-4'>Bluefin</a
-									>
-								</Trans>
+								{
+									"I have experience with databases such as PostgreSQL or MongoDB and I'm familiar with Docker, Docker Compose and even Podman."
+								}
+								{' '}
+								{
+									"I'm a passionate open-source enthusiast and have been contributing to several projects for a few years now. I've also created Memnix, a free and open-source flashcard app for Android and Web."
+								}
+							</p>
+							<p>
+								{
+									"I like to manage communities and I'm currently the founder of The Kafejo a Discord community for developers and students."
+								}
+								I'm a devoted Linux enthusiast, using <a
+									href='https://projectbluefin.io/'
+									rel='noreferrer noopener'
+									class='underline underline-offset-4'>Bluefin</a
+								> (Fedora Silverblue) as my main operating system
 							</p>
 						</div>
 					</div>
@@ -50,33 +68,33 @@ import { Trans } from 'astro-i18next/components'
 										d='M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5'
 										class='stroke-base-content/60'></path>
 								</svg>
-								<span class='ml-3'>{t('work.work')}</span>
+								<span class='ml-3'>Work</span>
 							</h2>
 							<ol class='mt-6 space-y-4'>
 								<Work
 									company='Memnix'
-									role={t('work.role_founder')}
+									role={"Founder"}
 									startDate='2021'
-									endDate={t('work.until_present')}
+									endDate={"Until present"}
 									image={imgMemnix}
 								/>
 								<Work
 									company='Stouuf'
-									role={t('work.role_cm')}
+									role={"Community manager"}
 									startDate='2022'
-									endDate={t('work.until_present')}
+									endDate={"Until present"}
 									image={imgMfStouuf}
 								/>
 								<Work
 									company='TrustMe'
-									role={t('work.role_lead')}
+									role={"Lead developer"}
 									startDate='Nov. 2022'
 									endDate='Nov. 2023'
 									image={imgTFD}
 								/>
 								<Work
 									company='OneToo'
-									role={t('work.role_trainee')}
+									role={"Trainee developer"}
 									startDate='Jun. 2021'
 									endDate='Jul. 2021'
 									image={imgOneToo}
@@ -88,7 +106,7 @@ import { Trans } from 'astro-i18next/components'
                              outline-offset-2 ring-1 ring-base-content ring-opacity-30 transition active:transition-none'
 								rel='noreferrer noopener'
 								href='https://www.linkedin.com/in/corentin-giaufer-saubert/'
-								>{t('work.download_cv')}
+								>Download CV
 								<svg
 									viewBox='0 0 16 16'
 									fill='none'

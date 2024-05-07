@@ -1,5 +1,4 @@
 ---
-import { changeLanguage } from 'i18next'
 export const prerender = true
 import BlogPostLayout from 'src/layouts/BlogPostLayout.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
@@ -9,8 +8,6 @@ import TableOfContents from '@/components/blog/TableOfContents'
 import { getPosts } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import Code from '@/components/mdx/Code'
-
-changeLanguage('en')
 
 const posts = await getCollection('blog')
 export async function getStaticPaths() {

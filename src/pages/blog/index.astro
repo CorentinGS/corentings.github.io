@@ -1,11 +1,9 @@
 ---
-import { changeLanguage, t } from 'i18next'
 import Layout from 'src/layouts/Layout.astro'
 import ListPosts from 'src/components/blog/ListPosts.astro'
 import { getPosts } from '@/utils'
 import ListCategories from 'src/components/blog/ListCategories.astro'
 
-changeLanguage('en')
 
 const posts = await getPosts(10)
 export const prerender = true
@@ -16,13 +14,13 @@ export const prerender = true
 		<div class='header py-2 mb-3 flex items-end justify-between'>
 			<div class='title'>
 				<h1 class='text-5xl font-bold first-letter:uppercase'>
-					{t('blog.title')}
+					My Articles
 				</h1>
 			</div>
 		</div>
 
 		<ListCategories />
-		<h2 class='text-lg font-medium tracking-wide text-end'>{t('blog.description')}</h2>
+		<h2 class='text-lg font-medium tracking-wide text-end'>Latest articles</h2>
 		<ListPosts FirstBig={true} posts={posts} />
 	</div>
 </Layout>

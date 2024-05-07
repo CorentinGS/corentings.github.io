@@ -1,10 +1,6 @@
 ---
 import '../styles/global.css'
-import { localizePath } from 'astro-i18next'
-import HeadHrefLangs from '../components/utils/HeadHrefLangs.astro'
-import { LanguageSelector } from 'astro-i18next/components'
 import ThemeSwitcher from '../components/utils/ThemeSwitcher.astro'
-import { t } from 'i18next'
 import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 
@@ -38,8 +34,6 @@ const articleDate = pubDate.toISOString()
 			ogImage={heroImage?.src}
 			articleDate={articleDate}
 		/>
-
-		<HeadHrefLangs />
 
 		<ProviderTheme />
 	</head>
@@ -121,28 +115,28 @@ const articleDate = pubDate.toISOString()
 						</li>
 						<li>
 							<a
-								href={localizePath('/projects')}
+								href='/projects'
 								data-astro-prefetch='tap'
 								class='text-md font-semibold leading-6'>Projects</a
 							>
 						</li>
 						<li>
 							<a
-								href={localizePath('/talks')}
+								href='/talks'
 								data-astro-prefetch='tap'
 								class='text-md font-semibold leading-6'>Talks</a
 							>
 						</li>
 						<li>
 							<a
-								href={localizePath('/experiences')}
+								href='/experiences'
 								data-astro-prefetch='tap'
 								class='text-md font-semibold leading-6'>Experiences</a
 							>
 						</li>
 						<li>
 							<a
-								href={localizePath('/blog')}
+								href='/blog'
 								data-astro-prefetch='tap'
 								class='text-md font-semibold leading-6'>Articles</a
 							>

@@ -5,9 +5,6 @@ import ListCategories from '@/components/blog/ListCategories'
 import { sluglify, unsluglify, getCategories, getPosts } from '@/utils'
 import { siteConfig } from '@/data/site.config'
 import Pagination from '@/components/blog/Pagination'
-import { changeLanguage } from 'i18next'
-
-changeLanguage('en')
 
 export const prerender = true
 export async function getStaticPaths({ paginate }: any) {
