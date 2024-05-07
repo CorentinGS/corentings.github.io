@@ -41,7 +41,7 @@ export default defineConfig({
 		playformInline(),
 		(await import('@playform/compress')).default({
 			CSS: true,
-			HTML: true,
+			HTML: false,
 			Image: false,
 			JavaScript: false
 		}),
