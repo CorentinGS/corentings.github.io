@@ -7,6 +7,7 @@ import imgTalk from '../assets/talk1.jpg'
 import Service from './Service.astro'
 import imgStouuf from '../assets/stouuf2.webp'
 import imgJustin from '../assets/justin.jpeg'
+import imgGnark from '../assets/david.webp'
 ---
 
 <section class='bg-base-200'>
@@ -100,7 +101,7 @@ import imgJustin from '../assets/justin.jpeg'
 					</div>
 				</div>
 
-				<div class='mt-8 flex hidden justify-between md:mt-0'>
+				<div class='mt-8 hidden justify-between md:mt-0'>
 					<button
 						title='left arrow'
 						class='btn btn-circle btn-ghost mx-3 p-2 transition-colors duration-300'
@@ -151,10 +152,11 @@ import imgJustin from '../assets/justin.jpeg'
 					image={imgJustin}
 				/>
 				<Testimony
-					description={t('testimony.placeholder.description')}
-					name='John Doe'
-					title={t('testimony.placeholder.job')}
-					job='Placeholder Inc'
+					description={t('testimony.gnark.description')}
+					name='David Barbier'
+					title={t('testimony.gnark.job')}
+					job=''
+					image={imgGnark}
 				/>
 			</section>
 		</div>

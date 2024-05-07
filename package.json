@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"engines": {
-        "node": "20.12.x"
-    },
+		"node": "20.12.x"
+	},
 	"scripts": {
 		"dev": "astro dev --host",
 		"start": "astro dev",
@@ -22,9 +22,12 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^10.2.5",
 		"@astrojs/mdx": "~2.3.1",
 		"@astrojs/node": "~8.2.5",
 		"@astrojs/prism": "^3.0.0",
+		"@astrojs/rss": "~4.0.5",
+		"@astrojs/sitemap": "~3.1.4",
 		"@astrojs/tailwind": "~5.1.0",
 		"@astrojs/vercel": "~7.5.4",
 		"@fontsource/do-hyeon": "~5.0.17",
@@ -48,8 +51,6 @@
 		"theme-change": "^2.5.0"
 	},
 	"devDependencies": {
-		"@astrojs/rss": "~4.0.5",
-		"@astrojs/sitemap": "~3.1.4",
 		"@pagefind/default-ui": "^1.0.4",
 		"@tailwindcss/aspect-ratio": "~0.4.2",
 		"@tailwindcss/forms": "^0.5.7",

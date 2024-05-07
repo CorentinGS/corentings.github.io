@@ -2,13 +2,12 @@
 import { TimelineCardType } from 'src/utils/types'
 import { Picture } from 'astro:assets'
 import { t } from 'i18next'
-import { Trans } from 'astro-i18next/components'
 import { Icon } from 'astro-iconify'
 
 interface Props {
 	name: string
 	description: string
-	image?: string
+	image?: ImageMetadata
 	end_date?: string
 	start_date: string
 	link?: string

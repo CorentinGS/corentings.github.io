@@ -1,0 +1,28 @@
+---
+import { changeLanguage, t } from 'i18next'
+import Layout from 'src/layouts/Layout.astro'
+import { Icon } from 'astro-iconify'
+import ListPosts from 'src/components/blog/ListPosts.astro'
+import { getPosts } from '@/utils'
+import ListCategories from 'src/components/blog/ListCategories.astro'
+
+changeLanguage('fr')
+
+const posts = await getPosts(10)
+---
+
+<Layout title='CorentinGS'>
+	<div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
+		<div class='header py-2 mb-3 flex items-end justify-between'>
+			<div class='title'>
+				<h1 class='text-5xl font-bold first-letter:uppercase'>
+					{t('blog.title')}
+				</h1>
+			</div>
+		</div>
+
+		<ListCategories />
+		<h2 class='text-lg font-medium tracking-wide text-end'>{t('blog.description')}</h2>
+		<ListPosts FirstBig={true} posts={posts} />
+	</div>
+</Layout>

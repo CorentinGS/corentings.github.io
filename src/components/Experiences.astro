@@ -1,7 +1,7 @@
 ---
 import Timeline from './Index/Timeline.astro'
 import TimelineCard from './Index/TimelineCard.astro'
-import { type TimelineCardList, TimelineCardType } from 'src/utils/types'
+import { TimelineCardType } from 'src/utils/types'
 import { t } from 'i18next'
 
 import imgIuLogo from '../assets/iu_logo.png'
@@ -16,8 +16,17 @@ import imgEstaca from '../assets/estaca.jpg'
 import imgKtk from '../assets/ktk.jpg'
 import imgChesscom from '../assets/chesscom_logo.png'
 import imgFfe from '../assets/ffe_logo.png'
+import imgEN from '../assets/logo_en.png'
 
 const experiences = [
+	{
+		name: t('experiences.en_bureau.title'),
+		type: TimelineCardType.Volunteering,
+		description: t('experiences.en_bureau.description'),
+		start_date: '2024',
+		link: 'https://echiquiernicois.com',
+		image: imgEN
+	},
 	{
 		name: t('experiences.referee.title'),
 		type: TimelineCardType.Volunteering,
