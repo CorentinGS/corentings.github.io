@@ -10,7 +10,7 @@
 *.log
 
 diff.txt
-dist
+
 
 node_modules
 .env
