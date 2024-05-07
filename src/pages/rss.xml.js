@@ -1,5 +1,6 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss'
-import { link } from 'fs'
+import rss from '@astrojs/rss'
+import { getCollection } from 'astro:content';
+
 
 export async function get(context) {
 	const posts = await getCollection('blog')
