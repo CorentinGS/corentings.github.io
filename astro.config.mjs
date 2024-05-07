@@ -1,11 +1,13 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/serverless'
 import compress from 'astro-compress'
 import compressor from 'astro-compressor'
 import astroI18next from 'astro-i18next'
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config'
+
+import cloudflare from '@astrojs/cloudflare';
+
 
 import { remarkReadingTime } from './src/utils/readTime.ts'
 
