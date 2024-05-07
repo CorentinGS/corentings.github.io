@@ -5,13 +5,13 @@ import compressor from 'astro-compressor';
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import { remarkReadingTime } from './src/utils/readTime.ts';
+import rss from '@astrojs/rss';
 
 import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://corentings.dev',
-
   image: {
     service: process.env.NODE_ENV === 'production' ? sharpImageService() : squooshImageService()
   },
@@ -27,7 +27,7 @@ export default defineConfig({
       wrap: true
     }
   },
-  integrations: [tailwind(), mdx({
+  integrations: [tailwind(),rss(), mdx({
     syntaxHighlight: 'shiki',
     shikiConfig: {
       theme: 'material-theme-palenight',
