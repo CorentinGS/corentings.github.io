@@ -1,7 +1,5 @@
 ---
 import { Icon } from 'astro-iconify'
-import ThemeSwitcher from './ThemeSwitcher.astro'
-
 
 import Logo from '../Index/Logo.astro'
 ---
@@ -9,10 +7,7 @@ import Logo from '../Index/Logo.astro'
 <header class=''>
 	<nav class='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
 		<div class='flex lg:flex-1'>
-			<a
-				href={'/'}
-				class='hoveranimation -m-1.5 flex p-1.5 text-xl normal-case lg:text-3xl'
-			>
+			<a href={'/'} class='hoveranimation -m-1.5 flex p-1.5 text-xl normal-case lg:text-3xl'>
 				<Logo class='mr-2 size-8' />
 			</a>
 		</div>
@@ -33,25 +28,17 @@ import Logo from '../Index/Logo.astro'
 			</label>
 		</div>
 		<div class='hidden lg:flex lg:gap-x-12'>
-			<a
-				href={'/projects'}
-				data-astro-prefetch='hover'
-				class='text-md font-semibold leading-6'>{"Projects"}</a
+			<a href={'/projects'} data-astro-prefetch='hover' class='text-md font-semibold leading-6'
+				>{'Projects'}</a
 			>
-			<a
-				href={'/talks'}
-				data-astro-prefetch='hover'
-				class='text-md font-semibold leading-6'>{"Talks"}</a
+			<a href={'/talks'} data-astro-prefetch='hover' class='text-md font-semibold leading-6'
+				>{'Talks'}</a
 			>
-			<a
-				href={'/experiences'}
-				data-astro-prefetch='hover'
-				class='text-md font-semibold leading-6'>{'Experiences'}</a
+			<a href={'/experiences'} data-astro-prefetch='hover' class='text-md font-semibold leading-6'
+				>{'Experiences'}</a
 			>
-			<a
-				href={'/blog'}
-				data-astro-prefetch='hover'
-				class='text-md font-semibold leading-6'>{'Articles'}</a
+			<a href={'/blog'} data-astro-prefetch='hover' class='text-md font-semibold leading-6'
+				>{'Articles'}</a
 			>
 		</div>
 		<div class='hidden lg:flex lg:flex-1 lg:justify-end'>

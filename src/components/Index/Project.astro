@@ -30,9 +30,7 @@ function to_lower(str: string) {
 	</div>
 	<div class='mb-8 mt-5 flex flex-col justify-center sm:w-1/2 sm:pr-16 md:mt-0 md:w-7/12'>
 		<div class='mb-2 flex items-center'>
-			<p class='text-sm font-semibold uppercase text-secondary'>
-				Made using
-			</p>
+			<p class='text-sm font-semibold uppercase text-secondary'>Made using</p>
 			<Icon name='lucide:chevron-right' class='size-6' />
 			<p class='text-sm font-semibold uppercase'>{stack}</p>
 		</div>
@@ -42,12 +40,12 @@ function to_lower(str: string) {
 			<a
 				href={link}
 				class='flex text-secondary hover:text-primary'
-				aria-label={"Discover" + ' ' + to_lower(name)}
+				aria-label={'Discover' + ' ' + to_lower(name)}
 				rel='noopener noreferrer'
 				data-umami-event='Project link clicked'
 				data-umami-name={name}
 			>
-				<span>{"Discover"}{' '}{to_lower(name)}</span>
+				<span>{'Discover'}{' '}{to_lower(name)}</span>
 			</a>
 		</div>
 	</div>

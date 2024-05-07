@@ -3,49 +3,45 @@ import Card from './Card.astro'
 
 const talks = [
 	{
-		title: "Workshop: Introduction to Go",
+		title: 'Workshop: Introduction to Go',
 		date: '2024',
 		location: 'Universite Nice Sophia Antipolis',
 		href: 'https://gdsc.community.dev/events/details/developer-student-clubs-cote-dazur-university-presents-workshop-initiation-a-golang/',
-		description: "A workshop about Go, and how to get started with it.",
-		cta: "Learn more"
+		description: 'A workshop about Go, and how to get started with it.',
+		cta: 'Learn more'
 	},
 	{
-		title: "Introduction to Microservices with Go",
+		title: 'Introduction to Microservices with Go',
 		date: '2023',
 		location: 'Universite Nice Sophia Antipolis',
 		href: 'https://gdsc.community.dev/events/details/developer-student-clubs-cote-dazur-university-presents-introduction-aux-microservices-avec-go/',
-		description: "A talk about microservices, and how to build them with Go.",
-		cta: "Learn more"
+		description: 'A talk about microservices, and how to build them with Go.',
+		cta: 'Learn more'
 	},
 	{
-		title: "Introduction to AI and Ethical considerations",
+		title: 'Introduction to AI and Ethical considerations',
 		date: '2023',
 		location: 'Demi-Siècle',
-		description: "A private talk about AI and its ethical considerations."
+		description: 'A private talk about AI and its ethical considerations.'
 	}
 ]
 
 const podcasts = [
 	{
-		title: "Meet CorentinGS",
+		title: 'Meet CorentinGS',
 		date: '2023',
 		location: 'Avocado Growth : Portrait tech',
-		description: "A podcast about my journey as a developer, and my vision of the future.",
-		cta: "Coming soon"
+		description: 'A podcast about my journey as a developer, and my vision of the future.',
+		cta: 'Coming soon'
 	}
 ]
-
 
 export const prerender = true
 ---
 
-<div
-	aria-labelledby={"Talks"}
-	class='md:border-secondary-100 mt-20 py-10 md:border-l md:pl-6'
->
+<div aria-labelledby={'Talks'} class='md:border-secondary-100 mt-20 py-10 md:border-l md:pl-6'>
 	<div class='grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4'>
-		<h2 class='text-sm font-semibold'>{"Talks"}</h2>
+		<h2 class='text-sm font-semibold'>{'Talks'}</h2>
 		<div class='md:col-span-3'>
 			<div class='space-y-16'>
 				{talks.map((talk) => <Card {...talk} />)}
@@ -54,12 +50,9 @@ export const prerender = true
 	</div>
 </div>
 
-<div
-	aria-labelledby={"Podcasts"}
-	class='md:border-secondary-100 mt-20 py-10 md:border-l md:pl-6'
->
+<div aria-labelledby={'Podcasts'} class='md:border-secondary-100 mt-20 py-10 md:border-l md:pl-6'>
 	<div class='grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4'>
-		<h2 class='text-sm font-semibold'>{"Podcasts"}</h2>
+		<h2 class='text-sm font-semibold'>{'Podcasts'}</h2>
 		<div class='md:col-span-3'>
 			<div class='space-y-16'>
 				{podcasts.map((talk) => <Card {...talk} />)}

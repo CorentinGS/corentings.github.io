@@ -1,4 +1,3 @@
-import { TimelineCardType, type TimelineCardList } from './types'
 
 import imgAvatar from 'src/assets/avatar.webp'
 export class Profile {

@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css'
-import ThemeSwitcher from '../components/utils/ThemeSwitcher.astro'
 import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 
@@ -10,7 +9,6 @@ import { Picture } from 'astro:assets'
 import FormattedDate from '../components/blog/FormattedDate.astro'
 import Tag from '../components/blog/Tag.astro'
 import BaseHead from '../components/utils/BaseHead.astro'
-import ProviderTheme from '../components/utils/ProviderTheme.astro'
 
 type Props = {
 	id: CollectionEntry<'blog'>['id']
@@ -34,8 +32,6 @@ const articleDate = pubDate.toISOString()
 			ogImage={heroImage?.src}
 			articleDate={articleDate}
 		/>
-
-		<ProviderTheme />
 	</head>
 	<body>
 		<main transition:animate='slide'>
@@ -110,21 +106,14 @@ const articleDate = pubDate.toISOString()
 			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
 				<label class='modal-box relative' for=''>
 					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
-						<li class='py-3'>
-							<ThemeSwitcher class='mx-auto w-full' />
-						</li>
 						<li>
-							<a
-								href='/projects'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Projects</a
+							<a href='/projects' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Projects</a
 							>
 						</li>
 						<li>
-							<a
-								href='/talks'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Talks</a
+							<a href='/talks' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Talks</a
 							>
 						</li>
 						<li>
@@ -135,10 +124,8 @@ const articleDate = pubDate.toISOString()
 							>
 						</li>
 						<li>
-							<a
-								href='/blog'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Articles</a
+							<a href='/blog' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Articles</a
 							>
 						</li>
 					</ul>

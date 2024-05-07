@@ -1,9 +1,6 @@
 ---
-import ThemeSwitcher from '../components/utils/ThemeSwitcher.astro'
-
 import Header from '../components/utils/Header.astro'
 import BaseHead from '../components/utils/BaseHead.astro'
-import ProviderTheme from '../components/utils/ProviderTheme.astro'
 
 export interface Props {
 	title: string
@@ -16,12 +13,9 @@ const { title, description, image, articleDate } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class='scroll-smooth'>
+<html lang='en' class='scroll-smooth'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
-
-
-		<ProviderTheme />
 	</head>
 	<body>
 		<main>
@@ -34,22 +28,14 @@ const { title, description, image, articleDate } = Astro.props
 			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
 				<label class='modal-box relative' for=''>
 					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
-						<li class='py-3'>
-							<ThemeSwitcher class='mx-auto w-full' />
-						</li>
-		
 						<li>
-							<a
-								href='/projects'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Projects</a
+							<a href='/projects' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Projects</a
 							>
 						</li>
 						<li>
-							<a
-								href='/talks'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Talks</a
+							<a href='/talks' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Talks</a
 							>
 						</li>
 						<li>
@@ -60,10 +46,8 @@ const { title, description, image, articleDate } = Astro.props
 							>
 						</li>
 						<li>
-							<a
-								href='/blog'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Articles</a
+							<a href='/blog' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
+								>Articles</a
 							>
 						</li>
 					</ul>
