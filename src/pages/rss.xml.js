@@ -8,7 +8,7 @@ export async function get(context) {
 	return rss({
 		title: "Corentin GS's blog",
 		description: 'A young programmer journey',
-		site: import.meta.env.SITE,
+		site: context.site,
 		items: posts.map((post) => ({
 			title: post.title,
 			description: post.description,

@@ -5,7 +5,6 @@ import compressor from 'astro-compressor';
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import { remarkReadingTime } from './src/utils/readTime.ts';
-import rss from '@astrojs/rss';
 
 import playformInline from "@playform/inline";
 
@@ -27,7 +26,8 @@ export default defineConfig({
       wrap: true
     }
   },
-  integrations: [tailwind(),rss(), mdx({
+  integrations: [tailwind(),
+	 mdx({
     syntaxHighlight: 'shiki',
     shikiConfig: {
       theme: 'material-theme-palenight',
