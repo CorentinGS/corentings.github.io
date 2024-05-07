@@ -59,6 +59,9 @@ dependencies:
   astro-seo-schema:
     specifier: ^4.0.0
     version: 4.0.2(astro@4.7.1)(schema-dts@1.1.2)
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
   daisyui:
     specifier: ^4.10.5
     version: 4.10.5(postcss@8.4.38)
