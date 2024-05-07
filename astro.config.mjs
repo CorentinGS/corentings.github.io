@@ -36,13 +36,13 @@ export default defineConfig({
     drafts: true
   }), sitemap({
     lastmod: new Date()
-  }), playformInline(), (await import("@playform/compress")).default(), compressor(
-	{
+  }), playformInline(), (await import("@playform/compress")).default({
 	CSS: false,
 	HTML: false,
 	Image: false,
 	JavaScript: false,
-})],
+}), compressor(
+	)],
   output: 'static',
   // adapter: cloudflare()
 });
