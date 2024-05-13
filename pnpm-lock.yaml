@@ -51,8 +51,8 @@ dependencies:
     specifier: 4.8.2
     version: 4.8.2(@types/node@20.12.11)(typescript@5.4.5)
   astro-font:
-    specifier: 0.0.80
-    version: 0.0.80
+    specifier: 0.0.81
+    version: 0.0.81
   astro-iconify:
     specifier: 1.2.0
     version: 1.2.0
@@ -1536,7 +1536,7 @@ packages:
       extract-zip: 2.0.1
       local-pkg: 0.5.0
       pathe: 1.1.2
-      svgo: 3.2.0
+      svgo: 3.3.2
       tar: 6.2.1
     transitivePeerDependencies:
       - debug
@@ -2693,8 +2693,8 @@ packages:
       - typescript
     dev: true
 
-  /astro-font@0.0.80:
-    resolution: {integrity: sha512-RjUANXSNdt0Yp2Tpyn7woBg67hCX2Gy1OiiA7B0NX501LcrzvFHoX98CoBgJC5af3tj3fznfLqqBmMr7wu6+fQ==}
+  /astro-font@0.0.81:
+    resolution: {integrity: sha512-VmK4kqzNpOAt2LASVbw2cbbe9sD6K30E7jOjqzHxHieHMTWInkdOljtzHmNGvKr3P0MeF4Wy+Z7j6CdETFecDA==}
     dev: false
 
   /astro-iconify@1.2.0:
@@ -7479,7 +7479,6 @@ packages:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.0.0
-    dev: true
 
   /synckit@0.8.8:
     resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}

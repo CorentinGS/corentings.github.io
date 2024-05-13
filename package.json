@@ -36,7 +36,7 @@
 		"@playform/inline": "^0.0.2",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.8.2",
-		"astro-font": "0.0.80",
+		"astro-font": "0.0.81",
 		"astro-iconify": "1.2.0",
 		"astro-seo-schema": "4.0.2",
 		"clsx": "2.1.1",
