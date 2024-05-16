@@ -39,11 +39,11 @@ dependencies:
     specifier: 5.0.20
     version: 5.0.20
   '@iconify/json':
-    specifier: 2.2.208
-    version: 2.2.208
+    specifier: 2.2.209
+    version: 2.2.209
   '@playform/inline':
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.3
+    version: 0.0.3
   '@rollup/plugin-json':
     specifier: 6.1.0
     version: 6.1.0
@@ -134,8 +134,8 @@ devDependencies:
     specifier: 9.1.0
     version: 9.1.0(eslint@9.2.0)
   eslint-plugin-astro:
-    specifier: 1.1.2
-    version: 1.1.2(eslint@9.2.0)(typescript@5.4.5)
+    specifier: 1.2.0
+    version: 1.2.0(eslint@9.2.0)(typescript@5.4.5)
   eslint-plugin-jsx-a11y:
     specifier: 6.8.0
     version: 6.8.0(eslint@9.2.0)
@@ -1518,8 +1518,8 @@ packages:
     engines: {node: '>=18.18'}
     dev: true
 
-  /@iconify/json@2.2.208:
-    resolution: {integrity: sha512-xGJnQ/bYWWFrnPs/qNCSq9CYHXOBINpV3ctuy0zUucKejdNKnpAwVIzuyDJPt0McvQ6XfdU0rxkzH3rHVF43Vg==}
+  /@iconify/json@2.2.209:
+    resolution: {integrity: sha512-Q19wYEc48ZSIxNEMhxTF7HbCOCR5QJcC8xHlRYSSt7gWdcdhleaUCreJwQSbj4lEZc0JXPFzG47ONBlLDFP7LA==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
@@ -1790,7 +1790,7 @@ packages:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.6.0
+      semver: 7.6.2
       tar: 6.2.1
     transitivePeerDependencies:
       - encoding
@@ -1931,19 +1931,11 @@ packages:
       - typescript
     dev: true
 
-  /@playform/inline@0.0.2:
-    resolution: {integrity: sha512-2+h7t4mydMVJjP+U8PZhFz7iUlCqf/oGZX/Y5hUO72WeP6YD76MxkRSMCLJjXbqQkIQ2e5N3irbhz0JKKzMBTQ==}
+  /@playform/inline@0.0.3:
+    resolution: {integrity: sha512-NM3c+6PRiIQMDJi3dLtqZU8GiZjh31KQ1qXdqhDVbGQQ+PYiFKfSzA5ve7DpYJIYfs1mCi0ZIQWHFyJZ9nrezw==}
     dependencies:
-      '@playform/pipe': 0.0.2
+      '@playform/pipe': 0.0.3
       critters: 0.0.22
-    dev: false
-
-  /@playform/pipe@0.0.2:
-    resolution: {integrity: sha512-1LJADjJVxUDIfpp5vkIup7vuxsZllWPYYbZO7gLN1CUcOFIekYSi1uxptkrYWBDRW/usiAyUdpd3gSKisED/sQ==}
-    dependencies:
-      '@types/node': 20.12.4
-      deepmerge-ts: 5.1.0
-      fast-glob: 3.3.2
     dev: false
 
   /@playform/pipe@0.0.3:
@@ -1952,7 +1944,6 @@ packages:
       '@types/node': 20.12.11
       deepmerge-ts: 5.1.0
       fast-glob: 3.3.2
-    dev: true
 
   /@rollup/plugin-json@6.1.0:
     resolution: {integrity: sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==}
@@ -2261,12 +2252,6 @@ packages:
     resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
     dependencies:
       undici-types: 5.26.5
-
-  /@types/node@20.12.4:
-    resolution: {integrity: sha512-E+Fa9z3wSQpzgYQdYmme5X3OTuejnnTx88A6p6vkkJosR3KBz+HpE3kqNm98VE6cfLFcISx7zW7MsJkH6KwbTw==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: false
 
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -3856,7 +3841,7 @@ packages:
       eslint: '>=6.0.0'
     dependencies:
       eslint: 9.2.0
-      semver: 7.6.0
+      semver: 7.6.2
     dev: true
 
   /eslint-config-prettier@9.1.0(eslint@9.2.0):
@@ -3868,8 +3853,8 @@ packages:
       eslint: 9.2.0
     dev: true
 
-  /eslint-plugin-astro@1.1.2(eslint@9.2.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-bVKnu0SH5hMxiw0k/gOpbQxZMztW8EYOv1WnK+ofOP1offosmexbYz087kqZ7kFYe2j7Yoz6UIJxisdjFgdTbw==}
+  /eslint-plugin-astro@1.2.0(eslint@9.2.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-Z2b/7a9EUNu8PWch6/fUKXTCj10hrbdVsR1CmUgke5nfrJuej+uUnL5z5hd9/IIWxLdSbk5Fowf/nyfbmhRmDQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.57.0'
