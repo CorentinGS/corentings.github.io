@@ -136,9 +136,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"Crafting-the-chiquier-Niois-Website.mdx": {
-	id: "Crafting-the-chiquier-Niois-Website.mdx";
-  slug: "crafting-the-chiquier-niois-website";
+"crafting-the-echiquier-nicois-website.mdx": {
+	id: "crafting-the-echiquier-nicois-website.mdx";
+  slug: "crafting-the-echiquier-nicois-website";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -153,6 +153,13 @@ declare module 'astro:content' {
 "docker-and-go.mdx": {
 	id: "docker-and-go.mdx";
   slug: "docker-and-go";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"karen-asrian-memorial-tournament.mdx": {
+	id: "karen-asrian-memorial-tournament.mdx";
+  slug: "karen-asrian-memorial-tournament";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

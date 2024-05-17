@@ -3,13 +3,20 @@
   <channel>
     <title>Corentin GS's blog</title>
     <link>https://corentings.dev/blog/</link>
-    <description>A young programmer journeyg</description>
-    <lastBuildDate>Mon, 07 May 2024 16:31:38 +0000</lastBuildDate>
+    <description>A young programmer journey</description>
+    <lastBuildDate>Fri, 17 May 2024</lastBuildDate>
+        <item>
+      <title>My Experience at the Karen Asrian Memorial Tournament</title>
+      <link>https://corentings.dev/blog/karen-asrian-memorial-tournament/</link>
+      <description>My experience playing in the Karen Asrian Memorial Tournament in Armenia.</description>
+      <pubDate>2024-05-17T23:00:00.000Z</pubDate>
+    </item>
     <item>
-      <title>Crafting the Chiquier Niois Website</title>
-      <link>https://corentings.dev/blog/crafting-the-chiquier-niois-website/</link>
+      <title>Crafting the Echiquier Nicois Website</title>
+      <link>https://corentings.dev/blog/crafting-the-echiquier-nicois-website/</link>
       <description>A Journey with AstroJS, Shadcn, Tailwind, and TinaCMS. How I built a website for my local chess club using modern web technologies.</description>
       <pubDate>2024-02-11T23:00:00.000Z</pubDate>
+      <updated>2024-05-16T23:00:00.000Z</updated>
     </item>
     <item>
       <title>DNF5 Step-by-Step</title>
