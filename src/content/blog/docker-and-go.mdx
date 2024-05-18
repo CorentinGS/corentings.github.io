@@ -11,6 +11,10 @@ tags:
 title: 'How to optimize a Go deployment with Docker '
 ---
 
+import { Picture } from 'astro:assets';
+
+import imgDocker from '../../assets/docker_infographie.jpg'
+
 ## How to optimize a Go deployment with Docker ?
 
 <br />
@@ -166,6 +170,6 @@ It's in French but I think you can understand it anyway.
 
 <br />
 
-![Docker Infographic](../../assets/docker_infographie.jpg)
-
-<img src="../../assets/docker_infographie.jpg" alt="Docker Infographic" />
+<Picture src={imgDocker} formats={['avif', 'webp', "jpg"]}
+        alt="Docker Infographic" quality="50" loading="lazy" 
+        width={500} height={800}/>
