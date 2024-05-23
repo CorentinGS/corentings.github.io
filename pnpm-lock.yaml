@@ -39,8 +39,8 @@ dependencies:
     specifier: 5.0.20
     version: 5.0.20
   '@iconify/json':
-    specifier: 2.2.211
-    version: 2.2.211
+    specifier: 2.2.212
+    version: 2.2.212
   '@playform/inline':
     specifier: ^0.0.3
     version: 0.0.3
@@ -1725,8 +1725,8 @@ packages:
     engines: {node: '>=18.18'}
     dev: true
 
-  /@iconify/json@2.2.211:
-    resolution: {integrity: sha512-bg/rNpMYwjXJrOR8R56AuMuuNxcSgf/lw/EqtRUyPP1bbiXytF5VJModXohysnsN46M/gr+ydRUjIXRa/vuotA==}
+  /@iconify/json@2.2.212:
+    resolution: {integrity: sha512-d1IXjpbSwk8V3C9D+mruRTJRPqZZpCnOWh9zyG/Zc5zJmPDLBEHNTKz+ZmeiJQ6LdzgjwLJai1WgFvt1HWVIPw==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
