@@ -42,8 +42,8 @@ dependencies:
     specifier: 2.2.213
     version: 2.2.213
   '@playform/inline':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.4
+    version: 0.0.4(astro@4.9.1)
   '@rollup/plugin-json':
     specifier: 6.1.0
     version: 6.1.0
@@ -2141,19 +2141,22 @@ packages:
       - '@playform/document'
     dev: true
 
-  /@playform/inline@0.0.3:
-    resolution: {integrity: sha512-NM3c+6PRiIQMDJi3dLtqZU8GiZjh31KQ1qXdqhDVbGQQ+PYiFKfSzA5ve7DpYJIYfs1mCi0ZIQWHFyJZ9nrezw==}
+  /@playform/inline@0.0.4(astro@4.9.1):
+    resolution: {integrity: sha512-5YCsTJ95D92PYZ5yO0Vorv++u9fq8csHSxhcpvmJalkRR5HdiJgAkme1gwOuQ/oVu9GR+k0+rg4BUeEd8fxzcw==}
+    peerDependencies:
+      '@playform/build': 0.0.9
+      astro: 4.9.1
+    peerDependenciesMeta:
+      '@playform/build':
+        optional: true
+      astro:
+        optional: true
     dependencies:
-      '@playform/pipe': 0.0.3
+      '@playform/pipe': 0.0.5
+      astro: 4.9.1(@types/node@20.12.12)(typescript@5.4.5)
       critters: 0.0.22
-    dev: false
-
-  /@playform/pipe@0.0.3:
-    resolution: {integrity: sha512-PMuG113yN2AYYBZhDS640lIVHPIYm62o4/X/+kE7Z5T78YySHdg3fQ8iUwKsqmGHOGxSs5J21X/T6xIV5Zwz0g==}
-    dependencies:
-      '@types/node': 20.12.11
-      deepmerge-ts: 5.1.0
-      fast-glob: 3.3.2
+    transitivePeerDependencies:
+      - '@playform/document'
     dev: false
 
   /@playform/pipe@0.0.5:
@@ -2170,7 +2173,6 @@ packages:
       '@types/node': 20.12.12
       deepmerge-ts: 7.0.1
       fast-glob: 3.3.2
-    dev: true
 
   /@rollup/plugin-json@6.1.0:
     resolution: {integrity: sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==}
@@ -2469,12 +2471,6 @@ packages:
 
   /@types/node@17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-    dev: false
-
-  /@types/node@20.12.11:
-    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
-    dependencies:
-      undici-types: 5.26.5
     dev: false
 
   /@types/node@20.12.12:
@@ -3593,15 +3589,9 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
-  /deepmerge-ts@5.1.0:
-    resolution: {integrity: sha512-eS8dRJOckyo9maw9Tu5O5RUi/4inFLrnoLkBe3cPfDMx3WZioXtmOew4TXQaxq7Rhl4xjDtR7c6x8nNTxOvbFw==}
-    engines: {node: '>=16.0.0'}
-    dev: false
-
   /deepmerge-ts@7.0.1:
     resolution: {integrity: sha512-Qbiitd155MxdVp/ww9M6eeRPPMiWOugA34ptYOBQzOcFlPYl6JcWZLho6WvLmPDuxHLyLymhIN3YxrBleqZX9g==}
     engines: {node: '>=16.0.0'}
-    dev: true
 
   /define-data-property@1.1.4:
     resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
