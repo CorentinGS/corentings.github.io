@@ -33,7 +33,7 @@
 		"@fontsource/nunito": "5.0.18",
 		"@fontsource/syne": "5.0.20",
 		"@iconify/json": "2.2.213",
-		"@playform/inline": "^0.0.3",
+		"@playform/inline": "^0.0.4",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.9.1",
 		"astro-font": "0.0.81",
