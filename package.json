@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"engines": {
-		"node": "20.13.x"
+		"node": "20.14.x"
 	},
 	"scripts": {
 		"dev": "astro dev --host",
@@ -58,8 +58,8 @@
 		"@tailwindcss/line-clamp": "0.4.4",
 		"@tailwindcss/typography": "^0.5.13",
 		"@types/node": "20.12.12",
-		"@typescript-eslint/eslint-plugin": "7.10.0",
-		"@typescript-eslint/parser": "7.10.0",
+		"@typescript-eslint/eslint-plugin": "7.11.0",
+		"@typescript-eslint/parser": "7.11.0",
 		"astro-compressor": "0.4.1",
 		"astro-eslint-parser": "1.0.2",
 		"autoprefixer": "10.4.19",
