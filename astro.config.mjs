@@ -5,8 +5,6 @@ import compressor from 'astro-compressor'
 import { defineConfig, sharpImageService, squooshImageService } from 'astro/config'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 
-import playformInline from '@playform/inline'
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://corentings.dev',
@@ -37,13 +35,6 @@ export default defineConfig({
 		}),
 		sitemap({
 			lastmod: new Date()
-		}),
-		playformInline(),
-		(await import('@playform/compress')).default({
-			CSS: true,
-			HTML: false,
-			Image: false,
-			JavaScript: false
 		}),
 		compressor()
 	],
