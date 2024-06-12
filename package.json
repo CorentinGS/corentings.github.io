@@ -33,7 +33,7 @@
 		"@fontsource/nunito": "5.0.18",
 		"@fontsource/syne": "5.0.20",
 		"@iconify/json": "2.2.217",
-		"@playform/inline": "^0.0.6",
+		"@playform/inline": "^0.0.7",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.10.1",
 		"astro-font": "0.0.81",
@@ -52,7 +52,7 @@
 	},
 	"devDependencies": {
 		"@pagefind/default-ui": "1.1.0",
-		"@playform/compress": "0.0.10",
+		"@playform/compress": "0.0.12",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "^0.5.7",
 		"@tailwindcss/line-clamp": "0.4.4",
