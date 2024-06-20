@@ -21,7 +21,7 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "10.4.0",
+		"@astrojs/cloudflare": "10.4.1",
 		"@astrojs/mdx": "3.1.0",
 		"@astrojs/node": "8.3.0",
 		"@astrojs/prism": "3.1.0",
@@ -32,7 +32,7 @@
 		"@fontsource/do-hyeon": "5.0.19",
 		"@fontsource/nunito": "5.0.18",
 		"@fontsource/syne": "5.0.20",
-		"@iconify/json": "2.2.219",
+		"@iconify/json": "2.2.220",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.10.2",
 		"astro-font": "0.0.81",

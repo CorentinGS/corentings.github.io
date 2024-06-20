@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/cloudflare':
-        specifier: 10.4.0
-        version: 10.4.0(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
+        specifier: 10.4.1
+        version: 10.4.1(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
       '@astrojs/mdx':
         specifier: 3.1.0
         version: 3.1.0(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
@@ -42,8 +42,8 @@ importers:
         specifier: 5.0.20
         version: 5.0.20
       '@iconify/json':
-        specifier: 2.2.219
-        version: 2.2.219
+        specifier: 2.2.220
+        version: 2.2.220
       '@rollup/plugin-json':
         specifier: 6.1.0
         version: 6.1.0(rollup@4.17.2)
@@ -185,8 +185,8 @@ packages:
   '@antfu/utils@0.7.8':
     resolution: {integrity: sha512-rWQkqXRESdjXtc+7NRfK9lASQjpXJu1ayp7qi1d23zZorY+wBHVLHHoVcMsEnkqEBWTFqbztO7/QdJFzyEcLTg==}
 
-  '@astrojs/cloudflare@10.4.0':
-    resolution: {integrity: sha512-OTBpdcDdv2aj10526g/LUkd/3tv1BFNQGRs1ELYEYcEJ5DKNQwoFFQHajIsxyS01RERFzTTmHJ0XvmTP32t+2A==}
+  '@astrojs/cloudflare@10.4.1':
+    resolution: {integrity: sha512-kwAUsFtBO8fOiklQpUHBS3AD1CdZ4n6qz7vIjWz3Ecrvhlvx6FiXTl4rYtLoz6XTrZsVXPlntOyNOfqPbBeuLw==}
     peerDependencies:
       astro: ^4.2.0
 
@@ -1002,8 +1002,8 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.219':
-    resolution: {integrity: sha512-q8asqbM61woVZ9rJGm/gvW46i5vdeHrq4TqZQ/5wF5ypk4pAZU9+4qVa5NQE2MZngYkMPeO68PDGGl7WaEV8jQ==}
+  '@iconify/json@2.2.220':
+    resolution: {integrity: sha512-EpKZAK99E5qmgeOS5XOxzlzPaYXOkhLneypLFvbKIU3/KGmxGS/k6pgaEX6wTId4oF2HPGBDJnXyvckHiOHQiA==}
 
   '@iconify/tools@4.0.4':
     resolution: {integrity: sha512-hX1Z3i1Tm6JxyrDv45jNEijPpepZZfal/4leFGtUC04H9LsgRo597BOBFB9PUZsQdFGLOxVUUfv6lqU/dC+xXw==}
@@ -4561,7 +4561,7 @@ snapshots:
 
   '@antfu/utils@0.7.8': {}
 
-  '@astrojs/cloudflare@10.4.0(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))':
+  '@astrojs/cloudflare@10.4.1(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
@@ -5211,7 +5211,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
-  '@iconify/json@2.2.219':
+  '@iconify/json@2.2.220':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
