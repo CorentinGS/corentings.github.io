@@ -32,7 +32,7 @@
 		"@fontsource/do-hyeon": "5.0.19",
 		"@fontsource/nunito": "5.0.18",
 		"@fontsource/syne": "5.0.20",
-		"@iconify/json": "2.2.227",
+		"@iconify/json": "2.2.228",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.11.5",
 		"astro-font": "0.0.81",
