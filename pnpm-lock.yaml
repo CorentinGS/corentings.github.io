@@ -42,8 +42,8 @@ importers:
         specifier: 5.0.20
         version: 5.0.20
       '@iconify/json':
-        specifier: 2.2.227
-        version: 2.2.227
+        specifier: 2.2.228
+        version: 2.2.228
       '@rollup/plugin-json':
         specifier: 6.1.0
         version: 6.1.0(rollup@4.17.2)
@@ -867,8 +867,8 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.227':
-    resolution: {integrity: sha512-MFSbYNpLJXHashfMAKox00XKK1ATEUMxOcqOBgdV+dsiscE9EOeApLpmyZ88+FQq7uDZea0l1YS63eSnVN5Yjw==}
+  '@iconify/json@2.2.228':
+    resolution: {integrity: sha512-Xd1CgQ1bCFLrp4t+J2TU+AXM+kVHAFLfhK9FcZD54aMPlzENdQMJ5JhfFzCgnsLBAIW1PbSY2Edbm4tt2Tw9Lg==}
 
   '@iconify/tools@4.0.4':
     resolution: {integrity: sha512-hX1Z3i1Tm6JxyrDv45jNEijPpepZZfal/4leFGtUC04H9LsgRo597BOBFB9PUZsQdFGLOxVUUfv6lqU/dC+xXw==}
@@ -4986,7 +4986,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
-  '@iconify/json@2.2.227':
+  '@iconify/json@2.2.228':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
