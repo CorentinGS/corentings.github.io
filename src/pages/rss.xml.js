@@ -12,12 +12,14 @@ export async function GET(context) {
         stylesheet: '/styles.xsl',
         description: 'A young programmer journey',
         site: context.site,
+        customData: `<atom:link href="https://corentin.gs/rss.xml" rel="self" type="application/rss+xml" />`,
         items: blog.map((post) => ({
             title: post.data.title,
             pubDate: post.data.pubDate,
             description: post.data.description,
-            customData: `<language>en-us</language> <category>${post.data.category}</category> <tags>${post.data.tags}</tags>`,
-            author: "Corentin GS",
+            customData: `<category>${post.data.category}</category>
+            <atom:link href="https://corentin.gs/blog/${post.slug}" rel="self" type="application/rss+xml" />`,
+            author: "Corentin GS &lt;contact+rss@corentings.dev&gt;",
             // Compute RSS link from post `slug`
             // This example assumes all posts are rendered as `/blog/[slug]` routes
             link: `/blog/${post.slug}/`,
