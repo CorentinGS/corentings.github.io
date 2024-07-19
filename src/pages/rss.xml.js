@@ -17,8 +17,7 @@ export async function GET(context) {
             title: post.data.title,
             pubDate: post.data.pubDate,
             description: post.data.description,
-            customData: `<category>${post.data.category}</category>
-            <atom:link href="https://corentin.gs/blog/${post.slug}" rel="self" type="application/rss+xml" />`,
+            customData: `<category>${post.data.category}</category>`,
             author: "Corentin GS &lt;contact+rss@corentings.dev&gt;",
             // Compute RSS link from post `slug`
             // This example assumes all posts are rendered as `/blog/[slug]` routes
