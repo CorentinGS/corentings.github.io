@@ -26,16 +26,6 @@ const talks = [
 	}
 ]
 
-const podcasts = [
-	{
-		title: 'Meet CorentinGS',
-		date: '2023',
-		location: 'Avocado Growth : Portrait tech',
-		description: 'A podcast about my journey as a developer, and my vision of the future.',
-		cta: 'Coming soon'
-	}
-]
-
 export const prerender = true
 ---
 
@@ -50,13 +40,3 @@ export const prerender = true
 	</div>
 </div>
 
-<div aria-labelledby={'Podcasts'} class='md:border-secondary-100 mt-20 py-10 md:border-l md:pl-6'>
-	<div class='grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4'>
-		<h2 class='text-sm font-semibold'>{'Podcasts'}</h2>
-		<div class='md:col-span-3'>
-			<div class='space-y-16'>
-				{podcasts.map((talk) => <Card {...talk} />)}
-			</div>
-		</div>
-	</div>
-</div>
