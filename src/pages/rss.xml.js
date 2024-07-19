@@ -12,7 +12,7 @@ export async function GET(context) {
         stylesheet: '/styles.xsl',
         description: 'A young programmer journey',
         site: context.site,
-        customData: `<atom:link href="https://corentin.gs/rss.xml" rel="self" type="application/rss+xml" />`,
+        customData: `<atom:link href="https://corentings.dev/rss.xml" rel="self" type="application/rss+xml" />`,
         items: blog.map((post) => ({
             title: post.data.title,
             pubDate: post.data.pubDate,
