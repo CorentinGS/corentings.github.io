@@ -2,27 +2,10 @@
 
 ### 🐛🚑️ Fixes
 
-- **rss**: fix rss atom:link
 - **rss**: fix rss
-- **rss**: fix issues with rss
 - **compressor**: fix css
-- headers
-- headers
-- t
-- **rss**: fix rss by writing manually
-- **rss**: test rss
-- **rss**: fix rss
 - **theme**: fix theme changing
-- tt
-- **fix**: fix
-- try to fix this shit
-- fix cloudflare
-- improve
-- test
 - **packages**: add clsx
-- cloudflare
-- try to fix cloudflare
-- **cloudflare**: fix cloudflare
 - **cloudflare**: get ready for cloudflare
 
 ### ⚡️ Performance
@@ -33,7 +16,7 @@
 
 - **deps**: bump braces in the npm_and_yarn group across 1 directory (#131)
 
-### fix
+### chore
 
 - **deps**: update dependency @iconify/json to v2.2.228 (#175)
 - **deps**: update dependency @iconify/json to v2.2.227 (#172)
@@ -93,7 +76,7 @@
 
 ### 🎨🏗️ Style & Architecture
 
-- **rss**: improve rss style and create autogen
+- **rss**: improve rss style
 
 ### 📌➕⬇️ ➖⬆️  Dependencies
 
@@ -101,21 +84,12 @@
 
 ### 🔐🚧📈✏️ 💩👽️🍻💬🥚🌱🚩🥅🩺 Others
 
-- update content
+- **experiences**: update content with chessmood
 - **blog**: karen asrian article >>> ⏰ 1h30
 
 ### 🔥⚰️  Clean up
 
-- useless deployment
-- remove themes
 - **themes**: remove themes
-
-### 🚀 Deployments
-
-- **pnpm**: pnpm i
-- fix
-- deploy cloudflare ?
-- **dist**: build the website
 
 ## 1.0.0-a1 (2024-05-07)
 
