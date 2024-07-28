@@ -32,7 +32,7 @@
 		"@fontsource/do-hyeon": "5.0.19",
 		"@fontsource/nunito": "5.0.18",
 		"@fontsource/syne": "5.0.20",
-		"@iconify/json": "2.2.230",
+		"@iconify/json": "2.2.231",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.12.2",
 		"astro-font": "0.0.81",
@@ -49,7 +49,7 @@
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
 		"tailwind-merge": "2.4.0",
-		"tailwindcss": "3.4.6"
+		"tailwindcss": "3.4.7"
 	},
 	"devDependencies": {
 		"@pagefind/default-ui": "1.1.0",
