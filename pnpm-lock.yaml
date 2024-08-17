@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 11.0.4
-        version: 11.0.4(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+        version: 11.0.4(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
       '@astrojs/mdx':
         specifier: 3.1.3
-        version: 3.1.3(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+        version: 3.1.3(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
       '@astrojs/node':
-        specifier: 8.3.2
-        version: 8.3.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+        specifier: 8.3.3
+        version: 8.3.3(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
       '@astrojs/prism':
         specifier: 3.1.0
         version: 3.1.0
@@ -28,10 +28,10 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(tailwindcss@3.4.10)
+        version: 5.1.0(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(tailwindcss@3.4.10)
       '@astrojs/vercel':
         specifier: 7.7.2
-        version: 7.7.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+        version: 7.7.2(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
       '@fontsource/do-hyeon':
         specifier: 5.0.19
         version: 5.0.19
@@ -48,8 +48,8 @@ importers:
         specifier: 6.1.0
         version: 6.1.0(rollup@4.17.2)
       astro:
-        specifier: 4.13.3
-        version: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+        specifier: 4.13.4
+        version: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       astro-font:
         specifier: 0.1.81
         version: 0.1.81
@@ -58,7 +58,7 @@ importers:
         version: 1.2.0
       astro-seo-schema:
         specifier: 4.0.2
-        version: 4.0.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4))
+        version: 4.0.2(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -217,8 +217,8 @@ packages:
     peerDependencies:
       astro: ^4.8.0
 
-  '@astrojs/node@8.3.2':
-    resolution: {integrity: sha512-Upv0D+9b3RXp7XViQTtrijaDqihHWbVHLdJQ2sxtPOEtw2GDrVxuC6LmXIUew5YvJ9Ylmpst6KizVwO8d/K9/Q==}
+  '@astrojs/node@8.3.3':
+    resolution: {integrity: sha512-idrKhnnPSi0ABV+PCQsRQqVNwpOvVDF/+fkwcIiE8sr9J8EMvW9g/oyAt8T4X2OBJ8FUzYPL8klfCdG7r0eB5g==}
     peerDependencies:
       astro: ^4.2.0
 
@@ -1058,6 +1058,9 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
+  '@oslojs/encoding@0.4.1':
+    resolution: {integrity: sha512-hkjo6MuIK/kQR5CrGNdAPZhS01ZCXuWDRJ187zh6qqF2+yMHZpD9fAYpX8q2bOO6Ryhl3XpCT6kUX76N8hhm4Q==}
+
   '@pagefind/default-ui@1.1.0':
     resolution: {integrity: sha512-+XiAJAK++C64nQcD7s3Prdmd5S92lT05fwjOxm0L1jj80jbL+tmvcqkkFnPpoqhnicIPgcAX/Y5W0HRZnBt35w==}
 
@@ -1538,8 +1541,8 @@ packages:
       astro: ^4.0.0
       schema-dts: ^1.1.0
 
-  astro@4.13.3:
-    resolution: {integrity: sha512-MyhmM0v5sphiVwxAm5jjKxWeuPZijWPJ8Ajdign9QzEmLWSH8vUYIJWx/dWRQ6vF1I0jXrksoj3wtw5nzXt9nw==}
+  astro@4.13.4:
+    resolution: {integrity: sha512-uoW961qyU5xxCiUzITVX8wYmdWbSH1zeog9UomoWC5uNpnIbH6WxOPv/qYu2m7W4r2PCxdRqfVXoYjZhFyGfTA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1616,11 +1619,6 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  browserslist@4.23.2:
-    resolution: {integrity: sha512-qkqSyistMYdxAcw+CzbZwlBy8AGmS/eEWs+sEV5TnLRGDOL+C5M2EnH6tlZyg0YoAxGJAFKh61En9BR941GnHA==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-
   browserslist@4.23.3:
     resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -1647,9 +1645,6 @@ packages:
   camelcase@7.0.1:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
-
-  caniuse-lite@1.0.30001642:
-    resolution: {integrity: sha512-3XQ0DoRgLijXJErLSl+bLnJ+Et4KqV1PY6JJBGAFlsNsz31zeAIncyeZfLCabHK/jtSh+671RM9YMldxjUPZtA==}
 
   caniuse-lite@1.0.30001651:
     resolution: {integrity: sha512-9Cf+Xv1jJNe1xPZLGuUXLNkE1BoDkqRqYyFJ9TDYSqhduqA4hu4oR9HluGoWYQC/aj8WHjsGVV+bwkh0+tegRg==}
@@ -1996,9 +1991,6 @@ packages:
 
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
-
-  electron-to-chromium@1.4.830:
-    resolution: {integrity: sha512-TrPKKH20HeN0J1LHzsYLs2qwXrp8TF4nHdu4sq61ozGbzMpWhI7iIOPYPPkxeq1azMT9PZ8enPFcftbs/Npcjg==}
 
   electron-to-chromium@1.5.10:
     resolution: {integrity: sha512-C3RDERDjrNW262GCRvpoer3a0Ksd66CtgDLxMHhzShQ8fhL4kwnpVXsJPAKg9xJjIROXUbLBrvtOzVAjALMIWA==}
@@ -3329,9 +3321,6 @@ packages:
     resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
     hasBin: true
 
-  node-releases@2.0.14:
-    resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
-
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
@@ -4546,13 +4535,13 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/cloudflare@11.0.4(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
+  '@astrojs/cloudflare@11.0.4(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
       '@astrojs/underscore-redirects': 0.3.4
       '@cloudflare/workers-types': 4.20240815.0
-      '@inox-tools/astro-when': 0.2.1(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      '@inox-tools/astro-when': 0.2.1(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       esbuild: 0.22.0
       estree-walker: 3.0.3
       magic-string: 0.30.10
@@ -4595,12 +4584,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.3(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
+  '@astrojs/mdx@3.1.3(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
     dependencies:
       '@astrojs/markdown-remark': 5.2.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.12.1
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -4616,9 +4605,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
+  '@astrojs/node@8.3.3(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
     dependencies:
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4639,9 +4628,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(tailwindcss@3.4.10)':
+  '@astrojs/tailwind@5.1.0(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(tailwindcss@3.4.10)':
     dependencies:
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       autoprefixer: 10.4.20(postcss@8.4.41)
       postcss: 8.4.41
       postcss-load-config: 4.0.2(postcss@8.4.41)
@@ -4663,13 +4652,13 @@ snapshots:
 
   '@astrojs/underscore-redirects@0.3.4': {}
 
-  '@astrojs/vercel@7.7.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
+  '@astrojs/vercel@7.7.2(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
       '@vercel/analytics': 1.3.1
       '@vercel/edge': 1.1.1
       '@vercel/nft': 0.27.2
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       esbuild: 0.21.5
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -4722,7 +4711,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.25.2
       '@babel/helper-validator-option': 7.24.8
-      browserslist: 4.23.2
+      browserslist: 4.23.3
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -5137,7 +5126,7 @@ snapshots:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.10
       '@iconify/types': 2.0.0
-      debug: 4.3.5
+      debug: 4.3.6
       kolorist: 1.8.0
       local-pkg: 0.5.0
       mlly: 1.7.1
@@ -5219,10 +5208,10 @@ snapshots:
   '@img/sharp-win32-x64@0.33.4':
     optional: true
 
-  '@inox-tools/astro-when@0.2.1(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
+  '@inox-tools/astro-when@0.2.1(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))':
     dependencies:
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
-      astro-integration-kit: 0.16.0(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro-integration-kit: 0.16.0(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -5256,12 +5245,12 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@jridgewell/trace-mapping@0.3.9':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@mapbox/node-pre-gyp@1.0.11':
     dependencies:
@@ -5352,6 +5341,8 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
+
+  '@oslojs/encoding@0.4.1': {}
 
   '@pagefind/default-ui@1.1.0': {}
 
@@ -5710,7 +5701,7 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -5857,18 +5848,18 @@ snapshots:
       - debug
       - supports-color
 
-  astro-integration-kit@0.16.0(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)):
+  astro-integration-kit@0.16.0(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)):
     dependencies:
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       pathe: 1.1.2
       recast: 0.23.9
 
-  astro-seo-schema@4.0.2(astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4)):
+  astro-seo-schema@4.0.2(astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4)):
     dependencies:
-      astro: 4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
+      astro: 4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4)
       schema-dts: 1.1.2(typescript@5.5.4)
 
-  astro@4.13.3(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4):
+  astro@4.13.4(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -5880,6 +5871,7 @@ snapshots:
       '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.25.2)
       '@babel/traverse': 7.25.3
       '@babel/types': 7.25.2
+      '@oslojs/encoding': 0.4.1
       '@types/babel__core': 7.20.5
       '@types/cookie': 0.6.0
       acorn: 8.12.1
@@ -6024,13 +6016,6 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.23.2:
-    dependencies:
-      caniuse-lite: 1.0.30001642
-      electron-to-chromium: 1.4.830
-      node-releases: 2.0.14
-      update-browserslist-db: 1.1.0(browserslist@4.23.2)
-
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001651
@@ -6057,13 +6042,11 @@ snapshots:
 
   camelcase@7.0.1: {}
 
-  caniuse-lite@1.0.30001642: {}
-
   caniuse-lite@1.0.30001651: {}
 
   capnp-ts@0.7.0:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
       tslib: 2.6.3
     transitivePeerDependencies:
       - supports-color
@@ -6394,8 +6377,6 @@ snapshots:
       sigmund: 1.0.1
 
   ee-first@1.1.1: {}
-
-  electron-to-chromium@1.4.830: {}
 
   electron-to-chromium@1.5.10: {}
 
@@ -6822,7 +6803,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -7243,7 +7224,7 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -7608,7 +7589,7 @@ snapshots:
 
   magic-string@0.30.10:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   magic-string@0.30.11:
     dependencies:
@@ -8057,7 +8038,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.5
+      debug: 4.3.6
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
@@ -8200,8 +8181,6 @@ snapshots:
   node-forge@1.3.1: {}
 
   node-gyp-build@4.8.1: {}
-
-  node-releases@2.0.14: {}
 
   node-releases@2.0.18: {}
 
@@ -9331,12 +9310,6 @@ snapshots:
       '@types/unist': 3.0.2
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
-
-  update-browserslist-db@1.1.0(browserslist@4.23.2):
-    dependencies:
-      browserslist: 4.23.2
-      escalade: 3.1.2
-      picocolors: 1.0.1
 
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
