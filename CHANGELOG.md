@@ -1,3 +1,26 @@
+## 2.0.2 (2024-08-21)
+
+### fix
+
+- **deps**: update all non-major dependencies (#201)
+- **deps**: update dependency @iconify/json to v2.2.238 (#200)
+- **deps**: update dependency sharp to v0.33.5 (#198)
+- **deps**: update dependency astro to v4.14.2 (#197)
+- **deps**: update dependency astro to v4.14.0 (#196)
+- **deps**: update all non-major dependencies (#195)
+- **deps**: update all non-major dependencies (#194)
+- **deps**: update dependency @iconify/json to v2.2.233 (#193)
+- **deps**: update dependency astro to v4.12.3 (#191)
+- **deps**: update dependency @iconify/json to v2.2.232 (#189)
+- **deps**: update all non-major dependencies (#186)
+- **deps**: update dependency @iconify/json to v2.2.230 (#181)
+- **deps**: update dependency astro to v4.12.2 (#180)
+- **deps**: update dependency @iconify/json to v2.2.229 (#179)
+
+### 🚚🍱 Resources & Assets
+
+- update assets
+
 ## 2.0.0 (2024-07-19)
 
 ### 🐛🚑️ Fixes
