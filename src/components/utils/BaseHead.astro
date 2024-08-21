@@ -1,7 +1,6 @@
 ---
 import { siteConfig } from '@/site-config'
 import 'src/styles/global.css'
-import { ViewTransitions } from 'astro:transitions'
 
 export interface Props {
 	title: string
@@ -25,8 +24,11 @@ import Schema from './Schema.astro'
 <!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
 
-<!-- ViewTransitions  -->
-<ViewTransitions />
+<style>
+	@view-transition {
+		navigation: auto; /* enabled! */
+	}
+</style>
 
 <!-- Global Metadata -->
 <meta charset='utf-8' />

@@ -18,7 +18,7 @@ const { title, description, image, articleDate } = Astro.props
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 	</head>
 	<body>
-		<main>
+		<main transition:animate='fade'>
 			<!-- Navbar -->
 			<Header lang={true} />
 			<!-- Page Slot -->
