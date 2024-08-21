@@ -33,14 +33,14 @@ importers:
         specifier: 7.7.2
         version: 7.7.2(astro@4.14.2(@types/node@20.15.0)(lightningcss@1.25.1)(rollup@4.17.2)(terser@5.31.1)(typescript@5.5.4))
       '@fontsource/do-hyeon':
-        specifier: 5.0.19
-        version: 5.0.19
-      '@fontsource/nunito':
-        specifier: 5.0.18
-        version: 5.0.18
-      '@fontsource/syne':
         specifier: 5.0.20
         version: 5.0.20
+      '@fontsource/nunito':
+        specifier: 5.0.19
+        version: 5.0.19
+      '@fontsource/syne':
+        specifier: 5.0.21
+        version: 5.0.21
       '@iconify/json':
         specifier: 2.2.238
         version: 2.2.238
@@ -843,14 +843,14 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fontsource/do-hyeon@5.0.19':
-    resolution: {integrity: sha512-nppPOyUA0+CT6gICb865u5q3y1oSqfS6WIwupF4jVoVtLvWc1xk/5ZmDNKr14GqsklNmGKCeSiSydjWwZp2/Rg==}
+  '@fontsource/do-hyeon@5.0.20':
+    resolution: {integrity: sha512-ETfDDWA/hpb6cr2W9pKPcbbfBhlHsY/OoemVNP+n5yW1bs0DjzTDDb77WrRu5KTygtLPRYx8z0tB9FHuTI1CAg==}
 
-  '@fontsource/nunito@5.0.18':
-    resolution: {integrity: sha512-B7BS7ab43z5x9X6shdvwtHiYI73Y6kJvnHBJhoIdbqYbVGRf6kGMRfipH9dbmLsjL6elfxoAB3q75V23/qqE/g==}
+  '@fontsource/nunito@5.0.19':
+    resolution: {integrity: sha512-wy2e9KPZnp3xZh4uaCQhQnwpJs9gaHqna56969Re65g6ksSZs09Njgcd90fAh8AOwAJD0Fd5sgux1XmQdCgYGg==}
 
-  '@fontsource/syne@5.0.20':
-    resolution: {integrity: sha512-i/JAznVfbi6bhBBaotpKmO0P8kimvsjBokHySUcbY1eDEzyocPC8PqkNfMHVdv6IqUlwP6ddIo2B3J5f2or+Qw==}
+  '@fontsource/syne@5.0.21':
+    resolution: {integrity: sha512-8KjN/Fe2wujuOz0qa5Wo4cuK7vlB/WmscTif6Pniga2n8ECnHeHmESFYHXEZgEQeFr8I6TTPtHPEZvpkxEW+9w==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -5093,11 +5093,11 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fontsource/do-hyeon@5.0.19': {}
+  '@fontsource/do-hyeon@5.0.20': {}
 
-  '@fontsource/nunito@5.0.18': {}
+  '@fontsource/nunito@5.0.19': {}
 
-  '@fontsource/syne@5.0.20': {}
+  '@fontsource/syne@5.0.21': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
