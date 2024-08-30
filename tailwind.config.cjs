@@ -6,8 +6,10 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: [
-					'Syne',
-					'Nunito',
+					'Syne Variable',
+					'Karla Variable',
+					'Rubik Variable',
+					'Nunito sans',
 					'system-ui',
 					'-apple-system',
 					'BlinkMacSystemFont',

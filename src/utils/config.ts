@@ -1,4 +1,3 @@
-
 import imgAvatar from 'src/assets/avatar.webp'
 export class Profile {
 	static readonly full_name = 'Corentin Giaufer Saubert'

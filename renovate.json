@@ -3,21 +3,20 @@
 	"labels": ["dependencies"],
 	"dependencyDashboard": true,
 	"extends": [
-	  "config:best-practices",
-	  ":disableRateLimiting",
-	  "group:recommended",
-	  "group:linters",
-	  "schedule:nonOfficeHours",
-	  "group:monorepos",
-	  "npm:unpublishSafe",
-	  "group:allNonMajor"
+		"config:best-practices",
+		":disableRateLimiting",
+		"group:recommended",
+		"group:linters",
+		"schedule:nonOfficeHours",
+		"group:monorepos",
+		"npm:unpublishSafe",
+		"group:allNonMajor"
 	],
 	"ignoreDeps": ["i18next"],
 	"packageRules": [
-	  {
-		"matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
-		"automerge": true
-	  }
+		{
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
+			"automerge": true
+		}
 	]
-  }
-  
+}
