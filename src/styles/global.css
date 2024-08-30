@@ -16,10 +16,6 @@
 		font-size: 2rem;
 	}
 
-	a {
-		font-family: 'Rubik Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
-	}
-
 	.hoveranimation {
 		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
 	}
