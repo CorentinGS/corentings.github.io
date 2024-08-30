@@ -17,7 +17,7 @@
 	}
 
 	.hoveranimation {
-		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
+		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105;
 	}
 
 	.underline-offset-4:hover {
