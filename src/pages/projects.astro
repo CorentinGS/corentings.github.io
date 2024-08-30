@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Projects from '../components/Projects.astro'
+import MyProjects from '../components/Projects.astro'
 import Footer from '../components/utils/Footer.astro'
 import { Icon } from 'astro-iconify'
 
 export const prerender = true
 ---
 
-<Layout title='Projects'>
+<Layout title='Projects' description='My personal projects'>
 	<div
 		class='hoveranimation btn btn-accent btn-sm fixed bottom-12 right-5 z-50 hidden'
 		id='btn-back-to-top'
@@ -15,7 +15,7 @@ export const prerender = true
 	>
 		<Icon name='lucide:arrow-up' class='size-6' />
 	</div>
-	<Projects />
+	<MyProjects />
 	<Footer />
 </Layout>
 

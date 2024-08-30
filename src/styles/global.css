@@ -4,20 +4,20 @@
 
 @layer base {
 	html {
-		font-family: 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: 'Lexend Exa Variable', 'Karla Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
 	}
 
 	h1 {
-		font-family: 'Syne', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: 'Syne Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
 	}
 
 	h2 {
-		font-family: 'Lufga', 'Syne', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: 'Rubik Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
 		font-size: 2rem;
 	}
 
 	.hoveranimation {
-		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110;
+		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105;
 	}
 
 	.underline-offset-4:hover {
