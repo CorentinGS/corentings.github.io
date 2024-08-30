@@ -9,13 +9,13 @@ export interface Props {
 	articleDate: string
 }
 
-const { title, description, image, articleDate } = Astro.props
+const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
 <html lang='en' class='scroll-smooth'>
 	<head>
-		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
+		<BaseHead title={title} description={description} ogImage={image} />
 	</head>
 	<body>
 		<main transition:animate='fade'>
@@ -31,11 +31,6 @@ const { title, description, image, articleDate } = Astro.props
 						<li>
 							<a href='/projects' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
 								>Projects</a
-							>
-						</li>
-						<li>
-							<a href='/talks' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
-								>Talks</a
 							>
 						</li>
 						<li>
