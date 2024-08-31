@@ -35,7 +35,7 @@
 		"@fontsource-variable/lexend-exa": "^5.0.21",
 		"@fontsource-variable/rubik": "5.0.23",
 		"@fontsource-variable/syne": "5.0.21",
-		"@iconify/json": "2.2.241",
+		"@iconify/json": "2.2.242",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.14.5",
 		"astro-font": "0.1.81",
