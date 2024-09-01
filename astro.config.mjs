@@ -11,6 +11,10 @@ export default defineConfig({
 	image: {
 		service: process.env.NODE_ENV === 'production' ? sharpImageService() : squooshImageService()
 	},
+	build: {
+		inlineStylesheets: 'never'
+	},
+
 	prefetch: {
 		prefetchAll: false,
 		defaultStrategy: 'hover'

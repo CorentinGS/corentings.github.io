@@ -5,7 +5,7 @@ import type { MarkdownHeading } from 'astro'
 
 import { Icon } from 'astro-iconify'
 import PostHeader from '../components/utils/PostHeader.astro'
-import { Picture } from 'astro:assets'
+import { Image } from 'astro:assets'
 import FormattedDate from '../components/blog/FormattedDate.astro'
 import Tag from '../components/blog/Tag.astro'
 import BaseHead from '../components/utils/BaseHead.astro'
@@ -73,12 +73,11 @@ const articleDate = pubDate.toISOString()
 					<>
 						{
 							heroImage && (
-								<Picture
+								<Image
 									src={heroImage}
 									width={1000}
 									height={500}
 									quality={80}
-									formats={['webp', 'avif']}
 									loading='eager'
 									class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
 									alt={`img of ${title}`}
