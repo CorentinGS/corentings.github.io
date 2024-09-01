@@ -1,3 +1,23 @@
+## 2.1.0 (2024-09-01)
+
+### ✨ Features
+
+- Add Chessmood work experience and image. Remove talks page an… (#209)
+
+### feat
+
+- Update Astro configuration and remove unused dependencies
+- Update Astro configuration and remove unused dependencies
+
+### fix
+
+- **deps**: update all non-major dependencies (#212)
+- **deps**: update dependency @iconify/json to v2.2.242 (#211)
+- **deps**: update dependency @iconify/json to v2.2.241 (#207)
+- **deps**: update all non-major dependencies (#206)
+- **deps**: update dependency astro to v4.14.5 (#205)
+- **deps**: update all non-major dependencies (#204)
+
 ## 2.0.2 (2024-08-21)
 
 ### fix
