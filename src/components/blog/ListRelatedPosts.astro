@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content'
 
 import { cn } from '@/utils'
-import { Picture } from 'astro:assets'
+import { Image } from 'astro:assets'
 
 type Props = {
 	posts: CollectionEntry<'blog'>[]
@@ -18,12 +18,11 @@ const { posts } = Astro.props
 				return (
 					<div class='flex gap-2 '>
 						<div class='min-h-full'>
-							<Picture
+							<Image
 								src={post.data.heroImage}
 								quality={40}
 								width={200}
 								height={200}
-								formats={['webp', 'avif']}
 								class='w-16 h-16 object-cover rounded-full '
 								alt={`img of ${post.data.title}`}
 							/>

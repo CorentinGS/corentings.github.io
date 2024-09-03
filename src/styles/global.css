@@ -4,15 +4,15 @@
 
 @layer base {
 	html {
-		font-family: 'Lexend Exa Variable', 'Karla Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	}
 
 	h1 {
-		font-family: 'Syne Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 	}
 
 	h2 {
-		font-family: 'Rubik Variable', 'Nunito Sans', 'Helvetica Neue', 'Roboto', 'Lato', sans-serif;
+		font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 		font-size: 2rem;
 	}
 

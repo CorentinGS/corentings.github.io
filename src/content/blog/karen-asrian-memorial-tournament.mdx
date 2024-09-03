@@ -9,7 +9,7 @@ tags:
   - Trip
 title: My Experience at the Karen Asrian Memorial Tournament
 ---
-import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
 
 import imgPlayingHall from '/src/assets/blog/karen_asrian_playing_hall.webp'
 import imgPlay from '/src/assets/blog/karen_asrian_1.webp'
@@ -29,7 +29,7 @@ One of the tournament's highlights was meeting Levon Aronian, a true chess super
 
 The tournament format consisted of nine rounds spread over nine days. Each game was a marathon, lasting between 3 and 4.5 hours.
 
-<Picture src={imgPlayingHall} formats={['avif', 'webp']}
+<Image src={imgPlayingHall}
         alt="Karen asrian playing hall" quality="50" loading="lazy" 
         width={800} height={800}/>
 
@@ -44,7 +44,7 @@ At the beginning of the tournament, I was rated 1803 Elo and was the 67th player
 I finished with 3.5 points over 9, half a point more than my initial goal. I earned 34 fide elo points and a performance of 2000 elo! 
 My final rank is 57th, meaning I had an excellent performance.
 
-<Picture src={imgPlay} formats={['avif', 'webp']}
+<Image src={imgPlay}
     alt="Karen Asrian play" quality="50" loading="lazy" width={800}
 	height={800}/>
 
@@ -56,7 +56,7 @@ This translated into real-world results, allowing me to consistently defeat play
 I also had the opportunity to meet them in person. I played in the tournament with IM David Shahinyan, who helped me improve recently. 
 Furthermore, I could visit Chessmood's office, discover their waiting room, and have a great barbecue with them! 
 
-<Picture class="grayscale mx-auto"  src={imgChessmoodOffice} formats={['avif', 'webp']} 
+<Image class="grayscale mx-auto"  src={imgChessmoodOffice} 
         alt="ChessMood office"  quality="50" loading="lazy" width={500}
 		height={500}/>
 
