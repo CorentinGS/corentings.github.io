@@ -19,11 +19,16 @@ const { title, description, href, date, location, cta } = Astro.props
 		</div>
 		<a href={href} target='_blank' rel='noreferrer noopener'
 			><span class='absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl'></span><h3
-				class='relative z-10 font-bold''>{title}</h3
-			></a
+				class='relative z-10 font-bold'
+				'
+			>
+				{title}
+			</h3></a
 		>
 	</h3>
-	<p class='relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-base-content/60 font-bold text-opacity-60'>
+	<p
+		class='relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-base-content/60 font-bold text-opacity-60'
+	>
 		<span class='absolute inset-y-0 left-0 flex items-center' aria-hidden='true'
 			><span class='h-4 w-0.5 rounded-full bg-base-content/60'></span></span
 		>{location}{'・'}
