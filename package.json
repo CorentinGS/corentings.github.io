@@ -51,7 +51,7 @@
 		"tailwindcss": "3.4.10"
 	},
 	"devDependencies": {
-		"@pagefind/default-ui": "1.1.0",
+		"@pagefind/default-ui": "1.1.1",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.8",
 		"@tailwindcss/line-clamp": "0.4.4",
