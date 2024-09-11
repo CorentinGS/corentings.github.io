@@ -30,11 +30,11 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(astro@4.15.4(@types/node@20.16.5)(lightningcss@1.25.1)(rollup@4.21.2)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.10)
       '@fontsource-variable/rubik':
-        specifier: 5.0.23
-        version: 5.0.23
+        specifier: 5.0.24
+        version: 5.0.24
       '@fontsource-variable/syne':
-        specifier: 5.0.21
-        version: 5.0.21
+        specifier: 5.0.22
+        version: 5.0.22
       '@iconify/json':
         specifier: 2.2.245
         version: 2.2.245
@@ -839,11 +839,11 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fontsource-variable/rubik@5.0.23':
-    resolution: {integrity: sha512-DN5t8EDVPgNRhWaiS2tm2M7oQmCIqp4oIEsKzPZYqtMzbEK1Me5ZoqMKQhlIpNnEhNJHl297wtcPNPkOU3Uv5g==}
+  '@fontsource-variable/rubik@5.0.24':
+    resolution: {integrity: sha512-V/3pPiI+qVA+LOmbMj+Mukee1ejjjDhUtZ382PfDFm4wr//K111OKV4aDmuX4SS7g6E0UGFqf8iirgFacMZEkw==}
 
-  '@fontsource-variable/syne@5.0.21':
-    resolution: {integrity: sha512-K4rQOxhjYA6Ffmq7voxGKNoDXbRsul11tkaSn+sXf6l/1libUJ1Bc2vHJi7BXX9AwJpjInnG8/zaCRPVGXQuNw==}
+  '@fontsource-variable/syne@5.0.22':
+    resolution: {integrity: sha512-iW1O5uepbP80RpiqhIsy7vI3FLlh3JoIpBlNBo26JYJ0i5djG03oWt5B+LRAN/45EGeRrYW+MGoGO+4RBOgFKA==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -5026,9 +5026,9 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fontsource-variable/rubik@5.0.23': {}
+  '@fontsource-variable/rubik@5.0.24': {}
 
-  '@fontsource-variable/syne@5.0.21': {}
+  '@fontsource-variable/syne@5.0.22': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
