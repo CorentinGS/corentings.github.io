@@ -21,7 +21,7 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "11.0.4",
+		"@astrojs/cloudflare": "11.0.5",
 		"@astrojs/mdx": "3.1.6",
 		"@astrojs/node": "8.3.3",
 		"@astrojs/prism": "3.1.0",
@@ -30,7 +30,7 @@
 		"@astrojs/tailwind": "5.1.1",
 		"@fontsource-variable/rubik": "5.1.0",
 		"@fontsource-variable/syne": "5.1.0",
-		"@iconify/json": "2.2.249",
+		"@iconify/json": "2.2.250",
 		"@playform/compress": "^0.1.1",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.15.7",
