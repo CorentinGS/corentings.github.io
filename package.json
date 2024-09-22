@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "11.0.5",
-		"@astrojs/mdx": "3.1.6",
+		"@astrojs/mdx": "3.1.7",
 		"@astrojs/node": "8.3.3",
 		"@astrojs/prism": "3.1.0",
 		"@astrojs/rss": "4.0.7",
@@ -33,7 +33,7 @@
 		"@iconify/json": "2.2.250",
 		"@playform/compress": "^0.1.1",
 		"@rollup/plugin-json": "6.1.0",
-		"astro": "4.15.7",
+		"astro": "4.15.8",
 		"astro-font": "0.1.81",
 		"astro-iconify": "1.2.0",
 		"astro-seo-schema": "4.0.2",
