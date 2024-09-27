@@ -21,7 +21,7 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "11.0.5",
+		"@astrojs/cloudflare": "11.1.0",
 		"@astrojs/mdx": "3.1.7",
 		"@astrojs/node": "8.3.4",
 		"@astrojs/prism": "3.1.0",
@@ -30,10 +30,10 @@
 		"@astrojs/tailwind": "5.1.1",
 		"@fontsource-variable/rubik": "5.1.0",
 		"@fontsource-variable/syne": "5.1.0",
-		"@iconify/json": "2.2.251",
+		"@iconify/json": "2.2.252",
 		"@playform/compress": "^0.1.1",
 		"@rollup/plugin-json": "6.1.0",
-		"astro": "4.15.8",
+		"astro": "4.15.9",
 		"astro-font": "0.1.81",
 		"astro-iconify": "1.2.0",
 		"astro-seo-schema": "4.0.2",
@@ -48,7 +48,7 @@
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
 		"tailwind-merge": "2.5.2",
-		"tailwindcss": "3.4.12"
+		"tailwindcss": "3.4.13"
 	},
 	"devDependencies": {
 		"@pagefind/default-ui": "1.1.1",
@@ -56,13 +56,13 @@
 		"@tailwindcss/forms": "0.5.9",
 		"@tailwindcss/line-clamp": "0.4.4",
 		"@tailwindcss/typography": "0.5.15",
-		"@types/node": "20.16.5",
-		"@typescript-eslint/eslint-plugin": "8.6.0",
-		"@typescript-eslint/parser": "8.6.0",
+		"@types/node": "20.16.6",
+		"@typescript-eslint/eslint-plugin": "8.7.0",
+		"@typescript-eslint/parser": "8.7.0",
 		"astro-compressor": "0.4.1",
 		"astro-eslint-parser": "1.0.3",
 		"autoprefixer": "10.4.20",
-		"eslint": "9.11.0",
+		"eslint": "9.11.1",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-astro": "1.2.4",
 		"eslint-plugin-jsx-a11y": "6.10.0",
