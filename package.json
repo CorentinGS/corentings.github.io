@@ -35,7 +35,7 @@
 		"astro-iconify": "1.2.0",
 		"astro-seo-schema": "4.0.2",
 		"clsx": "2.1.1",
-		"daisyui": "4.12.10",
+		"daisyui": "4.12.11",
 		"markdown-it": "14.1.0",
 		"mdast-util-to-string": "4.0.0",
 		"prettier-config-standard": "7.0.0",
