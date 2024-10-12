@@ -2,15 +2,12 @@
 
 This is a blog and portfolio website built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
 
-## Demo
-
-[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=corentings-github-io)](https://corentings.vercel.app/)
 
 ## Blazing Fast
 
 This website is built with Astro, which is a modern static site generator. It's blazing fast and has a lot of features that make it easy to build a website.
 
-[![Netlify Status](assets/blazing_fast.png)](assets/blazing_fast.png)
+[![Blazing Fast](assets/blazing_fast.png)](assets/blazing_fast.png)
 
 ## Features
 
@@ -48,4 +45,4 @@ Don't forget to star this project if you like it.
 
 ## Author
 
-- [Corentin GS](https://corentings.vercel.app/)
+- [Corentin GS](https://corentings.dev?utm_source=github&utm_medium=readme&utm_campaign=corentings-github-io)
