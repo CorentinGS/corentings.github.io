@@ -8,17 +8,10 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://corentings.dev',
-	image: {
-		service: process.env.NODE_ENV === 'production' ? sharpImageService() : squooshImageService()
-	},
 	build: {
 		inlineStylesheets: 'never'
 	},
-
-	prefetch: {
-		prefetchAll: false,
-		defaultStrategy: 'hover'
-	},
+	prefetch: true,
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
