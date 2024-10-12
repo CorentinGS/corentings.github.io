@@ -27,7 +27,7 @@
 		"@astrojs/tailwind": "5.1.1",
 		"@fontsource-variable/rubik": "5.1.0",
 		"@fontsource-variable/syne": "5.1.0",
-		"@iconify/json": "2.2.257",
+		"@iconify/json": "2.2.258",
 		"@playform/compress": "^0.1.1",
 		"@rollup/plugin-json": "6.1.0",
 		"astro": "4.15.12",
@@ -73,6 +73,6 @@
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.8",
 		"slugify": "1.6.6",
-		"typescript": "5.6.2"
+		"typescript": "5.6.3"
 	}
 }
