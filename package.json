@@ -30,7 +30,7 @@
 		"@iconify/json": "2.2.268",
 		"@playform/compress": "^0.1.1",
 		"@rollup/plugin-json": "6.1.0",
-		"astro": "4.16.9",
+		"astro": "4.16.10",
 		"astro-font": "0.1.81",
 		"astro-iconify": "1.2.0",
 		"astro-seo-schema": "4.0.2",
