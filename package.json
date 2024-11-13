@@ -68,7 +68,7 @@
 		"motion": "10.18.0",
 		"npm-run-all2": "7.0.1",
 		"organize-imports-cli": "0.10.0",
-		"postcss": "8.4.47",
+		"postcss": "8.4.48",
 		"prettier": "3.3.3",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.8",
