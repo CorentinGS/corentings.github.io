@@ -65,7 +65,7 @@
 		"eslint-plugin-jsx-a11y": "6.10.2",
 		"eslint-plugin-prettier": "5.2.1",
 		"eslint-plugin-tailwindcss": "3.17.5",
-		"motion": "10.18.0",
+		"motion": "11.11.17",
 		"npm-run-all2": "7.0.1",
 		"organize-imports-cli": "0.10.0",
 		"postcss": "8.4.49",
