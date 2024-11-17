@@ -29,7 +29,7 @@ const unsluglifyNameCategory = unsluglify(params.category!.toLowerCase())
 const posts = page.data
 ---
 
-<Layout title={params.category}>
+<Layout title={params.category} description={"Blog articles from " + params.category + "category"} >
 	<div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
 		<div class='title header py-2 mb-3 flex items-end justify-between'>
 			<h1 class='text-5xl font-bold first-letter:uppercase'>
