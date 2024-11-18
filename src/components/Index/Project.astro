@@ -2,51 +2,41 @@
 import { Picture } from 'astro:assets'
 import { Icon } from 'astro-iconify'
 
-const { name, stack, description, link, image, reversed, ratio } = Astro.props
+const { name, stack, description, link, image, lazy } = Astro.props
 
 function to_lower(str: string) {
 	return str.toLowerCase()
 }
 ---
 
-<div class='mb-8 flex flex-col sm:flex-row'>
-	<div
-		class={reversed
-			? 'mb-8 flex items-center sm:order-last sm:w-1/2 md:w-5/12'
-			: 'mb-8 flex items-center sm:w-1/2 md:w-5/12'}
-	>
+<article class='flex flex-col items-start justify-start'>
+	<div class='relative w-full'>
 		<Picture
-			alt={name}
 			src={image}
-			class={reversed
-				? 'hoveranimation transform-gpu rounded-lg shadow-xl hover:skew-y-3 hover:shadow-2xl'
-				: 'hoveranimation transform-gpu rounded-lg shadow-xl hover:-skew-y-3 hover:shadow-2xl'}
 			formats={['avif', 'webp']}
-			quality={30}
-			loading='lazy'
+			quality={60}
+			loading={lazy ? 'lazy' : 'eager'}
 			width={400}
 			height={400}
+			alt=''
+			class='aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]'
 		/>
+		<div class='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
 	</div>
-	<div class='mb-8 mt-5 flex flex-col justify-center sm:w-1/2 sm:pr-16 md:mt-0 md:w-7/12'>
-		<div class='mb-2 flex items-center'>
-			<p class='text-sm font-semibold uppercase text-secondary'>Made using</p>
-			<Icon name='lucide:chevron-right' class='size-6' />
-			<p class='text-sm font-semibold uppercase'>{stack}</p>
+	<div class='max-w-xl'>
+		<div class='mt-8 flex items-center gap-x-4 text-xs'>
+			<span class='text-zinc-600 dark:text-zinc-400'>{stack}</span>
 		</div>
-		<h3 class='mt-2 text-2xl sm:text-left md:text-4xl'>{name}</h3>
-		<p class='text mt-5 text-lg md:text-left'>{description}</p>
-		<div class='flex'>
-			<a
-				href={link}
-				class='flex text-secondary hover:text-primary'
-				aria-label={'Discover' + ' ' + to_lower(name)}
-				rel='noopener noreferrer'
-				data-umami-event='Project link clicked'
-				data-umami-name={name}
-			>
-				<span>{'Discover'}{' '}{to_lower(name)}</span>
-			</a>
+		<div class='group relative'>
+			<h3 class='mt-3 text-lg/6 font-semibold text-zinc-800 dark:text-zinc-100'>
+				<a href={link}>
+					<span class='absolute inset-0'></span>
+					{name}
+				</a>
+			</h3>
+			<p class='mt-5 text-sm/6 text-zinc-600 dark:text-zinc-400'>
+				{description}
+			</p>
 		</div>
 	</div>
-</div>
+</article>

@@ -1,0 +1,413 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import petitPrince from '../assets/petit_prince.webp'
+import { Picture, Image } from 'astro:assets'
+
+import chessMoodImg from '../assets/chessmood.webp'
+import trustmeImg from '../assets/logo_tfd.webp'
+import oneTooImg from '../assets/onetoo.webp'
+import echiquierNicoisImg from "../assets/logo_en.webp"
+import ubleamImg from "../assets/logo_qualialtis.webp"
+
+export const prerender = true
+---
+
+<Layout title='About me' description='Who is Corentin ? Learn everything about me'>
+	<div class='sm:px-8 mt-16 sm:mt-32'>
+		<div class='mx-auto w-full max-w-7xl lg:px-8'>
+			<div class='relative px-4 sm:px-8 lg:px-12'>
+				<div class='mx-auto max-w-2xl lg:max-w-5xl'>
+					<div class='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12'>
+						<div class='lg:pl-20'>
+							<div class='max-w-xs px-2.5 lg:max-w-none'>
+								<Picture
+									alt=''
+									loading='eager'
+									width='800'
+									height='800'
+									decoding='async'
+									formats={['avif', 'webp']}
+									class='aspect-square rotate-3 rounded-2xl bg-zinc-200 dark:bg-zinc-800 object-cover'
+									src={petitPrince}
+									quality='60'
+									style='color: transparent;'
+								/>
+							</div>
+						</div>
+						<div class='lg:order-first lg:row-span-2'>
+							<h1
+								class='text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100'
+							>
+								I’m Corentin Giaufer Saubert.
+							</h1>
+							<div class='mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400'>
+								<p>
+									{
+										"When I'm not coding, you can find me on the chessboard or soaring high on the wings of a TIE, pursuing my never-ending quest to find The Little Prince."
+									}{' '}
+									{
+										"I'm also passionate about cinema, whether films, series, or anime! In my free time, I enjoy playing the piano and training for volleyball."
+									}
+								</p><p>
+									{
+										'My love for chess began in childhood, starting with casual play before joining a club to satisfy my growing hunger for the game.'
+									}
+									{' '}
+									{
+										'After competing throughout my teenage years, I now focus on improving my chess skills and integrating my passion for coding. '
+									}
+									{' '}
+									{
+										'Currently, I work for a chess company, ChessMood, and contribute to the chess developer community, in addition to moderating for Chess.com on Twitch.'
+									}
+								</p><p>
+									{
+										'For as long as I can remember, The Little Prince has held a particular bearing on my heart. A story so simple yet so layered, so childish yet so subtle. A story that has colored my dreams ever since I read it.'
+									}
+									{' '}
+									{
+										'The Little Prince became a guiding star in my sky. That is how I first came into contact with the world of aviation, which I later fell in love with.'
+									}{' '}
+									{
+										"My interest has been unwavering across the years; I started taking flying lessons during adolescence and am currently completing my PPL (Private Pilot's License)."
+									}
+								</p>
+							</div>
+						</div>
+						<div class='lg:pl-20'>
+							<ul role='list'>
+								<li class='flex'>
+									<a
+										class='group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500'
+										href='#'
+										><svg
+											viewBox='0 0 24 24'
+											aria-hidden='true'
+											class='h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500'
+											><path
+												d='M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z'
+											></path></svg
+										><span class='ml-4'>Follow on X</span></a
+									>
+								</li>
+								<li class='mt-4 flex'>
+									<a
+										class='group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500'
+										href='https://github.com/corentings'
+										><svg
+											viewBox='0 0 24 24'
+											aria-hidden='true'
+											class='h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500'
+											><path
+												fill-rule='evenodd'
+												clip-rule='evenodd'
+												d='M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z'
+											></path></svg
+										><span class='ml-4'>Follow on GitHub</span></a
+									>
+								</li><li class='mt-4 flex'>
+									<a
+										class='group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500'
+										href='https://www.linkedin.com/in/corentin-giaufer-saubert/'
+										><svg
+											viewBox='0 0 24 24'
+											aria-hidden='true'
+											class='h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500'
+											><path
+												d='M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z'
+											></path></svg
+										><span class='ml-4'>Follow on LinkedIn</span></a
+									>
+								</li><li class='mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex'>
+									<a
+										class='group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500'
+										href='mailto:freelance@corentings.dev'
+										><svg
+											viewBox='0 0 24 24'
+											aria-hidden='true'
+											class='h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500'
+											><path
+												fill-rule='evenodd'
+												d='M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z'
+											></path></svg
+										><span class='ml-4'>freelance@corentings.dev</span></a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class='mt-10 sm:mt-14'>
+						<h2 class='mb-5 font-medium text-zinc-800 dark:text-zinc-200'>Work experience</h2>
+
+						<!-- Timeline -->
+						<div>
+							<!-- Item -->
+							<div class='group relative flex gap-x-5'>
+								<!-- Icon -->
+								<div
+									class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+								>
+									<div class='relative z-10 size-6 flex justify-center items-center'>
+										<Image
+											alt=''
+											loading='lazy'
+											width='32'
+											height='32'
+											decoding='async'
+											class='rounded-full object-cover'
+											src={chessMoodImg}
+											quality='60'
+										/>
+									</div>
+								</div>
+								<!-- End Icon -->
+
+								<!-- Right Content -->
+								<div class='grow pb-8 group-last:pb-0'>
+									<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2024 - Present</h3>
+
+									<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+										Web Designer &amp; Web Developer
+									</p>
+
+									<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+										The company has high expectations and using OKRs there is a mutual understanding
+										of expectations and performance.
+									</p>
+
+									<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Designed template UIs and design systems in Figma.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Converted UIs into responsive HTML and CSS with a mobile-first approach.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Created custom illustrations and item description banners.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Provided detailed documentation and customer support on GitHub.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Engaged with users to address setup inquiries, bug issues, and feedback.
+										</li>
+									</ul>
+								</div>
+								<!-- End Right Content -->
+							</div>
+							<!-- End Item -->
+
+							<!-- Item -->
+							<div class='group relative flex gap-x-5'>
+								<!-- Icon -->
+								<div
+									class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+								>
+									<div class='relative z-10 size-6 flex justify-center items-center'>
+										<Image
+											alt=''
+											loading='eager'
+											width='32'
+											height='32'
+											decoding='async'
+											class='rounded-full object-cover'
+											src={echiquierNicoisImg}
+											quality='60'
+										/>
+									</div>
+								</div>
+								<!-- End Icon -->
+
+								<!-- Right Content -->
+								<div class='grow pb-8 group-last:pb-0'>
+									<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2021 - 2023</h3>
+
+									<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+										Senior Software Engineer at Mailchimp
+									</p>
+
+									<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+										This is an excellent company and they reward their employees. It's becoming a
+										big company but it's still private, so the culture is as good as it gets at
+										1,000+ employees if you ask me. Managers are still adapting to the growth I
+										think, but everyone has to. Great place to work.
+									</p>
+
+									<div class='mt-3'>
+										<!-- Card -->
+										<a
+											class='block border border-zinc-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-zinc-700'
+											href='#'
+										>
+											<div class='relative flex items-center overflow-hidden'>
+												<img
+													class='w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg'
+													src='https://images.unsplash.com/photo-1661956600655-e772b2b97db4?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+													alt='Blog Image'
+												/>
+
+												<div class='grow p-4 ms-32 sm:ms-48'>
+													<div class='min-h-24 flex flex-col justify-center'>
+														<h3 class='font-semibold text-sm text-zinc-800 dark:text-zinc-300'>
+															Studio by Mailchimp
+														</h3>
+														<p class='mt-1 text-sm text-zinc-500 dark:text-zinc-500'>
+															Produce professional, reliable streams easily leveraging Mailchimp's
+															innovative broadcast studio.
+														</p>
+													</div>
+												</div>
+											</div>
+										</a>
+										<!-- End Card -->
+									</div>
+								</div>
+								<!-- End Right Content -->
+							</div>
+							<!-- End Item -->
+
+							<!-- Item -->
+							<div class='group relative flex gap-x-5'>
+								<!-- Icon -->
+								<div
+									class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+								>
+									<div class='relative z-10 size-6 flex justify-center items-center'>
+										<Image
+											alt=''
+											loading='eager'
+											width='32'
+											height='32'
+											decoding='async'
+											class='rounded-full object-cover'
+											src={trustmeImg}
+											quality='60'
+										/>
+									</div>
+								</div>
+								<!-- End Icon -->
+
+								<!-- Right Content -->
+								<div class='grow pb-8 group-last:pb-0'>
+									<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2011 - 2021</h3>
+
+									<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+										Junior Software Engineer at Slack
+									</p>
+
+									<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+										Work in Slack is one of the beautiful experience I can do in my entire life.
+										There are a lot of interesting thing to learn and manager respect your time and
+										your personality.
+									</p>
+								</div>
+								<!-- End Right Content -->
+							</div>
+							<!-- End Item -->
+
+							<!-- Item -->
+							<div class='group relative flex gap-x-5'>
+								<!-- Icon -->
+								<div
+									class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+								>
+									<div class='relative z-10 size-6 flex justify-center items-center'>
+										<Image
+											alt=''
+											loading='eager'
+											width='32'
+											height='32'
+											decoding='async'
+											class='rounded-full object-cover'
+											src={oneTooImg}
+											quality='60'
+										/>
+									</div>
+								</div>
+								<!-- End Icon -->
+
+								<!-- Right Content -->
+								<div class='grow pb-8 group-last:pb-0'>
+									<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2010 - 2011</h3>
+
+									<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+										Freelance Graphic Designer
+									</p>
+
+									<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Worked with a diverse range of clients, delivering tailored design solutions.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Developed and maintained strong client relationships through effective
+											communication and project management.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Utilized tools such as Notion for project tracking, Mailchimp for email
+											marketing designs, Slack for team collaboration, and GitHub for version
+											control and project sharing.
+										</li>
+									</ul>
+								</div>
+								<!-- End Right Content -->
+							</div>
+							<!-- End Item -->
+
+							<!-- Item -->
+							<div class='group relative flex gap-x-5'>
+								<!-- Icon -->
+								<div
+									class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+								>
+									<div class='relative z-10 size-6 flex justify-center items-center'>
+										<Image
+											alt=''
+											loading='eager'
+											width='32'
+											height='32'
+											decoding='async'
+											class='rounded-full object-cover'
+											src={ubleamImg}
+											quality='60'
+										/>
+									</div>
+								</div>
+								<!-- End Icon -->
+
+								<!-- Right Content -->
+								<div class='grow pb-8 group-last:pb-0'>
+									<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2010 - 2011</h3>
+
+									<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+										Freelance Graphic Designer
+									</p>
+
+									<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Worked with a diverse range of clients, delivering tailored design solutions.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Developed and maintained strong client relationships through effective
+											communication and project management.
+										</li>
+										<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+											Utilized tools such as Notion for project tracking, Mailchimp for email
+											marketing designs, Slack for team collaboration, and GitHub for version
+											control and project sharing.
+										</li>
+									</ul>
+								</div>
+								<!-- End Right Content -->
+							</div>
+							<!-- End Item -->
+						</div>
+						<!-- End Timeline -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style></style>
