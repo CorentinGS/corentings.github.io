@@ -9,69 +9,31 @@ const profile = Profile
 const copyrightYear = new Date().getFullYear()
 ---
 
-<footer class='footer items-center bg-base-200 p-4'>
-	<div class='grid-flow-col items-center'>
-		<p>
-			Copyright © {copyrightYear} - All right reserved - {profile.full_name}
-		</p>
-	</div>
-	<div class='grid-flow-col gap-4 md:place-self-center md:justify-self-end'>
-		<a
-			href={`mailto:${profile.email}`}
-			target='_blank'
-			aria-label='mail'
-			rel='noopener noreferrer nofollow'
-			data-umami-event='Mail footer link clicked'
-		>
-			<Icon name='lucide:mail' class='hoveranimation size-6' />
-		</a>
-		<a
-			href={'https://twitter.com/' + social.twitter}
-			target='_blank'
-			aria-label='twitter'
-			rel='noopener noreferrer'
-			data-umami-event='Twitter footer link clicked'
-		>
-			<Icon name='ri:twitter-x-fill' class='hoveranimation size-6' />
-		</a>
-		<a
-			href={social.discord}
-			target='_blank'
-			aria-label='discord'
-			rel='noopener noreferrer nofollow'
-			data-umami-event='Discord footer link clicked'
-		>
-			<Icon name='la:discord' class='hoveranimation size-6' />
-		</a>
-		<a
-			href={'https://github.com/' + social.github}
-			target='_blank'
-			aria-label='github'
-			rel='me noopener noreferrer'
-			data-umami-event='Github footer link clicked'
-		>
-			<Icon name='lucide:github' class='hoveranimation size-6' />
-		</a>
-		<a
-			href={'https://www.linkedin.com/in/' + social.linkedin}
-			target='_blank'
-			aria-label='linkedin'
-			rel='me noopener noreferrer'
-			data-umami-event='Linkedin footer link clicked'
-		>
-			<Icon name='lucide:linkedin' class='hoveranimation size-6' />
-		</a>
-		<a
-			rel='me noopener noreferrer'
-			href={social.mastodon}
-			aria-label='mastodon'
-			target='_blank'
-			data-umami-event='Mastodon footer link clicked'
-		>
-			<Icon name='la:mastodon' class='hoveranimation size-6' />
-		</a>
-		<a href={social.rss} aria-label='rss' rel='me' data-umami-event='RSS footer link clicked'>
-			<Icon name='la:rss' class='hoveranimation size-6' />
-		</a>
+<footer class='mt-32 flex-none'>
+	<div class='sm:px-8'>
+		<div class='mx-auto w-full max-w-7xl lg:px-8'>
+			<div class='border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40'>
+				<div class='relative px-4 sm:px-8 lg:px-12'>
+					<div class='mx-auto max-w-2xl lg:max-w-5xl'>
+						<div class='flex flex-col items-center justify-between gap-6 sm:flex-row'>
+							<div
+								class='flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200'
+							>
+								<a class='transition hover:text-teal-500 dark:hover:text-teal-400' href='/about'
+									>About</a
+								><a class='transition hover:text-teal-500 dark:hover:text-teal-400' href='/projects'
+									>Projects</a
+								><a class='transition hover:text-teal-500 dark:hover:text-teal-400' href='/speaking'
+									>Speaking</a
+								><a class='transition hover:text-teal-500 dark:hover:text-teal-400' href='/uses'
+									>Uses</a>
+							</div><p class='text-sm text-zinc-400 dark:text-zinc-500'>
+								© <!-- -->2024<!-- --> Corentin Giaufer Saubert. All rights reserved.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </footer>

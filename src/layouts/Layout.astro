@@ -1,6 +1,7 @@
 ---
-import Header from '../components/utils/Header.astro'
+import { HeaderComponent } from '../components/navigation/Header'
 import BaseHead from '../components/utils/BaseHead.astro'
+import Footer from '../components/utils/Footer.astro'
 
 export interface Props {
 	title: string
@@ -8,6 +9,8 @@ export interface Props {
 }
 
 const { title, description } = Astro.props
+
+const currentPath = Astro.url.pathname
 ---
 
 <!doctype html>
@@ -15,37 +18,18 @@ const { title, description } = Astro.props
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
-	<body>
-		<main transition:animate='fade'>
-			<!-- Navbar -->
-			<Header lang={true} />
-			<!-- Page Slot -->
-			<slot />
-
-			<input type='checkbox' id='my-modal-6' class='modal-toggle' />
-			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
-				<label class='modal-box relative' for=''>
-					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
-						<li>
-							<a href='/projects' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
-								>Projects</a
-							>
-						</li>
-						<li>
-							<a
-								href='/experiences'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Experiences</a
-							>
-						</li>
-						<li>
-							<a href='/blog' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
-								>Articles</a
-							>
-						</li>
-					</ul>
-				</label>
-			</label>
-		</main>
+	<body class='flex h-full bg-zinc-100 dark:bg-zinc-900'>
+		<div class='flex w-full'>
+			<div class='relative flex w-full flex-col'>
+				<!-- Navbar -->
+				<HeaderComponent client:load currentPath={currentPath} />
+				<main transition:animate='fade' class="flex-auto">
+					<!-- Page Slot -->
+					<slot />
+				</main>
+				<!-- Footer -->
+				<Footer />
+			</div>
+		</div>
 	</body>
 </html>

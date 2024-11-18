@@ -4,7 +4,7 @@
 
 @layer base {
 	html {
-		font-family: Inter, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		font-family: 'Rubik Variable', 'Inter', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	}
 
 	h1 {
@@ -16,17 +16,6 @@
 		font-family: 'Rubik Variable', Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro,
 			sans-serif;
 		font-size: 2rem;
-	}
-
-	.hoveranimation {
-		@apply transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105;
-	}
-
-	.underline-offset-4:hover {
-		transition: all 0.3s ease-in-out;
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
-		text-underline-offset: 4px;
 	}
 
 	.prose code {
@@ -55,11 +44,6 @@
 	box-shadow: -5px 3px 8px 1px rgba(0, 0, 0, 0.12);
 }
 
-@layer components {
-	.btn {
-		@apply rounded-lg;
-	}
-}
 
 @layer utilities {
 	/* Chrome, Safari and Opera */
