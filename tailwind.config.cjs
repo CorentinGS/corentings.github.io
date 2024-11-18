@@ -3,29 +3,38 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	jit: true,
 	theme: {
-		extend: {
-			fontFamily: {
-				sans: [
-					'Syne Variable',
-					'Karla Variable',
-					'Rubik Variable',
-					'Inter',
-					'Helvetica Neue',
-					'Arial Nova',
-					'Nimbus Sans',
-					'Arial',
-					'sans-serif',
-					'"Apple Color Emoji"',
-					'"Segoe UI Emoji"',
-					'"Segoe UI Symbol"',
-					'"Noto Color Emoji"'
-				]
-			},
-			animation: {
-				// Bounces 5 times 1s equals 5 seconds
-				'bounce-short': 'bounce 3s ease-in-out 2'
-			}
-		}
+		fontSize: {
+			xs: ['0.8125rem', { lineHeight: '1.5rem' }],
+			sm: ['0.875rem', { lineHeight: '1.5rem' }],
+			base: ['1rem', { lineHeight: '1.75rem' }],
+			lg: ['1.125rem', { lineHeight: '1.75rem' }],
+			xl: ['1.25rem', { lineHeight: '2rem' }],
+			'2xl': ['1.5rem', { lineHeight: '2rem' }],
+			'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+			'4xl': ['2rem', { lineHeight: '2.5rem' }],
+			'5xl': ['3rem', { lineHeight: '3.5rem' }],
+			'6xl': ['3.75rem', { lineHeight: '1' }],
+			'7xl': ['4.5rem', { lineHeight: '1' }],
+			'8xl': ['6rem', { lineHeight: '1' }],
+			'9xl': ['8rem', { lineHeight: '1' }]
+		},
+		fontFamily: {
+			sans: [
+				'Syne Variable',
+				'Karla Variable',
+				'Rubik Variable',
+				'Inter',
+				'Helvetica Neue',
+				'Arial Nova',
+				'Nimbus Sans',
+				'Arial',
+				'sans-serif',
+				'"Apple Color Emoji"',
+				'"Segoe UI Emoji"',
+				'"Segoe UI Symbol"',
+				'"Noto Color Emoji"'
+			]
+		},
 	},
 	variants: {
 		extend: {}
@@ -34,44 +43,6 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
-		require('@tailwindcss/aspect-ratio'),
-		require('daisyui')
-	],
-
-	daisyui: {
-		themes: [
-			{
-				light: {
-					primary: '#38555F',
-					secondary: '#6d4c41',
-					accent: '#f39c12',
-					neutral: '#40404A',
-					'base-200': '#f1f1f1',
-					'base-100': '#FCFCFC',
-					info: '#bf55ec',
-					success: '#72E9C1',
-					warning: '#F6D73C',
-					error: '#E83B55',
-					'base-content': '#333333',
-					'--rounded-btn': '1.9rem'
-				}
-			},
-			{
-				dark: {
-					primary: '#5FCCC7',
-					secondary: '#6d4c41',
-					accent: '#f39c12',
-					neutral: '#40404A',
-					'base-100': '#1c1c1e',
-					'base-200': '#1a1a1a',
-					info: '#bf55ec',
-					success: '#72E9C1',
-					warning: '#F6D73C',
-					error: '#E83B55',
-					'base-content': '#f2f2f7',
-					'--rounded-btn': '1.9rem'
-				}
-			}
-		]
-	}
+		require('@tailwindcss/aspect-ratio')
+	]
 }
