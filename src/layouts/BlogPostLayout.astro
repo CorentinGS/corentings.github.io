@@ -3,8 +3,7 @@ import '../styles/global.css'
 import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 
-import { Icon } from 'astro-iconify'
-import PostHeader from '../components/utils/PostHeader.astro'
+import Icon from 'astro-icon'
 import { Image } from 'astro:assets'
 import FormattedDate from '../components/blog/FormattedDate.astro'
 import Tag from '../components/blog/Tag.astro'
@@ -35,8 +34,7 @@ const articleDate = pubDate.toISOString()
 	</head>
 	<body>
 		<main transition:animate='fade'>
-			<!-- Navbar -->
-			<PostHeader lang={false} />
+
 			<!-- Page Slot -->
 			<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
 				<div class='hoveranimation absolute left-5 top-[0.5rem] z-10 hidden lg:block'>
@@ -45,7 +43,6 @@ const articleDate = pubDate.toISOString()
 						class='btn btn-ghost text-xl md:text-2xl lg:text-3xl'
 						data-astro-prefetch='hover'
 					>
-						<Icon name='lucide:arrow-left' class='h-10 w-10' />
 					</a>
 				</div>
 				<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
@@ -119,55 +116,5 @@ const articleDate = pubDate.toISOString()
 				</label>
 			</label>
 		</main>
-		<script>
-			const fnObserver = () => {
-				function handleIntersection(
-					entries: IntersectionObserverEntry[],
-					observer: IntersectionObserver
-				) {
-					entries.forEach((entry) => {
-						const index = document.querySelector(`aside a[href="#${entry.target.id}"]`)
-
-						if (entry.isIntersecting) {
-							index?.classList.remove('bg-base-200') // remove bg
-							index?.classList.add(
-								'bg-secondary',
-								'text-secondary-content',
-								'font-bold',
-								'transition-colors',
-								'duration-200'
-							)
-						} else {
-							index?.classList.add('bg-base-200') // add bg
-							index?.classList.remove(
-								'bg-secondary',
-								'text-secondary-content',
-								'font-bold',
-								'transition-colors',
-								'duration-200'
-							)
-						}
-					})
-				}
-
-				const headings = document.querySelectorAll(
-					'div.prose h1, div.prose h2, div.prose h3, div.prose h4, div.prose h5, div.prose h6'
-				)
-
-				const options = {
-					root: null,
-					rootMargin: ' 15% 0px 0% 0px ',
-					threshold: 1
-				}
-
-				const observer = new IntersectionObserver(handleIntersection, options)
-
-				headings.forEach((heading) => {
-					observer.observe(heading)
-				})
-			}
-			fnObserver()
-			document.addEventListener('astro:after-swap', fnObserver)
-		</script>
 	</body>
 </html>

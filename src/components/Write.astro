@@ -1,12 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
-import DiscoverCard from './blog/DiscoverCard.astro'
 import { getPosts } from '../utils'
 
 const posts: CollectionEntry<'blog'>[] = await getPosts(3)
 import { Picture } from 'astro:assets'
-import FormattedDate from './blog/FormattedDate.astro'
 ---
 
 <div class='sm:px-8 mt-16'>

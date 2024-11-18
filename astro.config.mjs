@@ -7,6 +7,8 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 
 import react from '@astrojs/react';
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://corentings.dev',
@@ -22,7 +24,7 @@ export default defineConfig({
             wrap: true
         }
     },
-    integrations: [tailwind(), mdx({
+    integrations: [tailwind(), react(), icon(), mdx({
         syntaxHighlight: 'shiki',
         shikiConfig: {
             theme: 'material-theme-palenight',
@@ -31,7 +33,7 @@ export default defineConfig({
         drafts: true
         }), sitemap({
         lastmod: new Date()
-        }), compressor(), react()],
+        }), compressor()],
     output: 'static'
     // adapter: cloudflare()
 })
