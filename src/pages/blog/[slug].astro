@@ -3,8 +3,6 @@ export const prerender = true
 import BlogPostLayout from 'src/layouts/BlogPostLayout.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import ListRelatedPosts from '@/components/blog/ListRelatedPosts'
-import Share from '@/components/blog/Share'
-import TableOfContents from '@/components/blog/TableOfContents'
 import { getPosts } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import Code from '@/components/mdx/Code'
@@ -37,14 +35,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 	headings={headings}
 	readTime={remarkPluginFrontmatter.minutesRead}
 >
-	<div class='grid grid-cols-1 md:grid-cols-[20%_auto] gap-10 mt-8'>
-		<!-- aside  -->
-		<aside class='md:flex flex-col gap-8 hidden'>
-			<Share />
-			<div class='sticky top-24 self-start hidden md:block transition-all duration-200'>
-				{headings && headings.length > 0 && <TableOfContents {headings} />}
-			</div>
-		</aside>
+	<div class=' mt-8'>
 
 		<!-- post -->
 		<article class='max-w-full w-full'>
@@ -54,7 +45,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 
 			<!-- related posts -->
 			<footer>
-				<h2 class='font-bold text-lg dark:text-white mb-6'>Related articles</h2>
+				<h2 class='font-bold text-lg text-zinc-800 dark:text-zinc-100  mb-6'>Related articles</h2>
 				<ListRelatedPosts posts={relatedPosts} />
 			</footer>
 		</article>

@@ -1,237 +1,249 @@
 ---
-import Timeline from './Index/Timeline.astro'
-import TimelineCard from './Index/TimelineCard.astro'
-import { TimelineCardType } from 'src/utils/types'
 
-import imgIuLogo from '../assets/iu_logo.webp'
-import imgMfStouuf from '../assets/MF_STOUUF.webp'
-import imgQualialtis from '../assets/logo_qualialtis.webp'
-import imgOneToo from '../assets/onetoo.webp'
-import imgEducative from '../assets/educative.webp'
-import imgHackerRank from '../assets/hackerrank.webp'
-import imgMemnix from '../assets/moutmout.webp'
-import imgUca from '../assets/uca.webp'
-import imgEstaca from '../assets/estaca.webp'
-import imgKtk from '../assets/ktk.webp'
-import imgChesscom from '../assets/chesscom_logo.webp'
-import imgFfe from '../assets/ffe_logo.webp'
-import imgEN from '../assets/logo_en.webp'
-import imgChessmood from '../assets/chessmood.webp'
-import imgTrustme from '../assets/logo_tfd.webp'
+import chessMoodImg from '../assets/chessmood.webp'
+import echiquierNicoisImg from '../assets/logo_en.webp'
+import trustmeImg from '../assets/logo_tfd.webp'
+import oneTooImg from '../assets/onetoo.webp'
+import ubleamImg from '../assets/logo_qualialtis.webp'
+import { Image } from 'astro:assets'
 
-const experiences = [
-	{
-		name: 'Chessmood - Back-end Developer',
-		type: TimelineCardType.Work,
-		tools: 'Golang, AWS, Python, Chess',
-		description: 'Developing the backend of the Chessmood platform.',
-		start_date: 'June 2024',
-		link: 'https://chessmood.com/',
-		image: imgChessmood
-	},
-	{
-		name: 'FFE - Chess Referee',
-		type: TimelineCardType.Volunteering,
-		description: 'Refereeing chess tournaments for the French Federation.',
-		start_date: '2024',
-		link: 'http://www.echecs.asso.fr/%28rpoos355juwbzbqlethyfg55%29/FicheJoueur.aspx?Id=591532',
-		image: imgFfe
-	},
-	{
-		name: 'Echiquier Niçois - Board Member',
-		type: TimelineCardType.Volunteering,
-		description: 'Board member of the Echiquier Niçois chess club.',
-		start_date: 'September 2023',
-		link: 'https://echiquiernicois.com',
-		image: imgEN
-	},
-	{
-		name: 'Chess.com - Twitch Moderator',
-		type: TimelineCardType.Volunteering,
-		description: 'Moderating the Chesscomfr twitch channel.',
-		start_date: '2023',
-		link: 'https://twitch.com/chesscomfr',
-		image: imgChesscom
-	},
-	{
-		name: 'IU - BSC. Computer Science',
-		type: TimelineCardType.School,
-		description:
-			"Bachelor's degree in Computer Science from IU International University of Applied Sciences.",
-		start_date: '2023',
-		tools: 'German, Java, Operating System',
-		link: 'https://www.iu.org/bachelor/computer-science/',
-		image: imgIuLogo
-	},
-	{
-		name: 'TrustMe - Lead Developer',
-		type: TimelineCardType.Work,
-		description: 'Leading the development of the TrustMe project, a job platform.',
-		start_date: '2022',
-		end_date: '2024',
-		tools: 'Golang, PostgreSQL, Docker...',
-		link: 'https://trustme.jobs/',
-		image: imgTrustme
-	},
-
-	{
-		name: 'Stouuf - Community Manager',
-		type: TimelineCardType.Volunteering,
-		description:
-			'Managing the Stouuf community, website development, events organization and twitch moderation.',
-		start_date: '2022',
-		tools: 'Canva, Tailwindcss, Youtube, Twitch',
-		image: imgMfStouuf,
-		link: 'https://stouuf.net/'
-	},
-	{
-		name: 'Educative.io - Courses',
-		type: TimelineCardType.Course,
-		description:
-			'Following several courses on Educative.io including but not limited to: Golang, Python, C, Java, Data Structure...',
-		start_date: '2022',
-		tools: 'C, Golang, Data Structure, Java',
-		link: 'https://www.Educative.io',
-		image: imgEducative
-	},
-	{
-		name: 'HackerRank - Certifications',
-		type: TimelineCardType.Course,
-		description:
-			'Obtained the following certifications from HackerRank: Python(Basic), Golang(Basic), Golang(Intermediate).',
-		start_date: 'March 2022',
-		end_date: 'March 2022',
-		tools: 'Golang, Python',
-		link: 'https://www.hackerrank.com/certificates/03173cedd98b',
-		image: imgHackerRank
-	},
-	{
-		name: 'Memnix - Lead developer',
-		type: TimelineCardType.Project,
-		description:
-			'Leading the development of the Memnix project, a spaced repetition learning platform.',
-		start_date: '2021',
-		image: imgMemnix,
-		link: 'https://memnix.app/',
-		tools: 'Golang, Nuxt, PostgreSQL, Docker...'
-	},
-	{
-		type: TimelineCardType.School,
-		description: "Studying computer science at Université Nice Côte d'Azur.",
-		link: 'https://univ-cotedazur.fr/',
-		image: imgUca,
-		name: 'Unice - Computer Science student',
-		start_date: 'September 2021',
-		end_date: 'December 2022',
-		location: 'Nice, France',
-		tools: 'Python, Arduino'
-	},
-	{
-		type: TimelineCardType.Work,
-		description:
-			'Linux embedded system and QT software development internship. Technical documentation writing and setup of project management tools.',
-		image: imgOneToo,
-		name: 'Onetoo - Internship',
-		start_date: 'June 2021',
-		end_date: 'July 2021',
-		location: 'Nice, France',
-		link: 'https://www.one-too.com/'
-	},
-	{
-		type: TimelineCardType.School,
-		description: 'First year of the aeronautical engineering degree program at Estaca.',
-		link: 'https://www.estaca.fr/',
-		image: imgEstaca,
-		name: 'Estaca - Student',
-		start_date: '2020',
-		end_date: '2021',
-		location: 'Laval, France'
-	},
-	{
-		type: TimelineCardType.School,
-		name: 'Scientific Baccalaureate - Graduate with Honor',
-		description:
-			'Obtained the Scientific Baccalaureate with honors with Engineering Sciences and English options at Cornat High School in Valognes, France.',
-		start_date: '2020',
-		location: 'Valognes, France',
-		link: 'https://www.lycee-valognes.fr/'
-	},
-	{
-		type: TimelineCardType.Others,
-		name: 'Theatre actor - Addams Family Show',
-		description: 'Performed in the Addams Family Show in Orlando, Florida for Kids Theater Kamp.',
-		start_date: '2019',
-		end_date: '2019',
-		link: 'https://www.ktkamp.com/',
-		image: imgKtk,
-		location: 'Orlando, Florida'
-	},
-	{
-		type: TimelineCardType.Others,
-		name: 'PPL - Private Pilot License',
-		description: 'Preparing for the private pilot license exam (postponed due to covid-19)',
-		start_date: '2019',
-		location: 'Cherbourg, France',
-		link: 'https://ac-cherbourg.com/'
-	},
-	{
-		type: TimelineCardType.Work,
-		name: 'Qualialtis - Intern',
-		description:
-			'Devops internship at Qualialtis to learn about devops, kubernetes, helm and linux administration.',
-		start_date: '2018',
-		end_date: '2018',
-		location: 'Toulouse, France',
-		tools: 'Kubernetes, Helm, Debian',
-		link: 'https://www.qualialtis.com/',
-		image: imgQualialtis
-	},
-	{
-		type: TimelineCardType.Others,
-		name: 'Hackaton - Climathon Copernicus',
-		description:
-			'Climathon organized by Copernicus at Toulouse to find digitals solutions to the climate crisis. Got the 3rd price.',
-		start_date: '2018',
-		end_date: '2018',
-		location: 'Toulouse, France'
-	}
-]
 ---
 
-<section class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
-	<div class='relative px-4 sm:px-8 lg:px-12'>
-		<div class='relative flex flex-col items-center'>
-			<h2 class='mx-auto text-center text-2xl font-bold md:text-3xl lg:text-5xl'>My Experiences</h2>
-			<p class='mt-8 text-xl'>Here are my experiences and education.</p>
+<div class='mt-10 sm:mt-14'>
+	<h2 class='mb-5 font-medium text-zinc-800 dark:text-zinc-200'>Work experience</h2>
+	<!-- Timeline -->
+	<div>
+		<!-- Item -->
+		<div class='group relative flex gap-x-5'>
+			<!-- Icon -->
+			<div
+				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+			>
+				<div class='relative z-10 size-6 flex justify-center items-center'>
+					<Image
+						alt=''
+						loading='lazy'
+						width='32'
+						height='32'
+						decoding='async'
+						class='rounded-full object-cover'
+						src={chessMoodImg}
+						quality='60'
+					/>
+				</div>
+			</div>
+			<!-- End Icon -->
+
+			<!-- Right Content -->
+			<div class='grow pb-8 group-last:pb-0'>
+				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2024 - Present</h3>
+
+				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+					Web Designer &amp; Web Developer
+				</p>
+
+				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+					The company has high expectations and using OKRs there is a mutual understanding
+					of expectations and performance.
+				</p>
+
+				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Designed template UIs and design systems in Figma.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Converted UIs into responsive HTML and CSS with a mobile-first approach.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Created custom illustrations and item description banners.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Provided detailed documentation and customer support on GitHub.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Engaged with users to address setup inquiries, bug issues, and feedback.
+					</li>
+				</ul>
+			</div>
+			<!-- End Right Content -->
 		</div>
+		<!-- End Item -->
+
+		<!-- Item -->
+		<div class='group relative flex gap-x-5'>
+			<!-- Icon -->
+			<div
+				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+			>
+				<div class='relative z-10 size-6 flex justify-center items-center'>
+					<Image
+						alt=''
+						loading='eager'
+						width='32'
+						height='32'
+						decoding='async'
+						class='rounded-full object-cover'
+						src={echiquierNicoisImg}
+						quality='60'
+					/>
+				</div>
+			</div>
+			<!-- End Icon -->
+
+			<!-- Right Content -->
+			<div class='grow pb-8 group-last:pb-0'>
+				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2021 - 2023</h3>
+
+				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+					Senior Software Engineer at Mailchimp
+				</p>
+
+				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+					This is an excellent company and they reward their employees. It's becoming a
+					big company but it's still private, so the culture is as good as it gets at
+					1,000+ employees if you ask me. Managers are still adapting to the growth I
+					think, but everyone has to. Great place to work.
+				</p>
+			</div>
+			<!-- End Right Content -->
+		</div>
+		<!-- End Item -->
+
+		<!-- Item -->
+		<div class='group relative flex gap-x-5'>
+			<!-- Icon -->
+			<div
+				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+			>
+				<div class='relative z-10 size-6 flex justify-center items-center'>
+					<Image
+						alt=''
+						loading='eager'
+						width='32'
+						height='32'
+						decoding='async'
+						class='rounded-full object-cover'
+						src={trustmeImg}
+						quality='60'
+					/>
+				</div>
+			</div>
+			<!-- End Icon -->
+
+			<!-- Right Content -->
+			<div class='grow pb-8 group-last:pb-0'>
+				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2011 - 2021</h3>
+
+				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+					Junior Software Engineer at Slack
+				</p>
+
+				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
+					Work in Slack is one of the beautiful experience I can do in my entire life.
+					There are a lot of interesting thing to learn and manager respect your time and
+					your personality.
+				</p>
+			</div>
+			<!-- End Right Content -->
+		</div>
+		<!-- End Item -->
+
+		<!-- Item -->
+		<div class='group relative flex gap-x-5'>
+			<!-- Icon -->
+			<div
+				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+			>
+				<div class='relative z-10 size-6 flex justify-center items-center'>
+					<Image
+						alt=''
+						loading='eager'
+						width='32'
+						height='32'
+						decoding='async'
+						class='rounded-full object-cover'
+						src={oneTooImg}
+						quality='60'
+					/>
+				</div>
+			</div>
+			<!-- End Icon -->
+
+			<!-- Right Content -->
+			<div class='grow pb-8 group-last:pb-0'>
+				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2010 - 2011</h3>
+
+				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+					Freelance Graphic Designer
+				</p>
+
+				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Worked with a diverse range of clients, delivering tailored design solutions.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Developed and maintained strong client relationships through effective
+						communication and project management.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Utilized tools such as Notion for project tracking, Mailchimp for email
+						marketing designs, Slack for team collaboration, and GitHub for version
+						control and project sharing.
+					</li>
+				</ul>
+			</div>
+			<!-- End Right Content -->
+		</div>
+		<!-- End Item -->
+
+		<!-- Item -->
+		<div class='group relative flex gap-x-5'>
+			<!-- Icon -->
+			<div
+				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+			>
+				<div class='relative z-10 size-6 flex justify-center items-center'>
+					<Image
+						alt=''
+						loading='eager'
+						width='32'
+						height='32'
+						decoding='async'
+						class='rounded-full object-cover'
+						src={ubleamImg}
+						quality='60'
+					/>
+				</div>
+			</div>
+			<!-- End Icon -->
+
+			<!-- Right Content -->
+			<div class='grow pb-8 group-last:pb-0'>
+				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2010 - 2011</h3>
+
+				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
+					Freelance Graphic Designer
+				</p>
+
+				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Worked with a diverse range of clients, delivering tailored design solutions.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Developed and maintained strong client relationships through effective
+						communication and project management.
+					</li>
+					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
+						Utilized tools such as Notion for project tracking, Mailchimp for email
+						marketing designs, Slack for team collaboration, and GitHub for version
+						control and project sharing.
+					</li>
+				</ul>
+			</div>
+			<!-- End Right Content -->
+		</div>
+		<!-- End Item -->
 	</div>
-</section>
-<section class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
-	<div class='items-center lg:flex'></div>
-	<div class='wrap relative h-full overflow-hidden p-10'>
-		<div
-			class='border-2-2 absolute left-[3.5rem] h-full border border-dashed border-gray-700 border-opacity-20 md:left-[50%]'
-		>
-		</div>
-		<div>
-			{
-				experiences.map((card, index) => (
-					<Timeline right={index % 2 !== 0}>
-						<TimelineCard
-							description={card.description}
-							end_date={card.end_date}
-							image={card.image}
-							link={card.link}
-							location={card.location}
-							name={card.name}
-							start_date={card.start_date}
-							type={card.type}
-							tools={card.tools}
-							right={index % 2 !== 0}
-						/>
-					</Timeline>
-				))
-			}
-		</div>
-	</div>
-</section>
+	<!-- End Timeline -->
+</div>
+

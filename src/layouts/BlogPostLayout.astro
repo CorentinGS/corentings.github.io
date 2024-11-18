@@ -3,11 +3,12 @@ import '../styles/global.css'
 import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 
-import Icon from 'astro-icon'
 import { Image } from 'astro:assets'
 import FormattedDate from '../components/blog/FormattedDate.astro'
 import Tag from '../components/blog/Tag.astro'
 import BaseHead from '../components/utils/BaseHead.astro'
+import Footer from '../components/utils/Footer.astro'
+import { HeaderComponent } from '../components/navigation/Header'
 
 type Props = {
 	id: CollectionEntry<'blog'>['id']
@@ -20,6 +21,8 @@ const { data, readTime, headings, id } = Astro.props
 const { title, description, pubDate, heroImage, tags } = data
 
 const articleDate = pubDate.toISOString()
+
+const currentPath = Astro.url.pathname
 ---
 
 <!doctype html>
@@ -32,23 +35,19 @@ const articleDate = pubDate.toISOString()
 			articleDate={articleDate}
 		/>
 	</head>
-	<body>
+	<body class='flex h-full bg-zinc-100 dark:bg-zinc-900'>
+	<div class='flex w-full'>
+		<div class='relative flex w-full flex-col'>
+			<!-- Navbar -->
+			<HeaderComponent client:load currentPath={currentPath} />
 		<main transition:animate='fade'>
 
 			<!-- Page Slot -->
 			<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
-				<div class='hoveranimation absolute left-5 top-[0.5rem] z-10 hidden lg:block'>
-					<a
-						href='/blog'
-						class='btn btn-ghost text-xl md:text-2xl lg:text-3xl'
-						data-astro-prefetch='hover'
-					>
-					</a>
-				</div>
 				<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
 					<header class='mb-3 flex flex-col justify-center items-center gap-6'>
 						<div class='flex flex-col gap-2'>
-							<div class='flex items-center justify-center gap-x-1'>
+							<div class='flex items-center justify-center gap-x-1 text-zinc-700  dark:text-zinc-300'>
 								<p class='text-center text-sm text-opacity-50'>
 									Published
 									<FormattedDate date={pubDate} />
@@ -57,12 +56,12 @@ const articleDate = pubDate.toISOString()
 									- {readTime}
 								</p>
 							</div>
-							<h1 class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold'>
+							<h1 class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold text-zinc-800  dark:text-zinc-200'>
 								{title}
 							</h1>
 						</div>
 
-						<div class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5'>
+						<div class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5 text-zinc-700  dark:text-zinc-300'>
 							{tags.map((tag) => <Tag tag={tag} />)}
 						</div>
 					</header>
@@ -73,7 +72,7 @@ const articleDate = pubDate.toISOString()
 								<Image
 									src={heroImage}
 									width={1000}
-									height={500}
+									height={700}
 									quality={80}
 									loading='eager'
 									class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
@@ -90,31 +89,10 @@ const articleDate = pubDate.toISOString()
 					</div>
 				</div>
 			</article>
-
-			<input type='checkbox' id='my-modal-6' class='modal-toggle' />
-			<label for='my-modal-6' class='modal modal-bottom cursor-pointer sm:modal-middle'>
-				<label class='modal-box relative' for=''>
-					<ul class='menu w-80 overflow-y-auto bg-base-100 p-4'>
-						<li>
-							<a href='/projects' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
-								>Projects</a
-							>
-						</li>
-						<li>
-							<a
-								href='/src/pages/about'
-								data-astro-prefetch='tap'
-								class='text-md font-semibold leading-6'>Experiences</a
-							>
-						</li>
-						<li>
-							<a href='/blog' data-astro-prefetch='tap' class='text-md font-semibold leading-6'
-								>Articles</a
-							>
-						</li>
-					</ul>
-				</label>
-			</label>
 		</main>
+			<!-- Footer -->
+			<Footer />
+		</div>
+	</div>
 	</body>
 </html>

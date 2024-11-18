@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import { Image } from 'astro:assets'
+import Experiences from '../components/Experiences.astro'
+
+import iuImg from '../assets/iu_logo.webp'
+import Testimony from '../components/Testimony.astro'
+
+import gnarkImg from '../assets/david.webp'
+import stouufImg from '../assets/stouuf2.webp'
+import justinImg from '../assets/justin.webp'
+
+export const prerender = true
+---
+
+<Layout title='Resume' description='My Resume'>
+	<div class='sm:px-8 mt-9'>
+		<div class='mx-auto w-full max-w-7xl lg:px-8'>
+			<div class='relative px-4 sm:px-8 lg:px-12'>
+				<div class='mx-auto max-w-2xl lg:max-w-5xl'>
+					<div class='max-w-2xl'>
+						<h1
+							class='text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100'
+						>
+							My Resume
+						</h1>
+					</div>
+
+					<Experiences />
+					<div class='mt-10 sm:mt-14'>
+						<h2 class='mb-3 font-medium text-zinc-800 dark:text-zinc-200'>Education</h2>
+
+						<!-- Grid -->
+						<div class='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+							<div class='p-4 border border-gray-200 rounded-lg dark:border-neutral-700'>
+								<Image
+									alt=''
+									loading='lazy'
+									width='90'
+									height='90'
+									decoding='async'
+									class='rounded-full object-cover shrink-0 size-14 mb-3'
+									src={iuImg}
+									quality='60'
+								/>
+
+								<h3 class='mb-1 text-xs text-gray-600 dark:text-neutral-400'>2022 - in progress</h3>
+
+								<p class='font-semibold text-sm text-gray-800 dark:text-neutral-200'>
+									Bachelor of Science - BS Computer Science
+								</p>
+
+								<p class='mt-1 text-sm text-gray-600 dark:text-neutral-400'>
+									IU International University of Applied Sciences
+								</p>
+							</div>
+						</div>
+						<!-- End Grid -->
+					</div>
+					<div class='mt-10 sm:mt-14'>
+						<h2 class='mb-3 font-medium text-zinc-800 dark:text-zinc-200'>Testimonials</h2>
+						<div class='mx-auto mt-10 flow-root max-w-2xl lg:mx-0 lg:max-w-none'>
+							<div class='-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-2'>
+								<Testimony
+									image={stouufImg}
+									name='Stephane Bressac'
+									company='Coach & Streamer'
+									content='Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more. His work is meticulous, and on top of that, he is very friendly, attentive, and available.'
+								/>
+								<Testimony
+									image={gnarkImg}
+									name='David Barbier'
+									company='Freelancer'
+									content="I've had the opportunity to work with Corentin on various projects, always with an eye for detail and finding the best solutions. Corentin will guide you in developing a resilient, high-performance backend"
+								/>
+								<!-- More testimonials... -->
+							</div>
+						</div>
+						<!-- End Grid -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

@@ -23,7 +23,7 @@ import { Picture } from 'astro:assets'
 
 					<div class='mt-8 space-y-20 lg:mt-12 lg:space-y-20'>
 						{
-							posts.map(async (post) => {
+							posts.map(async (post, index) => {
 								return (
 									<article class='relative isolate flex flex-col gap-8 lg:flex-row'>
 										<div class='relative w-full lg:w-64 lg:shrink-0'> {/* Remove aspect ratio from container */}
@@ -31,6 +31,7 @@ import { Picture } from 'astro:assets'
 												src={post.data.heroImage}
 												alt=''
 												class='rounded-2xl bg-gray-50 object-cover aspect-video w-full sm:aspect-[2/1] lg:aspect-[3/2] max-h-56'
+												loading={index < 2 ? 'eager' : 'lazy'}
 											/>
 											<div class='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10' />
 										</div>
