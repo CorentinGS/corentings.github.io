@@ -1,9 +1,9 @@
 // HeaderComponent.jsx
-import { useEffect, useRef } from 'react';
-import { Container } from './Container';
-import { MobileNavigation } from './Navigation';
-import { DesktopNavigation } from './Navigation';
-import { Avatar, AvatarContainer } from './Avatar';
+import { useEffect, useRef } from 'react'
+import { Container } from './Container'
+import { MobileNavigation } from './Navigation'
+import { DesktopNavigation } from './Navigation'
+import { Avatar, AvatarContainer } from './Avatar'
 
 function clamp(number, a, b) {
 	let min = Math.min(a, b)
@@ -35,11 +35,7 @@ export function HeaderComponent({ currentPath }) {
 			}
 
 			let { top, height } = headerRef.current.getBoundingClientRect()
-			let scrollY = clamp(
-				window.scrollY,
-				0,
-				document.body.scrollHeight - window.innerHeight,
-			)
+			let scrollY = clamp(window.scrollY, 0, document.body.scrollHeight - window.innerHeight)
 
 			if (isInitial.current) {
 				setProperty('--header-position', 'sticky')
@@ -88,10 +84,7 @@ export function HeaderComponent({ currentPath }) {
 			let x = (scrollY * (fromX - toX)) / downDelay + toX
 			x = clamp(x, fromX, toX)
 
-			setProperty(
-				'--avatar-image-transform',
-				`translate3d(${x}rem, 0, 0) scale(${scale})`,
-			)
+			setProperty('--avatar-image-transform', `translate3d(${x}rem, 0, 0) scale(${scale})`)
 
 			let borderScale = 1 / (toScale / scale)
 			let borderX = (-toX + x) * borderScale
@@ -120,41 +113,41 @@ export function HeaderComponent({ currentPath }) {
 	return (
 		<>
 			<header
-				className="pointer-events-none relative z-50 flex flex-none flex-col"
+				className='pointer-events-none relative z-50 flex flex-none flex-col'
 				style={{
 					height: 'var(--header-height)',
-					marginBottom: 'var(--header-mb)',
+					marginBottom: 'var(--header-mb)'
 				}}
 			>
 				{isHomePage && (
 					<>
 						<div
 							ref={avatarRef}
-							className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
+							className='order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]'
 						/>
 						<Container
-							className="top-0 order-last -mb-3 pt-3"
+							className='top-0 order-last -mb-3 pt-3'
 							style={{
-								position: 'var(--header-position)',
+								position: 'var(--header-position)'
 							}}
 						>
 							<div
-								className="top-[var(--avatar-top,theme(spacing.3))] w-full"
+								className='top-[var(--avatar-top,theme(spacing.3))] w-full'
 								style={{
-									position: 'var(--header-inner-position)',
+									position: 'var(--header-inner-position)'
 								}}
 							>
-								<div className="relative">
+								<div className='relative'>
 									<AvatarContainer
-										className="absolute left-0 top-3 origin-left transition-opacity"
+										className='absolute left-0 top-3 origin-left transition-opacity'
 										style={{
 											opacity: 'var(--avatar-border-opacity, 0)',
-											transform: 'var(--avatar-border-transform)',
+											transform: 'var(--avatar-border-transform)'
 										}}
 									/>
 									<Avatar
 										large
-										className="block h-16 w-16 origin-left"
+										className='block h-16 w-16 origin-left'
 										style={{ transform: 'var(--avatar-image-transform)' }}
 									/>
 								</div>
@@ -164,44 +157,43 @@ export function HeaderComponent({ currentPath }) {
 				)}
 				<div
 					ref={headerRef}
-					className="top-0 z-10 h-16 pt-6"
+					className='top-0 z-10 h-16 pt-6'
 					style={{
-						position: 'var(--header-position)',
+						position: 'var(--header-position)'
 					}}
 				>
 					<Container
-						className="top-[var(--header-top,theme(spacing.6))] w-full"
+						className='top-[var(--header-top,theme(spacing.6))] w-full'
 						style={{
-							position: 'var(--header-inner-position)',
+							position: 'var(--header-inner-position)'
 						}}
 					>
-						<div className="relative flex gap-4">
-							<div className="flex flex-1">
+						<div className='relative flex gap-4'>
+							<div className='flex flex-1'>
 								{!isHomePage && (
 									<AvatarContainer>
 										<Avatar />
 									</AvatarContainer>
 								)}
 							</div>
-							<div className="flex flex-1 justify-end md:justify-center">
-								<MobileNavigation currentPath={currentPath} className="pointer-events-auto md:hidden" />
-								<DesktopNavigation currentPath={currentPath} className="pointer-events-auto hidden md:block" />
+							<div className='flex flex-1 justify-end md:justify-center'>
+								<MobileNavigation
+									currentPath={currentPath}
+									className='pointer-events-auto md:hidden'
+								/>
+								<DesktopNavigation
+									currentPath={currentPath}
+									className='pointer-events-auto hidden md:block'
+								/>
 							</div>
-							<div className="flex justify-end md:flex-1">
-								<div className="pointer-events-auto">
-								</div>
+							<div className='flex justify-end md:flex-1'>
+								<div className='pointer-events-auto'></div>
 							</div>
-
 						</div>
 					</Container>
 				</div>
 			</header>
-			{isHomePage && (
-				<div
-					className="flex-none"
-					style={{ height: 'var(--content-offset)' }}
-				/>
-			)}
+			{isHomePage && <div className='flex-none' style={{ height: 'var(--content-offset)' }} />}
 		</>
 	)
 }

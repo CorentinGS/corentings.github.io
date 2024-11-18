@@ -1,5 +1,11 @@
 import clsx from 'clsx'
 
+import  imgAvatar  from '../../assets/avatar.webp'
+import { getImage } from 'astro/assets'
+const avatar  = await getImage({ src: imgAvatar, alt: 'Avatar',     format: "webp",
+	width: 200,
+	height: 200 })
+
 export function AvatarContainer({ className, ...props }) {
 	return (
 		<div
@@ -14,19 +20,14 @@ export function AvatarContainer({ className, ...props }) {
 
 export function Avatar({ large = false, className, ...props }) {
 	return (
-		<a
-			href="/"
-			aria-label="Home"
-			className={clsx(className, 'pointer-events-auto')}
-			{...props}
-		>
+		<a href='/' aria-label='Home' className={clsx(className, 'pointer-events-auto')} {...props}>
 			<img
-				src="/avatar.jpg" // Make sure to place your avatar image in the public folder
-				alt=""
+				src={avatar.src} // Make sure to place your avatar image in the public folder
+				alt=''
 				sizes={large ? '4rem' : '2.25rem'}
 				className={clsx(
 					'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-					large ? 'h-16 w-16' : 'h-9 w-9',
+					large ? 'h-16 w-16' : 'h-9 w-9'
 				)}
 			/>
 		</a>
