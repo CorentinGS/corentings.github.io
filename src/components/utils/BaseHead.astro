@@ -16,6 +16,7 @@ const titleSeparator = '•'
 
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 
+import { ViewTransitions } from 'astro:transitions';
 import Fonts from './Fonts.astro'
 ---
 
@@ -60,6 +61,8 @@ import Fonts from './Fonts.astro'
 
 <!-- Fonts -->
 <Fonts />
+
+<ViewTransitions />
 
 <!-- RSS auto-discovery -->
 <link

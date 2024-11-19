@@ -22,7 +22,7 @@ const currentPath = Astro.url.pathname
 			<div class='relative flex w-full flex-col'>
 				<!-- Navbar -->
 				<HeaderComponent client:load currentPath={currentPath} />
-				<main transition:animate='fade' class='flex-auto'>
+				<main transition:animate='initial' class='flex-auto'>
 					<!-- Page Slot -->
 					<slot />
 				</main>
