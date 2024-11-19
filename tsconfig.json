@@ -13,7 +13,9 @@
 			"@/data/*": ["src/data/*"],
 			"@/site-config": ["src/data/site.config.ts"],
 			"@/styles": ["src/styles/"]
-		}
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
 	},
 	"include": ["**/*", ".eslintrc.cjs"],
 	"exclude": ["node_modules", "**/node_modules/*", "dist", ".astro", ".idea"]

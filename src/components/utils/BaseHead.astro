@@ -16,8 +16,8 @@ const titleSeparator = '•'
 
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 
+import { ViewTransitions } from 'astro:transitions';
 import Fonts from './Fonts.astro'
-import Schema from './Schema.astro'
 ---
 
 <!-- Primary Meta Tags -->
@@ -59,6 +59,11 @@ import Schema from './Schema.astro'
 <meta property='twitter:description' content={description} />
 <meta property='twitter:image' content={socialImageURL} />
 
+<!-- Fonts -->
+<Fonts />
+
+<ViewTransitions />
+
 <!-- RSS auto-discovery -->
 <link
 	rel='alternate'
@@ -73,12 +78,7 @@ import Schema from './Schema.astro'
 <!-- Umami -->
 <script
 	async
+	is:inline
 	src='https://nero.corentings.dev/script.js'
 	data-website-id='5bf74955-9bdd-4461-8b7b-3d3aacaf94bb'
 	data-domains='corentings.dev'></script>
-
-<!-- Schema -->
-<Schema title={title} description={description} ogImage={socialImageURL} />
-
-<!-- Fonts -->
-<Fonts />

@@ -1,23 +1,86 @@
 ---
-import Layout from 'src/layouts/Layout.astro'
-import ListPosts from 'src/components/blog/ListPosts.astro'
-import { getPosts } from '@/utils'
-import ListCategories from 'src/components/blog/ListCategories.astro'
+import Layout from '../../layouts/Layout.astro'
+import { getPosts } from '../../utils'
+import { Picture } from 'astro:assets'
 
 const posts = await getPosts(10)
 export const prerender = true
 ---
 
-<Layout title='Blog'>
-	<div class='lg:py-15 mx-auto w-full max-w-7xl py-6 md:py-10 lg:px-8'>
-		<div class='header py-2 mb-3 flex items-end justify-between'>
-			<div class='title'>
-				<h1 class='text-5xl font-bold first-letter:uppercase'>My Articles</h1>
+<Layout title='Blog' description='List of all my articles'>
+	<div class='sm:px-8 mt-16'>
+		<div class='mx-auto w-full max-w-7xl lg:px-8'>
+			<div class='relative px-4 sm:px-8 lg:px-12'>
+				<div class='mx-auto max-w-2xl lg:max-w-5xl'>
+					<div class='max-w-2xl'>
+						<h1
+							class='text-2xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100'
+						>
+							My articles
+						</h1>
+						<p
+							class='mt-8 text-pretty text-lg font-medium text-zinc-600 dark:text-zinc-400 sm:text-xl/8'
+						>
+							I like to write about programming, chess and more. Here you can find all my articles.
+						</p>
+
+						<div class='mt-8 space-y-20 lg:mt-12 lg:space-y-20'>
+							{
+								posts.map(async (post, index) => {
+									// Eager load first 2-3 images that are likely to be in viewport
+									const loading = index < 3 ? 'eager' : 'lazy'
+									const fetchpriority = index < 2 ? 'high' : 'auto'
+
+									return (
+										<article class='relative isolate flex flex-col gap-8 lg:flex-row'>
+											<div class='relative w-full lg:w-64 lg:shrink-0'>
+												{' '}
+												<Picture
+													src={post.data.heroImage}
+													alt=''
+													loading={loading}
+													fetchpriority={fetchpriority}
+													formats={['avif', 'webp', 'jpeg']}
+													quality={70}
+													widths={[400, 800, 1200]}
+													sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
+													class='rounded-2xl bg-gray-50 object-cover aspect-video w-full sm:aspect-[2/1] lg:aspect-[3/2] max-h-56'
+												/>
+												<div class='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10' />
+											</div>
+											<div>
+												<div class='flex items-center gap-x-4 text-xs'>
+													<time
+														datetime={post.data.pubDate.toLocaleDateString()}
+														class='text-zinc-600 dark:text-zinc-400'
+													>
+														{post.data.pubDate.toLocaleDateString('en-us', {
+															year: 'numeric',
+															month: 'short',
+															day: 'numeric'
+														})}{' '}
+													</time>
+												</div>
+												<div class='group relative max-w-xl'>
+													<h3 class='mt-3 text-lg/6 font-semibold text-zinc-800 dark:text-zinc-100'>
+														<a href={'/blog/' + post.slug}>
+															<span class='absolute inset-0' />
+															{post.data.title}
+														</a>
+													</h3>
+													<p class='mt-5 text-sm/6 text-zinc-600 dark:text-zinc-400'>
+														{post.data.description}
+													</p>
+												</div>
+											</div>
+										</article>
+									)
+								})
+							}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<ListCategories />
-		<h2 class='text-lg font-medium tracking-wide text-end'>Latest articles</h2>
-		<ListPosts FirstBig={true} posts={posts} />
 	</div>
 </Layout>
