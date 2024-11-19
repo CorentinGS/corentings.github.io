@@ -37,7 +37,7 @@
 		"@types/react-dom": "18.3.1",
 		"astro": "4.16.12",
 		"astro-font": "0.1.81",
-		"astro-icon": "^1.1.2",
+		"astro-icon": "1.1.2",
 		"clsx": "2.1.1",
 		"markdown-it": "14.1.0",
 		"mdast-util-to-string": "4.0.0",
@@ -54,7 +54,7 @@
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.1",
-		"@iconify-json/simple-icons": "^1.2.11",
+		"@iconify-json/simple-icons": "1.2.11",
 		"@pagefind/default-ui": "1.2.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.9",
