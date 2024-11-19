@@ -11,14 +11,10 @@ import icon from 'astro-icon'
 
 import playformCompress from '@playform/compress';
 
-import playformInline from '@playform/inline';
-
 // https://astro.build/config
 export default defineConfig({
     site: 'https://corentings.dev',
-    build: {
-        inlineStylesheets: 'never'
-    },
+
     prefetch: true,
     markdown: {
         remarkPlugins: [remarkReadingTime],
@@ -37,7 +33,7 @@ export default defineConfig({
         drafts: true
         }), sitemap({
         lastmod: new Date()
-        }), playformInline(), playformCompress({
+        }), playformCompress({
         Image: false,
     }), compressor()],
     output: 'static'

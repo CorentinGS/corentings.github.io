@@ -31,7 +31,6 @@
 		"@fontsource-variable/syne": "5.1.0",
 		"@headlessui/react": "2.2.0",
 		"@playform/compress": "0.1.6",
-		"@playform/inline": "^0.1.0",
 		"@rollup/plugin-json": "6.1.0",
 		"@types/react": "18.3.12",
 		"@types/react-dom": "18.3.1",
@@ -55,7 +54,6 @@
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.1",
 		"@iconify-json/simple-icons": "1.2.11",
-		"@pagefind/default-ui": "1.2.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.9",
 		"@tailwindcss/line-clamp": "0.4.4",
