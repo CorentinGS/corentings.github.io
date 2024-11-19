@@ -1,9 +1,8 @@
 // HeaderComponent.jsx
 import { useEffect, useRef } from 'react'
-import { Container } from './Container'
-import { MobileNavigation } from './Navigation'
-import { DesktopNavigation } from './Navigation'
 import { Avatar, AvatarContainer } from './Avatar'
+import { Container } from './Container'
+import { DesktopNavigation, MobileNavigation } from './Navigation'
 
 function clamp(number, a, b) {
 	let min = Math.min(a, b)

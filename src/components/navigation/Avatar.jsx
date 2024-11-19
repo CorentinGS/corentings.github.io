@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
-import imgAvatar from '../../assets/avatar.webp'
 import { getImage } from 'astro/assets'
+import imgAvatar from '../../assets/avatar.webp'
 const avatar = await getImage({
 	src: imgAvatar,
 	alt: 'Avatar',
