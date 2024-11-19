@@ -36,63 +36,68 @@ const currentPath = Astro.url.pathname
 		/>
 	</head>
 	<body class='flex h-full bg-zinc-100 dark:bg-zinc-900'>
-	<div class='flex w-full'>
-		<div class='relative flex w-full flex-col'>
-			<!-- Navbar -->
-			<HeaderComponent client:load currentPath={currentPath} />
-		<main transition:animate='fade'>
+		<div class='flex w-full'>
+			<div class='relative flex w-full flex-col'>
+				<!-- Navbar -->
+				<HeaderComponent client:load currentPath={currentPath} />
+				<main transition:animate='fade'>
+					<!-- Page Slot -->
+					<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
+						<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
+							<header class='mb-3 flex flex-col justify-center items-center gap-6'>
+								<div class='flex flex-col gap-2'>
+									<div
+										class='flex items-center justify-center gap-x-1 text-zinc-700 dark:text-zinc-300'
+									>
+										<p class='text-center text-sm text-opacity-50'>
+											Published
+											<FormattedDate date={pubDate} />
+										</p>
+										<p class='text-center text-sm text-opacity-50 font-bold'>
+											- {readTime}
+										</p>
+									</div>
+									<h1
+										class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold text-zinc-800 dark:text-zinc-200'
+									>
+										{title}
+									</h1>
+								</div>
 
-			<!-- Page Slot -->
-			<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
-				<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
-					<header class='mb-3 flex flex-col justify-center items-center gap-6'>
-						<div class='flex flex-col gap-2'>
-							<div class='flex items-center justify-center gap-x-1 text-zinc-700  dark:text-zinc-300'>
-								<p class='text-center text-sm text-opacity-50'>
-									Published
-									<FormattedDate date={pubDate} />
-								</p>
-								<p class='text-center text-sm text-opacity-50 font-bold'>
-									- {readTime}
-								</p>
+								<div
+									class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5 text-zinc-700 dark:text-zinc-300'
+								>
+									{tags.map((tag) => <Tag tag={tag} />)}
+								</div>
+							</header>
+
+							<>
+								{
+									heroImage && (
+										<Image
+											src={heroImage}
+											width={1000}
+											height={700}
+											quality={80}
+											loading='eager'
+											class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
+											alt={`img of ${title}`}
+										/>
+									)
+								}
+							</>
+
+							<hr />
+
+							<div>
+								<slot />
 							</div>
-							<h1 class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold text-zinc-800  dark:text-zinc-200'>
-								{title}
-							</h1>
 						</div>
-
-						<div class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5 text-zinc-700  dark:text-zinc-300'>
-							{tags.map((tag) => <Tag tag={tag} />)}
-						</div>
-					</header>
-
-					<>
-						{
-							heroImage && (
-								<Image
-									src={heroImage}
-									width={1000}
-									height={700}
-									quality={80}
-									loading='eager'
-									class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
-									alt={`img of ${title}`}
-								/>
-							)
-						}
-					</>
-
-					<hr />
-
-					<div>
-						<slot />
-					</div>
-				</div>
-			</article>
-		</main>
-			<!-- Footer -->
-			<Footer />
+					</article>
+				</main>
+				<!-- Footer -->
+				<Footer />
+			</div>
 		</div>
-	</div>
 	</body>
 </html>

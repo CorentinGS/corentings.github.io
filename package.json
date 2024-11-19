@@ -30,7 +30,6 @@
 		"@fontsource-variable/rubik": "5.1.0",
 		"@fontsource-variable/syne": "5.1.0",
 		"@headlessui/react": "2.2.0",
-		"@iconify/json": "2.2.272",
 		"@playform/compress": "0.1.6",
 		"@rollup/plugin-json": "6.1.0",
 		"@types/react": "18.3.12",

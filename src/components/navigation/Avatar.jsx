@@ -1,17 +1,21 @@
 import clsx from 'clsx'
 
-import  imgAvatar  from '../../assets/avatar.webp'
+import imgAvatar from '../../assets/avatar.webp'
 import { getImage } from 'astro/assets'
-const avatar  = await getImage({ src: imgAvatar, alt: 'Avatar',     format: "webp",
+const avatar = await getImage({
+	src: imgAvatar,
+	alt: 'Avatar',
+	format: 'webp',
 	width: 200,
-	height: 200 })
+	height: 200
+})
 
 export function AvatarContainer({ className, ...props }) {
 	return (
 		<div
 			className={clsx(
 				className,
-				'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+				'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
 			)}
 			{...props}
 		/>

@@ -34,7 +34,7 @@ module.exports = {
 				'"Segoe UI Symbol"',
 				'"Noto Color Emoji"'
 			]
-		},
+		}
 	},
 	variants: {
 		extend: {}

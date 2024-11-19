@@ -4,7 +4,8 @@
 
 @layer base {
 	html {
-		font-family: 'Rubik Variable', 'Inter', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		font-family: 'Rubik Variable', 'Inter', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial,
+			sans-serif;
 	}
 
 	h1 {
@@ -43,7 +44,6 @@
 .shadow {
 	box-shadow: -5px 3px 8px 1px rgba(0, 0, 0, 0.12);
 }
-
 
 @layer utilities {
 	/* Chrome, Safari and Opera */

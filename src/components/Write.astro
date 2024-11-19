@@ -26,18 +26,25 @@ import { Picture } from 'astro:assets'
 							posts.map(async (post, index) => {
 								return (
 									<article class='relative isolate flex flex-col gap-8 lg:flex-row'>
-										<div class='relative w-full lg:w-64 lg:shrink-0'> {/* Remove aspect ratio from container */}
+										<div class='relative w-full lg:w-64 lg:shrink-0'>
+											{' '}
 											<Picture
 												src={post.data.heroImage}
 												alt=''
 												class='rounded-2xl bg-gray-50 object-cover aspect-video w-full sm:aspect-[2/1] lg:aspect-[3/2] max-h-56'
 												loading={index < 2 ? 'eager' : 'lazy'}
+												width={400}
+												height={400}
+												formats={['avif', 'webp', 'jpeg']}
 											/>
 											<div class='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10' />
 										</div>
 										<div>
 											<div class='flex items-center gap-x-4 text-xs'>
-												<time datetime={post.data.pubDate.toLocaleDateString()} class='text-zinc-500'>
+												<time
+													datetime={post.data.pubDate.toLocaleDateString()}
+													class='text-zinc-500'
+												>
 													{post.data.pubDate.toLocaleDateString('en-us', {
 														year: 'numeric',
 														month: 'short',

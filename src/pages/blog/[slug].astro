@@ -35,8 +35,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 	headings={headings}
 	readTime={remarkPluginFrontmatter.minutesRead}
 >
-	<div class=' mt-8'>
-
+	<div class='mt-8'>
 		<!-- post -->
 		<article class='max-w-full w-full'>
 			<div class='prose prose-lg md:prose-xl dark:prose-invert mb-12 min-w-full text-justify'>
@@ -45,7 +44,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 
 			<!-- related posts -->
 			<footer>
-				<h2 class='font-bold text-lg text-zinc-800 dark:text-zinc-100  mb-6'>Related articles</h2>
+				<h2 class='font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-6'>Related articles</h2>
 				<ListRelatedPosts posts={relatedPosts} />
 			</footer>
 		</article>

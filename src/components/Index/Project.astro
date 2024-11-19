@@ -2,17 +2,13 @@
 import { Picture } from 'astro:assets'
 
 const { name, stack, description, link, image, lazy } = Astro.props
-
-function to_lower(str: string) {
-	return str.toLowerCase()
-}
 ---
 
 <article class='flex flex-col items-start justify-start'>
 	<div class='relative w-full'>
 		<Picture
 			src={image}
-			formats={['avif', 'webp']}
+			formats={['avif', 'webp', 'jpeg']}
 			quality={60}
 			loading={lazy ? 'lazy' : 'eager'}
 			width={400}
