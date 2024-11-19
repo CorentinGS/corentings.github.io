@@ -32,25 +32,27 @@ export const prerender = true
 
 						<!-- Grid -->
 						<div class='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-							<div class='p-4 border border-gray-200 rounded-lg dark:border-neutral-700'>
-								<Image
-									alt=''
-									loading='lazy'
-									width='90'
-									height='90'
-									decoding='async'
-									class='rounded-full object-cover shrink-0 size-14 mb-3'
-									src={iuImg}
-									quality='60'
-								/>
+							<div class='p-4 border border-zinc-200 rounded-lg dark:border-zinc-700'>
+								<div class="bg-zinc-200 dark:bg-zinc-300 rounded-full p-1.5 mb-3 h-16 w-16 overflow-hidden flex justify-center">
+									<Image
+										alt=''
+										loading='lazy'
+										width='90'
+										height='90'
+										decoding='async'
+										class='rounded-full object-cover shrink-0 size-14 mb-3 mx-auto'
+										src={iuImg}
+										quality='60'
+									/>
+								</div>
 
-								<h3 class='mb-1 text-xs text-gray-600 dark:text-neutral-400'>2022 - in progress</h3>
+								<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2022 - in progress</h3>
 
-								<p class='font-semibold text-sm text-gray-800 dark:text-neutral-200'>
+								<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
 									Bachelor of Science - BS Computer Science
 								</p>
 
-								<p class='mt-1 text-sm text-gray-600 dark:text-neutral-400'>
+								<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
 									IU International University of Applied Sciences
 								</p>
 							</div>
