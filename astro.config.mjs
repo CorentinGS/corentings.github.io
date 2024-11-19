@@ -37,7 +37,9 @@ export default defineConfig({
         drafts: true
         }), sitemap({
         lastmod: new Date()
-        }), playformInline(), playformCompress(), compressor()],
+        }), playformInline(), playformCompress({
+        Image: false,
+    }), compressor()],
     output: 'static'
     // adapter: cloudflare()
 })
