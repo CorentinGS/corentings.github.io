@@ -60,7 +60,7 @@ export const prerender = true
 					<div class='mt-10 sm:mt-14'>
 						<h2 class='mb-3 font-medium text-zinc-800 dark:text-zinc-200'>Testimonials</h2>
 						<div class='mx-auto mt-10 flow-root max-w-2xl lg:mx-0 lg:max-w-none'>
-							<div class='-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-2'>
+							<div class='grid grid-cols-1 gap-8 sm:grid-cols-2'>
 								<Testimony
 									image={stouufImg}
 									name='Stephane Bressac'
@@ -73,7 +73,7 @@ export const prerender = true
 									company='Freelancer'
 									content="I've had the opportunity to work with Corentin on various projects, always with an eye for detail and finding the best solutions. Corentin will guide you in developing a resilient, high-performance backend"
 								/>
-								<!-- More testimonials... -->
+								{/* More testimonials... */}
 							</div>
 						</div>
 						<!-- End Grid -->

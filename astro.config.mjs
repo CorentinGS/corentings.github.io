@@ -6,11 +6,11 @@ import { defineConfig } from 'astro/config'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 
 import react from '@astrojs/react'
-
 import icon from 'astro-icon'
 
-
 import playformInline from '@playform/inline';
+
+import playformCompress from '@playform/compress';
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,7 +36,9 @@ export default defineConfig({
         drafts: true
         }), sitemap({
         lastmod: new Date()
-        }), playformInline(), compressor()],
+        }), playformCompress({
+        Image: false
+    }), playformInline(), compressor()],
     output: 'static'
     // adapter: cloudflare()
 })
