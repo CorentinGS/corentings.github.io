@@ -73,7 +73,7 @@
 		"npm-run-all2": "7.0.1",
 		"organize-imports-cli": "0.10.0",
 		"postcss": "8.4.49",
-		"prettier": "3.4.0",
+		"prettier": "3.4.1",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.9",
 		"slugify": "1.6.6",
