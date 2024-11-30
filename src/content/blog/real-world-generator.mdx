@@ -1,0 +1,146 @@
+---
+author: Corentin GS
+heroImage: ../../assets/blog/real_world_generator.webp
+category: Programming
+description: "Explore advanced applications of the Generator pattern in Go with a real-world example of generating test data for a web service."
+pubDate: "2024-12-05"
+tags:
+ - Golang
+ - Concurrency
+title: "Advanced Generator Pattern in Go: Test Data Generation"
+---
+
+## Advanced Generator Pattern: Test Data for Web Services
+
+<span class={"text-teal-700 dark:text-teal-200"}>Difficulty Level: Intermediate</span>
+
+### Introduction
+
+Building upon our previous exploration of the Generator pattern, let's dive into a more advanced real-world application: generating test data for a web service. This pattern is particularly useful for creating large datasets to stress test APIs or simulate high-load scenarios.
+
+### When to Use
+
+- Stress testing web services
+- Simulating high-load scenarios for databases
+- Creating diverse datasets for QA environments
+- Benchmarking system performance
+
+### Why to Use
+
+- **Scalability**: Easily generate large volumes of test data
+- **Customization**: Tailor data generation to specific test scenarios
+- **Realism**: Create data that closely mimics production patterns
+- **Efficiency**: Generate data on-the-fly, reducing storage needs
+
+### How it Works
+
+1. Define structures representing your API's data models
+2. Create generator functions for each data type
+3. Combine generators to create complex, interrelated data sets
+4. Use channels to stream generated data to consumers (e.g., API clients)
+
+### Advanced Example: E-commerce API Test Data Generator
+
+```go
+type Product struct {
+    ID    int
+    Name  string
+    Price float64
+}
+
+type Order struct {
+    ID       int
+    UserID   int
+    Products []Product
+    Total    float64
+}
+
+func productGenerator(count int) <-chan Product {
+    out := make(chan Product)
+    go func() {
+        defer close(out)
+        for i := 0; i < count; i++ {
+            out <- Product{
+                ID:    i + 1,
+                Name:  fmt.Sprintf("Product-%d", i+1),
+                Price: 10.0 + float64(i),
+            }
+        }
+    }()
+    return out
+}
+
+func orderGenerator(userCount, orderPerUser int, products <-chan Product) <-chan Order {
+    out := make(chan Order)
+    go func() {
+        defer close(out)
+        var orderID int
+        for userID := 1; userID <= userCount; userID++ {
+            for i := 0; i < orderPerUser; i++ {
+                orderID++
+                var orderProducts []Product
+                var total float64
+                for j := 0; j < rand.Intn(5)+1; j++ {
+                    product := <-products
+                    orderProducts = append(orderProducts, product)
+                    total += product.Price
+                }
+                out <- Order{
+                    ID:       orderID,
+                    UserID:   userID,
+                    Products: orderProducts,
+                    Total:    total,
+                }
+            }
+        }
+    }()
+    return out
+}
+
+func main() {
+    productChan := productGenerator(1000)
+    orderChan := orderGenerator(100, 5, productChan)
+
+    // Simulate sending orders to an API
+    for order := range orderChan {
+        // In a real scenario, you'd send this to your API
+        fmt.Printf("Sending order %d for user %d with total $%.2f\n", order.ID, order.UserID, order.Total)
+    }
+}
+```
+
+This example demonstrates a more complex use of the Generator pattern to create realistic test data for an e-commerce API. It generates products and orders, simulating a scenario where multiple users are placing orders with varying numbers of products.
+
+### Best Practices and Pitfalls
+
+Best Practices:
+1. Use buffered channels for improved performance when generating large datasets
+2. Implement cancellation mechanisms for long-running generators
+3. Consider using worker pools for parallel data generation in complex scenarios
+4. Seed random number generators for reproducible test data
+
+Pitfalls:
+1. Generating more data than necessary, leading to increased test times
+2. Not closing channels properly, causing goroutine leaks
+3. Overlooking edge cases in data generation, leading to incomplete test coverage
+4. Generating unrealistic data that doesn't reflect real-world scenarios
+
+
+### Summary
+
+The advanced application of the Generator pattern for test data generation showcases its power in creating scalable, customizable, and efficient solutions for testing web services. By leveraging Go's concurrency features, we can create sophisticated data generation pipelines that closely mimic real-world scenarios, enabling thorough and realistic testing of our systems.
+
+### Disclaimer
+
+This article expands on the Generator pattern with a focus on test data generation. While the example provided is more complex, it's still simplified for educational purposes. In real-world applications, additional considerations such as data variety, error handling, and integration with actual API endpoints would be necessary.
+
+For more advanced concurrency patterns and best practices in Go, stay tuned for future articles! 🚀
+
+If you want to experiment with the code examples, you can find them on my [GitHub repository](https://github.com/CorentinGS/golang-articles).
+
+<div class={"text-sm text-zinc-800 dark:text-zinc-200"}>
+	<span property="dct:title">Educational Go Patterns </span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://corentings.dev">Corentin Giaufer Saubert</a>
+	is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International </a><br/>
+	The code examples are licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+	The banner image has been created by (DALL·E) and is licensed under the same license as the article and other graphics.
+</div>

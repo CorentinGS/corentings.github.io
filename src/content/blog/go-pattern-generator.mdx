@@ -1,0 +1,148 @@
+---
+author: Corentin GS
+heroImage: ../../assets/blog/cute_generator.webp
+category: Programming
+description: "Explore the Generator pattern in Go - a powerful concurrency pattern for creating sequences of values. Learn when and how to use it effectively in your Go projects."
+pubDate: "2024-12-03"
+tags:
+ - Golang
+ - Concurrency
+title: "Mastering the Generator Pattern in Go"
+---
+
+
+## Generator Pattern in Go
+
+<span class={"text-teal-700 dark:text-teal-200"}>Difficulty Level: Beginner</span>
+
+### Introduction
+
+The Generator pattern in Go is a powerful concurrency pattern used to create functions that produce a sequence of values. It leverages Go's goroutines and channels to generate data asynchronously, providing an elegant way to work with streams of data or implement iterators.
+
+### When to Use
+
+- Creating sequences of numbers or data
+- Implementing iterators
+- Processing streams of data
+- Generating test data
+- Simulating real-time data sources
+
+### Why to Use
+
+- **Lazy Evaluation**: Values are generated on-demand, saving memory
+- **Encapsulation**: Hides the complexity of data generation
+- **Concurrency**: Allows for asynchronous data production
+- **Flexibility**: Can generate infinite or finite sequences
+- **Composability**: Generators can be chained or combined easily
+
+### How it Works
+
+1. A function creates and returns a channel
+2. The function starts a goroutine that sends values through the channel
+3. The caller receives values from the channel, typically using a for-range loop
+
+### Simple Example
+
+```go
+func evenGenerator(max int) <-chan int {
+    out := make(chan int)
+    go func() {
+        for i := 0; i <= max; i += 2 {
+            out <- i
+        }
+        close(out)
+    }()
+    return out
+}
+
+func main() {
+    for num := range evenGenerator(10) {
+        fmt.Println(num)
+    }
+}
+```
+
+This example creates a generator that produces even numbers up to a specified maximum. The `evenGenerator` function returns a receive-only channel (`<-chan int`). It starts a goroutine that sends even numbers through the channel and closes it when done.
+
+### Real-World Example: Log Line Generator
+
+Let's consider a scenario where we need to generate sample log lines for testing a log analysis system.
+
+```go
+type LogEntry struct {
+    Timestamp time.Time
+    Level     string
+    Message   string
+}
+
+func logGenerator(count int) <-chan LogEntry {
+    out := make(chan LogEntry)
+    go func() {
+        levels := []string{"INFO", "WARNING", "ERROR"}
+        messages := []string{
+            "User logged in",
+            "Failed login attempt",
+            "Database connection lost",
+            "API request received",
+            "Cache miss",
+        }
+        for i := 0; i < count; i++ {
+            out <- LogEntry{
+                Timestamp: time.Now().Add(time.Duration(i) * time.Second),
+                Level:     levels[rand.Intn(len(levels))],
+                Message:   messages[rand.Intn(len(messages))],
+            }
+            time.Sleep(100 * time.Millisecond) // Simulate delay between log entries
+        }
+        close(out)
+    }()
+    return out
+}
+
+func main() {
+    for entry := range logGenerator(5) {
+        fmt.Printf("[%s] %s: %s\n", entry.Timestamp.Format(time.RFC3339), entry.Level, entry.Message)
+    }
+}
+```
+
+This generator creates a stream of log entries, simulating real-world log generation. It's useful for testing log processing systems, allowing developers to generate a controlled stream of diverse log entries.
+
+### Best Practices and Pitfalls
+
+Best Practices:
+1. Always close the channel when generation is complete
+2. Use receive-only channels (`<-chan`) as return types
+3. Consider using context for cancellation in long-running generators
+4. Implement error handling for robust generators
+
+Pitfalls:
+1. Forgetting to close channels, leading to goroutine leaks
+2. Creating infinite generators without proper termination conditions
+3. Blocking indefinitely on channel operations without timeout mechanisms
+4. Overusing generators for simple, finite sequences where slices might suffice
+
+### Related Patterns
+
+- Pipeline Pattern: Often used in conjunction with generators to process data streams
+- Fan-Out/Fan-In Pattern: Can distribute generator output to multiple consumers
+- Iterator Pattern: Generators can be seen as concurrent iterators
+
+### Summary
+
+The Generator pattern in Go provides a powerful way to create sequences or streams of data asynchronously. By leveraging goroutines and channels, it offers lazy evaluation, encapsulation of complex logic, and seamless integration with Go's concurrency model. Whether you're working with infinite sequences, simulating data sources, or implementing iterators, the Generator pattern offers a flexible and efficient solution.
+
+### Disclaimer
+
+This article provides an introduction to the Generator pattern in Go. While the pattern is powerful, it's important to consider the specific needs of your application when implementing it. For production use, additional error handling and optimizations may be necessary.
+
+For more advanced concurrency patterns and best practices in Go, stay tuned for future articles! 🚀
+
+If you want to experiment with the code examples, you can find them on my [GitHub repository](https://github.com/CorentinGS/golang-articles).
+
+<div class={"text-sm text-zinc-800 dark:text-zinc-200"}>
+	<span property="dct:title">Educational Go Patterns </span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://corentings.dev">Corentin Giaufer Saubert</a>
+	is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International </a><br/>
+	The code examples are licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+	The banner image has been created by (DALL·E) and is licensed under the same license as the article and other graphics.<br/>
+ </div>
