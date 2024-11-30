@@ -2,8 +2,9 @@
 import Layout from '../../layouts/Layout.astro'
 import { getPosts } from '../../utils'
 import { Picture } from 'astro:assets'
+import { getPostsWithoutFuture } from '../../utils/post'
 
-const posts = await getPosts(10)
+const posts = await getPostsWithoutFuture(10)
 export const prerender = true
 ---
 

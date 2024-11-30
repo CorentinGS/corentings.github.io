@@ -3,8 +3,9 @@ import type { CollectionEntry } from 'astro:content'
 
 import { getPosts } from '../utils'
 
-const posts: CollectionEntry<'blog'>[] = await getPosts(3)
+const posts: CollectionEntry<'blog'>[] = await getPostsWithoutFuture(3)
 import { Picture } from 'astro:assets'
+import { getPostsWithoutFuture } from '../utils/post'
 ---
 
 <div class='sm:px-8 mt-16'>
