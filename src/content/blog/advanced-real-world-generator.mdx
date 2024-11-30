@@ -1,0 +1,192 @@
+---
+author: Corentin GS
+heroImage: ../../assets/blog/producer_consumer.png
+category: Programming
+description: "Explore advanced applications of the Generator pattern in Go for consuming large datasets and simulating data streams for testing."
+pubDate: "2024-12-06"
+tags:
+ - Golang
+ - Concurrency
+ - Streams
+ - Testing
+title: "Advanced Generator Pattern: Consuming and Testing Data Streams"
+---
+
+
+## Generator Pattern: Consuming and Testing Data Streams
+
+<span class={"text-teal-700 dark:text-teal-200"}>Difficulty Level: Advanced</span>
+
+### Introduction
+
+Expanding on our previous discussions of the Generator pattern, we'll explore two advanced applications: consuming large datasets lazily and simulating data streams for testing. These techniques are crucial for efficient data processing and robust application testing.
+
+### When to Use
+
+- Processing large datasets that don't fit in memory
+- Simulating data sources for testing
+- Implementing ETL (Extract, Transform, Load) processes
+- Creating reproducible test scenarios for data processing pipelines
+
+### Why to Use
+
+- **Memory Efficiency**: Process large datasets without loading everything into memory
+- **Testability**: Create controlled environments for testing data processing logic
+- **Flexibility**: Easily switch between real and simulated data sources
+- **Reproducibility**: Generate consistent test cases for data processing scenarios
+
+### How it Works
+
+1. Create generator functions that yield data items one at a time
+2. Use channels to stream data from the source to the consumer
+3. Implement lazy loading for large datasets
+4. Create mock data generators for testing scenarios
+
+### Example 1: Lazy Loading of Large Datasets
+
+```go
+type DataItem struct {
+    ID   int
+    Data string
+}
+
+// lazyDataLoader simulates loading a large dataset lazily
+func lazyDataLoader(filePath string) <-chan DataItem {
+    out := make(chan DataItem)
+    go func() {
+        defer close(out)
+        // Simulate opening a large file
+        fmt.Printf("Opening file: %s\n", filePath)
+
+        // Simulate reading the file line by line
+        for i := 0; i < 1000000; i++ {
+            // Simulate processing delay for each item
+            time.Sleep(1 * time.Millisecond)
+            out <- DataItem{
+                ID:   i + 1,
+                Data: fmt.Sprintf("Data from line %d", i+1),
+            }
+            if i%100000 == 0 {
+                fmt.Printf("Processed %d items\n", i)
+            }
+        }
+    }()
+    return out
+}
+
+func processData(data <-chan DataItem) {
+    for item := range data {
+        // Simulate data processing
+        processedData := fmt.Sprintf("Processed: %s (ID: %d)", item.Data, item.ID)
+        fmt.Println(processedData)
+    }
+}
+
+func main() {
+    dataStream := lazyDataLoader("large_dataset.txt")
+    processData(dataStream)
+}
+```
+
+This example demonstrates lazy loading of a large dataset, processing items one at a time without loading the entire dataset into memory.
+
+### Example 2: Simulating Data Streams for Testing
+
+```go
+type DataItem struct {
+    ID   int
+    Data string
+}
+
+// mockDataStream simulates a data source (e.g., a file, queue, or network stream)
+func mockDataStream(count int) <-chan DataItem {
+    out := make(chan DataItem)
+    go func() {
+       defer close(out)
+       for i := 0; i < count; i++ {
+          // Simulate reading from a data source
+          time.Sleep(100 * time.Millisecond)
+          out <- DataItem{
+             ID:   i + 1,
+             Data: fmt.Sprintf("Data-%d", i+1),
+          }
+       }
+    }()
+    return out
+}
+
+// dataGenerator consumes the mock stream and yields processed data
+func dataGenerator(stream <-chan DataItem) <-chan string {
+    out := make(chan string)
+    go func() {
+       defer close(out)
+       for item := range stream {
+          // Process the data item
+          processedData := fmt.Sprintf("Processed: %s (ID: %d)", item.Data, item.ID)
+          out <- processedData
+       }
+    }()
+    return out
+}
+
+type StreamGenerator struct{}
+
+func (g StreamGenerator) Execute() {
+    // Create a mock data stream
+    dataStream := mockDataStream(10)
+
+    // Create a generator to process the stream
+    processedDataGen := dataGenerator(dataStream)
+
+    // Consume and print the processed data
+    for data := range processedDataGen {
+       fmt.Println(data)
+    }
+}
+```
+
+This example demonstrates a more structured approach to using the Generator pattern for testing data processing pipelines:
+
+- mockDataStream simulates a data source by generating items with controlled timing
+- dataGenerator shows how to process a stream of data items and transform them
+- The StreamGenerator type provides a clean interface for executing the pipeline and can be replaced with real data sources in production using DI (Dependency Injection)
+- Each stage of the pipeline is clearly separated and testable
+
+### Best Practices and Pitfalls
+
+Best Practices:
+1. Use buffered channels for improved performance when processing large streams
+2. Implement timeout mechanisms for long-running operations
+3. Use the `context` package for cancellation in long-running generators
+4. Create configurable mock generators for diverse test scenarios
+
+Pitfalls:
+1. Not handling errors or edge cases in data generation
+2. Overlooking resource cleanup in generators (e.g., closing file handles)
+3. Creating overly complex mock generators that don't reflect real-world scenarios
+4. Ignoring performance implications in lazy loading implementations
+
+### Related Patterns
+
+- Pipeline Pattern: Chain multiple generators for complex data processing workflows
+- Fan-Out/Fan-In: Distribute stream processing across multiple workers
+- Circuit Breaker: Handle failures in data stream processing
+
+### Summary
+
+The Generator pattern proves invaluable for both consuming large datasets efficiently and creating robust test environments for data processing logic. By leveraging Go's concurrency features, we can create flexible, memory-efficient, and testable data processing pipelines that can handle real-world scenarios and simulated test cases alike.
+
+### Disclaimer
+
+While these examples demonstrate the power of the Generator pattern for data processing and testing, real-world implementations may require additional error handling, resource management, and optimizations. Always consider the specific requirements and constraints of your application when applying these patterns.
+
+For more advanced concurrency patterns and best practices in Go, stay tuned for future articles! 🚀
+
+If you want to experiment with the code examples, you can find them on my [GitHub repository](https://github.com/CorentinGS/golang-articles).
+
+<div class={"text-sm text-zinc-800 dark:text-zinc-200"}>
+	<span property="dct:title">Educational Go Patterns </span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://corentings.dev">Corentin Giaufer Saubert</a>
+	is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International </a><br/>
+	The code examples are licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+	The banner image has been created by (DALL·E) and is licensed under the same license as the article and other graphics.
+</div>
