@@ -6,7 +6,8 @@ import sanitizeHtml from 'sanitize-html'
 const parser = new MarkdownIt()
 
 export async function GET(context) {
-	const blog = await getCollection('blog')
+
+	const blog = (await getCollection('blog')).filter(post => !post.data.draft && new Date(post.data.pubDate) <= new Date())
 	return rss({
 		title: "Corentin GS's blog",
 		stylesheet: '/styles.xsl',
