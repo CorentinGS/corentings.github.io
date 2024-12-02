@@ -7,7 +7,7 @@ const parser = new MarkdownIt()
 
 export async function GET(context) {
 
-	const blog = (await getCollection('blog')).filter(post => !post.data.draft && new Date(post.data.pubDate) <= new Date())
+	const blog = (await getCollection('blog')).filter(post => !post.data.draft && new Date(post.data.pubDate) <= new Date()).sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
 	return rss({
 		title: "Corentin GS's blog",
 		stylesheet: '/styles.xsl',
