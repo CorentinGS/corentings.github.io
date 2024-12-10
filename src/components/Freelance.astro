@@ -3,88 +3,100 @@ import { Picture } from 'astro:assets'
 import imgTalk from '../assets/talk1.webp'
 ---
 
-<div class='sm:px-8 mt-6'>
-	<div class='mx-auto w-full max-w-7xl lg:px-8'>
-		<div class='relative px-4 sm:px-8 lg:px-12'>
-			<div
-				class='mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:max-w-5xl lg:flex-row'
-			>
-				<div class='w-full lg:max-w-lg lg:flex-auto'>
-					<h2 class='text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100'>
-						My expertise
-					</h2>
-					<p
-						class='mt-8 text-pretty text-lg font-medium text-zinc-600 dark:text-zinc-400 sm:text-xl/8'
-					>
-						I'm a freelance backend developer and I've been working on several projects for the past
-						years.
-					</p>
+<section class='relative bg-white dark:bg-zinc-900' aria-labelledby='expertise-heading'>
+	<div class='mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32'>
+		<div class='flex flex-col gap-16 lg:flex-row lg:items-start lg:justify-between'>
+			{/* Left Column */}
+			<div class='flex flex-col lg:w-[40%]'>
+				<h2
+					id='expertise-heading'
+					class='text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl'
+				>
+					My expertise
+				</h2>
 
-					<Picture
-						alt=''
-						loading='lazy'
-						width='512'
-						height='512'
-						formats={['avif', 'webp']}
-						decoding='async'
-						quality='60'
-						class='mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover object-top grayscale lg:aspect-auto lg:h-[28.5rem]'
-						src={imgTalk}
-					/>
-				</div>
-				<div class='w-full lg:max-w-xl lg:flex-auto'>
-					<h3 class='sr-only'>List of proposed services</h3>
-					<ul class='-my-8 divide-y divide-zinc-100'>
-						<li class='py-8'>
-							<dl class='relative flex flex-wrap gap-x-3'>
-								<dt class='sr-only'>Service</dt>
-								<dd
-									class='w-full flex-none text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-200'
-								>
-									<div>
-										Expert Backend Solutions
-										<span class='absolute inset-0' aria-hidden='true'></span>
-									</div>
-								</dd>
-								<dt class='sr-only'>Description</dt>
-								<dd
-									class='mt-2 w-full flex-none text-pretty text-base/7 font-medium text-zinc-600 dark:text-zinc-400'
-								>
-									Do you need high-quality backend solutions? As an experienced Golang developer, I
-									craft robust backends with high unit/integration test coverage, ensuring excellent
-									performance with fast deployment and a small binary.
-								</dd>
-							</dl>
-						</li>
-						<li class='py-8'>
-							<dl class='relative flex flex-wrap gap-x-3'>
-								<dt class='sr-only'>Service</dt>
-								<dd
-									class='w-full flex-none text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-200'
-								>
-									<div>
-										Low-JS, High-Performance Websites
-										<span class='absolute inset-0' aria-hidden='true'></span>
-									</div>
-								</dd>
-								<dt class='sr-only'>Description</dt>
-								<dd
-									class='mt-2 w-full flex-none text-pretty text-base/7 font-medium text-zinc-600 dark:text-zinc-400'
-								>
-									Want captivating, low-footprint websites? I create visually stunning, highly
-									performant sites using Astro and HTMX. These technologies are perfect for
-									cost-effective solutions that don't sacrifice speed or functionality.
-								</dd>
-							</dl>
-						</li>
-					</ul>
-					<div class='mt-8 flex border-t border-gray-100 pt-8'>
-						<a href='/resume' class='text-sm/6 font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-500'>
-							View my experiences <span aria-hidden='true'>&rarr;</span></a
-						>
-					</div>
+				<p class='mt-6 text-lg font-medium text-zinc-600 dark:text-zinc-400'>
+					I'm a freelance backend developer and I've been working on several projects for the past
+					years.
+				</p>
+
+				<Picture
+					src={imgTalk}
+					alt='Speaking at a tech conference'
+					width={800}
+					height={800}
+					formats={['avif', 'webp']}
+					class='mt-12 aspect-[4/3] w-full rounded-3xl object-cover grayscale lg:aspect-[3/4] lg:h-[40rem] object-top'
+					loading='lazy'
+					decoding='async'
+				/>
+			</div>
+
+			{/* Right Column */}
+			<div class='lg:w-[50%]'>
+				<h3 class='sr-only'>Services offered</h3>
+				<ul class='space-y-12 divide-y divide-zinc-100 dark:divide-zinc-800'>
+					<li class='pt-12 first:pt-0'>
+						<article class='group relative'>
+							<h4 class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'>
+								Expert Backend Solutions
+							</h4>
+							<p class='mt-4 text-base/relaxed font-medium text-zinc-600 dark:text-zinc-400'>
+								Do you need high-quality backend solutions? As an experienced Golang developer, I
+								craft robust backends with high unit/integration test coverage, ensuring excellent
+								performance with fast deployment and a small binary.
+							</p>
+						</article>
+					</li>
+					<li class='pt-12'>
+						<article class='group relative'>
+							<h4 class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'>
+								Low-JS, High-Performance Websites
+							</h4>
+							<p class='mt-4 text-base/relaxed font-medium text-zinc-600 dark:text-zinc-400'>
+								Want captivating, low-footprint websites? I create visually stunning, highly
+								performant sites using Astro and HTMX. These technologies are perfect for
+								cost-effective solutions that don't sacrifice speed or functionality.
+							</p>
+						</article>
+					</li>
+					<li class='pt-12'>
+						<article class='group relative'>
+							<h4 class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'>
+								Performance Optimization Specialist
+							</h4>
+							<p class='mt-4 text-base/relaxed font-medium text-zinc-600 dark:text-zinc-400'>
+								Do you need high-performance backend solutions? I specialize in crafting efficient
+								systems with optimized data structures, minimal allocations, and comprehensive
+								benchmarking. My solutions are built for scale, ensuring maximum throughput with
+								minimal resource usage.
+							</p>
+						</article>
+					</li>
+					<li class='pt-12'>
+						<article class='group relative'>
+							<h4 class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'>
+								Cloud Infrastructure Development
+							</h4>
+							<p class='mt-4 text-base/relaxed font-medium text-zinc-600 dark:text-zinc-400'>
+								Looking for scalable cloud solutions? I develop cloud-native applications with a
+								focus on containerization and microservices architecture. Using modern DevOps
+								practices, I create reliable, scalable systems that grow with your needs.
+							</p>
+						</article>
+					</li>
+				</ul>
+
+				<div class='mt-12 flex border-t border-zinc-100 pt-6 dark:border-zinc-800'>
+					<a
+						href='/resume'
+						class='group inline-flex items-center gap-2 text-base font-medium text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300'
+					>
+						View my experiences
+						<span aria-hidden='true' class='transition group-hover:translate-x-1'>→</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>

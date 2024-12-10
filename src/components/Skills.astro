@@ -2,31 +2,45 @@
 import { Icon } from 'astro-icon/components'
 ---
 
-<div class='py-16 sm:py-24 mx-auto w-full max-w-7xl lg:px-8'>
-	<div class='mx-auto px-6 lg:px-8'>
+<section class='relative bg-white dark:bg-zinc-900' aria-labelledby='skills-heading'>
+	<div class='mx-auto max-w-7xl px-6 py-24 lg:px-8'>
+		<header>
+			<h2 id='skills-heading' class='sr-only'>Technical Skills</h2>
+		</header>
+
 		<div
-			class='mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5'
+			class='mt-12 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-5 lg:gap-x-10'
 		>
 			<Icon
 				name='fa6-brands:golang'
-				class='col-span-2 h-14 w-full object-contain lg:col-span-1 text-zinc-800 dark:text-zinc-200'
+				class='h-14 w-full object-contain text-zinc-800 dark:text-zinc-200 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400'
+				aria-label='Golang Programming Language'
+				role='img'
 			/>
 			<Icon
 				name='fa6-brands:docker'
-				class='col-span-2 h-14 w-full object-contain lg:col-span-1 text-zinc-800 dark:text-zinc-200'
+				class='h-14 w-full object-contain text-zinc-800 dark:text-zinc-200 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400'
+				aria-label='Docker Containerization'
+				role='img'
 			/>
 			<Icon
 				name='fa6-brands:python'
-				class='col-span-2 h-14 w-full object-contain lg:col-span-1 text-zinc-800 dark:text-zinc-200'
+				class='h-14 w-full object-contain text-zinc-800 dark:text-zinc-200 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400'
+				aria-label='Python Programming Language'
+				role='img'
 			/>
 			<Icon
 				name='fa6-brands:linux'
-				class='col-span-2 h-14 w-full object-contain lg:col-span-1 text-zinc-800 dark:text-zinc-200'
+				class='h-14 w-full object-contain text-zinc-800 dark:text-zinc-200 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400'
+				aria-label='Linux Operating System'
+				role='img'
 			/>
 			<Icon
 				name='simple-icons:htmx'
-				class='col-span-2 h-14 w-full object-contain lg:col-span-1 text-zinc-800 dark:text-zinc-200'
+				class='h-14 w-full object-contain text-zinc-800 dark:text-zinc-200 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400'
+				aria-label='HTMX Framework'
+				role='img'
 			/>
 		</div>
 	</div>
-</div>
+</section>

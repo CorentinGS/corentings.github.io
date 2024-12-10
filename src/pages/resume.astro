@@ -1,87 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro'
-
 import { Image } from 'astro:assets'
 import Experiences from '../components/Experiences.astro'
-
-import iuImg from '../assets/iu_logo.webp'
 import Testimony from '../components/Testimony.astro'
 
+import iuImg from '../assets/iu_logo.webp'
 import gnarkImg from '../assets/david.webp'
 import stouufImg from '../assets/stouuf2.webp'
 
 export const prerender = true
 ---
 
-<Layout title='Resume' description='My Resume'>
-	<div class='sm:px-8 mt-9'>
-		<div class='mx-auto w-full max-w-7xl lg:px-8'>
-			<div class='relative px-4 sm:px-8 lg:px-12'>
-				<div class='mx-auto max-w-2xl lg:max-w-5xl'>
-					<div class='max-w-2xl'>
-						<h1
-							class='text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100'
-						>
-							My Resume
-						</h1>
-					</div>
+<Layout
+	title='Resume | CorentinGS'
+	description='Professional experience, education, and testimonials of Corentin Giaufer Saubert - Backend Developer specializing in Golang'
+>
+	<section class='relative bg-white dark:bg-zinc-900' aria-labelledby='resume-heading'>
+		<div class='mx-auto max-w-7xl px-6 py-24 lg:px-8'>
+			<div class='w-full'>
+				<header class='max-w-2xl'>
+					<h1
+						id='resume-heading'
+						class='text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl'
+					>
+						My Resume
+					</h1>
+				</header>
 
-					<Experiences />
-					<div class='mt-10 sm:mt-14'>
-						<h2 class='mb-3 font-medium text-zinc-800 dark:text-zinc-200'>Education</h2>
+				<Experiences />
 
-						<!-- Grid -->
-						<div class='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-							<div class='p-4 border border-zinc-200 rounded-lg dark:border-zinc-700'>
-								<div class="bg-zinc-200 dark:bg-zinc-300 rounded-full p-1.5 mb-3 h-16 w-16 overflow-hidden flex justify-center">
-									<Image
-										alt=''
-										loading='lazy'
-										width='90'
-										height='90'
-										decoding='async'
-										class='rounded-full object-cover shrink-0 size-14 mb-3 mx-auto'
-										src={iuImg}
-										quality='60'
-									/>
-								</div>
+				<section class='mt-16' aria-labelledby='education-heading'>
+					<h2 id='education-heading' class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'>
+						Education
+					</h2>
 
-								<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2022 - in progress</h3>
-
-								<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
-									Bachelor of Science - BS Computer Science
-								</p>
-
-								<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-									IU International University of Applied Sciences
-								</p>
-							</div>
-						</div>
-						<!-- End Grid -->
-					</div>
-					<div class='mt-10 sm:mt-14'>
-						<h2 class='mb-3 font-medium text-zinc-800 dark:text-zinc-200'>Testimonials</h2>
-						<div class='mx-auto mt-10 flow-root max-w-2xl lg:mx-0 lg:max-w-none'>
-							<div class='grid grid-cols-1 gap-8 sm:grid-cols-2'>
-								<Testimony
-									image={stouufImg}
-									name='Stephane Bressac'
-									company='Coach & Streamer'
-									content='Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more. His work is meticulous, and on top of that, he is very friendly, attentive, and available.'
+					<div class='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6'>
+						<article class='p-6 border border-zinc-200 dark:border-zinc-800 rounded-2xl'>
+							<div
+								class='bg-zinc-100 dark:bg-zinc-800 rounded-full p-1.5 h-16 w-16 mb-4 overflow-hidden flex items-center justify-center'
+							>
+								<Image
+									src={iuImg}
+									alt='IU International University logo'
+									width={90}
+									height={90}
+									class='rounded-full object-cover size-14'
+									loading='lazy'
+									decoding='async'
 								/>
-								<Testimony
-									image={gnarkImg}
-									name='David Barbier'
-									company='Freelancer'
-									content="I've had the opportunity to work with Corentin on various projects, always with an eye for detail and finding the best solutions. Corentin will guide you in developing a resilient, high-performance backend"
-								/>
-								{/* More testimonials... */}
 							</div>
-						</div>
-						<!-- End Grid -->
+
+							<time class='block text-sm text-zinc-600 dark:text-zinc-400'>
+								2022 - in progress
+							</time>
+
+							<h3 class='mt-2 font-semibold text-zinc-900 dark:text-zinc-100'>
+								Bachelor of Science - BS Computer Science
+							</h3>
+
+							<p class='mt-1 text-zinc-600 dark:text-zinc-400'>
+								IU International University of Applied Sciences
+							</p>
+						</article>
 					</div>
-				</div>
+				</section>
+
+				<section class='mt-16' aria-labelledby='testimonials-heading'>
+					<h2
+						id='testimonials-heading'
+						class='text-xl font-semibold text-zinc-900 dark:text-zinc-100'
+					>
+						Testimonials
+					</h2>
+
+					<div class='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2'>
+						<Testimony
+							image={stouufImg}
+							name='Stephane Bressac'
+							company='Coach & Streamer'
+							content='Corentin took care of creating my website as well as everything I needed in terms of graphics, audio, and more. His work is meticulous, and on top of that, he is very friendly, attentive, and available.'
+						/>
+						<Testimony
+							image={gnarkImg}
+							name='David Barbier'
+							company='Freelancer'
+							content="I've had the opportunity to work with Corentin on various projects, always with an eye for detail and finding the best solutions. Corentin will guide you in developing a resilient, high-performance backend"
+						/>
+					</div>
+				</section>
 			</div>
 		</div>
-	</div>
+	</section>
 </Layout>

@@ -1,13 +1,18 @@
 ---
-import { HeaderComponent } from '../components/navigation/Header'
+import Header from '../components/navigation/Header'
 import BaseHead from '../components/utils/BaseHead.astro'
 import Footer from '../components/utils/Footer.astro'
+
 export interface Props {
 	title: string
 	description: string
+	type?: 'website' | 'article' | 'profile'
+	keywords?: string[]
+	ogImage?: string
+	articleDate?: string
 }
 
-const { title, description } = Astro.props
+const { title, description, type = 'website', keywords = [], ogImage, articleDate } = Astro.props
 
 const currentPath = Astro.url.pathname
 ---
@@ -15,18 +20,22 @@ const currentPath = Astro.url.pathname
 <!doctype html>
 <html lang='en' class='scroll-smooth'>
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead
+			title={title}
+			description={description}
+			type={type}
+			keywords={keywords}
+			ogImage={ogImage}
+			articleDate={articleDate}
+		/>
 	</head>
 	<body class='flex h-full bg-zinc-100 dark:bg-zinc-900'>
 		<div class='flex w-full'>
 			<div class='relative flex w-full flex-col'>
-				<!-- Navbar -->
-				<HeaderComponent client:load currentPath={currentPath} />
-				<main transition:animate='initial' class='flex-auto'>
-					<!-- Page Slot -->
+				<Header currentPath={currentPath} client:load />
+				<main id='main-content' transition:animate='initial' class='flex-auto'>
 					<slot />
 				</main>
-				<!-- Footer -->
 				<Footer />
 			</div>
 		</div>

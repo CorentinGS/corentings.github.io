@@ -1,37 +1,59 @@
 ---
 import { Picture } from 'astro:assets'
 
-const { name, stack, description, link, image, lazy } = Astro.props
+interface Props {
+	name: string;
+	stack: string;
+	description: string;
+	link: string;
+	image: ImageMetadata;
+	lazy?: boolean;
+}
+
+const { name, stack, description, link, image, lazy = true } = Astro.props
 ---
 
-<article class='flex flex-col items-start justify-start'>
-	<div class='relative w-full'>
+<article
+	class="group flex flex-col"
+	aria-labelledby={`project-${name.toLowerCase().replace(/\s+/g, '-')}`}
+>
+	<div class="relative w-full overflow-hidden rounded-2xl">
 		<Picture
 			src={image}
-			formats={['avif', 'webp', 'jpeg']}
-			quality={60}
+			formats={['avif', 'webp']}
+			width={800}
+			height={600}
+			alt={`Screenshot or logo of ${name} project`}
+			class="aspect-[3/2] w-full object-cover transition duration-300 group-hover:scale-105"
 			loading={lazy ? 'lazy' : 'eager'}
-			width={400}
-			height={400}
-			alt=''
-			class='aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]'
+			decoding={lazy ? 'async' : 'sync'}
 		/>
-		<div class='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
+		<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10"></div>
 	</div>
-	<div class='max-w-xl'>
-		<div class='mt-8 flex items-center gap-x-4 text-xs'>
-			<span class='text-zinc-600 dark:text-zinc-400'>{stack}</span>
-		</div>
-		<div class='group relative'>
-			<h3 class='mt-3 text-lg/6 font-semibold text-zinc-800 dark:text-zinc-100'>
-				<a href={link}>
-					<span class='absolute inset-0'></span>
-					{name}
-				</a>
-			</h3>
-			<p class='mt-5 text-sm/6 text-zinc-600 dark:text-zinc-400'>
-				{description}
+
+	<div class="mt-8">
+		<div class="flex items-center gap-x-4 text-sm">
+			<p class="text-zinc-600 dark:text-zinc-400" aria-label="Technologies used">
+				{stack}
 			</p>
 		</div>
+
+		<h2
+			id={`project-${name.toLowerCase().replace(/\s+/g, '-')}`}
+			class="mt-4 text-xl font-semibold text-zinc-900 dark:text-zinc-100"
+		>
+			<a
+				href={link}
+				class="outline-offset-4 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{name}
+			</a>
+		</h2>
+
+		<p class="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+			{description}
+		</p>
 	</div>
 </article>

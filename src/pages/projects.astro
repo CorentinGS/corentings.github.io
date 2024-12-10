@@ -1,94 +1,93 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Project from '../components/Index/Project.astro'
+import { Image } from 'astro:assets'
 
+// Import images
 import imgMemnixLogo from '../assets/moutmout.webp'
 import imgGauntlet from '../assets/gauntlet.webp'
 import imgUcaEdt from '../assets/edt-uca.webp'
 import imgStouufWebsite from '../assets/Stouuf.webp'
 import imgKitsu from '../assets/kitsu.webp'
 import imgChessbet from '../assets/chessbet.webp'
-import Project from '../components/Index/Project.astro'
 
 export const prerender = true
+
+const projects = [
+	{
+		name: 'Memnix',
+		description:
+			'Memnix is a project that aims to create tools to facilitate learning for students in an organized way. It utilizes its spaced repetition system, enabling students to create and share learning materials.',
+		stack: 'HTMX・Golang・PostgreSQL・MongoDB',
+		link: 'https://github.com/memnix/',
+		image: imgMemnixLogo
+	},
+	{
+		name: 'Chessbet',
+		description:
+			'Chessbet is a project that aims to create a platform for chess betting. It will allow users to bet on their favorite players. The project is still in development.',
+		stack: 'Golang・PostgreSQL・HTMX',
+		link: 'https://github.com/corentings/chessbet',
+		image: imgChessbet
+	},
+	{
+		name: 'Gauntlet Reborn',
+		description:
+			'Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s.',
+		stack: 'C・SDL2',
+		link: 'https://github.com/corentings/gauntlet-reborn',
+		image: imgGauntlet
+	},
+	{
+		name: 'Uca Edt',
+		description:
+			"A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar.",
+		stack: 'Golang・Mongo・Docker',
+		link: 'https://github.com/CorentinGS/uca-edt',
+		image: imgUcaEdt
+	},
+	{
+		name: 'Kitsu',
+		description:
+			'Kitsu is a multi-purpose discord bot that generates stats for your discord server to help you increase the activity and grow quicker.',
+		stack: 'PostgreSQL・Golang・Rust',
+		link: 'https://github.com/CorentinGS/Kitsu',
+		image: imgKitsu
+	},
+	{
+		name: 'Stouuf Website',
+		description:
+			"This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students.",
+		stack: 'Tailwindcss',
+		link: 'https://stouuf.net',
+		image: imgStouufWebsite
+	}
+]
 ---
 
-<Layout title='Projects' description='My personal projects'>
-	<div class='sm:px-8 mt-16'>
-		<div class='mx-auto w-full max-w-7xl lg:px-8'>
-			<div class='relative px-4 sm:px-8 lg:px-12'>
-				<div class='mx-auto max-w-2xl lg:max-w-5xl'>
-					<div class='max-w-2xl'>
-						<h1
-							class='text-2xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100'
-						>
-							My projects
-						</h1>
-						<p
-							class='mt-8 text-pretty text-lg font-medium text-zinc-600 dark:text-zinc-400 sm:text-xl/8'
-						>
-							Here are some of my personal projects. I've been working on them for the past years.
-						</p>
-					</div>
-
-					<div
-						class='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3'
+<Layout
+	title='Projects | CorentinGS'
+	description='Explore my portfolio of personal projects including Memnix, Chessbet, and other applications built with Golang, HTMX, and modern technologies.'
+>
+	<section class='relative bg-white dark:bg-zinc-900' aria-labelledby='projects-heading'>
+		<div class='mx-auto max-w-7xl px-6 py-24 lg:px-8'>
+			<div class='w-full'>
+				<header class='max-w-2xl'>
+					<h1
+						id='projects-heading'
+						class='text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl'
 					>
-						<Project
-							description='Memnix is a project that aims to create tools to facilitate learning for students in an organized way. It utilizes its spaced repetition system, enabling students to create and share learning materials.'
-							image={imgMemnixLogo}
-							link='https://github.com/memnix/'
-							name='Memnix'
-							stack='HTMX・Golang・PostgreSQL・MongoDB'
-							lazy={false}
-						/>
+						My projects
+					</h1>
+					<p class='mt-6 text-lg font-medium text-zinc-600 dark:text-zinc-400'>
+						Here are some of my personal projects. I've been working on them for the past years.
+					</p>
+				</header>
 
-						<Project
-							description='Chessbet is a project that aims to create a platform for chess betting. It will allow users to bet on their favorite players. The project is still in development.'
-							link='https://github.com/corentings/chessbet'
-							name='Chessbet'
-							stack='Golang・PostgreSQL・HTMX'
-							lazy={false}
-							image={imgChessbet}
-						/>
-
-						<Project
-							description='Gauntlet reborn is a project that aims to create a new version of the arcade game Gauntlet from the 80s.'
-							link='https://github.com/corentings/gauntlet-reborn'
-							name='Gauntlet Reborn'
-							stack='C・SDL2'
-							lazy={false}
-							image={imgGauntlet}
-						/>
-
-						<Project
-							description="A simple project to help UCA (Université Côte d'Azur) students to have a better view of their schedule and to be able to export it to their calendar."
-							link='https://github.com/CorentinGS/uca-edt'
-							name='Uca Edt'
-							stack='Golang・Mongo・Docker'
-							lazy={false}
-							image={imgUcaEdt}
-						/>
-						<Project
-							description='Kitsu is a multi-purpose discord bot that generates stats for your discord server to help you increase the activity and grow quicker.'
-							image={imgKitsu}
-							link='https://github.com/CorentinGS/Kitsu'
-							name='Kitsu'
-							stack='PostgreSQL・Golang・Rust'
-							lazy={false}
-						/>
-						<Project
-							description="This is a website I made for Stouuf, a french chess coach. It's a simple single page website to help him promote his courses and find new students."
-							link='https://stouuf.net'
-							name='Stouuf Website'
-							stack='Tailwindcss'
-							image={imgStouufWebsite}
-							lazy={false}
-						/>
-					</div>
+				<div class='mt-16 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:grid-cols-3'>
+					{projects.map((project, index) => <Project {...project} lazy={index > 6} />)}
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<style></style>
+	</section>
 </Layout>

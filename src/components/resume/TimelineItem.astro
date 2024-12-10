@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets'
+
+const { experience, isLast } = Astro.props
+---
+
+<div
+	class="group relative flex gap-x-5"
+	role="listitem"
+>
+	<!-- Icon -->
+	<div
+		class:list={[
+			'relative',
+			{ 'after:hidden': isLast },
+			'after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
+		]}
+	>
+		<div class="relative z-10 size-6 flex justify-center items-center">
+			<Image
+				alt={`${experience.company} logo`}
+				loading={isLast ? 'lazy' : 'eager'}
+				width="32"
+				height="32"
+				decoding="async"
+				class="rounded-full object-cover"
+				src={experience.image}
+				quality="60"
+			/>
+		</div>
+	</div>
+	<!-- End Icon -->
+
+	<!-- Content -->
+	<div class="grow pb-8 group-last:pb-0">
+		<time
+			datetime={`${experience.startYear}`}
+			class="mb-1 text-xs text-zinc-600 dark:text-zinc-400"
+		>
+			{experience.startYear} - {experience.endYear || 'Present'}
+		</time>
+
+		<h3 class="font-semibold text-sm text-zinc-800 dark:text-zinc-200">
+			{experience.title}
+		</h3>
+
+		{experience.description && (
+			<p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+				{experience.description}
+			</p>
+		)}
+
+		{experience.achievements && (
+			<ul class="list-disc ms-6 mt-3 space-y-1.5" role="list">
+				{experience.achievements.map(achievement => (
+					<li class="ps-1 text-sm text-zinc-600 dark:text-zinc-400">
+						{achievement}
+					</li>
+				))}
+			</ul>
+		)}
+	</div>
+	<!-- End Content -->
+</div>

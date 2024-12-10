@@ -11,11 +11,10 @@ const posts = await getCollection('blog')
 
 export async function getStaticPaths() {
 	const posts = await getPosts()
-	return posts
-			.map((post) => ({
-					params: { slug: post.slug },
-					props: post
-			}))
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post
+	}))
 }
 
 const pastPosts = posts.filter((post) => post.data.pubDate < new Date())
@@ -33,7 +32,6 @@ const getRelatedPosts = (post: Props) => {
 }
 const relatedPosts = getRelatedPosts(post)
 const { Content, headings, remarkPluginFrontmatter } = await post.render()
-
 ---
 
 <BlogPostLayout

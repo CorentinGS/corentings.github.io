@@ -1,42 +1,52 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-
 import { cn } from '@/utils'
 import { Image } from 'astro:assets'
 
-type Props = {
+interface Props {
 	posts: CollectionEntry<'blog'>[]
+	title?: string
 }
 
-const { posts } = Astro.props
+const { posts, title = 'Related Posts' } = Astro.props
 ---
 
-<section class={cn(`flex flex-col sm:justify-between gap-8`)}>
+<section class={cn('flex flex-col gap-8')} aria-labelledby='related-posts-heading'>
+	<h2 id='related-posts-heading' class='sr-only'>{title}</h2>
+
 	{
 		posts.length > 0 ? (
-			posts.map((post) => {
-				return (
-					<div class='flex gap-2 text-zinc-700 dark:text-zinc-300'>
-						<div class='min-h-full'>
+			<ul class='space-y-6' role='list'>
+				{posts.map((post) => (
+					<li>
+						<article class='flex items-center gap-4' aria-labelledby={`post-title-${post.slug}`}>
 							<Image
 								src={post.data.heroImage}
-								quality={40}
-								width={200}
-								height={200}
-								class='w-16 h-16 object-cover rounded-full '
-								alt={`img of ${post.data.title}`}
+								width={64}
+								height={64}
+								class='w-16 h-16 object-cover rounded-full shrink-0'
+								alt={post.data.title}
+								loading='lazy'
+								decoding='async'
 							/>
-						</div>
-						<header class='flex justify-center items-center overflow-ellipsis truncate'>
-							<a class='font-medium  hover:underline' href={`/blog/${post.slug}/`}>
-								{post.data.title}
-							</a>
-						</header>
-					</div>
-				)
-			})
+
+							<h3
+								id={`post-title-${post.slug}`}
+								class='text-zinc-700 dark:text-zinc-300 font-medium line-clamp-1'
+							>
+								<a
+									href={`/blog/${post.slug}/`}
+									class='hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
+								>
+									{post.data.title}
+								</a>
+							</h3>
+						</article>
+					</li>
+				))}
+			</ul>
 		) : (
-			<span class='text-zinc-400'>There are no related posts yet. 😢</span>
+			<p class='text-zinc-400 text-center'>There are no related posts yet. 😢</p>
 		)
 	}
 </section>

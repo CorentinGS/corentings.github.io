@@ -4,285 +4,75 @@ import echiquierNicoisImg from '../assets/logo_en.webp'
 import trustmeImg from '../assets/logo_tfd.webp'
 import oneTooImg from '../assets/onetoo.webp'
 import ubleamImg from '../assets/logo_qualialtis.webp'
-import { Image } from 'astro:assets'
+import WorkExperience from './resume/WorkExperience.astro'
+
+const workExperiences = [
+	{
+		company: 'ChessMood',
+		title: 'Back End Developer',
+		startYear: 2024,
+		description:
+			'Architected and developed a scalable microservices-based chess learning platform using AWS services (Lambda, SNS/SQS, Aurora MySQL, EC2, API Gateway).',
+		achievements: [
+			'Engineered high-performance chess algorithms and custom data structures in Go and Python for efficient game representation, analysis, and pattern recognition.',
+			'Developed optimized chess libraries implementing advanced features like Zobrist hashing for efficient game storage and retrieval.',
+			'Created a deep learning model for chess position recognition from videos, enabling position-based video search and content analysis.',
+			'Implemented background workers for integrating third-party platforms (Chess.com, Lichess) to gather comprehensive player statistics and game data.',
+			'Implemented robust chess logic and microservices with comprehensive test coverage using TDD and testcontainers.',
+			'Created efficient data processing pipelines for real-time game analysis and personalized learning recommendations.',
+			'Collaborated with a diverse international team including IT professionals and chess masters, bridging technical and chess expertise across multiple languages and cultures.'
+		],
+		image: chessMoodImg
+	},
+	{
+		company: 'Echiquier Niçois',
+		title: 'Board Member & Chess Coach & Web Developer',
+		startYear: 2023,
+		description:
+			'Architected and developed a high-performance static website using modern web technologies including Astro, React, and Tailwind CSS. Implemented a user-friendly content management system with TinaCMS while maintaining optimal loading speeds and SEO metrics through automated CI/CD pipelines.\n\nAs a chess coach and board member, I lead adult group sessions while managing strategic partnerships and financial planning. My approach combines practical teaching methods with sustainable club development strategies, focusing on both individual player growth and strengthening our community presence through collaborative initiatives.',
+		image: echiquierNicoisImg
+	},
+	{
+		company: 'TrustMe',
+		title: 'Project Manager & Backend Developer',
+		startYear: 2022,
+		endYear: 2023,
+		achievements: [
+			'Architected and developed a scalable recruitment management system in Go, integrating it with multiple external APIs and services.',
+			'Designed a high-performance data layer using PostgreSQL with optimized queries and Redis caching strategies, significantly enhancing system response times.',
+			'Integrated Meilisearch for advanced job search capabilities, enabling real-time filtering and full-text search functionality.',
+			'Implemented comprehensive observability using OpenTelemetry with Jaeger for distributed tracing, and Prometheus with Grafana for metrics collection and visualization.',
+			'Built a robust API with OpenAPI specifications, facilitating seamless integration with front-end services.',
+			'Established automated CI/CD pipelines using GitHub Actions with optimized Docker images using distroless containers and multi-stage builds.',
+			'Successfully delivered the project within timeline and budget constraints while maintaining high code quality standards.'
+		],
+		image: trustmeImg
+	},
+	{
+		company: 'OneToo',
+		title: 'Embedded Systems Development Intern',
+		startYear: 2021,
+		endYear: 2021,
+		description:
+			'I contributed to embedded systems development, focusing on protocol implementation and system integration:',
+		achievements: [
+			'Developed and integrated proprietary and Open Protocol communication interfaces in C on a BuildRoot-based embedded system, ensuring robust device-to-device data exchange.',
+			'Coded a cross-platform desktop application using C++/Qt, enabling real-time WiFi communication with embedded devices for efficient data retrieval, filtering, and analysis.',
+			'Designed and implemented an intuitive graphical interface for embedded system control, significantly boosting operator workflow efficiency.',
+			'Created comprehensive technical documentation covering system architecture and protocol specifications.'
+		],
+		image: oneTooImg
+	},
+	{
+		company: 'Ubleam',
+		title: 'Backend Developer Intern',
+		startYear: 2018,
+		endYear: 2018,
+		description:
+			'Managed and optimized containerized applications using Docker and Kubernetes with Helm charts for orchestration. Handled Linux system administration tasks.',
+		image: ubleamImg
+	}
+]
 ---
 
-<div class='mt-10 sm:mt-14'>
-	<h2 class='mb-5 font-medium text-zinc-800 dark:text-zinc-200'>Work experience</h2>
-	<!-- Timeline -->
-	<div>
-		<!-- Item -->
-		<div class='group relative flex gap-x-5'>
-			<!-- Icon -->
-			<div
-				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
-			>
-				<div class='relative z-10 size-6 flex justify-center items-center'>
-					<Image
-						alt=''
-						loading='eager'
-						width='32'
-						height='32'
-						decoding='async'
-						class='rounded-full object-cover'
-						src={chessMoodImg}
-						quality='60'
-					/>
-				</div>
-			</div>
-			<!-- End Icon -->
-
-			<!-- Right Content -->
-			<div class='grow pb-8 group-last:pb-0'>
-				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2024 - Present</h3>
-
-				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>Back End Developer</p>
-
-				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-					Architected and developed a scalable microservices-based chess learning platform using AWS
-					services (Lambda, SNS/SQS, Aurora MySQL, EC2, API Gateway).
-				</p>
-
-				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Engineered high-performance chess algorithms and custom data structures in Go and Python
-						for efficient game representation, analysis, and pattern recognition.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Developed optimized chess libraries implementing advanced features like Zobrist hashing
-						for efficient game storage and retrieval.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Created a deep learning model for chess position recognition from videos, enabling
-						position-based video search and content analysis.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Implemented background workers for integrating third-party platforms (Chess.com,
-						Lichess) to gather comprehensive player statistics and game data.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Implemented robust chess logic and microservices with comprehensive test coverage using
-						TDD and testcontainers.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Created efficient data processing pipelines for real-time game analysis and personalized
-						learning recommendations.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Collaborated with a diverse international team including IT professionals and chess
-						masters, bridging technical and chess expertise across multiple languages and cultures.
-					</li>
-				</ul>
-			</div>
-			<!-- End Right Content -->
-		</div>
-		<!-- End Item -->
-
-		<!-- Item -->
-		<div class='group relative flex gap-x-5'>
-			<!-- Icon -->
-			<div
-				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
-			>
-				<div class='relative z-10 size-6 flex justify-center items-center'>
-					<Image
-						alt=''
-						loading='eager'
-						width='32'
-						height='32'
-						decoding='async'
-						class='rounded-full object-cover'
-						src={echiquierNicoisImg}
-						quality='60'
-					/>
-				</div>
-			</div>
-			<!-- End Icon -->
-
-			<!-- Right Content -->
-			<div class='grow pb-8 group-last:pb-0'>
-				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2023 - Present</h3>
-
-				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
-					Board Member & Chess Coach & Web Developer
-				</p>
-
-				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-					Architected and developed a high-performance static website using modern web technologies
-					including Astro, React, and Tailwind CSS. Implemented a user-friendly content management
-					system with TinaCMS while maintaining optimal loading speeds and SEO metrics through
-					automated CI/CD pipelines.
-				</p>
-				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-					As a chess coach and board member, I lead adult group sessions while managing strategic
-					partnerships and financial planning. My approach combines practical teaching methods with
-					sustainable club development strategies, focusing on both individual player growth and
-					strengthening our community presence through collaborative initiatives.
-				</p>
-			</div>
-			<!-- End Right Content -->
-		</div>
-		<!-- End Item -->
-
-		<!-- Item -->
-		<div class='group relative flex gap-x-5'>
-			<!-- Icon -->
-			<div
-				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
-			>
-				<div class='relative z-10 size-6 flex justify-center items-center'>
-					<Image
-						alt=''
-						loading='eager'
-						width='32'
-						height='32'
-						decoding='async'
-						class='rounded-full object-cover'
-						src={trustmeImg}
-						quality='60'
-					/>
-				</div>
-			</div>
-			<!-- End Icon -->
-
-			<!-- Right Content -->
-			<div class='grow pb-8 group-last:pb-0'>
-				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2022 - 2023</h3>
-
-				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
-					Project Manager & Backend Developer
-				</p>
-
-				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Architected and developed a scalable recruitment management system in Go, integrating it
-						with multiple external APIs and services.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Designed a high-performance data layer using PostgreSQL with optimized queries and Redis
-						caching strategies, significantly enhancing system response times.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Integrated Meilisearch for advanced job search capabilities, enabling real-time
-						filtering and full-text search functionality.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Implemented comprehensive observability using OpenTelemetry with Jaeger for distributed
-						tracing, and Prometheus with Grafana for metrics collection and visualization.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Built a robust API with OpenAPI specifications, facilitating seamless integration with
-						front-end services.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Established automated CI/CD pipelines using GitHub Actions with optimized Docker images
-						using distroless containers and multi-stage builds.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Successfully delivered the project within timeline and budget constraints while
-						maintaining high code quality standards.
-					</li>
-				</ul>
-			</div>
-			<!-- End Right Content -->
-		</div>
-		<!-- End Item -->
-
-		<!-- Item -->
-		<div class='group relative flex gap-x-5'>
-			<!-- Icon -->
-			<div
-				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
-			>
-				<div class='relative z-10 size-6 flex justify-center items-center'>
-					<Image
-						alt=''
-						loading='lazy'
-						width='32'
-						height='32'
-						decoding='async'
-						class='rounded-full object-cover'
-						src={oneTooImg}
-						quality='60'
-					/>
-				</div>
-			</div>
-			<!-- End Icon -->
-
-			<!-- Right Content -->
-			<div class='grow pb-8 group-last:pb-0'>
-				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2021 - 2021</h3>
-
-				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
-					Embedded Systems Development Intern
-				</p>
-
-				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-					I contributed to embedded systems development, focusing on protocol implementation and
-					system integration:
-				</p>
-
-				<ul class='list-disc ms-6 mt-3 space-y-1.5'>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Developed and integrated proprietary and Open Protocol communication interfaces in C on
-						a BuildRoot-based embedded system, ensuring robust device-to-device data exchange.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Coded a cross-platform desktop application using C++/Qt, enabling real-time WiFi
-						communication with embedded devices for efficient data retrieval, filtering, and
-						analysis.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Designed and implemented an intuitive graphical interface for embedded system control,
-						significantly boosting operator workflow efficiency.
-					</li>
-					<li class='ps-1 text-sm text-zinc-600 dark:text-zinc-400'>
-						Created comprehensive technical documentation covering system architecture and protocol
-						specifications.
-					</li>
-				</ul>
-			</div>
-			<!-- End Right Content -->
-		</div>
-		<!-- End Item -->
-
-		<!-- Item -->
-		<div class='group relative flex gap-x-5'>
-			<!-- Icon -->
-			<div
-				class='relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-zinc-200 dark:after:bg-zinc-700'
-			>
-				<div class='relative z-10 size-6 flex justify-center items-center'>
-					<Image
-						alt=''
-						loading='lazy'
-						width='32'
-						height='32'
-						decoding='async'
-						class='rounded-full object-cover'
-						src={ubleamImg}
-						quality='60'
-					/>
-				</div>
-			</div>
-			<!-- End Icon -->
-
-			<!-- Right Content -->
-			<div class='grow pb-8 group-last:pb-0'>
-				<h3 class='mb-1 text-xs text-zinc-600 dark:text-zinc-400'>2018 - 2018</h3>
-
-				<p class='font-semibold text-sm text-zinc-800 dark:text-zinc-200'>
-					Backend Developer Intern
-				</p>
-
-				<p class='mt-1 text-sm text-zinc-600 dark:text-zinc-400'>
-					Managed and optimized containerized applications using Docker and Kubernetes with Helm
-					charts for orchestration. Handled Linux system administration tasks.
-				</p>
-			</div>
-			<!-- End Right Content -->
-		</div>
-		<!-- End Item -->
-	</div>
-	<!-- End Timeline -->
-</div>
+<WorkExperience experiences={workExperiences} />

@@ -8,9 +8,9 @@ import FormattedDate from '../components/blog/FormattedDate.astro'
 import Tag from '../components/blog/Tag.astro'
 import BaseHead from '../components/utils/BaseHead.astro'
 import Footer from '../components/utils/Footer.astro'
-import { HeaderComponent } from '../components/navigation/Header'
+import { Header } from '../components/navigation/Header'
 
-type Props = {
+interface Props {
 	id: CollectionEntry<'blog'>['id']
 	data: CollectionEntry<'blog'>['data']
 	headings: MarkdownHeading[]
@@ -20,82 +20,84 @@ type Props = {
 const { data, readTime, headings, id } = Astro.props
 const { title, description, pubDate, heroImage, tags } = data
 
+const currentPath = Astro.url.pathname
 const articleDate = pubDate.toISOString()
 
-const currentPath = Astro.url.pathname
+// Generate keywords from tags
+const keywords = tags.map((tag) => tag.toLowerCase())
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' class='scroll-smooth'>
 	<head>
 		<BaseHead
 			title={title}
 			description={description}
 			ogImage={heroImage?.src}
 			articleDate={articleDate}
+			type='article'
+			keywords={keywords}
 		/>
 	</head>
 	<body class='flex h-full bg-zinc-100 dark:bg-zinc-900'>
 		<div class='flex w-full'>
 			<div class='relative flex w-full flex-col'>
-				<!-- Navbar -->
-				<HeaderComponent client:load currentPath={currentPath} />
-				<main transition:animate='fade'>
-					<!-- Page Slot -->
-					<article class='min-w-full md:py-4 sm:max-w-none md:max-w-none relative'>
-						<div class='mx-auto mt-12 max-w-screen-lg px-4 text-lg leading-relaxed lg:px-0'>
-							<header class='mb-3 flex flex-col justify-center items-center gap-6'>
-								<div class='flex flex-col gap-2'>
-									<div
-										class='flex items-center justify-center gap-x-1 text-zinc-700 dark:text-zinc-300'
-									>
-										<p class='text-center text-sm text-opacity-50'>
-											Published
-											<FormattedDate date={pubDate} />
-										</p>
-										<p class='text-center text-sm text-opacity-50 font-bold'>
-											- {readTime}
-										</p>
-									</div>
-									<h1
-										class='text-center text-4xl md:text-6xl md:pb-2.5 font-semibold text-zinc-800 dark:text-zinc-200'
-									>
-										{title}
-									</h1>
+				<Header client:load currentPath={currentPath} />
+
+				<main id='main-content' class='flex-auto'>
+					<article
+						class='prose prose-zinc dark:prose-invert mx-auto mt-12 max-w-screen-lg px-6 lg:px-8'
+						aria-labelledby='article-title'
+					>
+						<header class='mb-8 text-center'>
+							<div class='flex flex-col gap-4'>
+								<div
+									class='flex items-center justify-center gap-2 text-sm text-zinc-600 dark:text-zinc-400'
+								>
+									<time datetime={articleDate}>
+										Published <FormattedDate date={pubDate} />
+									</time>
+									<span aria-hidden='true'>•</span>
+									<span>{readTime}</span>
 								</div>
 
-								<div
-									class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5 text-zinc-700 dark:text-zinc-300'
+								<h1
+									id='article-title'
+									class='text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl'
 								>
+									{title}
+								</h1>
+
+								<div class='flex flex-wrap justify-center gap-3'>
 									{tags.map((tag) => <Tag tag={tag} />)}
 								</div>
-							</header>
-
-							<>
-								{
-									heroImage && (
-										<Image
-											src={heroImage}
-											width={1000}
-											height={700}
-											quality={80}
-											loading='eager'
-											class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
-											alt={`img of ${title}`}
-										/>
-									)
-								}
-							</>
-
-							<hr />
-
-							<div>
-								<slot />
 							</div>
+						</header>
+
+						{
+							heroImage && (
+								<figure class='my-8'>
+									<Image
+										src={heroImage}
+										width={1200}
+										height={630}
+										quality={80}
+										loading='eager'
+										class='rounded-2xl aspect-[2/1] object-cover'
+										alt={`Cover image for ${title}`}
+									/>
+								</figure>
+							)
+						}
+
+						<hr class='my-8 border-zinc-200 dark:border-zinc-800' />
+
+						<div class='prose-content'>
+							<slot />
 						</div>
 					</article>
 				</main>
-				<!-- Footer -->
+
 				<Footer />
 			</div>
 		</div>
