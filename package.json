@@ -18,7 +18,7 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "11.2.0",
+		"@astrojs/cloudflare": "12.0.1",
 		"@astrojs/mdx": "3.1.9",
 		"@astrojs/node": "8.3.4",
 		"@astrojs/prism": "3.2.0",
