@@ -1,3 +1,146 @@
+## 2.2.0 (2024-12-17)
+
+### build
+
+- **astro**: 🔧 remove squoosh and add prefetch  (#260)
+
+### chore
+
+- **deps**: update dependency motion to v11.14.1 (#334)
+- **deps**: update dependency @types/node to v22.10.2 (#333)
+- **deps**: update all non-major dependencies (#331)
+- **deps**: bump nanoid in the npm_and_yarn group across 1 directory (#329)
+- **deps**: update dependency prettier to v3.4.2 (#325)
+- **deps**: update all non-major dependencies to v8.17.0 (#320)
+- **deps**: update dependency eslint to v9.16.0 (#319)
+- **deps**: update dependency astro-compressor to v1 (#318)
+- **deps**: update dependency @types/node to v22.10.1 (#316)
+- **deps**: update dependency prettier to v3.4.1 (#311)
+- **deps**: update all non-major dependencies (#310)
+- **deps**: update all non-major dependencies (#309)
+- **deps**: update all non-major dependencies (#307)
+- **deps**: bump cross-spawn (#304)
+- **deps**: update dependency motion to v11 (#297)
+- **deps**: update all non-major dependencies (#305)
+- **deps**: update all non-major dependencies to v8.15.0 (#303)
+- **deps**: update dependency astro-eslint-parser to v1.1.0 (#294)
+- **deps**: update all non-major dependencies (#293)
+- **deps**: update dependency postcss to v8.4.48 (#292)
+- **deps**: update dependency eslint-plugin-astro to v1.3.1 (#289)
+- **deps**: update dependency @pagefind/default-ui to v1.2.0 (#287)
+- **deps**: update all non-major dependencies (#285)
+- **deps**: update dependency @types/node to v22.8.7 (#284)
+- **deps**: update dependency eslint to v9.14.0 (#282)
+- **deps**: update dependency @types/node to v22.8.6 (#281)
+- **deps**: update all non-major dependencies (#278)
+- **deps**: update dependency npm-run-all2 to v7 (#269)
+- **deps**: update dependency @types/node to v22 (#274)
+- **deps**: update dependency @types/node to v20.17.1 (#273)
+- **deps**: update dependency @types/node to v20.17.0 (#271)
+- **deps**: update all non-major dependencies (#268)
+- **deps**: update dependency @types/node to v20.16.13 (#266)
+- **deps**: update all non-major dependencies (#265)
+- **deps**: update all non-major dependencies (#264)
+- **deps**: bump the npm_and_yarn group across 1 directory with 2 updates (#256)
+- **deps**: update all non-major dependencies to v8.8.0 (#246)
+- **deps**: update dependency @types/node to v20.16.10 (#244)
+- **deps**: update dependency @types/node to v20.16.9 (#242)
+- **deps**: update dependency @types/node to v20.16.8 (#241)
+- **deps**: update all non-major dependencies (#240)
+- **deps**: update dependency eslint-plugin-astro to v1.2.4 (#231)
+- **deps**: update dependency @tailwindcss/forms to v0.5.9 (#224)
+- **deps**: update dependency @types/node to v20.16.5 (#222)
+- **deps**: update dependency @types/node to v20.16.4 (#220)
+- **deps**: update all non-major dependencies (#219)
+- **deps**: update dependency @pagefind/default-ui to v1.1.1 [security] (#217)
+- **deps**: update dependency postcss to v8.4.43 (#216)
+
+### feat
+
+- prefetch
+- update to astro v5
+- better html css
+- go-patttern-producer-consumer
+- go-patttern-producer-consumer
+- Update to new version
+- ✨ 404 page
+- Update image import in ListRelatedPosts.astro
+
+### fix
+
+- **deps**: update all non-major dependencies (#335)
+- **deps**: update all non-major dependencies (#332)
+- **deps**: update dependency @astrojs/node to v9 (#324)
+- **deps**: update dependency @astrojs/cloudflare to v12 (#323)
+- **deps**: update react monorepo to v19 (#328)
+- **deps**: update all non-major dependencies (#327)
+- **deps**: update dependency @types/react to v18.3.13 (#326)
+- **deps**: update all non-major dependencies (#321)
+- dates
+- rss
+- rss
+- image for generator
+- hide future posts
+- hide future posts
+- **deps**: update all non-major dependencies (#313)
+- some issues
+- some issues
+- **deps**: update dependency tailwind-merge to v2.5.5 (#308)
+- **deps**: update all non-major dependencies (#306)
+- some issues
+- some issues
+- **deps**: update all non-major dependencies (#301)
+- **deps**: update dependency tailwindcss to v3.4.15 (#300)
+- **deps**: update dependency @iconify/json to v2.2.272 (#299)
+- **deps**: update dependency astro to v4.16.12 (#298)
+- **deps**: update all non-major dependencies (#296)
+- **deps**: update dependency @iconify/json to v2.2.270 (#291)
+- **deps**: update dependency @iconify/json to v2.2.269 (#290)
+- **deps**: update dependency astro to v4.16.10 (#288)
+- **deps**: update all non-major dependencies (#286)
+- **deps**: update dependency @iconify/json to v2.2.267 (#283)
+- **deps**: update all non-major dependencies (#280)
+- **deps**: update dependency @iconify/json to v2.2.266 (#279)
+- **deps**: update all non-major dependencies (#277)
+- **deps**: update dependency @astrojs/cloudflare to v11.2.0 (#276)
+- **deps**: update all non-major dependencies (#275)
+- **deps**: update dependency @playform/compress to v0.1.6 (#272)
+- **deps**: update all non-major dependencies (#270)
+- **deps**: update dependency @iconify/json to v2.2.262 (#267)
+- **deps**: update all non-major dependencies (#263)
+- **deps**: update all non-major dependencies (#262)
+- **deps**: update all non-major dependencies (#261)
+- **deps**: update all non-major dependencies (#259)
+- **deps**: update dependency daisyui to v4.12.13 (#258)
+- **deps**: update all non-major dependencies (#257)
+- **deps**: update dependency @playform/compress to v0.1.2 (#255)
+- **deps**: update all non-major dependencies (#254)
+- **deps**: update all non-major dependencies (#253)
+- **deps**: update all non-major dependencies (#252)
+- **deps**: update dependency @iconify/json to v2.2.256 (#251)
+- **deps**: update dependency daisyui to v4.12.11 (#250)
+- **deps**: update all non-major dependencies (#248)
+- **deps**: update dependency @iconify/json to v2.2.254 (#245)
+- **deps**: update dependency @iconify/json to v2.2.253 (#243)
+- **deps**: update all non-major dependencies (#239)
+- **deps**: update all non-major dependencies (#238)
+- **deps**: update all non-major dependencies (#237)
+- **deps**: update all non-major dependencies (#236)
+- **deps**: update all non-major dependencies (#235)
+- **deps**: update all non-major dependencies (#234)
+- **deps**: update all non-major dependencies (#233)
+- **deps**: update all non-major dependencies (#232)
+- **deps**: update all non-major dependencies (#230)
+- **deps**: update dependency tailwindcss to v3.4.11 (#229)
+- **deps**: update dependency @iconify/json to v2.2.247 (#228)
+- **deps**: update all non-major dependencies (#227)
+- **deps**: update all non-major dependencies (#226)
+- **deps**: update all non-major dependencies (#225)
+- **deps**: update dependency astro to v4.15.3 (#223)
+- **deps**: update all non-major dependencies (#221)
+- **deps**: update all non-major dependencies (#215)
+- **deps**: update dependency astro to v4.15.0 (#214)
+
 ## 2.1.0 (2024-09-01)
 
 ### ✨ Features
