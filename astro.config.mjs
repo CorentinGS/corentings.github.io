@@ -12,7 +12,10 @@ import icon from 'astro-icon'
 export default defineConfig({
 	site: 'https://corentings.dev',
 
-	prefetch: true,
+	prefetch: {
+		defaultStrategy: 'viewport',
+		prefetchAll: true
+	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
