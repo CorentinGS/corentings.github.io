@@ -31,11 +31,11 @@ const { posts, title = 'Related Posts' } = Astro.props
 							/>
 
 							<h3
-								id={`post-title-${post.slug}`}
+								id={`post-title-${post.id}`}
 								class='text-zinc-700 dark:text-zinc-300 font-medium line-clamp-1'
 							>
 								<a
-									href={`/blog/${post.slug}/`}
+									href={`/blog/${post.id}/`}
 									class='hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
 								>
 									{post.data.title}

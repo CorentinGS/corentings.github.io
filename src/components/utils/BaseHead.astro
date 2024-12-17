@@ -2,7 +2,7 @@
 import { siteConfig } from '@/site-config'
 import 'src/styles/global.css'
 import Fonts from './Fonts.astro'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 export interface Props {
 	title: string
@@ -83,7 +83,7 @@ const siteTitle = `${title} • ${siteConfig.title}`
 <!-- Fonts -->
 <Fonts />
 
-<ViewTransitions />
+<ClientRouter />
 
 <!-- RSS -->
 <link

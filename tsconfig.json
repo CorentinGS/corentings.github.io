@@ -17,6 +17,6 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "react"
 	},
-	"include": ["**/*", ".eslintrc.cjs"],
+	"include": [".astro/types.d.ts", "**/*", ".eslintrc.cjs"],
 	"exclude": ["node_modules", "**/node_modules/*", "dist", ".astro", ".idea"]
 }

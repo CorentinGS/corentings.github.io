@@ -1,7 +1,8 @@
 ---
 export const prerender = true
+
 import BlogPostLayout from 'src/layouts/BlogPostLayout.astro'
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection, render  } from 'astro:content'
 import ListRelatedPosts from '@/components/blog/ListRelatedPosts'
 import { getPosts } from '@/utils'
 import SButton from '@/components/mdx/SButton'
@@ -12,7 +13,7 @@ const posts = await getCollection('blog')
 export async function getStaticPaths() {
 	const posts = await getPosts()
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { id: post.id },
 		props: post
 	}))
 }
@@ -26,12 +27,12 @@ const MAX_POSTS = 3
 const getRelatedPosts = (post: Props) => {
 	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
 	const relatedPosts = pastPosts.filter(
-		(p) => p.slug !== post.slug && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
+		(p) => p.id !== post.id && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
 	)
 	return relatedPosts.slice(0, MAX_POSTS)
 }
 const relatedPosts = getRelatedPosts(post)
-const { Content, headings, remarkPluginFrontmatter } = await post.render()
+const { Content, headings, remarkPluginFrontmatter } = await render(post)
 ---
 
 <BlogPostLayout

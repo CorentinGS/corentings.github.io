@@ -41,7 +41,7 @@ export const prerender = true
 						posts.map((post, index) => (
 							<article
 								class='relative flex flex-col gap-8 lg:flex-row'
-								aria-labelledby={`article-${post.slug}`}
+								aria-labelledby={`article-${post.id}`}
 							>
 								<div class='relative aspect-[16/9] lg:w-64 lg:shrink-0'>
 									<Picture
@@ -73,11 +73,11 @@ export const prerender = true
 									</div>
 
 									<h2
-										id={`article-${post.slug}`}
+										id={`article-${post.id}`}
 										class='mt-4 text-xl font-semibold text-zinc-900 dark:text-zinc-100'
 									>
 										<a
-											href={`/blog/${post.slug}`}
+											href={`/blog/${post.id}`}
 											class='group hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
 										>
 											{post.data.title}

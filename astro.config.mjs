@@ -11,9 +11,7 @@ import icon from 'astro-icon'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://corentings.dev',
-	build: {
-		inlineStylesheets: 'never'
-	},
+
 	prefetch: true,
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
