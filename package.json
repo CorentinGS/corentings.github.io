@@ -34,7 +34,7 @@
 		"@rollup/plugin-json": "6.1.0",
 		"@types/react": "18.3.17",
 		"@types/react-dom": "18.3.5",
-		"astro": "5.0.9",
+		"astro": "5.1.0",
 		"astro-font": "0.1.81",
 		"astro-icon": "1.1.4",
 		"clsx": "2.1.1",
