@@ -36,7 +36,7 @@
 		"@types/react-dom": "18.3.5",
 		"astro": "5.1.1",
 		"astro-font": "0.1.81",
-		"astro-icon": "1.1.4",
+		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
 		"markdown-it": "14.1.0",
 		"mdast-util-to-string": "4.0.0",
