@@ -46,7 +46,7 @@ const keywords = tags.map((tag) => tag.toLowerCase())
 
 				<main id='main-content' class='flex-auto'>
 					<article
-						class='prose prose-zinc dark:prose-invert mx-auto mt-12 max-w-screen-lg px-6 lg:px-8'
+						class='prose prose-zinc dark:prose-invert mx-auto mt-12 max-w-(--breakpoint-lg) px-6 lg:px-8'
 						aria-labelledby='article-title'
 					>
 						<header class='mb-8 text-center'>
@@ -83,7 +83,7 @@ const keywords = tags.map((tag) => tag.toLowerCase())
 										height={630}
 										quality={80}
 										loading='eager'
-										class='rounded-2xl aspect-[2/1] object-cover'
+										class='rounded-2xl aspect-2/1 object-cover'
 										alt={`Cover image for ${title}`}
 									/>
 								</figure>
