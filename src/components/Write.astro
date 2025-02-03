@@ -38,7 +38,7 @@ const posts: CollectionEntry<'blog'>[] = await getPostsWithoutFuture(3)
 							class='relative flex flex-col gap-8 lg:flex-row'
 							aria-labelledby={`article-${post.id}`}
 						>
-							<div class='relative aspect-[16/9] lg:w-72 lg:shrink-0'>
+							<div class='relative aspect-16/9 lg:w-72 lg:shrink-0'>
 								<Picture
 									src={post.data.heroImage}
 									alt={post.data.title}

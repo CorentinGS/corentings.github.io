@@ -24,7 +24,7 @@ const { name, stack, description, link, image, lazy = true } = Astro.props
 			width={800}
 			height={600}
 			alt={`Screenshot or logo of ${name} project`}
-			class="aspect-[3/2] w-full object-cover transition duration-300 group-hover:scale-105"
+			class="aspect-3/2 w-full object-cover transition duration-300 group-hover:scale-105"
 			loading={lazy ? 'lazy' : 'eager'}
 			decoding={lazy ? 'async' : 'sync'}
 		/>

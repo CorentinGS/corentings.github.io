@@ -32,7 +32,7 @@ export function Header({ currentPath }) {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	return (
-		<header className='sticky top-0 z-50 bg-white/80 backdrop-blur-sm dark:bg-zinc-900/80'>
+		<header className='sticky top-0 z-50 bg-white/80 backdrop-blur-xs dark:bg-zinc-900/80'>
 			<nav className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'>
 				{/* Brand */}
 				<div className='flex lg:flex-1'>

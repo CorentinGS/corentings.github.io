@@ -1,6 +1,5 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
 import compressor from 'astro-compressor'
 import { defineConfig } from 'astro/config'
 import { remarkReadingTime } from './src/utils/readTime.ts'
@@ -8,39 +7,47 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 import react from '@astrojs/react'
 import icon from 'astro-icon'
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://corentings.dev',
+  site: 'https://corentings.dev',
 
-	prefetch: {
-		defaultStrategy: 'viewport',
-		prefetchAll: true
+  prefetch: {
+      defaultStrategy: 'viewport',
+      prefetchAll: true
 	},
-	markdown: {
-		remarkPlugins: [remarkReadingTime],
-		drafts: true,
-		shikiConfig: {
-			theme: 'material-theme-palenight',
-			wrap: true
-		}
+
+  markdown: {
+      remarkPlugins: [remarkReadingTime],
+      drafts: true,
+      shikiConfig: {
+          theme: 'material-theme-palenight',
+          wrap: true
+      }
 	},
-	integrations: [
-		tailwind(),
-		react(),
-		icon(),
-		mdx({
-			syntaxHighlight: 'shiki',
-			shikiConfig: {
-				theme: 'material-theme-palenight',
-				wrap: true
-			},
-			drafts: true
-		}),
-		sitemap({
-			lastmod: new Date()
-		}),
-		compressor()
+
+  integrations: [
+      react(),
+      icon(),
+      mdx({
+          syntaxHighlight: 'shiki',
+          shikiConfig: {
+              theme: 'material-theme-palenight',
+              wrap: true
+          },
+          drafts: true
+      }),
+      sitemap({
+          lastmod: new Date()
+      }),
+      compressor()
 	],
-	output: 'static'
-	// adapter: cloudflare()
+
+  // adapter: cloudflare()
+  output: 'static',
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 })
