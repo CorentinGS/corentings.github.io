@@ -49,7 +49,7 @@
 		"sharp": "0.33.5",
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
-		"tailwind-merge": "2.6.0",
+		"tailwind-merge": "3.0.1",
 		"tailwindcss": "4.0.3"
 	},
 	"devDependencies": {
