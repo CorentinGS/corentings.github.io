@@ -50,11 +50,11 @@
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
 		"tailwind-merge": "3.0.1",
-		"tailwindcss": "4.0.6"
+		"tailwindcss": "4.0.7"
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.5",
-		"@iconify-json/simple-icons": "1.2.24",
+		"@iconify-json/simple-icons": "1.2.25",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.10",
 		"@tailwindcss/line-clamp": "0.4.4",
@@ -71,7 +71,7 @@
 		"eslint-plugin-jsx-a11y": "6.10.2",
 		"eslint-plugin-prettier": "5.2.3",
 		"eslint-plugin-tailwindcss": "3.18.0",
-		"motion": "12.4.3",
+		"motion": "12.4.4",
 		"npm-run-all2": "7.0.2",
 		"organize-imports-cli": "0.10.0",
 		"postcss": "8.5.2",
