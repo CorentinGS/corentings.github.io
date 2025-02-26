@@ -79,7 +79,7 @@ importers:
         version: 4.0.0
       prettier-config-standard:
         specifier: 7.0.0
-        version: 7.0.0(prettier@3.5.1)
+        version: 7.0.0(prettier@3.5.2)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -102,8 +102,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       tailwind-merge:
-        specifier: 3.0.1
-        version: 3.0.1
+        specifier: 3.0.2
+        version: 3.0.2
       tailwindcss:
         specifier: 4.0.8
         version: 4.0.8
@@ -158,7 +158,7 @@ importers:
         version: 6.10.2(eslint@9.21.0(jiti@2.4.2))
       eslint-plugin-prettier:
         specifier: 5.2.3
-        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.1)
+        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.2)
       eslint-plugin-tailwindcss:
         specifier: 3.18.0
         version: 3.18.0(tailwindcss@4.0.8)
@@ -175,14 +175,14 @@ importers:
         specifier: 8.5.3
         version: 8.5.3
       prettier:
-        specifier: 3.5.1
-        version: 3.5.1
+        specifier: 3.5.2
+        version: 3.5.2
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 0.6.11
-        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.1)
+        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.2)
       slugify:
         specifier: 1.6.6
         version: 1.6.6
@@ -3288,8 +3288,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.5.1:
-    resolution: {integrity: sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==}
+  prettier@3.5.2:
+    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3677,8 +3677,8 @@ packages:
   tabbable@6.2.0:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
 
-  tailwind-merge@3.0.1:
-    resolution: {integrity: sha512-AvzE8FmSoXC7nC+oU5GlQJbip2UO7tmOhOfQyOmPhrStOGXHU08j8mZEHZ4BmCqY5dWTCo4ClWkNyRNx1wpT0g==}
+  tailwind-merge@3.0.2:
+    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
 
   tailwindcss@4.0.8:
     resolution: {integrity: sha512-Me7N5CKR+D2A1xdWA5t5+kjjT7bwnxZOE6/yDI/ixJdJokszsn2n++mdU5yJwrsTpqFX2B9ZNMBJDwcqk9C9lw==}
@@ -6133,10 +6133,10 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.1):
+  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.2):
     dependencies:
       eslint: 9.21.0(jiti@2.4.2)
-      prettier: 3.5.1
+      prettier: 3.5.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.1
     optionalDependencies:
@@ -7712,9 +7712,9 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-config-standard@7.0.0(prettier@3.5.1):
+  prettier-config-standard@7.0.0(prettier@3.5.2):
     dependencies:
-      prettier: 3.5.1
+      prettier: 3.5.2
 
   prettier-linter-helpers@1.0.0:
     dependencies:
@@ -7723,16 +7723,16 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.9.2
-      prettier: 3.5.1
+      prettier: 3.5.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.1):
+  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.2):
     dependencies:
-      prettier: 3.5.1
+      prettier: 3.5.2
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
 
-  prettier@3.5.1: {}
+  prettier@3.5.2: {}
 
   printable-characters@1.0.42: {}
 
@@ -8263,7 +8263,7 @@ snapshots:
 
   tabbable@6.2.0: {}
 
-  tailwind-merge@3.0.1: {}
+  tailwind-merge@3.0.2: {}
 
   tailwindcss@4.0.8: {}
 
