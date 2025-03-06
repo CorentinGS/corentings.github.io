@@ -33,14 +33,14 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(astro@5.4.1(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.2)(yaml@2.4.2))(tailwindcss@4.0.9)
       '@fontsource-variable/inter':
-        specifier: 5.2.0
-        version: 5.2.0
+        specifier: 5.2.5
+        version: 5.2.5
       '@fontsource-variable/rubik':
-        specifier: 5.2.0
-        version: 5.2.0
+        specifier: 5.2.5
+        version: 5.2.5
       '@fontsource-variable/syne':
-        specifier: 5.2.0
-        version: 5.2.0
+        specifier: 5.2.5
+        version: 5.2.5
       '@headlessui/react':
         specifier: 2.2.0
         version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -79,7 +79,7 @@ importers:
         version: 4.0.0
       prettier-config-standard:
         specifier: 7.0.0
-        version: 7.0.0(prettier@3.5.2)
+        version: 7.0.0(prettier@3.5.3)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -112,8 +112,8 @@ importers:
         specifier: 1.2.5
         version: 1.2.5
       '@iconify-json/simple-icons':
-        specifier: 1.2.26
-        version: 1.2.26
+        specifier: 1.2.27
+        version: 1.2.27
       '@tailwindcss/aspect-ratio':
         specifier: 0.4.2
         version: 0.4.2(tailwindcss@4.0.9)
@@ -158,7 +158,7 @@ importers:
         version: 6.10.2(eslint@9.21.0(jiti@2.4.2))
       eslint-plugin-prettier:
         specifier: 5.2.3
-        version: 5.2.3(eslint-config-prettier@10.0.2(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.2)
+        version: 5.2.3(eslint-config-prettier@10.0.2(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.3)
       eslint-plugin-tailwindcss:
         specifier: 3.18.0
         version: 3.18.0(tailwindcss@4.0.9)
@@ -175,14 +175,14 @@ importers:
         specifier: 8.5.3
         version: 8.5.3
       prettier:
-        specifier: 3.5.2
-        version: 3.5.2
+        specifier: 3.5.3
+        version: 3.5.3
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 0.6.11
-        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.2)
+        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
       slugify:
         specifier: 1.6.6
         version: 1.6.6
@@ -739,14 +739,14 @@ packages:
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
-  '@fontsource-variable/inter@5.2.0':
-    resolution: {integrity: sha512-JKtSEgBxbNKnF4+o+yEgkiW95ZOkgds1PO+NRO4+t1vrQdCb/Q/Um5seBKFFVzZ+HDx0JQfCioIme7Blsm++OQ==}
+  '@fontsource-variable/inter@5.2.5':
+    resolution: {integrity: sha512-TrWffUAFOnT8zroE9YmGybagoOgM/HjRqMQ8k9R0vVgXlnUh/vnpbGPAS/Caz1KIlOPnPGh6fvJbb7DHbFCncA==}
 
-  '@fontsource-variable/rubik@5.2.0':
-    resolution: {integrity: sha512-NwWLnAJa7x1igg+KFe7UPnN9lhLTDeNLek/jbFewkm3S5e02GYLuXO1Fajoeab+l1SfVtkyAV1qYcSObqBAluQ==}
+  '@fontsource-variable/rubik@5.2.5':
+    resolution: {integrity: sha512-6tXqnHFA9/ItIEODfH5LrzLSmcNE5TXD8OuXx14cvmS7j1zX4JgEHjYrhlWhLGuBXXzrOnz0A0oMheMMbXwmWA==}
 
-  '@fontsource-variable/syne@5.2.0':
-    resolution: {integrity: sha512-+jzTk3GoyvN8OYhDCoIu2UYexx8r0aKyrkv1yiNJ5zl3lmUF2Q+NhEwQtChAKDmfwlDNSa+p4kWB7F7sL2yhHQ==}
+  '@fontsource-variable/syne@5.2.5':
+    resolution: {integrity: sha512-Ooue1Z8ToVybeYOYXgd/Loz0ZIsWYOy/Dbvo9X4zBRTqdcLAe0yEiUGTlrGNmDefAsLoEHEwNd0gvCFRakj0uA==}
 
   '@headlessui/react@2.2.0':
     resolution: {integrity: sha512-RzCEg+LXsuI7mHiSomsu/gBJSjpupm6A1qIZ5sWjd7JhARNlMiSA4kKfJpCKwU9tE+zMRterhhrP74PvfJrpXQ==}
@@ -783,8 +783,8 @@ packages:
   '@iconify-json/fa6-brands@1.2.5':
     resolution: {integrity: sha512-U/iFfziz6jSN9zArOJZYTtoj2tQyh6MxPdI8M84DQ2kEulPaj8j+h9bqvjmzszNHmD7v+kmmKd/MLkMKk+3Zuw==}
 
-  '@iconify-json/simple-icons@1.2.26':
-    resolution: {integrity: sha512-NvqRuE+5h/tp4boPlnvfs0alD0CvnRE7oeG9Li5NGmZRx2/rhwlNjW/vEVTyhZcR9zqvRPAVh2GXR+PTEpzV+A==}
+  '@iconify-json/simple-icons@1.2.27':
+    resolution: {integrity: sha512-FtZwp/H7ih5rY9FPfDR+k6toOo/cuwpHWY8faNhxLs5O5uW6Q8TeqdNWfjVfgFtrs5tUUzWysjqNGL234v8EMA==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -3287,8 +3287,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.5.2:
-    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4629,11 +4629,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@fontsource-variable/inter@5.2.0': {}
+  '@fontsource-variable/inter@5.2.5': {}
 
-  '@fontsource-variable/rubik@5.2.0': {}
+  '@fontsource-variable/rubik@5.2.5': {}
 
-  '@fontsource-variable/syne@5.2.0': {}
+  '@fontsource-variable/syne@5.2.5': {}
 
   '@headlessui/react@2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
@@ -4665,7 +4665,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.26':
+  '@iconify-json/simple-icons@1.2.27':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -6107,10 +6107,10 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.2(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.2):
+  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.2(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.3):
     dependencies:
       eslint: 9.21.0(jiti@2.4.2)
-      prettier: 3.5.2
+      prettier: 3.5.3
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.1
     optionalDependencies:
@@ -7686,9 +7686,9 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-config-standard@7.0.0(prettier@3.5.2):
+  prettier-config-standard@7.0.0(prettier@3.5.3):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
 
   prettier-linter-helpers@1.0.0:
     dependencies:
@@ -7697,16 +7697,16 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.9.2
-      prettier: 3.5.2
+      prettier: 3.5.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.2):
+  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   printable-characters@1.0.42: {}
 
