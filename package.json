@@ -29,7 +29,7 @@
 		"@fontsource-variable/inter": "5.2.5",
 		"@fontsource-variable/rubik": "5.2.5",
 		"@fontsource-variable/syne": "5.2.5",
-		"@headlessui/react": "2.2.0",
+		"@headlessui/react": "2.2.1",
 		"@heroicons/react": "2.2.0",
 		"@rollup/plugin-json": "6.1.0",
 		"@tailwindcss/vite": "^4.0.3",
@@ -46,11 +46,11 @@
 		"react-dom": "^19.0.0",
 		"reading-time": "1.5.0",
 		"sanitize-html": "2.15.0",
-		"sharp": "0.33.5",
+		"sharp": "0.34.0",
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
 		"tailwind-merge": "3.1.0",
-		"tailwindcss": "4.1.1"
+		"tailwindcss": "4.1.3"
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.5",
@@ -65,7 +65,7 @@
 		"astro-compressor": "1.0.0",
 		"astro-eslint-parser": "1.2.2",
 		"autoprefixer": "10.4.21",
-		"eslint": "9.23.0",
+		"eslint": "9.24.0",
 		"eslint-config-prettier": "10.1.1",
 		"eslint-plugin-astro": "1.3.1",
 		"eslint-plugin-jsx-a11y": "6.10.2",
@@ -79,6 +79,6 @@
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.11",
 		"slugify": "1.6.6",
-		"typescript": "5.8.2"
+		"typescript": "5.8.3"
 	}
 }
