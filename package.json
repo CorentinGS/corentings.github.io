@@ -49,12 +49,12 @@
 		"sharp": "0.34.1",
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
-		"tailwind-merge": "3.2.0",
+		"tailwind-merge": "3.3.0",
 		"tailwindcss": "4.1.6"
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.5",
-		"@iconify-json/simple-icons": "1.2.33",
+		"@iconify-json/simple-icons": "1.2.34",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.10",
 		"@tailwindcss/line-clamp": "0.4.4",
