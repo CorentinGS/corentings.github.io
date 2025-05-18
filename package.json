@@ -50,7 +50,7 @@
 		"source-map": "0.7.4",
 		"string-width": "7.2.0",
 		"tailwind-merge": "3.3.0",
-		"tailwindcss": "4.1.6"
+		"tailwindcss": "4.1.7"
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.5",
@@ -71,7 +71,7 @@
 		"eslint-plugin-jsx-a11y": "6.10.2",
 		"eslint-plugin-prettier": "5.4.0",
 		"eslint-plugin-tailwindcss": "3.18.0",
-		"motion": "12.11.3",
+		"motion": "12.11.4",
 		"npm-run-all2": "7.0.2",
 		"organize-imports-cli": "0.10.0",
 		"postcss": "8.5.3",
