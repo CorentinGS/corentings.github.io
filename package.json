@@ -20,7 +20,7 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "12.6.0",
 		"@astrojs/mdx": "4.3.0",
-		"@astrojs/node": "9.2.2",
+		"@astrojs/node": "9.3.0",
 		"@astrojs/prism": "3.3.0",
 		"@astrojs/react": "4.3.0",
 		"@astrojs/rss": "4.0.12",
@@ -35,7 +35,7 @@
 		"@tailwindcss/vite": "^4.0.3",
 		"@types/react": "19.1.8",
 		"@types/react-dom": "19.1.6",
-		"astro": "5.10.2",
+		"astro": "5.11.0",
 		"astro-font": "1.1.0",
 		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
