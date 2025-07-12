@@ -59,7 +59,7 @@
 		"@tailwindcss/forms": "0.5.10",
 		"@tailwindcss/line-clamp": "0.4.4",
 		"@tailwindcss/typography": "0.5.16",
-		"@types/node": "22.16.0",
+		"@types/node": "22.16.2",
 		"@typescript-eslint/eslint-plugin": "8.36.0",
 		"@typescript-eslint/parser": "8.36.0",
 		"astro-compressor": "1.0.0",
