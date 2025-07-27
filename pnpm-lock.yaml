@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 12.6.0
-        version: 12.6.0(@types/node@22.16.5)(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.36.0)(yaml@2.4.2)
+        version: 12.6.0(@types/node@22.16.5)(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.36.0)(yaml@2.4.2)
       '@astrojs/mdx':
         specifier: 4.3.1
-        version: 4.3.1(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))
+        version: 4.3.1(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))
       '@astrojs/node':
         specifier: 9.3.0
-        version: 9.3.0(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))
+        version: 9.3.0(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))
       '@astrojs/prism':
         specifier: 3.3.0
         version: 3.3.0
@@ -31,7 +31,7 @@ importers:
         version: 3.4.1
       '@astrojs/tailwind':
         specifier: 6.0.2
-        version: 6.0.2(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(tailwindcss@4.1.11)
+        version: 6.0.2(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(tailwindcss@4.1.11)
       '@fontsource-variable/inter':
         specifier: 5.2.6
         version: 5.2.6
@@ -42,8 +42,8 @@ importers:
         specifier: 5.2.6
         version: 5.2.6
       '@headlessui/react':
-        specifier: 2.2.4
-        version: 2.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 2.2.5
+        version: 2.2.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@heroicons/react':
         specifier: 2.2.0
         version: 2.2.0(react@19.1.0)
@@ -60,8 +60,8 @@ importers:
         specifier: 19.1.6
         version: 19.1.6(@types/react@19.1.8)
       astro:
-        specifier: 5.12.2
-        version: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
+        specifier: 5.12.3
+        version: 5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
       astro-font:
         specifier: 1.1.0
         version: 1.1.0
@@ -109,8 +109,8 @@ importers:
         version: 4.1.11
     devDependencies:
       '@iconify-json/fa6-brands':
-        specifier: 1.2.5
-        version: 1.2.5
+        specifier: 1.2.6
+        version: 1.2.6
       '@iconify-json/simple-icons':
         specifier: 1.2.44
         version: 1.2.44
@@ -163,8 +163,8 @@ importers:
         specifier: 3.18.2
         version: 3.18.2(tailwindcss@4.1.11)
       motion:
-        specifier: 12.23.6
-        version: 12.23.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 12.23.7
+        version: 12.23.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4
@@ -632,8 +632,8 @@ packages:
   '@fontsource-variable/syne@5.2.6':
     resolution: {integrity: sha512-aUeK7LuZs0+bAbNMIF1I4gom+sOvhNcEhFqVh88MvqWmk6mBauKUH3JaO3yvfFOgeJPf2owymiNuay3YqotvKg==}
 
-  '@headlessui/react@2.2.4':
-    resolution: {integrity: sha512-lz+OGcAH1dK93rgSMzXmm1qKOJkBUqZf1L4M8TWLNplftQD3IkoEDdUFNfAn4ylsN6WOTVtWaLmvmaHOUk1dTA==}
+  '@headlessui/react@2.2.5':
+    resolution: {integrity: sha512-h1+2Vu1yR5pp/fBcTnwVEW8Kb94Hbxp7MXZLORfDzvSrbmGgiTyaTZ4LI/tPNZnK8eDrYD9s9cMbjm5HS5otIQ==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
@@ -664,8 +664,8 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/fa6-brands@1.2.5':
-    resolution: {integrity: sha512-U/iFfziz6jSN9zArOJZYTtoj2tQyh6MxPdI8M84DQ2kEulPaj8j+h9bqvjmzszNHmD7v+kmmKd/MLkMKk+3Zuw==}
+  '@iconify-json/fa6-brands@1.2.6':
+    resolution: {integrity: sha512-twL3X4KWcxAhbc1vz/mIDsVr+CAItk1/EIfxKUVQtpv6O4eydk5KNYqTZWdvJNHGInUgd6vKg21aWfVgb5DXEg==}
 
   '@iconify-json/simple-icons@1.2.44':
     resolution: {integrity: sha512-CdWgSPygwDlDbKtDWjvi3NtUefnkoepXv90n3dQxJerqzD9kI+nEJOiWUBM+eOyMYQKtxBpLWFBrgeotF0IZKw==}
@@ -1534,8 +1534,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@5.12.2:
-    resolution: {integrity: sha512-/qTPSD8bSxjsh5KNXvOsf6Md7dqNuH3WSx6KLa1YbxPR2JZDgPWEKEyulS3/9L5h5aP0SkjONrqwOGdgWw97fg==}
+  astro@5.12.3:
+    resolution: {integrity: sha512-fU1hNPMkccm+FuonGsY5DFkC2QyuLCju++8L2ubzBtYBDBf6bmfgmVM7A2dK+Hl+ZJCUNgepsClhBpczj+2LRw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2220,8 +2220,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@12.23.6:
-    resolution: {integrity: sha512-dsJ389QImVE3lQvM8Mnk99/j8tiZDM/7706PCqvkQ8sSCnpmWxsgX+g0lj7r5OBVL0U36pIecCTBoIWcM2RuKw==}
+  framer-motion@12.23.9:
+    resolution: {integrity: sha512-TqEHXj8LWfQSKqfdr5Y4mYltYLw96deu6/K9kGDd+ysqRJPNwF9nb5mZcrLmybHbU7gcJ+HQar41U3UTGanbbQ==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -3000,14 +3000,14 @@ packages:
   mlly@1.7.4:
     resolution: {integrity: sha512-qmdSIPC4bDJXgZTCR7XosJiNKySV7O215tsPtDN9iEO/7q/76b/ijtgRu/+epFXSJhijtTCCGp3DWS549P3xKw==}
 
-  motion-dom@12.23.6:
-    resolution: {integrity: sha512-G2w6Nw7ZOVSzcQmsdLc0doMe64O/Sbuc2bVAbgMz6oP/6/pRStKRiVRV4bQfHp5AHYAKEGhEdVHTM+R3FDgi5w==}
+  motion-dom@12.23.9:
+    resolution: {integrity: sha512-6Sv++iWS8XMFCgU1qwKj9l4xuC47Hp4+2jvPfyTXkqDg2tTzSgX6nWKD4kNFXk0k7llO59LZTPuJigza4A2K1A==}
 
   motion-utils@12.23.6:
     resolution: {integrity: sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==}
 
-  motion@12.23.6:
-    resolution: {integrity: sha512-6U55IW5i6Vut2ryKEhrZKg55490k9d6qdGXZoNSf98oQgDj5D7bqTnVJotQ6UW3AS6QfbW6KSLa7/e1gy+a07g==}
+  motion@12.23.7:
+    resolution: {integrity: sha512-h6xccd06g+VizejdBGWKgFzOROIHjhLDmzhdphUQ62C693dtP40YSSgj47916hovFXfH4jvYEca4duW7EZ7Iug==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -4192,12 +4192,12 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/cloudflare@12.6.0(@types/node@22.16.5)(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.36.0)(yaml@2.4.2)':
+  '@astrojs/cloudflare@12.6.0(@types/node@22.16.5)(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.36.0)(yaml@2.4.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/workers-types': 4.20250515.0
-      astro: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
+      astro: 5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
       tinyglobby: 0.2.13
       vite: 6.3.5(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.36.0)(yaml@2.4.2)
       wrangler: 4.15.2(@cloudflare/workers-types@4.20250515.0)
@@ -4250,12 +4250,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.1(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))':
+  '@astrojs/mdx@4.3.1(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.3
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       acorn: 8.15.0
-      astro: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
+      astro: 5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -4269,10 +4269,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.3.0(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))':
+  '@astrojs/node@9.3.0(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.6.1
-      astro: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
+      astro: 5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
       send: 1.2.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4316,9 +4316,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/tailwind@6.0.2(astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(tailwindcss@4.1.11)':
+  '@astrojs/tailwind@6.0.2(astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2))(tailwindcss@4.1.11)':
     dependencies:
-      astro: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
+      astro: 5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2)
       autoprefixer: 10.4.21(postcss@8.5.6)
       postcss: 8.5.6
       postcss-load-config: 4.0.2(postcss@8.5.6)
@@ -4655,7 +4655,7 @@ snapshots:
 
   '@fontsource-variable/syne@5.2.6': {}
 
-  '@headlessui/react@2.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@headlessui/react@2.2.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@floating-ui/react': 0.26.28(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@react-aria/focus': 3.20.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -4682,7 +4682,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@iconify-json/fa6-brands@1.2.5':
+  '@iconify-json/fa6-brands@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5570,7 +5570,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2):
+  astro@5.12.3(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(terser@5.36.0)(typescript@5.8.3)(yaml@2.4.2):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -6460,9 +6460,9 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@12.23.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  framer-motion@12.23.9(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
-      motion-dom: 12.23.6
+      motion-dom: 12.23.9
       motion-utils: 12.23.6
       tslib: 2.8.1
     optionalDependencies:
@@ -7546,15 +7546,15 @@ snapshots:
       pkg-types: 1.3.1
       ufo: 1.5.4
 
-  motion-dom@12.23.6:
+  motion-dom@12.23.9:
     dependencies:
       motion-utils: 12.23.6
 
   motion-utils@12.23.6: {}
 
-  motion@12.23.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  motion@12.23.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
-      framer-motion: 12.23.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      framer-motion: 12.23.9(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       tslib: 2.8.1
     optionalDependencies:
       react: 19.1.0
