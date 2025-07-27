@@ -29,7 +29,7 @@
 		"@fontsource-variable/inter": "5.2.6",
 		"@fontsource-variable/rubik": "5.2.6",
 		"@fontsource-variable/syne": "5.2.6",
-		"@headlessui/react": "2.2.5",
+		"@headlessui/react": "2.2.6",
 		"@heroicons/react": "2.2.0",
 		"@rollup/plugin-json": "6.1.0",
 		"@tailwindcss/vite": "^4.0.3",
