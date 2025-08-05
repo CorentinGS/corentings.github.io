@@ -18,9 +18,9 @@
 		"serve": "node ./dist/server/entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "12.6.1",
-		"@astrojs/mdx": "4.3.2",
-		"@astrojs/node": "9.3.2",
+		"@astrojs/cloudflare": "12.6.2",
+		"@astrojs/mdx": "4.3.3",
+		"@astrojs/node": "9.3.3",
 		"@astrojs/prism": "3.3.0",
 		"@astrojs/react": "4.3.0",
 		"@astrojs/rss": "4.0.12",
@@ -35,7 +35,7 @@
 		"@tailwindcss/vite": "^4.0.3",
 		"@types/react": "19.1.9",
 		"@types/react-dom": "19.1.7",
-		"astro": "5.12.7",
+		"astro": "5.12.8",
 		"astro-font": "1.1.0",
 		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
