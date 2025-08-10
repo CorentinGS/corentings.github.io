@@ -136,8 +136,8 @@ importers:
         specifier: 8.39.0
         version: 8.39.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.9.2)
       astro-compressor:
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 1.1.2
+        version: 1.1.2
       astro-eslint-parser:
         specifier: 1.2.2
         version: 1.2.2
@@ -1526,8 +1526,8 @@ packages:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
 
-  astro-compressor@1.1.1:
-    resolution: {integrity: sha512-yvwVmaTb6SMCd6MTufz0pYBsYXPTZu66QjNgAPrDqLqrHfKAsIIQ/4JTci76eS+rX6rdbuDeBb0SVlgrRCCtuw==}
+  astro-compressor@1.1.2:
+    resolution: {integrity: sha512-BsX6ypOkRff2g7e5vA47Vlpq9MfVxAo4pXzfkJvXTSzzrSYvf8m3e0lbyGK6eReSzWcAPXymOTIoooqDX1BTlA==}
     engines: {node: '>=22.15.0 <23.0.0 || >=23.8.0'}
 
   astro-eslint-parser@1.2.2:
@@ -5556,7 +5556,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-compressor@1.1.1: {}
+  astro-compressor@1.1.2: {}
 
   astro-eslint-parser@1.2.2:
     dependencies:
