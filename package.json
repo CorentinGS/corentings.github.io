@@ -20,7 +20,7 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "12.6.3",
 		"@astrojs/mdx": "4.3.3",
-		"@astrojs/node": "9.4.1",
+		"@astrojs/node": "9.4.2",
 		"@astrojs/prism": "3.3.0",
 		"@astrojs/react": "4.3.0",
 		"@astrojs/rss": "4.0.12",
