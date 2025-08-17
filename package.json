@@ -24,7 +24,7 @@
 		"@astrojs/prism": "3.3.0",
 		"@astrojs/react": "4.3.0",
 		"@astrojs/rss": "4.0.12",
-		"@astrojs/sitemap": "3.4.2",
+		"@astrojs/sitemap": "3.5.0",
 		"@astrojs/tailwind": "6.0.2",
 		"@fontsource-variable/inter": "5.2.6",
 		"@fontsource-variable/rubik": "5.2.6",
@@ -35,7 +35,7 @@
 		"@tailwindcss/vite": "^4.0.3",
 		"@types/react": "19.1.10",
 		"@types/react-dom": "19.1.7",
-		"astro": "5.12.9",
+		"astro": "5.13.0",
 		"astro-font": "1.1.0",
 		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
@@ -50,7 +50,7 @@
 		"source-map": "0.7.6",
 		"string-width": "7.2.0",
 		"tailwind-merge": "3.3.1",
-		"tailwindcss": "4.1.11"
+		"tailwindcss": "4.1.12"
 	},
 	"devDependencies": {
 		"@iconify-json/fa6-brands": "1.2.6",
