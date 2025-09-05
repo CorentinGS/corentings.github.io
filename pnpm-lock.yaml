@@ -99,8 +99,8 @@ importers:
         specifier: 0.7.6
         version: 0.7.6
       string-width:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.0
+        version: 8.1.0
       tailwind-merge:
         specifier: 3.3.1
         version: 3.3.1
@@ -2434,10 +2434,6 @@ packages:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
 
-  get-east-asian-width@1.2.0:
-    resolution: {integrity: sha512-2nk+7SIVb14QrgXFHcm84tD4bKQz0RxPuMT8Ag5KPOq7J5fEmAg0UbXdTOSHqNuHSU28k55qnceesxXRZGzKWA==}
-    engines: {node: '>=18'}
-
   get-east-asian-width@1.3.1:
     resolution: {integrity: sha512-R1QfovbPsKmosqTnPoRFiJ7CF9MLRgb53ChvMZm+r4p76/+8yKDy17qLL2PKInORy2RkZZekuK0efYgmzTkXyQ==}
     engines: {node: '>=18'}
@@ -3850,8 +3846,8 @@ packages:
     resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
     engines: {node: '>=18'}
 
-  string-width@8.0.0:
-    resolution: {integrity: sha512-k6IAvw5ubuVp/NNXUXFoOZFUGa+GY369bYTwG55AEq6s1XLurtpjdookJ+vI8TdxFS/X7oz2xI1giGh6nK6mog==}
+  string-width@8.1.0:
+    resolution: {integrity: sha512-Kxl3KJGb/gxkaUMOjRsQ8IrXiGW75O4E3RPjFIINOVH8AMl2SQ/yWdTzWwF3FevIX9LcMAjJW+GRwAlAbTSXdg==}
     engines: {node: '>=20'}
 
   string.prototype.includes@2.0.1:
@@ -6821,8 +6817,6 @@ snapshots:
 
   gensync@1.0.0-beta.2: {}
 
-  get-east-asian-width@1.2.0: {}
-
   get-east-asian-width@1.3.1: {}
 
   get-intrinsic@1.2.4:
@@ -8630,10 +8624,10 @@ snapshots:
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.3.0
-      get-east-asian-width: 1.2.0
+      get-east-asian-width: 1.3.1
       strip-ansi: 7.1.0
 
-  string-width@8.0.0:
+  string-width@8.1.0:
     dependencies:
       get-east-asian-width: 1.3.1
       strip-ansi: 7.1.0
